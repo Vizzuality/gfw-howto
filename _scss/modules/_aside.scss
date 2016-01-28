@@ -1,0 +1,43 @@
+.m-aside {
+  padding: 20px 40px;
+  border-top: 1px solid $border1;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  h2 {
+    font-size: 13px;
+    font-weight: 500;
+    color: $light;
+    padding: 0 0 10px;
+  }
+
+  ul {
+    li {
+      a {
+        display: block;
+        position: relative;
+        font-size: 14px;
+        color: $dark;
+        padding: 5px 0 5px 25px;
+        &:hover {
+          color: $primary-color;
+          svg {
+            fill: $primary-color;
+          }
+        }
+        svg {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0%;
+          transform: translate(0%,-60%);
+          width: 20px;
+          height: 20px;
+          fill: $dark;
+        }
+      }
+    }
+  }
+}

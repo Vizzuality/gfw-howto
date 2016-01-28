@@ -8,9 +8,12 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="/css/main.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,300' rel='stylesheet' type='text/css'>
     <script id="loader-gfw" data-current=".shape-howto" src="http://www.globalforestwatch.org/gfw-assets"></script>
   </head>
-  <body>  
+  <body>
+    {% include icons.html %}
     <!-- HEADER -->
     <div id="headerGfw"></div>
 
@@ -19,7 +22,7 @@
         {% include aside.html %}
       </aside>
       <div class="l-content">
-        {{ content }}  
+        {{ content }}
       </div>
     </div>
 
