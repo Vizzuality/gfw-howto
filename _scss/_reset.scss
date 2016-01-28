@@ -1,160 +1,47 @@
-/*****************************************************************************/
-/*
-/* Common
-/*
-/*****************************************************************************/
-
-/* Global Reset */
-* {
-    margin: 0;
-    padding: 0;
+*, *:after, *:before {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
 }
 
-html, body { height: 100%; }
-
-body {
-    background-color: black;
-    font: 13.34px Helvetica, Arial, sans-serif;
-    font-size: small;
-    text-align: center;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-size: 100%; }
-
-h1 { margin-bottom: 1em; }
-p { margin: 1em 0; }
-
-a         { color: #00a; }
-a:hover   { color: #000; }
-a:visited { color: #a0a; }
-
-/*****************************************************************************/
-/*
-/* Home
-/*
-/*****************************************************************************/
-.posts {
-    list-style-type: none;
-    margin-bottom: 2em;
-}
-
-.posts li {
-    line-height: 1.75em;
-}
-
-.posts span {
-    color: #aaa;
-    font-family: Monaco, "Courier New", monospace;
-    font-size: 80%;
-}
-
-/*****************************************************************************/
-/*
-/* Site
-/*
-/*****************************************************************************/
-
-.site {
-    font-size: 115%;
-    text-align: justify;
-    width: 42em;
-    margin: 3em auto 2em;
-    line-height: 1.5em;
-}
-
-.header a {
-    font-weight: bold;
-    text-decoration: none;
-}
-
-.title {
-    display: inline-block;
-    margin-bottom: 2em;
-}
-
-.title a {
-    color: #a00;
-}
-
-.title a:hover {
-    color: #000;
-}
-
-.header a.extra {
-    color: #aaa;
-    margin-left: 1em;
-}
-
-.header a.extra:hover {
-    color: #000;
-}
-
-.meta {
-    color: #aaa;
-}
-
-.footer {
-    font-size: 80%;
-    color: #666;
-    border-top: 4px solid #eee;
-    margin-top: 2em;
+html, body{
+  padding: 0;
+  border: 0;
+  margin: 0;
+  &.-no-scroll{
     overflow: hidden;
+  }
 }
 
-.footer .contact {
-    float: left;
-    margin-right: 3em;
+div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
 }
 
-.footer .contact a {
-    color: #8085C1;
+ol, ul {
+  list-style: none;
 }
 
-.footer .rss {
-    margin-top: 1.1em;
-    margin-right: -.2em;
-    float: right;
+a {
+  text-decoration: none;
 }
 
-.footer .rss img {
-    border: 0;
+button {
+  display: inline-block;
+  box-shadow: none;
+  outline: none;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
-/*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
-
-/* standard */
-.post pre {
-    border: 1px solid #ddd;
-    background-color: #eef;
-    padding: 0 .4em;
-}
-
-.post ul, .post ol {
-    margin-left: 1.35em;
-}
-
-.post code {
-    border: 1px solid #ddd;
-    background-color: #eef;
-    padding: 0 .2em;
-}
-
-.post pre code {
-    border: none;
-}
-
-/* terminal */
-.post pre.terminal {
-    border: 1px solid #000;
-    background-color: #333;
-    color: #FFF;
-}
-
-.post pre.terminal code {
-    background-color: #333;
+.-hidden {
+  display: none;
 }

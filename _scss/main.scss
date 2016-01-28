@@ -1,6 +1,8 @@
+@import "settings";
 @import "reset";
-@import "syntax";
 
-body {
-    background: white;
-}
+// Layout & grids
+@import "layout";
+
+// Sintax
+@import "syntax";
