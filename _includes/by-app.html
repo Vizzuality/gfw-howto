@@ -1,12 +1,12 @@
 <div class="m-by-app">
   <!-- Grid -->
   <ul>
-    {% for tag in site.tags %}
-      <li class="-{{ tag[0] | slugify }}">
-        <a href="/apps/{{ tag[0] | slugify }}">
+    {% for category in site.categories %}
+      <li class="-{{ category[0] | slugify }}">
+        <a href="/apps/{{ category[0] | slugify }}">
           <h2>
-            {{ tag[0] | capitalize }}
-            <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:' ' }}"></use></svg>
+            {{ category[0] | capitalize }}
+            <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:' ' }}"></use></svg>
           </h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua.</p>

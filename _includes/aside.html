@@ -1,9 +1,23 @@
 <div class="m-aside">
   <h2>SEARCH BY THEME</h2>
   <ul>
+    {% for tag in site.tags %}
+      <li>
+        <a href="/themes/{{ tag[0] | slugify }}">
+          <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:' ' }}"></use></svg>
+          {{ tag[0] | capitalize }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="m-aside">
+  <h2>SEARCH BY APPLICATION</h2>
+  <ul>
   {% for category in site.categories %}
     <li>
-      <a href="/themes/{{ category[0] | slugify }}">
+      <a href="/apps/{{ category[0] | slugify }}">
         <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:' ' }}"></use></svg>
         {{ category[0] | capitalize }}
       </a>
@@ -12,16 +26,3 @@
   </ul>
 </div>
 
-<div class="m-aside">
-  <h2>SEARCH BY APPLICATION</h2>
-  <ul>
-    {% for tag in site.tags %}
-      <li>
-        <a href="/apps/{{ tag[0] | slugify }}">
-          <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:' ' }}"></use></svg>
-          {{ tag[0] | capitalize }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</div>

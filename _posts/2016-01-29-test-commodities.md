@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Test commodities
-categories: [suscribe to alerts]
-tags: [commodities]
+tags: [suscribe to alerts]
+categories: [commodities]
 published: True
 
 ---

@@ -20,5 +20,5 @@ jekyll-archives:
     # year: '/:year/'
     # month: '/:year/:month/'
     # day: '/:year/:month/:day/'
-    tag: '/apps/:name/'
-    category: '/themes/:name/'
+    category: '/apps/:name/'
+    tag: '/themes/:name/'

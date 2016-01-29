@@ -4,11 +4,11 @@
     <div class="frame js_frame">
       <ul class="slides js_slides">
 
-        {% for category in site.categories %}
+        {% for tag in site.tags %}
           <li class="js_slide">
-            <a href="/themes/{{ category[0] | slugify }}">
-              <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:' ' }}"></use></svg>
-              <h2>{{ category[0] | capitalize }}</h2>
+            <a href="/themes/{{ tag[0] | slugify }}">
+              <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:' ' }}"></use></svg>
+              <h2>{{ tag[0] | capitalize }}</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et dolore magna aliqua.</p>
             </a>
