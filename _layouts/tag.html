@@ -2,7 +2,12 @@
 layout: default
 ---
 
-<h1>Archive of posts with {{ page.type }} '{{ page.title }}'</h1>
+<header class="m-header">
+  <h2>{{page.title | capitalize}}</h2>
+  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h3>
+</header>
+
 <ul class="posts">
   {% for post in page.posts %}
     <li>
