@@ -6,7 +6,7 @@
 
         {% for category in site.categories %}
           <li class="js_slide">
-            <a href="/category/{{ category[0] | slugify }}">
+            <a href="/themes/{{ category[0] | slugify }}">
               <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:' ' }}"></use></svg>
               <h2>{{ category[0] | capitalize }}</h2>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod

@@ -3,7 +3,7 @@
   <ul>
   {% for category in site.categories %}
     <li>
-      <a href="/category/{{ category[0] | slugify }}">
+      <a href="/themes/{{ category[0] | slugify }}">
         <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:' ' }}"></use></svg>
         {{ category[0] | capitalize }}
       </a>
@@ -17,7 +17,7 @@
   <ul>
     {% for tag in site.tags %}
       <li>
-        <a href="/tag/{{ tag[0] | slugify }}">
+        <a href="/apps/{{ tag[0] | slugify }}">
           <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:' ' }}"></use></svg>
           {{ tag[0] | capitalize }}
         </a>

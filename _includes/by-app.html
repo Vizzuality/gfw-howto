@@ -3,7 +3,7 @@
   <ul>
     {% for tag in site.tags %}
       <li class="-{{ tag[0] | slugify }}">
-        <a href="/tag/{{ tag[0] | slugify }}">
+        <a href="/apps/{{ tag[0] | slugify }}">
           <h2>
             {{ tag[0] | capitalize }}
             <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:' ' }}"></use></svg>
