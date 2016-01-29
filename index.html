@@ -13,16 +13,16 @@ subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius
   <header>
     <h2>Find content by theme</h2>
   </header>
-  <div class="m-by-theme">
-    <ul>
-      {% for category in site.categories %}
-        <li>
-          <a href="/category/{{ category[0] | slugify }}">
-            <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:' ' }}"></use></svg>
-            {{ category[0] | capitalize }}
-          </a>
-        </li>
-      {% endfor %}
-    </ul>
-  </div>
+  <!-- By theme grid -->
+  {% include by-theme.html %}
 </section>
+
+<section class="m-section">
+  <header>
+    <h2>Find content by application</h2>
+  </header>
+  <!-- By application grid -->
+  {% include by-app.html %}
+</section>
+
+

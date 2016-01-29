@@ -1,1 +1,1 @@
-console.log("How to Portal");var init={name:"How to Portal"};
+function setSlideWidth(){var e=$(".js_slider"),t=$(".js_slide"),i=e.width()/2;t.width(i)}document.addEventListener("DOMContentLoaded",function(){var e=document.querySelector(".js_slider");e.addEventListener("before.lory.init",setSlideWidth),lory(e,{slidesToScroll:2,infinite:2,enableMouseEvents:!0})});

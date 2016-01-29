@@ -34,13 +34,13 @@
 }
 
 .l-aside {
-  width: 325px;
+  width: $aside-width;
   padding-top: 90px;
   background: #f7f8f8;
 }
 
 .l-content {
-  width: 100%;
+  width: calc(100% - #{$aside-width});
   background: $white;
   padding: 50px;
   > * {

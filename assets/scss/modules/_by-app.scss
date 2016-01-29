@@ -1,0 +1,45 @@
+.m-by-app {
+  padding: 50px 0;
+  ul {
+    margin: -4% 0 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    li {
+      padding: 40px;
+      width: 48%;
+      margin: 4% 0 0;
+      color: $white;
+      position: relative;
+
+      &.-gfw { background: $primary-color;}
+      &.-fires { background: $red;}
+      &.-commodities { background: $orange;}
+      &.-climate { background: $blue;}
+
+      h2 {
+        color: $white;
+        text-transform: uppercase;
+        font-size: 21px;
+        position: relative;
+        margin: 0 0 30px;
+      }
+
+      svg {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0,-50%);
+        fill: $white;
+        width: 35px;
+        height: 35px;
+      }
+
+      p {
+        color: $white;
+        font-size: 14px;
+      }
+    }
+  }
+}

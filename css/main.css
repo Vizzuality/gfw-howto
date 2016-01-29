@@ -75,12 +75,12 @@ button {
     height: 100%; }
 
 .l-aside {
-  width: 325px;
+  width: 265px;
   padding-top: 90px;
   background: #f7f8f8; }
 
 .l-content {
-  width: 100%;
+  width: calc(100% - 265px);
   background: #FFF;
   padding: 50px; }
   .l-content > * {
@@ -135,6 +135,90 @@ button {
     font-size: 35px;
     font-weight: 300;
     color: #555; }
+
+.m-by-theme {
+  padding: 50px 0; }
+  .m-by-theme .m-slider {
+    width: 100%; }
+    .m-by-theme .m-slider .frame {
+      width: 100%;
+      position: relative;
+      font-size: 0;
+      overflow: hidden;
+      white-space: nowrap; }
+    .m-by-theme .m-slider ul {
+      display: inline-block; }
+      .m-by-theme .m-slider ul li {
+        position: relative;
+        display: inline-block; }
+        .m-by-theme .m-slider ul li a {
+          display: block; }
+          .m-by-theme .m-slider ul li a > * {
+            padding: 25px 0 0; }
+            .m-by-theme .m-slider ul li a > *:first-child {
+              padding: 0; }
+          .m-by-theme .m-slider ul li a svg {
+            display: block;
+            width: 50px;
+            height: 50px;
+            fill: #97bd3d; }
+          .m-by-theme .m-slider ul li a h2 {
+            color: #97bd3d;
+            text-transform: uppercase;
+            font-size: 21px; }
+          .m-by-theme .m-slider ul li a p {
+            padding: 15px 0 0;
+            font-size: 14px;
+            color: #555;
+            max-width: 75%;
+            white-space: normal; }
+
+.m-by-app {
+  padding: 50px 0; }
+  .m-by-app ul {
+    margin: -4% 0 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    .m-by-app ul li {
+      padding: 40px;
+      width: 48%;
+      margin: 4% 0 0;
+      color: #FFF;
+      position: relative; }
+      .m-by-app ul li.-gfw {
+        background: #97bd3d; }
+      .m-by-app ul li.-fires {
+        background: #ed1846; }
+      .m-by-app ul li.-commodities {
+        background: #e98300; }
+      .m-by-app ul li.-climate {
+        background: #5b80a0; }
+      .m-by-app ul li h2 {
+        color: #FFF;
+        text-transform: uppercase;
+        font-size: 21px;
+        position: relative;
+        margin: 0 0 30px; }
+      .m-by-app ul li svg {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+        fill: #FFF;
+        width: 35px;
+        height: 35px; }
+      .m-by-app ul li p {
+        color: #FFF;
+        font-size: 14px; }
 
 .highlight {
   background: #ffffff; }
