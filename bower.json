@@ -1,0 +1,22 @@
+{
+  "name": "gfw-howto",
+  "homepage": "https://github.com/Vizzuality/gfw-howto",
+  "authors": [
+    "Miguel Barrenechea <miguel.barrenechea@simbiotica.es>"
+  ],
+  "description": "GFW How to portal",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.0",
+    "backbone": "^1.2.3",
+    "lory": "^2.0.1"
+  }
+}

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: How to portal
+title: How to
 subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
 ---
 
@@ -8,3 +8,21 @@ subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius
   <h2>{{page.title}}</h2>
   <h3>{{page.subtitle}}</h3>
 </header>
+
+<section class="m-section">
+  <header>
+    <h2>Find content by theme</h2>
+  </header>
+  <div class="m-by-theme">
+    <ul>
+      {% for category in site.categories %}
+        <li>
+          <a href="/category/{{ category[0] | slugify }}">
+            <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:' ' }}"></use></svg>
+            {{ category[0] | capitalize }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

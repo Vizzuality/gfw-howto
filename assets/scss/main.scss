@@ -5,8 +5,12 @@
 @import "layout";
 
 // Modules
-@import "modules/aside";
 @import "modules/header";
+@import "modules/aside";
+@import "modules/section";
+
+// Carousel by theme
+@import "modules/by-theme";
 
 // Sintax
 @import "syntax";

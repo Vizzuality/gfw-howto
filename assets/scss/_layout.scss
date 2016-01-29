@@ -25,7 +25,7 @@
   text-indent: -9999px;
   width: 90px;
   height: 90px;
-  background-image: url('/images/logo.png');
+  background-image: url('/assets/images/logo.png');
   a {
     display: block;
     width: 100%;
@@ -43,4 +43,13 @@
   width: 100%;
   background: $white;
   padding: 50px;
+  > * {
+    padding: 40px 0;
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
 }

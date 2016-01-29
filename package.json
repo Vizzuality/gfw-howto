@@ -11,7 +11,11 @@
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-sass": "^2.1.0",
-    "gulp-autoprefixer": "1.0.0"
+    "gulp-autoprefixer": "1.0.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglifyjs": "^0.6.2",
+    "main-bower-files": "^2.11.1"
   },
   "repository": {
     "type": "git",
@@ -20,10 +24,12 @@
   "keywords": [
     "jekyll",
     "gulp",
-    "sass",
+    "sass"
   ],
   "bugs": {
     "url": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync/issues"
   },
-  "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync"
+  "homepage": "https://github.com/shakyShane/jekyll-gulp-sass-browser-sync",
+  "dependencies": {
+  }
 }
