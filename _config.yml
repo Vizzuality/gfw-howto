@@ -1,4 +1,23 @@
 name: How to portal
-markdown: redcarpet
-highlighter: pygments # or rouge or null
+
+url: http://localhost:3000/
+
+gems:
+  - jekyll-archives
+
 exclude: ["node_modules", "gulpfile.js", "package.json"]
+
+jekyll-archives:
+  enabled: [categories,tags]
+  layouts:
+    # year: year
+    # month: month
+    # day: day
+    tag: tag
+    category: category
+  permalinks:
+    # year: '/:year/'
+    # month: '/:year/:month/'
+    # day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'

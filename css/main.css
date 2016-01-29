@@ -59,8 +59,19 @@ button {
       max-width: 1200px;
       width: 75%; } }
 
+.l-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  text-indent: -9999px;
+  width: 90px;
+  height: 90px;
+  background-image: url("/images/logo.png"); }
+
 .l-aside {
   width: 325px;
+  padding-top: 90px;
   background: #f7f8f8; }
 
 .l-content {
