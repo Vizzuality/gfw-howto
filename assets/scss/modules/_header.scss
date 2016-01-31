@@ -2,6 +2,26 @@
   h2 {
     font-size: 47px;
     font-weight: 300;
+    position: relative;
+    padding-right: 75px;
+    display: inline-block;
+
+    svg {
+      fill: $primary-color;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0,-50%);
+      margin: -5px 0 0;
+
+      &.-gfw { fill: $primary-color;}
+      &.-fires { fill: $red;}
+      &.-commodities { fill: $orange;}
+      &.-climate { fill: $blue;}
+
+    }
   }
 
   h3 {

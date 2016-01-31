@@ -3,7 +3,10 @@ layout: default
 ---
 
 <header class="m-header">
-  <h2>{{page.title | capitalize}}</h2>
+  <h2>
+    {{page.title | capitalize}}
+    <svg class="-{{ page.title | downcase | remove:' ' }}"><use xlink:href="#icon-{{ page.title | downcase | remove:' ' }}"></use></svg>
+  </h2>
   <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h3>
 </header>
