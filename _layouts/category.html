@@ -15,15 +15,25 @@ layout: default
         <header>
           <h2><a href="/themes/{{ tag[0] | slugify }}">{{ tag[0] | capitalize }}</a></h2>
         </header>
-        <ul>
-        {% for posts in tag %}
-          {% for post in posts %}
-            {% if post.categories contains page.title %}
-              <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-            {% endif %}
+        <div class="m-content-grid">
+          <ul>
+          {% for posts in tag %}
+            {% for post in posts %}
+              {% if post.categories contains page.title %}
+                <li class="m-content-item">
+                  <a href="{{ post.url }}">
+                    <div class="img"></div>
+                    <div class="content">
+                      <h3>{{ post.title }}</h3>
+                      <p>{{ post.description }}</p>
+                    </div>
+                  </a>
+                </li>
+              {% endif %}
+            {% endfor %}
           {% endfor %}
-        {% endfor %}
-        </ul>
+          </ul>
+        </div>
       </li>
     {% endfor %}
   </ul>

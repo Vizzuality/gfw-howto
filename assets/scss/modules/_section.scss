@@ -5,6 +5,9 @@
       font-size: 35px;
       font-weight: 300;
       color: $dark;
+      a {
+        color: inherit;
+      }
     }
   }
 }

@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Test fires
-tags: [analyze data]
-categories: [fires]
+tags: [view statistics]
+categories: [climate]
 published: True
 
 ---

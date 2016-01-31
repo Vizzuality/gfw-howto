@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Test commodities
-tags: [suscribe to alerts]
-categories: [commodities]
+tags: [view statistics]
+categories: [climate]
 published: True
 
 ---
