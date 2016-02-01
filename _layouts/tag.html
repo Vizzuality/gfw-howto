@@ -3,6 +3,7 @@ layout: default
 ---
 
 <header class="m-header">
+  {% include breadcrumbs.html %}
   <h2>
     {{page.title | capitalize}}
     <svg class="-{{ page.title | downcase | remove:' ' }}"><use xlink:href="#icon-{{ page.title | downcase | remove:' ' }}"></use></svg>

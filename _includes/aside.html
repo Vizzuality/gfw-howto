@@ -5,7 +5,7 @@
       <li>
         <a href="/themes/{{ tag[0] | slugify }}">
           <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:'_' }}"></use></svg>
-          {{ tag[0] | capitalize }}
+          {{ tag[1].title }}
         </a>
       </li>
     {% endfor %}
@@ -18,8 +18,8 @@
   {% for category in site.categories_info | sort: 'order' %}
     <li>
       <a href="/apps/{{ category[0] | slugify }}">
-        <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:' ' }}"></use></svg>
-        {{ category[0] | capitalize }}
+        <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:'_' }}"></use></svg>
+        {{ category[1].title }}
       </a>
     </li>
   {% endfor %}
