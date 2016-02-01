@@ -158,6 +158,10 @@ button {
     color: #555; }
     .m-section header h2 a {
       color: inherit; }
+  .m-section .m-category-grid > li {
+    display: none; }
+    .m-section .m-category-grid > li.-active {
+      display: block; }
 
 .m-content-grid {
   padding: 50px 0; }

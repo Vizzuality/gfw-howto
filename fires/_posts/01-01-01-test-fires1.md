@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Test Climate 1
+title: Test Fires 1
 order: 1
 published: True
 description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
@@ -9,4 +9,4 @@ categories: [fires]
 
 ---
 
-Climate 1
+Fires 1
