@@ -63,12 +63,12 @@ gulp.task('sass', function () {
 });
 
 gulp.task('js', function(){
-  gulp.src(paths.asset+'/js/*.js')
+  gulp.src([paths.asset+'/js/views/*.js',paths.asset+'/js/router.js', paths.asset+'/js/app.js'])
     .pipe(concat('app.js'))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(gulp.dest('_site/js'))
-    .pipe(browserSync.reload({stream:true}))
-    .pipe(gulp.dest('js'));
+    .pipe(gulp.dest('js'))
+    .pipe(browserSync.reload({stream:true}));
 });
 
 gulp.task('templates', function(){
@@ -100,7 +100,7 @@ gulp.task('bower_install', function() {
 gulp.task('watch', function () {
   gulp.watch([paths.asset+'/scss/*.scss', paths.asset+'/scss/modules/*.scss'], ['sass']);
   gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', 'climate/**/*.md', 'gfw/**/*.md', 'commodities/**/*.md', 'fires/**/*.md'], ['jekyll-rebuild']);
-  gulp.watch([paths.asset+'/js/*.js', paths.asset+'/templates/*.hbs'], ['js']);
+  gulp.watch([paths.asset+'/js/**/*.js', paths.asset+'/templates/*.hbs'], ['js']);
   gulp.watch([paths.asset+'/templates/*.hbs'], ['templates']);
 });
 
