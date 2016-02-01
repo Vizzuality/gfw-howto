@@ -22,3 +22,52 @@ jekyll-archives:
     # day: '/:year/:month/:day/'
     category: '/apps/:name/'
     tag: '/themes/:name/'
+
+categories_info:
+  gfw:
+    order: 1
+    description: Description gfw
+  climate:
+    order: 2
+    description: Description climate
+  fires:
+    order: 3
+    description: Description fires
+  commodities:
+    order: 4
+    description: Description commodities
+
+
+tags_info:
+  visualize_data:
+    order: 1
+    title: Visualize data
+    description: Description visualize_data
+  view_statistics:
+    order: 2
+    title: View statistics
+    description: Description view_statistics
+  analyze_data:
+    order: 3
+    title: Analyze data
+    description: Description analyze_data
+  subscribe_to_alerts:
+    order: 4
+    title: Subscribe to alerts
+    description: Description subscribe_to_alerts
+  submit_a_story:
+    order: 5
+    title: Submit a story
+    description: Description submit_a_story
+  tutorial_videos:
+    order: 6
+    title: Tutorial videos
+    description: Description tutorial_videos
+  webinars:
+    order: 7
+    title: Webinars
+    description: Description webinars
+  training_modules:
+    order: 8
+    title: Training modules
+    description: Description training_modules
