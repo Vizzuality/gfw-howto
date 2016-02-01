@@ -3,6 +3,9 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var uglify      = require('gulp-uglifyjs');
+var handlebars  = require('gulp-handlebars');
+var wrap        = require('gulp-wrap');
+var declare     = require('gulp-declare');
 var concat      = require('gulp-concat');
 var rename      = require('gulp-rename');
 var uglify      = require('gulp-uglify');
@@ -36,7 +39,7 @@ gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
 /**
  * Wait for jekyll-build, then launch the Server
  */
-gulp.task('browser-sync', ['sass', 'jekyll-build', 'js', 'bower_install'], function() {
+gulp.task('browser-sync', ['sass', 'jekyll-build', 'templates', 'js', 'bower_install'], function() {
     browserSync({
         server: {
             baseDir: '_site'
@@ -68,6 +71,20 @@ gulp.task('js', function(){
     .pipe(gulp.dest('js'));
 });
 
+gulp.task('templates', function(){
+  gulp.src(paths.asset+'/templates/*.hbs')
+    .pipe(handlebars())
+    .pipe(wrap('Handlebars.template(<%= contents %>)'))
+    .pipe(declare({
+      namespace: 'HandlebarsTemplates',
+      noRedeclare: true, // Avoid duplicate declarations
+    }))
+    .pipe(concat('templates.js'))
+    .pipe(gulp.dest('_site/js'))
+    .pipe(browserSync.reload({stream:true}))
+    .pipe(gulp.dest('js'));
+});
+
 gulp.task('bower_install', function() {
     return gulp.src(mainBowerFiles(), { base: '/bower_components' })
         .pipe(concat('vendor.js'))
@@ -83,7 +100,8 @@ gulp.task('bower_install', function() {
 gulp.task('watch', function () {
   gulp.watch([paths.asset+'/scss/*.scss', paths.asset+'/scss/modules/*.scss'], ['sass']);
   gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', 'climate/**/*.md', 'gfw/**/*.md', 'commodities/**/*.md', 'fires/**/*.md'], ['jekyll-rebuild']);
-  gulp.watch([paths.asset+'/js/*.js'], ['js']);
+  gulp.watch([paths.asset+'/js/*.js', paths.asset+'/templates/*.hbs'], ['js']);
+  gulp.watch([paths.asset+'/templates/*.hbs'], ['templates']);
 });
 
 /**
