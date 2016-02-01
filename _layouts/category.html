@@ -20,20 +20,19 @@ layout: default
         </header>
         <div class="m-content-grid">
           <ul>
-          {% for posts in tag %}
-            {% for post in posts %}
-              {% if post.categories contains page.title %}
-                <li class="m-content-item">
-                  <a href="{{ post.url }}">
-                    <div class="img"></div>
-                    <div class="content">
-                      <h3>{{ post.title }}</h3>
-                      <p>{{ post.description }}</p>
-                    </div>
-                  </a>
-                </li>
-              {% endif %}
-            {% endfor %}
+          {% assign sorted_posts = site.posts | sort: 'order' %}
+          {% for post in sorted_posts %}
+            {% if post.categories contains page.title and post.tags contains tag[0] %}
+              <li class="m-content-item">
+                <a href="{{ post.url }}">
+                  <div class="img"></div>
+                  <div class="content">
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.description }}</p>
+                  </div>
+                </a>
+              </li>
+            {% endif %}
           {% endfor %}
           </ul>
         </div>

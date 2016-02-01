@@ -5,7 +5,7 @@ layout: default
 <header class="m-header">
   <h2>
     {{page.title | capitalize}}
-    <svg><use xlink:href="#icon-{{ page.title | downcase | remove:' ' }}"></use></svg>
+    <svg class="-{{ page.title | downcase | remove:' ' }}"><use xlink:href="#icon-{{ page.title | downcase | remove:' ' }}"></use></svg>
   </h2>
   <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h3>
@@ -20,20 +20,19 @@ layout: default
         </header>
         <div class="m-content-grid">
           <ul>
-          {% for posts in category %}
-            {% for post in posts %}
-              {% if post.tags contains page.title %}
-                <li class="m-content-item">
-                  <a href="{{ post.url }}">
-                    <div class="img"></div>
-                    <div class="content">
-                      <h3>{{ post.title }}</h3>
-                      <p>{{ post.description }}</p>
-                    </div>
-                  </a>
-                </li>
-              {% endif %}
-            {% endfor %}
+          {% assign sorted_posts = site.posts | sort: 'order' %}
+          {% for post in sorted_posts %}
+            {% if post.categories contains category[0] and post.tags contains page.title %}
+              <li class="m-content-item">
+                <a href="{{ post.url }}">
+                  <div class="img"></div>
+                  <div class="content">
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.description }}</p>
+                  </div>
+                </a>
+              </li>
+            {% endif %}
           {% endfor %}
           </ul>
         </div>
