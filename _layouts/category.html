@@ -4,12 +4,11 @@ layout: default
 
 <header class="m-header">
   {% include breadcrumbs.html %}
-  <h2>
-    {{page.title | capitalize}}
-    <!-- <svg class="-{{ page.title | downcase | remove:' ' }}"><use xlink:href="#icon-{{ page.title | downcase | remove:' ' }}"></use></svg> -->
-  </h2>
-  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</h3>
+
+  {% assign slug = (page.title | downcase )%}
+  {% assign category = site.categories_info[slug] %}
+  <h2>{{category.title}}</h2>
+  <h3>{{category.description}}</h3>
 </header>
 
 <div class="m-section">

@@ -1,15 +1,14 @@
 <div class="m-by-app">
   <!-- Grid -->
   <ul>
-    {% for category in site.categories %}
-      <li class="-{{ category[0] | slugify }}">
-        <a href="/apps/{{ category[0] | slugify }}">
+    {% for category in site.categories_info %}
+      <li class="-{{ category[1].slug }}">
+        <a href="/apps/{{ category[1].slug | slugify }}">
           <h2>
-            {{ category[0] | capitalize }}
-            <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:' ' }}"></use></svg>
+            {{ category[1].title }}
+            <svg><use xlink:href="#icon-{{ category[1].slug | downcase | remove:' ' }}"></use></svg>
           </h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>{{category[1].description}}</p>
         </a>
       </li>
     {% endfor %}

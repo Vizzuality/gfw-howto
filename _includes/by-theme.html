@@ -4,13 +4,12 @@
     <div class="frame js_frame">
       <ul class="slides js_slides">
 
-        {% for tag in site.tags %}
+        {% for tag in site.tags_info %}
           <li class="js_slide">
-            <a href="/themes/{{ tag[0] | slugify }}">
-              <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:' ' }}"></use></svg>
-              <h2>{{ tag[0] | capitalize }}</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="/themes/{{ tag[1].slug | slugify }}">
+              <svg><use xlink:href="#icon-{{ tag[1].slug | downcase | remove:' ' }}"></use></svg>
+              <h2>{{ tag[1].title }}</h2>
+              <p>{{ tag[1].description }}</p>
             </a>
           </li>
         {% endfor %}
