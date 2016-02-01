@@ -1,10 +1,10 @@
 <div class="m-aside">
   <h2>SEARCH BY THEME</h2>
   <ul>
-    {% for tag in site.tags %}
+    {% for tag in site.tags_info %}
       <li>
         <a href="/themes/{{ tag[0] | slugify }}">
-          <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:' ' }}"></use></svg>
+          <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:'_' }}"></use></svg>
           {{ tag[0] | capitalize }}
         </a>
       </li>
@@ -15,7 +15,7 @@
 <div class="m-aside">
   <h2>SEARCH BY APPLICATION</h2>
   <ul>
-  {% for category in site.categories %}
+  {% for category in site.categories_info | sort: 'order' %}
     <li>
       <a href="/apps/{{ category[0] | slugify }}">
         <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:' ' }}"></use></svg>

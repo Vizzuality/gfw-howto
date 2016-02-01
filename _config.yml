@@ -26,16 +26,24 @@ jekyll-archives:
 categories_info:
   gfw:
     order: 1
+    title: Gfw
     description: Description gfw
+    slug: gfw
   climate:
     order: 2
+    title: Climate
     description: Description climate
+    slug: climate
   fires:
     order: 3
+    title: Fires
     description: Description fires
+    slug: fires
   commodities:
     order: 4
+    title: Commodities
     description: Description commodities
+    slug: commodities
 
 
 tags_info:
@@ -43,31 +51,39 @@ tags_info:
     order: 1
     title: Visualize data
     description: Description visualize_data
+    slug: visualize data
   view_statistics:
     order: 2
     title: View statistics
     description: Description view_statistics
+    slug: view statistics
   analyze_data:
     order: 3
     title: Analyze data
     description: Description analyze_data
-  subscribe_to_alerts:
+    slug: analyze data
+  suscribe_to_alerts:
     order: 4
-    title: Subscribe to alerts
-    description: Description subscribe_to_alerts
+    title: Suscribe to alerts
+    description: Description suscribe_to_alerts
+    slug: suscribe to alerts
   submit_a_story:
     order: 5
     title: Submit a story
     description: Description submit_a_story
+    slug: submit a story
   tutorial_videos:
     order: 6
     title: Tutorial videos
     description: Description tutorial_videos
+    slug: tutorial videos
   webinars:
     order: 7
     title: Webinars
     description: Description webinars
+    slug: webinars
   training_modules:
     order: 8
     title: Training modules
     description: Description training_modules
+    slug: training modules
