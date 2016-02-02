@@ -225,6 +225,8 @@ button {
       margin: 0; }
   .m-breadcrumbs a {
     color: #97bd3d; }
+    .m-breadcrumbs a:hover {
+      text-decoration: underline; }
 
 .m-section {
   border-top: 1px solid #E5E5DF; }
@@ -278,6 +280,14 @@ button {
   .m-content-grid .m-content-item p {
     color: #555;
     font-size: 14px; }
+  .m-content-grid .m-content-footer {
+    padding: 30px 0 0; }
+    .m-content-grid .m-content-footer a {
+      text-transform: uppercase;
+      font-size: 11px;
+      color: #97bd3d; }
+      .m-content-grid .m-content-footer a:hover {
+        text-decoration: underline; }
 
 .m-by-theme {
   padding: 50px 0; }
@@ -383,12 +393,20 @@ button {
       position: relative; }
       .m-by-app ul li.-gfw {
         background: #97bd3d; }
+        .m-by-app ul li.-gfw:hover {
+          background: #a2c64e; }
       .m-by-app ul li.-fires {
         background: #ed1846; }
+        .m-by-app ul li.-fires:hover {
+          background: #ef3059; }
       .m-by-app ul li.-commodities {
         background: #e98300; }
+        .m-by-app ul li.-commodities:hover {
+          background: #ff9104; }
       .m-by-app ul li.-climate {
         background: #5b80a0; }
+        .m-by-app ul li.-climate:hover {
+          background: #6a8daa; }
       .m-by-app ul li h2 {
         color: #FFF;
         text-transform: uppercase;
