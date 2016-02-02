@@ -76,7 +76,6 @@
           break;
         }
       }
-      console.log();
     },
 
     // Events

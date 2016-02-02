@@ -1,3 +1,12 @@
+<div id="searchView" class="m-search">
+  <div class="search-container">
+    <svg class="-active -search"><use xlink:href="#icon-search"></use></svg>
+    <svg id="search-close" class="-cross"><use xlink:href="#icon-cross"></use></svg>
+    <input id="search-input" type="text" placeholder="Search">
+  </div>
+  <ul id="search-results" class="search-results"></ul>
+</div>
+
 <div class="m-aside">
   <h2>SEARCH BY THEME</h2>
   <ul>
@@ -17,7 +26,7 @@
   <ul>
   {% for category in site.categories_info | sort: 'order' %}
     <li>
-      <a href="/apps/{{ category[0] | slugify }}">
+      <a class="{{ category[0] | slugify }}" href="/apps/{{ category[0] | slugify }}">
         <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:'_' }}"></use></svg>
         {{ category[1].title }}
       </a>

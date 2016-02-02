@@ -26,6 +26,7 @@
 
     initialize: function() {
       this.router = new root.app.Router();
+      this.setGlobalViews();
       this.setListeners();
     },
 
@@ -40,6 +41,10 @@
     homePage: function() {
       this.sliderView = new root.app.View.SliderView();
     },
+
+    setGlobalViews: function() {
+      this.searchView = new root.app.View.SearchView();
+    }
 
   });
 
