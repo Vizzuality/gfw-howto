@@ -325,6 +325,8 @@ button {
             color: #555;
             max-width: 75%;
             white-space: normal; }
+          .m-by-theme .m-slider ul li a:hover h2 {
+            text-decoration: underline; }
   .m-by-theme .m-slider-navigation {
     padding: 50px 0 0; }
     .m-by-theme .m-slider-navigation ul {
@@ -355,11 +357,13 @@ button {
       border: 2px solid #97bd3d; }
       .m-by-theme .m-slider-navigation .item.-active {
         color: #b6b6ba;
-        border-color: #b6b6ba; }
+        border-color: #b6b6ba;
+        cursor: default;
+        pointer-events: none; }
       .m-by-theme .m-slider-navigation .item.-arrow {
         border: none; }
         .m-by-theme .m-slider-navigation .item.-arrow svg {
-          fill: #97bd3d;
+          fill: #b6b6ba;
           display: block;
           width: 28px;
           height: 28px;
@@ -368,6 +372,13 @@ button {
           left: 50%;
           -webkit-transform: translate(-50%, -50%);
                   transform: translate(-50%, -50%); }
+        .m-by-theme .m-slider-navigation .item.-arrow:hover {
+          background: none; }
+          .m-by-theme .m-slider-navigation .item.-arrow:hover svg {
+            fill: #97bd3d; }
+      .m-by-theme .m-slider-navigation .item:hover {
+        color: #FFF;
+        background: #97bd3d; }
     .m-by-theme .m-slider-navigation button {
       position: absolute;
       border: none; }

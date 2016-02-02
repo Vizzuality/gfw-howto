@@ -47,6 +47,12 @@
             max-width: 75%;
             white-space: normal;
           }
+
+          &:hover {
+            h2 {
+              text-decoration: underline;
+            }
+          }
         }
       }
     }
@@ -84,12 +90,14 @@
       &.-active {
         color: $light;
         border-color: $light;
+        cursor: default;
+        pointer-events: none;
       }
 
       &.-arrow {
         border: none;
         svg {
-          fill: $primary-color;
+          fill: $light;
           display: block;
           width: 28px;
           height: 28px;
@@ -98,7 +106,21 @@
           left: 50%;
           transform: translate(-50%,-50%);
         }
+
+        &:hover {
+          background: none;
+          svg {
+            fill: $primary-color;
+          }
+        }
       }
+
+      &:hover {
+        color: $white;
+        background: $primary-color;
+      }
+
+
     }
 
     button {
