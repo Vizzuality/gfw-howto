@@ -52,12 +52,12 @@ tags_info:
   visualize_data:
     order: 1
     title: Visualize data
-    description: "Description visualize_data"
+    description: "Some data are produced directly by WRI and our partners, such as FORMA alerts, Intact Forest Landscapes, and some forest use data."
     slug: visualize data
   view_statistics:
     order: 2
     title: View statistics
-    description: "Description view_statistics"
+    description: "These courses are designed to provide an in-depth understanding of the ways can support a variety of professional."
     slug: view statistics
   analyze_data:
     order: 3
