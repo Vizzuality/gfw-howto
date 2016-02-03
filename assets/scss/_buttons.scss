@@ -1,0 +1,46 @@
+%reset-btn {
+  -webkit-appearance: none;
+  border: 1px solid transparent;
+  background: none;
+  outline: none;
+  box-shadow: none;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: "Fira Sans";
+}
+
+// Btn
+.btn {
+  @extend %reset-btn;
+  background: $border1;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  padding: 0px 12px;
+  border-radius: 40px;
+  font-size: 14px;
+  text-decoration: none;
+  height: 36px;
+  line-height: 36px;
+  text-align: center;
+  font-weight: 500;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: $dark;
+  background: $white;
+  border-color: $primary-color;
+
+  transition: background .15s linear;
+
+  &:hover {
+    background: darken($white,5%);
+    text-decoration: none !important;
+  }
+
+  &.disabled{
+    opacity: 0.25;
+    cursor: default;
+  }
+}
+
