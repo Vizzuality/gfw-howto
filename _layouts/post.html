@@ -12,3 +12,36 @@ layout: default
 <section class="m-post">
   {{ content }}
 </section>
+
+<section class="m-section">
+  <header>
+    <h2>May you find this interesting</h2>
+  </header>
+
+  <div class="m-content-grid">
+    <ul>
+      {% if page.previous.url %}
+      <li class="m-content-item">
+        <a href="{{page.previous.url}}">
+          <div class="img"></div>
+          <div class="content">
+            <h3>{{page.previous.title}}</h3>
+            <p>{{page.previous.description}}</p>
+          </div>
+        </a>
+      </li>
+      {% endif %}
+      {% if page.next.url %}
+      <li class="m-content-item">
+        <a href="{{page.next.url}}">
+          <div class="img"></div>
+          <div class="content">
+            <h3>{{page.next.title}}</h3>
+            <p>{{page.next.description}}</p>
+          </div>
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</section>

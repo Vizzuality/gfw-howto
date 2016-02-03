@@ -328,7 +328,7 @@ button {
         text-decoration: underline; }
 
 .m-post {
-  padding: 0;
+  padding: 0 0 50px;
   font-size: 14px; }
   .m-post > * {
     padding-top: 20px; }
