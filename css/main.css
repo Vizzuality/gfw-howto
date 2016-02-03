@@ -332,6 +332,48 @@ button {
       .m-content-grid .m-content-footer a:hover {
         text-decoration: underline; }
 
+.m-blog ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .m-blog ul li {
+    position: relative;
+    width: 50%;
+    border-left: 1px solid #E5E5DF; }
+    .m-blog ul li:first-child {
+      border-left: none; }
+    .m-blog ul li a {
+      color: #555; }
+      .m-blog ul li a:hover {
+        text-decoration: underline; }
+    .m-blog ul li .img {
+      padding-bottom: 270px;
+      background: #555;
+      background-repeat: no-repeat; }
+      .m-blog ul li .img.-feature-posts {
+        background: url("/assets/images/categories/feature-posts.png") center;
+        background-size: cover; }
+      .m-blog ul li .img.-guest-post {
+        background: url("/assets/images/categories/guest-post.png") center;
+        background-size: cover; }
+      .m-blog ul li .img.-zooming-in {
+        background: url("/assets/images/categories/zooming-in.png") center;
+        background-size: cover; }
+      .m-blog ul li .img.-updates {
+        background: url("/assets/images/categories/updates.png") center;
+        background-size: cover; }
+      .m-blog ul li .img.-map-of-the-week {
+        background: url("/assets/images/categories/map-of-the-week.png") center;
+        background-size: cover; }
+    .m-blog ul li h3 {
+      font-size: 21px;
+      text-transform: uppercase;
+      padding: 50px;
+      line-height: 1.25; }
+
 .m-post {
   padding: 0 0 50px;
   font-size: 14px; }
@@ -438,7 +480,8 @@ button {
       display: inline-block; }
       .m-by-theme .m-slider ul li {
         position: relative;
-        display: inline-block; }
+        display: inline-block;
+        vertical-align: top; }
         .m-by-theme .m-slider ul li a {
           display: block; }
           .m-by-theme .m-slider ul li a > * {

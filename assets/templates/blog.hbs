@@ -1,0 +1,10 @@
+<ul>
+  {{#each blogposts}}
+    <li>
+      <a href="{{this.link}}" target="_blank">
+        <div class="img -{{this.categories}}"></div>
+        <h3>{{this.title}}</h3>
+      </a>
+    </li>
+  {{/each}}
+</ul>
