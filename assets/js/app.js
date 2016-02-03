@@ -32,6 +32,7 @@
 
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
+      this.listenTo(this.router, 'route:post', this.postPage);
     },
 
     start: function() {
@@ -40,6 +41,10 @@
 
     homePage: function() {
       this.sliderView = new root.app.View.SliderView();
+    },
+
+    postPage: function() {
+      this.toggleView = new root.app.View.ToggleView();
     },
 
     setGlobalViews: function() {

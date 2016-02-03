@@ -1,11 +1,14 @@
 .m-post {
   padding: 0 0 50px;
   font-size: 14px;
-  > * {
-    padding-top: 20px;
+  .content {
+    display: none;
+    > * {
+      padding-top: 20px;
 
-    &:first-child {
-      padding-top: 0;
+      &:first-child {
+        padding-top: 0;
+      }
     }
   }
 

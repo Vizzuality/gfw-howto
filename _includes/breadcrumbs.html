@@ -7,6 +7,15 @@
     <a href="/themes/{{page.tags[0] | slugify}}">{{page.tags}}</a>
     <span>/</span>
     <span>{{page.title | capitalize}}</span>
+
+    {% if page.mobile %}
+      <div id="toggleView" class="m-toggle-howto">
+        <div class="skitter"></div>
+        <span class="choice -active" data-toggle="desktop">HOW TO: DESKTOP</span>
+        <span class="choice" data-toggle="mobile">HOW TO: MOBILE</span>
+      </div>
+    {% endif %}
+
   </div>
 {% else %}
   <div class="m-breadcrumbs">

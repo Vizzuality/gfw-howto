@@ -8,6 +8,7 @@
 
     routes: {
       '': 'home',
+      'gfw/:id' : 'post'
     },
 
     ParamsModel: Backbone.Model.extend({}),

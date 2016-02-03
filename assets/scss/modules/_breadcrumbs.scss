@@ -1,7 +1,9 @@
 .m-breadcrumbs {
+  position: relative;
   display: flex;
   text-transform: uppercase;
   font-size: 11px;
+  margin: 0 0 10px;
 
   > * {
     margin: 0 0 0 5px;
