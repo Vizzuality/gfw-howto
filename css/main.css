@@ -263,7 +263,9 @@ button {
   .m-search .search-results.-active {
     display: block; }
   .m-search .search-results li {
-    font-size: 14px; }
+    font-size: 14px;
+    line-height: 1.25;
+    margin: 5px 0 0; }
     .m-search .search-results li.-highlight a {
       color: #97bd3d; }
     .m-search .search-results li a {
@@ -319,7 +321,8 @@ button {
     text-transform: uppercase;
     font-size: 21px;
     position: relative;
-    margin: 0 0 20px; }
+    margin: 0 0 20px;
+    line-height: 1.25; }
   .m-content-grid .m-content-item p {
     color: #555;
     font-size: 14px; }
