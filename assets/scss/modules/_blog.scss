@@ -25,27 +25,37 @@
         background-repeat: no-repeat;
 
         &.-feature-posts {
-          background: url('/assets/images/categories/feature-posts.png') center;
+          background: url('/assets/images/categories/feature-posts.jpg') center;
           background-size: cover;
         }
 
         &.-guest-post {
-          background: url('/assets/images/categories/guest-post.png') center;
+          background: url('/assets/images/categories/guest-post.jpg') center;
           background-size: cover;
         }
 
         &.-zooming-in {
-          background: url('/assets/images/categories/zooming-in.png') center;
+          background: url('/assets/images/categories/zooming-in.jpg') center;
           background-size: cover;
         }
 
         &.-updates {
-          background: url('/assets/images/categories/updates.png') center;
+          background: url('/assets/images/categories/updates.jpg') center;
           background-size: cover;
         }
 
         &.-map-of-the-week {
-          background: url('/assets/images/categories/map-of-the-week.png') center;
+          background: url('/assets/images/categories/map-of-the-week.jpg') center;
+          background-size: cover;
+        }
+
+        &.-news-roundups {
+          background: url('/assets/images/categories/news-roundups.jpg') center;
+          background-size: cover;
+        }
+
+        &.-gfw-user-profile {
+          background: url('/assets/images/categories/gfw-user-profile.jpg') center;
           background-size: cover;
         }
       }
