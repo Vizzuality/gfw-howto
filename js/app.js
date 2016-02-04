@@ -152,7 +152,7 @@
 
   // Model for getting the data
   root.app.Collection.SearchCollection = Backbone.Collection.extend({
-    url: '/json/search.json'
+    url: '/gfw-howto/json/search.json'
   });
 
   // View for display results

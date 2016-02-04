@@ -78,7 +78,7 @@ button {
   text-indent: -9999px;
   width: 90px;
   height: 90px;
-  background-image: url("/assets/images/logo.png"); }
+  background-image: url("/gfw-howto/assets/images/logo.png"); }
   .l-logo a {
     display: block;
     width: 100%;
@@ -359,25 +359,25 @@ button {
       background: #555;
       background-repeat: no-repeat; }
       .m-blog ul li .img.-feature-posts {
-        background: url("/assets/images/categories/feature-posts.jpg") center;
+        background: url("/gfw-howto/assets/images/categories/feature-posts.jpg") center;
         background-size: cover; }
       .m-blog ul li .img.-guest-post {
-        background: url("/assets/images/categories/guest-post.jpg") center;
+        background: url("/gfw-howto/assets/images/categories/guest-post.jpg") center;
         background-size: cover; }
       .m-blog ul li .img.-zooming-in {
-        background: url("/assets/images/categories/zooming-in.jpg") center;
+        background: url("/gfw-howto/assets/images/categories/zooming-in.jpg") center;
         background-size: cover; }
       .m-blog ul li .img.-updates {
-        background: url("/assets/images/categories/updates.jpg") center;
+        background: url("/gfw-howto/assets/images/categories/updates.jpg") center;
         background-size: cover; }
       .m-blog ul li .img.-map-of-the-week {
-        background: url("/assets/images/categories/map-of-the-week.jpg") center;
+        background: url("/gfw-howto/assets/images/categories/map-of-the-week.jpg") center;
         background-size: cover; }
       .m-blog ul li .img.-news-roundups {
-        background: url("/assets/images/categories/news-roundups.jpg") center;
+        background: url("/gfw-howto/assets/images/categories/news-roundups.jpg") center;
         background-size: cover; }
       .m-blog ul li .img.-gfw-user-profile {
-        background: url("/assets/images/categories/gfw-user-profile.jpg") center;
+        background: url("/gfw-howto/assets/images/categories/gfw-user-profile.jpg") center;
         background-size: cover; }
     .m-blog ul li h3 {
       font-size: 21px;
