@@ -12,14 +12,14 @@
   <ul>
     {% for tag in site.tags_info %}
       <li>
-        <a id="aside-{{ tag[0] | slugify }}" href="{{site.baseUrl}}/themes/{{ tag[0] | slugify }}">
+        <a id="aside-{{ tag[0] | slugify }}" href="{{site.baseurl}}/themes/{{ tag[0] | slugify }}">
           <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:'_' }}"></use></svg>
           {{ tag[1].title }}
         </a>
       </li>
     {% endfor %}
       <li>
-        <a id="aside-faqs" href="{{site.baseUrl}}/faqs">
+        <a id="aside-faqs" href="{{site.baseurl}}/faqs">
           <svg><use xlink:href="#icon-faqs"></use></svg>
           FAQ's
         </a>
@@ -32,7 +32,7 @@
   <ul>
   {% for category in site.categories_info | sort: 'order' %}
     <li>
-      <a id="aside-{{ category[0] | slugify }}" class="{{ category[0] | slugify }}" href="{{site.baseUrl}}/apps/{{ category[0] | slugify }}">
+      <a id="aside-{{ category[0] | slugify }}" class="{{ category[0] | slugify }}" href="{{site.baseurl}}/apps/{{ category[0] | slugify }}">
         <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:'_' }}"></use></svg>
         {{ category[1].title }}
       </a>

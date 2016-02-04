@@ -1,7 +1,9 @@
 name: How to portal
 permalink: none
 
-url: http://localhost:3000/
+baseurl: "/gfw-style-guides" # the subpath of your site, e.g. /blog/
+url: "http://vizzuality.github.io/" # the base hostname & protocol for your site
+
 
 gems:
   - jekyll-archives

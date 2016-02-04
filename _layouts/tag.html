@@ -19,7 +19,7 @@ layout: default
     {% for category in site.categories_info %}
       <li class="{% for post in sorted_posts %}{% if post.categories contains category[1].slug and post.tags contains page.title %}-active {% endif %}{% endfor %}">
         <header>
-          <h2><a href="{{site.baseUrl}}/apps/{{ category[0] | slugify }}">{{ category[1].title }}</a></h2>
+          <h2><a href="{{site.baseurl}}/apps/{{ category[0] | slugify }}">{{ category[1].title }}</a></h2>
         </header>
         <div class="m-content-grid">
           <ul>
@@ -38,7 +38,7 @@ layout: default
           {% endfor %}
           </ul>
           <div class="m-content-footer">
-            <a href="{{site.baseUrl}}/apps/{{category[1].slug}}">Every {{category[1].title}} contents ></a>
+            <a href="{{site.baseurl}}/apps/{{category[1].slug}}">Every {{category[1].title}} contents ></a>
           </div>
         </div>
       </li>
