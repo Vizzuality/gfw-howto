@@ -9,6 +9,8 @@
     routes: {
       // HOME
       '': 'home',
+      // HOME
+      'faqs(/)': 'faqs',
       // APP
       'apps/:id(/)': 'category',
       //THEME

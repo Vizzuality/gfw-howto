@@ -32,6 +32,7 @@
 
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
+      this.listenTo(this.router, 'route:faqs', this.faqsPage);
       this.listenTo(this.router, 'route:category', this.appPage);
       this.listenTo(this.router, 'route:tag', this.themePage);
       this.listenTo(this.router, 'route:post', this.postPage);
@@ -43,6 +44,10 @@
 
     homePage: function() {
       this.sliderView = new root.app.View.SliderView();
+    },
+
+    faqsPage: function() {
+      this.faqsView = new root.app.View.FaqsView();
     },
 
     appPage: function(id) {

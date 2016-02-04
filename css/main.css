@@ -385,6 +385,91 @@ button {
       padding: 50px;
       line-height: 1.25; }
 
+.m-faqs {
+  padding: 0 0 50px; }
+
+.m-faqs-list > li {
+  border-top: 1px solid #E5E5DF; }
+  .m-faqs-list > li h3 {
+    position: relative;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 15px 0;
+    font-weight: 500;
+    font-size: 13px; }
+    .m-faqs-list > li h3 .arrow {
+      position: absolute;
+      display: block;
+      width: 60px;
+      height: 50%;
+      border-left: 1px solid #E5E5DF;
+      top: 50%;
+      right: 0;
+      -webkit-transform: translate(0, -50%);
+              transform: translate(0, -50%); }
+      .m-faqs-list > li h3 .arrow svg {
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%); }
+  .m-faqs-list > li .content {
+    display: none; }
+  .m-faqs-list > li.-selected h3 {
+    color: #97bd3d; }
+    .m-faqs-list > li.-selected h3 .arrow svg {
+      -webkit-transform: translate(-50%, -60%) rotate(180deg);
+              transform: translate(-50%, -60%) rotate(180deg); }
+  .m-faqs-list > li.-selected .content {
+    display: block; }
+
+.m-faqs-content {
+  padding: 10px 10px 40px; }
+  .m-faqs-content > * {
+    padding-top: 20px; }
+    .m-faqs-content > *:first-child {
+      padding-top: 0; }
+  .m-faqs-content a:not(.btn) {
+    color: #97bd3d; }
+    .m-faqs-content a:not(.btn):hover {
+      text-decoration: underline; }
+  .m-faqs-content h3 {
+    font-size: 16px;
+    font-weight: 500; }
+  .m-faqs-content ul {
+    list-style-type: disc;
+    color: #555; }
+    .m-faqs-content ul > li {
+      list-style-type: disc;
+      padding: 10px 0 0;
+      margin-left: 20px;
+      line-height: 1.25; }
+      .m-faqs-content ul > li:first-child {
+        padding: 0; }
+  .m-faqs-content ol {
+    counter-reset: mycounter; }
+    .m-faqs-content ol li {
+      margin-top: 20px;
+      padding-left: 15px;
+      position: relative; }
+      .m-faqs-content ol li:first-child {
+        margin-top: 0; }
+      .m-faqs-content ol li:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        margin: 0 5px 0 0;
+        content: counter(mycounter) ".";
+        counter-increment: mycounter; }
+      .m-faqs-content ol li > * {
+        margin-top: 10px; }
+  .m-faqs-content img {
+    display: block;
+    max-width: 100%; }
+
 .m-post {
   padding: 0 0 50px;
   font-size: 14px; }

@@ -10,6 +10,7 @@ var concat      = require('gulp-concat');
 var rename      = require('gulp-rename');
 var uglify      = require('gulp-uglify');
 var cp          = require('child_process');
+var deploy      = require("gulp-gh-pages");
 var mainBowerFiles = require('main-bower-files');
 var paths = {
   asset   : './assets',
@@ -99,7 +100,7 @@ gulp.task('bower_install', function() {
  */
 gulp.task('watch', function () {
   gulp.watch([paths.asset+'/scss/*.scss', paths.asset+'/scss/modules/*.scss'], ['sass']);
-  gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', 'climate/**/*.md', 'gfw/**/*.md', 'commodities/**/*.md', 'fires/**/*.md'], ['jekyll-rebuild']);
+  gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', 'climate/**/*.md', 'gfw/**/*.md', 'commodities/**/*.md', 'fires/**/*.md', 'faqs/**/*'], ['jekyll-rebuild']);
   gulp.watch([paths.asset+'/js/**/*.js', paths.asset+'/templates/*.hbs'], ['js']);
   gulp.watch([paths.asset+'/templates/*.hbs'], ['templates']);
 });
@@ -109,3 +110,8 @@ gulp.task('watch', function () {
  * compile the jekyll site, launch BrowserSync & watch files.
  */
 gulp.task('default', ['browser-sync', 'watch']);
+
+gulp.task("deploy", ["jekyll-build"], function () {
+    return gulp.src("./_site/**/*")
+        .pipe(deploy());
+});

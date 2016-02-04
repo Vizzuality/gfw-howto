@@ -103,6 +103,51 @@
 
   root.app = root.app || {};
   root.app.View = root.app.View || {};
+  root.app.Model = root.app.Model || {};
+
+  // View for display results
+  root.app.View.FaqsView = Backbone.View.extend({
+
+    el: '#faqsView',
+
+    events: {
+      'click .toggle' : 'toggleFaq'
+    },
+
+    model: new (Backbone.Model.extend({})),
+
+    initialize: function(settings) {
+      var opts = settings && settings.options ? settings.options : {};
+      this.options = _.extend({}, this.defaults, opts);
+      this.model.set(this.options.model);
+      this.cache();
+    },
+
+    cache: function() {
+      this.$listItems = $('.m-faqs-list li');
+    },
+
+    toggleFaq: function(e) {
+      var $parent = $(e.currentTarget).parent();
+
+      if ($parent.hasClass('-selected')) {
+        this.$listItems.removeClass('-selected');
+      } else {
+        this.$listItems.removeClass('-selected');
+        $parent.addClass('-selected');
+      }
+    }
+
+  });
+
+})(this);
+
+(function(root) {
+
+  'use strict';
+
+  root.app = root.app || {};
+  root.app.View = root.app.View || {};
   root.app.Collection = root.app.Collection || {};
 
   // Model for getting the data
@@ -400,6 +445,8 @@
     routes: {
       // HOME
       '': 'home',
+      // HOME
+      'faqs(/)': 'faqs',
       // APP
       'apps/:id(/)': 'category',
       //THEME
@@ -545,6 +592,7 @@
 
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
+      this.listenTo(this.router, 'route:faqs', this.faqsPage);
       this.listenTo(this.router, 'route:category', this.appPage);
       this.listenTo(this.router, 'route:tag', this.themePage);
       this.listenTo(this.router, 'route:post', this.postPage);
@@ -556,6 +604,10 @@
 
     homePage: function() {
       this.sliderView = new root.app.View.SliderView();
+    },
+
+    faqsPage: function() {
+      this.faqsView = new root.app.View.FaqsView();
     },
 
     appPage: function(id) {
