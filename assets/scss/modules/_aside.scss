@@ -24,15 +24,15 @@
         color: $dark;
         padding: 5px 0 5px 28px;
 
-        &:hover {
+        &:hover, &.-active {
           color: $primary-color;
           svg {
             fill: $primary-color;
           }
         }
 
-        &.fires{
-          &:hover {
+        &.fires {
+          &:hover, &.-active {
             color: $red;
             svg {
               fill: $red;
@@ -40,8 +40,8 @@
           }
         }
 
-        &.commodities{
-          &:hover {
+        &.commodities {
+          &:hover, &.-active {
             color: $orange;
             svg {
               fill: $orange;
@@ -49,8 +49,8 @@
           }
         }
 
-        &.climate{
-          &:hover {
+        &.climate {
+          &:hover, &.-active {
             color: $blue;
             svg {
               fill: $blue;

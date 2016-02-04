@@ -27,11 +27,8 @@
 
       this.cache();
 
-      this.model.fetch({
-        parse: true
-      }).success(function(data){
+      this.model.fetch().success(function(data){
         this.render();
-        console.log(data);
       }.bind(this));
     },
 

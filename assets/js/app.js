@@ -32,6 +32,8 @@
 
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
+      this.listenTo(this.router, 'route:category', this.appPage);
+      this.listenTo(this.router, 'route:tag', this.themePage);
       this.listenTo(this.router, 'route:post', this.postPage);
     },
 
@@ -41,6 +43,26 @@
 
     homePage: function() {
       this.sliderView = new root.app.View.SliderView();
+    },
+
+    appPage: function(id) {
+      this.asideView = new root.app.View.AsideView({
+        options: {
+          model: {
+            id: id
+          }
+        }
+      });
+    },
+
+    themePage: function(id) {
+      this.asideView = new root.app.View.AsideView({
+        options: {
+          model: {
+            id: id
+          }
+        }
+      });
     },
 
     postPage: function() {

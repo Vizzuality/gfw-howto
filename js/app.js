@@ -7,6 +7,39 @@
   root.app.Model = root.app.Model || {};
 
   // View for display results
+  root.app.View.AsideView = Backbone.View.extend({
+
+    el: '#asideView',
+
+    model: new (Backbone.Model.extend({})),
+
+    initialize: function(settings) {
+      var opts = settings && settings.options ? settings.options : {};
+      this.options = _.extend({}, this.defaults, opts);
+      this.model.set(this.options.model);
+      this.cache();
+      this.highlight();
+    },
+
+    cache: function() {
+    },
+
+    highlight: function() {
+      this.$el.find('#aside-'+this.model.get('id')).addClass('-active');
+    }
+  });
+
+})(this);
+
+(function(root) {
+
+  'use strict';
+
+  root.app = root.app || {};
+  root.app.View = root.app.View || {};
+  root.app.Model = root.app.Model || {};
+
+  // View for display results
   root.app.View.BlogView = Backbone.View.extend({
 
     el: '#blogView',
@@ -27,11 +60,8 @@
 
       this.cache();
 
-      this.model.fetch({
-        parse: true
-      }).success(function(data){
+      this.model.fetch().success(function(data){
         this.render();
-        console.log(data);
       }.bind(this));
     },
 
@@ -368,8 +398,18 @@
   root.app.Router = Backbone.Router.extend({
 
     routes: {
+      // HOME
       '': 'home',
-      'gfw/:id' : 'post'
+      // APP
+      'apps/:id(/)': 'category',
+      //THEME
+      'themes/:id(/)': 'tag',
+      // POST
+      'gfw/:id' : 'post',
+      'climate/:id' : 'post',
+      'fires/:id' : 'post',
+      'commodities/:id' : 'post',
+
     },
 
     ParamsModel: Backbone.Model.extend({}),
@@ -505,6 +545,8 @@
 
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
+      this.listenTo(this.router, 'route:category', this.appPage);
+      this.listenTo(this.router, 'route:tag', this.themePage);
       this.listenTo(this.router, 'route:post', this.postPage);
     },
 
@@ -514,6 +556,26 @@
 
     homePage: function() {
       this.sliderView = new root.app.View.SliderView();
+    },
+
+    appPage: function(id) {
+      this.asideView = new root.app.View.AsideView({
+        options: {
+          model: {
+            id: id
+          }
+        }
+      });
+    },
+
+    themePage: function(id) {
+      this.asideView = new root.app.View.AsideView({
+        options: {
+          model: {
+            id: id
+          }
+        }
+      });
     },
 
     postPage: function() {

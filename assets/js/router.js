@@ -7,8 +7,18 @@
   root.app.Router = Backbone.Router.extend({
 
     routes: {
+      // HOME
       '': 'home',
-      'gfw/:id' : 'post'
+      // APP
+      'apps/:id(/)': 'category',
+      //THEME
+      'themes/:id(/)': 'tag',
+      // POST
+      'gfw/:id' : 'post',
+      'climate/:id' : 'post',
+      'fires/:id' : 'post',
+      'commodities/:id' : 'post',
+
     },
 
     ParamsModel: Backbone.Model.extend({}),
