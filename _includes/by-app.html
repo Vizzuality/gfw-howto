@@ -3,7 +3,7 @@
   <ul>
     {% for category in site.categories_info %}
       <li class="-{{ category[1].slug }}">
-        <a href="/apps/{{ category[1].slug | slugify }}">
+        <a href="{{site.baseUrl}}/apps/{{ category[1].slug | slugify }}">
           <h2>
             {{ category[1].title }}
             <svg><use xlink:href="#icon-{{ category[1].slug | downcase | remove:' ' }}"></use></svg>
