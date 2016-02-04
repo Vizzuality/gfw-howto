@@ -25,7 +25,7 @@
   text-indent: -9999px;
   width: 90px;
   height: 90px;
-  background-image: url('/gfw-howto/assets/images/logo.png');
+  background-image: url($baseurl + '/assets/images/logo.png');
   a {
     display: block;
     width: 100%;

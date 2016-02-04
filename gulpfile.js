@@ -1,6 +1,7 @@
 var gulp        = require('gulp');
 var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
+var preprocess  = require('gulp-preprocess');
 var prefix      = require('gulp-autoprefixer');
 var uglify      = require('gulp-uglifyjs');
 var handlebars  = require('gulp-handlebars');
@@ -26,9 +27,19 @@ var messages = {
  */
 gulp.task('jekyll-build', function (done) {
     browserSync.notify(messages.jekyllBuild);
-    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+    return cp.spawn('jekyll', ['build', '--config', '_config.yml,_config_dev.yml'], {stdio: 'inherit'})
         .on('close', done);
 });
+
+/**
+ * Build the Jekyll Site for production
+ */
+gulp.task('jekyll-build-prod', [], function (done) {
+    browserSync.notify(messages.jekyllBuild);
+    return cp.spawn('jekyll', ['build'], {stdio: 'inherit'})
+        .on('close', done);
+});
+
 
 /**
  * Rebuild Jekyll & do page reload
@@ -57,6 +68,23 @@ gulp.task('sass', function () {
             includePaths: ['scss'],
             onError: browserSync.notify
         }))
+        .pipe(preprocess({context: {BASEURL: ''}}))
+        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(gulp.dest('_site/css'))
+        .pipe(browserSync.reload({stream:true}))
+        .pipe(gulp.dest('css'));
+});
+
+/**
+ * Compile files from _scss into both _site/css (for live injecting) and site (for future jekyll builds)
+ */
+gulp.task('sass-prod', function () {
+    return gulp.src(paths.asset+'/scss/main.scss')
+        .pipe(sass({
+            includePaths: ['scss'],
+            onError: browserSync.notify
+        }))
+        .pipe(preprocess({context: {BASEURL: '/gfw-howto'}}))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('_site/css'))
         .pipe(browserSync.reload({stream:true}))
@@ -111,7 +139,9 @@ gulp.task('watch', function () {
  */
 gulp.task('default', ['browser-sync', 'watch']);
 
-gulp.task("deploy", ["jekyll-build"], function () {
+gulp.task("deploy", ["sass-prod", "jekyll-build-prod"], function () {
     return gulp.src("./_site/**/*")
         .pipe(deploy());
 });
+
+

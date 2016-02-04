@@ -8,18 +8,18 @@
 
     routes: {
       // HOME
-      'gfw-howto(/)': 'home',
+      '': 'home',
       // HOME
-      'gfw-howto/faqs(/)': 'faqs',
+      'faqs(/)': 'faqs',
       // APP
-      'gfw-howto/apps/:id(/)': 'category',
+      'apps/:id(/)': 'category',
       //THEME
-      'gfw-howto/themes/:id(/)': 'tag',
+      'themes/:id(/)': 'tag',
       // POST
-      'gfw-howto/gfw/:id' : 'post',
-      'gfw-howto/climate/:id' : 'post',
-      'gfw-howto/fires/:id' : 'post',
-      'gfw-howto/commodities/:id' : 'post',
+      'gfw/:id' : 'post',
+      'climate/:id' : 'post',
+      'fires/:id' : 'post',
+      'commodities/:id' : 'post',
 
     },
 

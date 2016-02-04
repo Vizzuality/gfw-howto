@@ -1,6 +1,6 @@
 {% if page.layout == 'post' %}
   <div class="m-breadcrumbs">
-    <a href="{{site.url}}">How to</a>
+    <a href="{{site.baseurl}}">How to</a>
     <span>/</span>
     <a href="{{site.baseurl}}/apps/{{page.categories[0] | slugify}}">{{page.categories}}</a>
     <span>/</span>
@@ -19,6 +19,6 @@
   </div>
 {% else %}
   <div class="m-breadcrumbs">
-    <a href="{{site.url}}">How to</a> <span>/</span> <span>{{page.title | capitalize}}</span>
+    <a href="{{site.baseurl}}">How to</a> <span>/</span> <span>{{page.title | capitalize}}</span>
   </div>
 {% endif %}

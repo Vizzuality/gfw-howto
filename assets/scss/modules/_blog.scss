@@ -25,37 +25,37 @@
         background-repeat: no-repeat;
 
         &.-feature-posts {
-          background: url('/gfw-howto/assets/images/categories/feature-posts.jpg') center;
+          background: url($baseurl + '/assets/images/categories/feature-posts.jpg') center;
           background-size: cover;
         }
 
         &.-guest-post {
-          background: url('/gfw-howto/assets/images/categories/guest-post.jpg') center;
+          background: url($baseurl + '/assets/images/categories/guest-post.jpg') center;
           background-size: cover;
         }
 
         &.-zooming-in {
-          background: url('/gfw-howto/assets/images/categories/zooming-in.jpg') center;
+          background: url($baseurl + '/assets/images/categories/zooming-in.jpg') center;
           background-size: cover;
         }
 
         &.-updates {
-          background: url('/gfw-howto/assets/images/categories/updates.jpg') center;
+          background: url($baseurl + '/assets/images/categories/updates.jpg') center;
           background-size: cover;
         }
 
         &.-map-of-the-week {
-          background: url('/gfw-howto/assets/images/categories/map-of-the-week.jpg') center;
+          background: url($baseurl + '/assets/images/categories/map-of-the-week.jpg') center;
           background-size: cover;
         }
 
         &.-news-roundups {
-          background: url('/gfw-howto/assets/images/categories/news-roundups.jpg') center;
+          background: url($baseurl + '/assets/images/categories/news-roundups.jpg') center;
           background-size: cover;
         }
 
         &.-gfw-user-profile {
-          background: url('/gfw-howto/assets/images/categories/gfw-user-profile.jpg') center;
+          background: url($baseurl + '/assets/images/categories/gfw-user-profile.jpg') center;
           background-size: cover;
         }
       }
