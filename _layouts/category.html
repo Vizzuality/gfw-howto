@@ -25,7 +25,7 @@ layout: default
           {% for post in sorted_posts %}
             {% if post.categories contains page.title and post.tags contains tag[1].slug %}
               <li class="m-content-item">
-                <a href="{{ post.url }}">
+                <a href="{{site.baseurl}}{{ post.url }}">
                   <div class="img"></div>
                   <div class="content">
                     <h3>{{ post.title }}</h3>

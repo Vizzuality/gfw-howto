@@ -23,7 +23,7 @@ layout: default
     <ul>
       {% if page.previous.url %}
       <li class="m-content-item">
-        <a href="{{page.previous.url}}">
+        <a href="{{site.baseurl}}{{page.previous.url}}">
           <div class="img"></div>
           <div class="content">
             <h3>{{page.previous.title}}</h3>
@@ -34,7 +34,7 @@ layout: default
       {% endif %}
       {% if page.next.url %}
       <li class="m-content-item">
-        <a href="{{page.next.url}}">
+        <a href="{{site.baseurl}}{{page.next.url}}">
           <div class="img"></div>
           <div class="content">
             <h3>{{page.next.title}}</h3>
