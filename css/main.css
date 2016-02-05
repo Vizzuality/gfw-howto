@@ -200,6 +200,12 @@ button {
   color: #b6b6ba;
   padding: 0 0 10px; }
 
+.m-aside ul li.toggle-themes {
+  cursor: pointer;
+  padding-left: 28px; }
+  .m-aside ul li.toggle-themes:hover {
+    color: #97bd3d; }
+
 .m-aside ul li a {
   display: block;
   position: relative;

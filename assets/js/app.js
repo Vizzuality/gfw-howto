@@ -47,10 +47,12 @@
 
     homePage: function() {
       this.sliderView = new root.app.View.SliderView();
+      this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
     },
 
     faqsPage: function() {
       this.faqsView = new root.app.View.FaqsView();
+      this.asideView = new root.app.View.AsideView({ options: { model: { id: 'faqs' }}});
     },
 
     appPage: function(id) {
@@ -75,6 +77,7 @@
 
     postPage: function() {
       this.toggleView = new root.app.View.ToggleView();
+      this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
     },
 
     setGlobalViews: function() {

@@ -9,7 +9,7 @@
 
 <div class="m-aside">
   <h2>SEARCH BY THEME</h2>
-  <ul>
+  <ul id="asideThemeView">
     {% for tag in site.tags_info %}
       <li>
         <a id="aside-{{ tag[0] | slugify }}" href="{{site.baseurl}}/themes/{{ tag[0] | slugify }}">

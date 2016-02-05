@@ -17,6 +17,15 @@
 
   ul {
     li {
+
+      &.toggle-themes {
+        cursor: pointer;
+        padding-left: 28px;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
       a {
         display: block;
         position: relative;
