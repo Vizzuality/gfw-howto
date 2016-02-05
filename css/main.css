@@ -361,8 +361,10 @@ button {
     .m-blog ul li:first-child {
       border-left: none; }
     .m-blog ul li a {
-      color: #555; }
-      .m-blog ul li a:hover {
+      color: #555;
+      padding: 50px;
+      display: block; }
+      .m-blog ul li a:hover h3 {
         text-decoration: underline; }
     .m-blog ul li .img {
       padding-bottom: 270px;
@@ -392,8 +394,8 @@ button {
     .m-blog ul li h3 {
       font-size: 21px;
       text-transform: uppercase;
-      padding: 50px;
-      line-height: 1.25; }
+      line-height: 1.25;
+      padding: 0 0 20px; }
 
 .m-blog .m-blog-link {
   background: #555;

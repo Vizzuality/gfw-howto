@@ -1,9 +1,10 @@
 <ul>
   {{#each blogposts}}
     <li>
+      <div class="img -{{this.categories}}"></div>
       <a href="{{this.link}}" target="_blank">
-        <div class="img -{{this.categories}}"></div>
         <h3>{{this.title}}</h3>
+        <p>{{{this.description}}}</p>
       </a>
     </li>
   {{/each}}

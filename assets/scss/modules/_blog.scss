@@ -15,8 +15,12 @@
 
       a {
         color: $dark;
+        padding: 50px;
+        display: block;
         &:hover {
-          text-decoration: underline;
+          h3 {
+            text-decoration: underline;
+          }
         }
       }
 
@@ -64,8 +68,8 @@
       h3 {
         font-size: 21px;
         text-transform: uppercase;
-        padding: 50px;
         line-height: 1.25;
+        padding: 0 0 20px;
       }
     }
   }
