@@ -1,11 +1,12 @@
 .m-content-grid {
-  padding: 50px 0;
+  padding: 20px 0 0;
   ul {
     margin: -4% 0 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     li {
+      display: flex;
       width: 48%;
       margin: 4% 0 0;
       position: relative;
@@ -15,6 +16,7 @@
   .m-content-item {
     a {
       display: block;
+      width: 100%;
       position: relative;
       border: 1px solid $border1;
     }

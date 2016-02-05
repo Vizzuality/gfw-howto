@@ -42,14 +42,5 @@
 .l-content {
   width: calc(100% - #{$aside-width});
   background: $white;
-  padding: 50px;
-  > * {
-    padding: 40px 0;
-    &:first-child {
-      padding-top: 0;
-    }
-    &:last-child {
-      padding-bottom: 0;
-    }
-  }
+  padding: 50px 0;
 }

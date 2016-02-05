@@ -1,5 +1,10 @@
 .m-section {
-  border-top: 1px solid $border1;
+
+  &.-padding {
+    padding: 40px;
+    border-top: 1px solid $border1;
+  }
+
   header {
     h2 {
       font-size: 35px;
@@ -14,6 +19,9 @@
   .m-category-grid {
     > li {
       display: none;
+      border-top: 1px solid $border1;
+      padding: 40px;
+
       &.-active {
         display: block;
       }
