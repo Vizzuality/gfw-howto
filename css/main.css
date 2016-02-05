@@ -10,7 +10,8 @@ html, body {
   margin: 0;
   font-family: "Fira Sans", Helvetica;
   font-size: 14px;
-  color: #555; }
+  color: #555;
+  background: #EEE; }
   html.-no-scroll, body.-no-scroll {
     overflow: hidden; }
 
@@ -355,7 +356,8 @@ button {
   .m-blog ul li {
     position: relative;
     width: 50%;
-    border-left: 1px solid #E5E5DF; }
+    border-left: 1px solid #E5E5DF;
+    background: #FFF; }
     .m-blog ul li:first-child {
       border-left: none; }
     .m-blog ul li a {
@@ -645,7 +647,7 @@ button {
       .m-by-theme .m-slider-navigation .item.-arrow {
         border: none; }
         .m-by-theme .m-slider-navigation .item.-arrow svg {
-          fill: #b6b6ba;
+          fill: #97bd3d;
           display: block;
           width: 28px;
           height: 28px;
@@ -657,7 +659,7 @@ button {
         .m-by-theme .m-slider-navigation .item.-arrow:hover {
           background: none; }
           .m-by-theme .m-slider-navigation .item.-arrow:hover svg {
-            fill: #97bd3d; }
+            fill: #b6b6ba; }
       .m-by-theme .m-slider-navigation .item:hover {
         color: #FFF;
         background: #97bd3d; }
