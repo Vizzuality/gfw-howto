@@ -69,4 +69,45 @@
       }
     }
   }
+
+  .m-blog-link {
+    background: $dark;
+    padding: 30px 0;
+    display: flex;
+    justify-content: center;
+
+    a {
+      position: relative;
+      width: auto;
+      height: 50px;
+      line-height: 54px;
+
+      display: inline-flex;
+      align-self: center;
+
+      margin: 0 auto;
+      padding: 0px 42px;
+
+      color: $dark;
+      background: $white;
+      border-radius: 50px;
+
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover {
+        background: darken($white,5%);
+      }
+
+      svg {
+        display: inline-block;
+        fill: $dark;
+        display: flex;
+        align-self: center;
+        width: 30px;
+        height: 30px;
+        margin: 0 5px 0 0;
+      }
+    }
+  }
 }

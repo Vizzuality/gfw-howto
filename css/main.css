@@ -395,6 +395,48 @@ button {
       padding: 50px;
       line-height: 1.25; }
 
+.m-blog .m-blog-link {
+  background: #555;
+  padding: 30px 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .m-blog .m-blog-link a {
+    position: relative;
+    width: auto;
+    height: 50px;
+    line-height: 54px;
+    display: -webkit-inline-flex;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
+    margin: 0 auto;
+    padding: 0px 42px;
+    color: #555;
+    background: #FFF;
+    border-radius: 50px;
+    text-decoration: none;
+    text-transform: uppercase; }
+    .m-blog .m-blog-link a:hover {
+      background: #f2f2f2; }
+    .m-blog .m-blog-link a svg {
+      display: inline-block;
+      fill: #555;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center;
+      width: 30px;
+      height: 30px;
+      margin: 0 5px 0 0; }
+
 .m-faqs {
   padding: 0 0 50px; }
 
