@@ -251,6 +251,8 @@ button {
       left: auto;
       right: 10px;
       cursor: pointer; }
+      .m-search .search-container svg.-cross:hover {
+        fill: #ed1846; }
     .m-search .search-container svg.-active {
       display: block; }
   .m-search .search-container input {

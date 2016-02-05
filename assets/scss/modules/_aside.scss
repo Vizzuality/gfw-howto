@@ -97,6 +97,9 @@
         left: auto;
         right: 10px;
         cursor: pointer;
+        &:hover {
+          fill: $red;
+        }
       }
 
       &.-active {
