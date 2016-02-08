@@ -1,13 +1,21 @@
 .m-header {
-  padding: 0 40px 40px;
+  padding: 70px 15px 40px;
+  @media (min-width: $br-mobile){
+    padding: 0 40px 40px;
+  }
+
   h2 {
-    font-size: 47px;
+    font-size: 40px;
     font-weight: 300;
     position: relative;
     display: inline-block;
     padding: 15px 0;
-    padding-right: 75px;
     line-height: 1.125;
+
+    @media (min-width: $br-mobile){
+      font-size: 47px;
+      padding-right: 75px;
+    }
 
     &.-toggle {
       padding-right: 200px;
@@ -15,6 +23,7 @@
     }
 
     svg {
+      display: none;
       fill: $primary-color;
       width: 40px;
       height: 40px;
@@ -23,6 +32,9 @@
       right: 0;
       transform: translate(0,-50%);
       margin: -5px 0 0;
+      @media (min-width: $br-mobile){
+        display: block;
+      }
 
       &.-gfw { fill: $primary-color;}
       &.-fires { fill: $red;}
@@ -33,7 +45,13 @@
   }
 
   h3 {
-    font-size: 19px;
+    font-size: 15px;
     font-weight: 300;
+
+    @media (min-width: $br-mobile){
+      font-size: 19px;
+    }
+
+
   }
 }
