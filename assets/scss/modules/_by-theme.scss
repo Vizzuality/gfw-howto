@@ -67,8 +67,10 @@
             padding: 15px 0 0;
             font-size: 14px;
             color: $dark;
-            max-width: 75%;
             white-space: normal;
+            @media (min-width: $br-mobile){
+              max-width: 75%;
+            }
           }
 
           &:hover {

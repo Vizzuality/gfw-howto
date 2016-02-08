@@ -1,5 +1,8 @@
 .m-faqs {
-  padding: 0 40px 40px;
+  padding: 0 15px 40px;
+  @media (min-width: $br-mobile){
+    padding: 0 40px 40px;
+  }
 }
 
 .m-faqs-list {
@@ -13,6 +16,7 @@
       padding: 15px 0;
       font-weight: 500;
       font-size: 13px;
+      padding-right: 65px;
 
       .arrow {
         position: absolute;
@@ -23,6 +27,7 @@
         top: 50%;
         right: 0;
         transform: translate(0,-50%);
+
         svg {
           position: absolute;
           width: 16px;

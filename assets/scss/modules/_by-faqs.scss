@@ -5,8 +5,12 @@
 
   a {
     display: block;
-    padding: 40px;
+    padding: 20px;
     border: 1px solid $border1;
+    @media (min-width: $br-mobile){
+      padding: 40px;
+    }
+
   }
 
   h2 {

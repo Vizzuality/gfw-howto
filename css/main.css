@@ -515,7 +515,10 @@ button {
       margin: 0 5px 0 0; }
 
 .m-faqs {
-  padding: 0 40px 40px; }
+  padding: 0 15px 40px; }
+  @media (min-width: 850px) {
+    .m-faqs {
+      padding: 0 40px 40px; } }
 
 .m-faqs-list > li {
   border-top: 1px solid #E5E5DF; }
@@ -525,7 +528,8 @@ button {
     cursor: pointer;
     padding: 15px 0;
     font-weight: 500;
-    font-size: 13px; }
+    font-size: 13px;
+    padding-right: 65px; }
     .m-faqs-list > li h3 .arrow {
       position: absolute;
       display: block;
@@ -724,7 +728,7 @@ button {
       .m-by-app ul {
         margin: -4% 0 0; } }
     .m-by-app ul li {
-      padding: 40px;
+      padding: 20px;
       width: 100%;
       margin: 15px 0 0;
       color: #FFF;
@@ -732,7 +736,8 @@ button {
       @media (min-width: 850px) {
         .m-by-app ul li {
           width: 48%;
-          margin: 4% 0 0; } }
+          margin: 4% 0 0;
+          padding: 40px; } }
       .m-by-app ul li.-gfw {
         background: #97bd3d; }
         .m-by-app ul li.-gfw:hover {
@@ -775,8 +780,11 @@ button {
   position: relative; }
   .m-by-faqs a {
     display: block;
-    padding: 40px;
+    padding: 20px;
     border: 1px solid #E5E5DF; }
+    @media (min-width: 850px) {
+      .m-by-faqs a {
+        padding: 40px; } }
   .m-by-faqs h2 {
     color: #97bd3d;
     text-transform: uppercase;
@@ -850,8 +858,10 @@ button {
             padding: 15px 0 0;
             font-size: 14px;
             color: #555;
-            max-width: 75%;
             white-space: normal; }
+            @media (min-width: 850px) {
+              .m-by-theme .m-slider ul li a p {
+                max-width: 75%; } }
           .m-by-theme .m-slider ul li a:hover h2 {
             text-decoration: underline; }
   .m-by-theme .m-slider-navigation {

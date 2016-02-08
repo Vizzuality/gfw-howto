@@ -15,7 +15,7 @@
     }
 
     li {
-      padding: 40px;
+      padding: 20px;
       width: 100%;
       margin: 15px 0 0;
       color: $white;
@@ -23,6 +23,7 @@
       @media (min-width: $br-mobile){
         width: 48%;
         margin: 4% 0 0;
+        padding: 40px;
       }
 
       &.-gfw {
