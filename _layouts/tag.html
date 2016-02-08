@@ -29,7 +29,7 @@ layout: default
             {% if post.categories contains category[1].slug and post.tags contains page.title %}
               <li class="m-content-item">
                 <a href="{{site.baseurl}}{{ post.url }}">
-                  <div class="img" {% if post.thumbnail %} style="background-image: url({{post.thumbnail}})"{% endif %}></div>
+                  <div class="img" {% if post.thumbnail %} style="background-image: url({{site.baseurl}}{{post.thumbnail}})"{% endif %}></div>
                   <div class="content">
                     <h3>{{ post.title }}</h3>
                     <p>{{ post.description }}</p>
