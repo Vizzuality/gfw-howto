@@ -16,6 +16,15 @@
   }
 
   ul {
+    &.-submenu {
+      margin: 0 0 10px;
+      li {
+        a {
+          padding: 2px 0 2px 28px;
+        }
+      }
+    }
+
     li {
 
       &.toggle-themes {

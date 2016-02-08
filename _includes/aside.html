@@ -12,7 +12,7 @@
   <ul id="asideThemeView">
     {% for tag in site.tags_info %}
       <li>
-        <a id="aside-{{ tag[0] | slugify }}" href="{{site.baseurl}}/themes/{{ tag[0] | slugify }}">
+        <a class="-theme" id="aside-{{ tag[0] | slugify }}" href="{{site.baseurl}}/themes/{{ tag[0] | slugify }}">
           <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:'_' }}"></use></svg>
           {{ tag[1].title }}
         </a>
@@ -32,7 +32,7 @@
   <ul>
   {% for category in site.categories_info | sort: 'order' %}
     <li>
-      <a id="aside-{{ category[0] | slugify }}" class="{{ category[0] | slugify }}" href="{{site.baseurl}}/apps/{{ category[0] | slugify }}">
+      <a class="-app {{ category[0] | slugify }}" id="aside-{{ category[0] | slugify }}" href="{{site.baseurl}}/apps/{{ category[0] | slugify }}">
         <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:'_' }}"></use></svg>
         {{ category[1].title }}
       </a>

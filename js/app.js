@@ -15,6 +15,8 @@
       'click .toggle-themes' : 'toggleThemes'
     },
 
+    submenuTemplate: HandlebarsTemplates['aside-submenu'],
+
     model: new (Backbone.Model.extend({
       defaults: {
         collapsed: true
@@ -24,6 +26,7 @@
     initialize: function(settings) {
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
+      this.setListeners();
       this.cache();
 
       // inits
@@ -34,10 +37,15 @@
     cache: function() {
       // html vars
       this.$asideThemeView = $('#asideThemeView');
+      this.$contentThemeNames = $('#contentThemeView > li');
 
       // model vars
       this.model.set(this.options.model);
       this.model.set('themes',this.$asideThemeView.find('li'));
+    },
+
+    setListeners: function() {
+      this.model.on('change:id', this.getData.bind(this));
     },
 
     // Themes behaviour
@@ -68,8 +76,27 @@
     },
 
     highlight: function() {
-      this.$el.find('#aside-'+this.model.get('id')).addClass('-active');
-    }
+      if (!!this.model.get('id')) {
+        var $el = this.$el.find('#aside-'+this.model.get('id'));
+        $el.addClass('-active');
+        if ($el.hasClass('-theme')) {
+          $el.parent().append(this.submenuTemplate({ submenu: this.model.get('submenu') }));
+        }
+      }
+    },
+
+    getData: function() {
+      var submenu =  _.compact(_.map(this.$contentThemeNames, function(el) {
+        if ($(el).hasClass('-active')) {
+          return {
+            title: $(el).data('title'),
+            id: $(el).data('id')
+          }
+        }
+      }));
+      this.model.set('submenu', submenu);
+    },
+
   });
 
 })(this);

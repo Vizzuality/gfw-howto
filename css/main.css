@@ -241,6 +241,11 @@ button {
   color: #b6b6ba;
   padding: 0 0 10px; }
 
+.m-aside ul.-submenu {
+  margin: 0 0 10px; }
+  .m-aside ul.-submenu li a {
+    padding: 2px 0 2px 28px; }
+
 .m-aside ul li.toggle-themes {
   cursor: pointer;
   padding-left: 28px; }
