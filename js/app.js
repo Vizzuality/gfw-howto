@@ -665,6 +665,7 @@
     },
 
     appPage: function(id) {
+      this.sliderView = new root.app.View.SliderView();
       this.asideView = new root.app.View.AsideView({
         options: {
           model: {
@@ -675,6 +676,7 @@
     },
 
     themePage: function(id) {
+      this.sliderView = new root.app.View.SliderView();
       this.asideView = new root.app.View.AsideView({
         options: {
           model: {
