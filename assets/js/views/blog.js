@@ -24,6 +24,8 @@
     initialize: function(settings) {
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
+      this.options.sample = ($(window).width() < 850) ? 1 : 2;
+
 
       this.cache();
 
@@ -45,7 +47,7 @@
         return item;
       }.bind(this)), 'categories');
 
-      var items = _.map(_.sample(groups,2), function(group){
+      var items = _.map(_.sample(groups,this.options.sample), function(group){
         return _.sample(group);
       });
 

@@ -1,16 +1,29 @@
 .m-by-app {
-  padding: 50px 0;
+  padding: 25px 0 0;
+  @media (min-width: $br-mobile){
+    padding: 50px 0;
+  }
+
+
   ul {
-    margin: -4% 0 0;
+    margin: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media (min-width: $br-mobile){
+      margin: -4% 0 0;
+    }
+
     li {
       padding: 40px;
-      width: 48%;
-      margin: 4% 0 0;
+      width: 100%;
+      margin: 15px 0 0;
       color: $white;
       position: relative;
+      @media (min-width: $br-mobile){
+        width: 48%;
+        margin: 4% 0 0;
+      }
 
       &.-gfw {
         background: $primary-color;

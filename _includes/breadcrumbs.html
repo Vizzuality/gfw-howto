@@ -5,14 +5,14 @@
     <a href="{{site.baseurl}}/apps/{{page.categories[0] | slugify}}">{{page.categories}}</a>
     <span>/</span>
     <a href="{{site.baseurl}}/themes/{{page.tags[0] | slugify}}">{{page.tags}}</a>
-    <span>/</span>
-    <span>{{page.title | capitalize}}</span>
+    <span class="-desktop">/</span>
+    <span class="-desktop">{{page.title | capitalize}}</span>
 
     {% if page.mobile %}
       <div id="toggleView" class="m-toggle-howto">
         <div class="skitter"></div>
-        <span class="choice -active" data-toggle="desktop">HOW TO: DESKTOP</span>
-        <span class="choice" data-toggle="mobile">HOW TO: MOBILE</span>
+        <span class="choice -active" data-toggle="desktop"><em>HOW TO:</em> DESKTOP</span>
+        <span class="choice" data-toggle="mobile"><em>HOW TO:</em> MOBILE</span>
       </div>
     {% endif %}
 

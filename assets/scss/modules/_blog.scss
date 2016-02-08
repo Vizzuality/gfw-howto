@@ -5,9 +5,12 @@
 
     li {
       position: relative;
-      width: 50%;
+      width: 100%;
       border-left: 1px solid $border1;
       background: $white;
+      @media (min-width: $br-mobile){
+        width: 50%;
+      }
 
       &:first-child {
         border-left: none;
@@ -15,8 +18,12 @@
 
       a {
         color: $dark;
-        padding: 50px;
+        padding: 15px;
         display: block;
+        @media (min-width: $br-mobile){
+          padding: 50px;
+        }
+
         &:hover {
           h3 {
             text-decoration: underline;
@@ -25,9 +32,12 @@
       }
 
       .img {
-        padding-bottom: 270px;
+        padding-bottom: 170px;
         background: $dark;
         background-repeat: no-repeat;
+        @media (min-width: $br-mobile){
+          padding-bottom: 270px;
+        }
 
         &.-feature-posts {
           background: url($baseurl + '/assets/images/categories/feature-posts.jpg') center;

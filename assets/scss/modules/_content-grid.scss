@@ -1,15 +1,23 @@
 .m-content-grid {
   padding: 20px 0 0;
   ul {
-    margin: -4% 0 0;
+    margin: 0;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    @media (min-width: $br-mobile){
+      margin: -4% 0 0;
+    }
+
     li {
       display: flex;
-      width: 48%;
-      margin: 4% 0 0;
+      width: 100%;
+      margin: 15px 0 0;
       position: relative;
+      @media (min-width: $br-mobile){
+        width: 48%;
+        margin: 4% 0 0;
+      }
     }
   }
 
@@ -31,7 +39,11 @@
     }
 
     .content {
-      padding: 40px;
+      padding: 30px 15px;
+      @media (min-width: $br-mobile){
+        padding: 40px;
+      }
+
     }
 
     h3 {
