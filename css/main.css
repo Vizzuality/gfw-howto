@@ -86,7 +86,8 @@ button {
   @media (min-width: 850px) {
     .l-logo {
       width: 90px;
-      height: 90px; } }
+      height: 90px;
+      margin: 0; } }
   .l-logo a {
     display: block;
     width: 100%;
@@ -107,8 +108,7 @@ button {
   padding: 0; }
   @media (min-width: 850px) {
     .l-content {
-      width: calc(100% - 265px);
-      padding: 50px 0; } }
+      width: calc(100% - 265px); } }
 
 .btn {
   -webkit-appearance: none;
@@ -182,7 +182,7 @@ button {
   padding: 70px 15px 40px; }
   @media (min-width: 850px) {
     .m-header {
-      padding: 0 40px 40px; } }
+      padding: 70px 40px; } }
   .m-header h2 {
     font-size: 40px;
     font-weight: 300;
@@ -326,7 +326,7 @@ button {
   border-top: 1px solid #E5E5DF; }
   @media (min-width: 850px) {
     .m-section.-padding {
-      padding: 40px; } }
+      padding: 70px 40px; } }
 
 .m-section header h2 {
   font-size: 30px;
@@ -704,11 +704,104 @@ button {
     .m-toggle-howto span.-active {
       color: #555; }
 
+.m-by-app {
+  padding: 25px 0 0; }
+  @media (min-width: 850px) {
+    .m-by-app {
+      padding: 50px 0 0; } }
+  .m-by-app ul {
+    margin: 0;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+    @media (min-width: 850px) {
+      .m-by-app ul {
+        margin: -4% 0 0; } }
+    .m-by-app ul li {
+      padding: 40px;
+      width: 100%;
+      margin: 15px 0 0;
+      color: #FFF;
+      position: relative; }
+      @media (min-width: 850px) {
+        .m-by-app ul li {
+          width: 48%;
+          margin: 4% 0 0; } }
+      .m-by-app ul li.-gfw {
+        background: #97bd3d; }
+        .m-by-app ul li.-gfw:hover {
+          background: #a2c64e; }
+      .m-by-app ul li.-fires {
+        background: #ed1846; }
+        .m-by-app ul li.-fires:hover {
+          background: #ef3059; }
+      .m-by-app ul li.-commodities {
+        background: #e98300; }
+        .m-by-app ul li.-commodities:hover {
+          background: #ff9104; }
+      .m-by-app ul li.-climate {
+        background: #5b80a0; }
+        .m-by-app ul li.-climate:hover {
+          background: #6a8daa; }
+      .m-by-app ul li h2 {
+        color: #FFF;
+        text-transform: uppercase;
+        font-size: 21px;
+        position: relative;
+        margin: 0 0 30px; }
+      .m-by-app ul li svg {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        -webkit-transform: translate(0, -50%);
+                transform: translate(0, -50%);
+        fill: #FFF;
+        width: 35px;
+        height: 35px; }
+      .m-by-app ul li p {
+        color: #FFF;
+        font-size: 14px; }
+
+.m-by-faqs {
+  width: 100%;
+  color: #FFF;
+  position: relative; }
+  .m-by-faqs a {
+    display: block;
+    padding: 40px;
+    border: 1px solid #E5E5DF; }
+  .m-by-faqs h2 {
+    color: #97bd3d;
+    text-transform: uppercase;
+    font-size: 21px;
+    position: relative;
+    margin: 0 0 30px; }
+  .m-by-faqs svg {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    -webkit-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    fill: #97bd3d;
+    width: 35px;
+    height: 35px; }
+  .m-by-faqs p {
+    color: #555;
+    font-size: 14px; }
+
 .m-by-theme {
   padding: 25px 0 0; }
   @media (min-width: 850px) {
     .m-by-theme {
-      padding: 50px 0; } }
+      padding: 50px 0 0; } }
   .m-by-theme .m-slider {
     width: 100%; }
     .m-by-theme .m-slider .frame {
@@ -740,7 +833,8 @@ button {
             @media (min-width: 850px) {
               .m-by-theme .m-slider ul li a svg {
                 width: 50px;
-                height: 50px; } }
+                height: 50px;
+                position: relative; } }
           .m-by-theme .m-slider ul li a h2 {
             position: relative;
             top: 4px;
@@ -823,71 +917,6 @@ button {
     .m-by-theme .m-slider-navigation button {
       position: absolute;
       border: none; }
-
-.m-by-app {
-  padding: 25px 0 0; }
-  @media (min-width: 850px) {
-    .m-by-app {
-      padding: 50px 0; } }
-  .m-by-app ul {
-    margin: 0;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap; }
-    @media (min-width: 850px) {
-      .m-by-app ul {
-        margin: -4% 0 0; } }
-    .m-by-app ul li {
-      padding: 40px;
-      width: 100%;
-      margin: 15px 0 0;
-      color: #FFF;
-      position: relative; }
-      @media (min-width: 850px) {
-        .m-by-app ul li {
-          width: 48%;
-          margin: 4% 0 0; } }
-      .m-by-app ul li.-gfw {
-        background: #97bd3d; }
-        .m-by-app ul li.-gfw:hover {
-          background: #a2c64e; }
-      .m-by-app ul li.-fires {
-        background: #ed1846; }
-        .m-by-app ul li.-fires:hover {
-          background: #ef3059; }
-      .m-by-app ul li.-commodities {
-        background: #e98300; }
-        .m-by-app ul li.-commodities:hover {
-          background: #ff9104; }
-      .m-by-app ul li.-climate {
-        background: #5b80a0; }
-        .m-by-app ul li.-climate:hover {
-          background: #6a8daa; }
-      .m-by-app ul li h2 {
-        color: #FFF;
-        text-transform: uppercase;
-        font-size: 21px;
-        position: relative;
-        margin: 0 0 30px; }
-      .m-by-app ul li svg {
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        -webkit-transform: translate(0, -50%);
-                transform: translate(0, -50%);
-        fill: #FFF;
-        width: 35px;
-        height: 35px; }
-      .m-by-app ul li p {
-        color: #FFF;
-        font-size: 14px; }
 
 .highlight {
   background: #ffffff; }

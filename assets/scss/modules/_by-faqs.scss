@@ -1,0 +1,35 @@
+.m-by-faqs {
+  width: 100%;
+  color: $white;
+  position: relative;
+
+  a {
+    display: block;
+    padding: 40px;
+    border: 1px solid $border1;
+  }
+
+  h2 {
+    color: $primary-color;
+    text-transform: uppercase;
+    font-size: 21px;
+    position: relative;
+    margin: 0 0 30px;
+  }
+
+  svg {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(0,-50%);
+    fill: $primary-color;
+    width: 35px;
+    height: 35px;
+  }
+
+  p {
+    color: $dark;
+    font-size: 14px;
+  }
+}

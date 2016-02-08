@@ -32,6 +32,7 @@
   @media (min-width: $br-mobile){
     width: 90px;
     height: 90px;
+    margin: 0;
   }
 
   a {
@@ -57,6 +58,5 @@
   padding: 0;
   @media (min-width: $br-mobile){
     width: calc(100% - #{$aside-width});
-    padding: 50px 0;
   }
 }
