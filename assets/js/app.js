@@ -52,6 +52,7 @@
 
     faqsPage: function() {
       this.faqsView = new root.app.View.FaqsView();
+      this.faqsSelectView = new root.app.View.FaqsSelectView();
       this.asideView = new root.app.View.AsideView({ options: { model: { id: 'faqs' }}});
     },
 

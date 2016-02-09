@@ -35,6 +35,29 @@ this["HandlebarsTemplates"]["blog"] = Handlebars.template({"1":function(depth0,h
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.blogposts : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</ul>\n<div class=\"m-blog-link\">\n  <a target=\"_blank\" href=\"http://blog.globalforestwatch.org/\">\n    <svg class=\"icon\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#icon-f-blog\"></use></svg>\n    Read our blog\n  </a>\n</div>\n";
 },"useData":true});
+this["HandlebarsTemplates"]["faqs"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers.each.call(depth0,depth0,{"name":"each","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+},"2":function(depth0,helpers,partials,data) {
+    var stack1, alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "    <li data-app=\""
+    + alias2(alias1((depth0 != null ? depth0.category : depth0), depth0))
+    + "\" data-order=\""
+    + alias2(alias1((depth0 != null ? depth0.order : depth0), depth0))
+    + "\">\n      <h3 class=\"toggle\">\n        "
+    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
+    + "\n        <span class=\"arrow\"><svg><use xlink:href=\"#icon-arrowdown\"></use></svg></span>\n      </h3>\n      <div class=\"content m-faqs-content\">\n        "
+    + ((stack1 = alias1((depth0 != null ? depth0.content : depth0), depth0)) != null ? stack1 : "")
+    + "\n      </div>\n    </li>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<ul class=\"m-faqs-list\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.groups : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "</ul>\n";
+},"useData":true});
 this["HandlebarsTemplates"]["search"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1;
 

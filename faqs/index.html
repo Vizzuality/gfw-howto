@@ -7,25 +7,17 @@ subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius
 <header class="m-header">
   {% include breadcrumbs.html %}
   <h2>FAQ's</h2>
+  <div id="faqsSelectView" class="m-faqs-select m-select">
+    <select>
+      <option value="all">All aplications</option>
+      <option value="gfw">GFW</option>
+      <option value="climate">Climate</option>
+      <option value="fires">Fires</option>
+      <option value="commodities">Commodities</option>
+    </select>
+  </div>
 </header>
 
 <section id="faqsView" class="m-faqs">
-  <ul class="m-faqs-list">
-    {% assign sorted_posts = site.posts | sort: 'order' %}
-    {% for category in site.categories_info %}
-      {% for post in sorted_posts %}
-        {% if post.app contains category[1].slug and post.categories contains 'faqs' %}
-          <li data-app="{{post.app}}">
-            <h3 class="toggle">
-              {{post.title}}
-              <span class="arrow"><svg><use xlink:href="#icon-arrowdown"></use></svg></span>
-            </h3>
-            <div class="content m-faqs-content">
-              {{post.content}}
-            </div>
-          </li>
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
-  </ul>
+
 </section>
