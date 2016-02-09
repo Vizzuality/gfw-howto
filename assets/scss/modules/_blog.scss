@@ -73,6 +73,11 @@
           background: url($baseurl + '/assets/images/categories/gfw-user-profile.jpg') center;
           background-size: cover;
         }
+
+        &.-uncategorized {
+          background: url($baseurl + '/assets/images/categories/guest-post.jpg') center;
+          background-size: cover;
+        }
       }
 
       h3 {

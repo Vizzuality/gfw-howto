@@ -56,7 +56,7 @@ this["HandlebarsTemplates"]["faqs"] = Handlebars.template({"1":function(depth0,h
 
   return "<ul class=\"m-faqs-list\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.groups : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "</ul>\n";
+    + "</ul>\n<ul class=\"m-faqs-pagination\"></ul>\n";
 },"useData":true});
 this["HandlebarsTemplates"]["search"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1;

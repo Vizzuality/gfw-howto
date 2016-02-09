@@ -1,0 +1,115 @@
+.simple-pagination{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0 0;
+  margin: 0 auto;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%,0);
+
+}
+
+
+.simple-pagination ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  // @include clearfix();
+}
+
+
+.simple-pagination ul li{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+
+/*------------------------------------*\
+  Light Theme Styles
+\*------------------------------------*/
+
+.simple-pagination.light-theme a, .simple-pagination.light-theme span{
+  float: left;
+  color: $dark;
+  font-size:16px;
+  line-height:24px;
+  font-weight: 500;
+  text-align: center;
+  min-width: 24px;
+  margin: 0 10px 0 0;
+  background: none;
+  text-decoration: none;
+}
+
+
+.simple-pagination.light-theme a:hover{
+  text-decoration: none;
+  color: $primary-color;
+}
+
+
+.simple-pagination.light-theme .current{
+  cursor: default;
+  border-bottom: 2px solid $primary-color;
+}
+
+.simple-pagination.light-theme .next, .simple-pagination.light-theme .prev {
+
+  background: $primary-color;
+  position: relative;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+
+  &:hover {
+    background: lighten($primary-color,5%);
+  }
+
+  &.current{
+    display: none;
+  }
+  &:before{
+    content: "";
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+.simple-pagination.light-theme .prev {
+  &:before {
+    background: url($baseurl + '/assets/images/arrow-left.svg') center no-repeat;
+    transform: translate(-55%,-50%);
+    background-size: contain;
+  }
+}
+.simple-pagination.light-theme .next {
+  &:before {
+    background: url($baseurl + '/assets/images/arrow-right.svg') center no-repeat;
+    transform: translate(-45%,-50%);
+    background-size: contain;
+  }
+}
+
+
+
+.simple-pagination.light-theme .ellipse{
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-weight: 500;
+  cursor: default;
+}
+
+
+
+
+
+
