@@ -3,27 +3,41 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ page.title }}</title>
+    <title>{{ page.title }} | How to</title>
     <meta name="viewport" content="width=device-width">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Fira+Sans:400,500,300' rel='stylesheet' type='text/css'>
     <script id="loader-gfw" data-current=".shape-howto" src="http://www.globalforestwatch.org/gfw-assets"></script>
   </head>
-  <body>  
+  <body>
+    {% include icons.html %}
     <!-- HEADER -->
     <div id="headerGfw"></div>
 
     <div class="l-wrapper">
-      <aside class="l-aside">
+      <h1 class="l-logo"><a href="{{site.baseurl}}/">GFW How to portal</a></h1>
+      <aside id="asideView" class="l-aside">
         {% include aside.html %}
       </aside>
       <div class="l-content">
-        {{ content }}  
+        {{ content }}
       </div>
+    </div>
+
+    <div class="l-wrapper">
+      <div id="blogView" class="m-blog"></div>
     </div>
 
     <!-- FOOTER -->
     <div id="footerGfw"></div>
   </body>
 </html>
+<script type="text/javascript">
+  var baseurl = '{{site.baseurl}}';
+</script>
+<script src="{{site.baseurl}}/js/vendor.js"></script>
+<script src="{{site.baseurl}}/js/templates.js"></script>
+<script src="{{site.baseurl}}/js/app.js"></script>

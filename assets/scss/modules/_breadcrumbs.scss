@@ -1,0 +1,42 @@
+.m-breadcrumbs {
+  position: relative;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 11px;
+  margin: 5px 0 0px;
+  @media (min-width: $br-mobile){
+    margin: 0 0 10px;
+  }
+
+  > * {
+    margin: 0 0 0 5px;
+    display: inline-block;
+    &.-desktop {
+      display: none;
+    }
+
+    @media (min-width: $br-mobile){
+      &.-desktop {
+        display: inline-block;
+      }
+    }
+
+    &:first-child {
+      margin: 0;
+    }
+
+    em {
+      display: none;
+      @media (min-width: $br-mobile){
+        display: inline;
+      }
+    }
+  }
+
+  a {
+    color: $primary-color;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<ul>
+  {{#each blogposts}}
+    <li>
+      <div class="img -{{this.categories}}"></div>
+      <a href="{{this.link}}" target="_blank">
+        <h3>{{this.title}}</h3>
+        <p>{{{this.description}}}</p>
+      </a>
+    </li>
+  {{/each}}
+</ul>
+<div class="m-blog-link">
+  <a target="_blank" href="http://blog.globalforestwatch.org/">
+    <svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-f-blog"></use></svg>
+    Read our blog
+  </a>
+</div>

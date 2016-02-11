@@ -1,0 +1,20 @@
+<div id="sliderView" class="m-by-theme">
+  <!-- Slider -->
+  <div class="m-slider js_slider">
+    <div class="frame js_frame">
+      <ul class="slides js_slides">
+
+        {% for tag in site.tags_info %}
+          <li class="js_slide">
+            <a href="{{site.baseurl}}/themes/{{ tag[1].slug | slugify }}">
+              <svg><use xlink:href="#icon-{{ tag[1].slug | downcase | remove:' ' }}"></use></svg>
+              <h2>{{ tag[1].title }}</h2>
+              <p>{{ tag[1].description }}</p>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="m-slider-navigation js_slide_navigation"></div>
+</div>

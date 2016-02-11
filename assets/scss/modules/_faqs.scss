@@ -1,0 +1,141 @@
+.m-faqs {
+  padding: 0 15px 40px;
+  @media (min-width: $br-mobile){
+    padding: 0 40px 40px;
+  }
+}
+
+.m-faqs-list {
+  > li {
+    border-top: 1px solid $border1;
+
+    h3 {
+      position: relative;
+      text-transform: uppercase;
+      cursor: pointer;
+      padding: 15px 0;
+      font-weight: 500;
+      font-size: 13px;
+      padding-right: 65px;
+
+      .arrow {
+        position: absolute;
+        display: block;
+        width: 60px;
+        height: 50%;
+        border-left: 1px solid $border1;
+        top: 50%;
+        right: 0;
+        transform: translate(0,-50%);
+
+        svg {
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+        }
+      }
+
+    }
+
+    .content {
+      display: none;
+    }
+
+    &.-selected {
+      h3 {
+        color: $primary-color;
+        .arrow {
+          svg {
+            transform: translate(-50%,-60%) rotate(180deg);
+          }
+        }
+      }
+
+      .content {
+        display: block;
+      }
+    }
+  }
+}
+
+.m-faqs-content {
+  padding: 0px 0px 40px;
+  @media (min-width: $br-mobile){
+    padding: 10px 10px 40px;
+  }
+  // Elements
+  > * {
+    padding-top: 20px;
+
+    &:first-child {
+      padding-top: 0;
+    }
+  }
+
+  a:not(.btn) {
+    color: $primary-color;
+    &:hover {
+      text-decoration: underline;;
+    }
+  }
+
+  h3 {
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  ul {
+    list-style-type: disc;
+    color: $dark;
+
+    > li{
+      list-style-type: disc;
+      padding: 10px 0 0;
+      margin-left: 20px;
+      line-height: 1.25;
+
+      &:first-child{
+        padding: 0;
+      }
+    }
+  }
+
+  ol {
+    counter-reset: mycounter;
+
+    li {
+      margin-top: 20px;
+      padding-left: 15px;
+      position: relative;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        margin: 0 5px 0 0;
+        content: counter(mycounter)'.';
+        counter-increment: mycounter;
+      }
+
+      > * {
+        margin-top: 10px;
+        // &:first-child {
+        //   margin-top: 0px;
+        // }
+      }
+    }
+  }
+
+  img {
+    display: block;
+    max-width: 100%;
+  }
+}

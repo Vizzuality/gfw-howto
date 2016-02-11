@@ -1,0 +1,68 @@
+.m-header {
+  padding: 70px 15px 40px;
+  position: relative;
+  @media (min-width: $br-mobile){
+    padding: 70px 40px;
+  }
+
+  h2 {
+    font-size: 40px;
+    font-weight: 300;
+    position: relative;
+    display: inline-block;
+    padding: 15px 0;
+    line-height: 1.125;
+
+    @media (min-width: $br-mobile){
+      font-size: 47px;
+      padding-right: 75px;
+    }
+
+    &.-toggle {
+      padding-right: 200px;
+      display: block;
+    }
+
+    svg {
+      display: none;
+      fill: $primary-color;
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(0,-50%);
+      margin: -5px 0 0;
+      @media (min-width: $br-mobile){
+        display: block;
+      }
+
+      &.-gfw { fill: $primary-color;}
+      &.-fires { fill: $red;}
+      &.-commodities { fill: $orange;}
+      &.-climate { fill: $blue;}
+
+    }
+  }
+
+  h3 {
+    font-size: 15px;
+    font-weight: 300;
+
+    @media (min-width: $br-mobile){
+      font-size: 19px;
+    }
+  }
+
+  .m-faqs-select {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    @media (min-width: $br-mobile){
+      position: absolute;
+      top: 100px;
+      right: 40px;
+      width: 200px;
+    }
+  }
+}

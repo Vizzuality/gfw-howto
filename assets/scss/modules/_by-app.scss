@@ -1,0 +1,77 @@
+.m-by-app {
+  padding: 25px 0 0;
+  @media (min-width: $br-mobile){
+    padding: 50px 0 0;
+  }
+
+
+  ul {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media (min-width: $br-mobile){
+      margin: -4% 0 0;
+    }
+
+    li {
+      padding: 20px 20px 40px;
+      width: 100%;
+      margin: 15px 0 0;
+      color: $white;
+      position: relative;
+      @media (min-width: $br-mobile){
+        width: 48%;
+        margin: 4% 0 0;
+        padding: 40px;
+      }
+
+      &.-gfw { background: $primary-color;}
+      &.-fires { background: $red;}
+      &.-commodities { background: $orange;}
+      &.-climate { background: $blue;}
+
+      @media (min-width: $br-mobile){
+        &.-gfw:hover { background: lighten($primary-color,5%);}
+        &.-fires:hover { background: lighten($red,5%);}
+        &.-commodities:hover { background: lighten($orange,5%);}
+        &.-climate:hover { background: lighten($blue,5%);}
+      }
+
+
+      h2 {
+        color: $white;
+        text-transform: uppercase;
+        font-size: 19px;
+        position: relative;
+        margin: 0 0 20px;
+        @media (min-width: $br-mobile){
+          margin: 0 0 30px;
+          font-size: 21px;
+        }
+      }
+
+      svg {
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0,-50%);
+        fill: $white;
+        width: 20px;
+        height: 20px;
+
+        @media (min-width: $br-mobile){
+          width: 35px;
+          height: 35px;
+        }
+
+      }
+
+      p {
+        color: $white;
+        font-size: 14px;
+      }
+    }
+  }
+}

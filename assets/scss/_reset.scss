@@ -2,13 +2,18 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
+  -moz-osx-font-smoothing: grayscale;
 }
 
 html, body{
   padding: 0;
   border: 0;
   margin: 0;
+  font-family: "Fira Sans", Helvetica;
+  font-size: 14px;
+  line-height: 1.5;
+  color: $dark;
+  background: #EEE;
   &.-no-scroll{
     overflow: hidden;
   }
@@ -31,6 +36,10 @@ a {
   text-decoration: none;
 }
 
+strong {
+  font-weight: 500;
+}
+
 button {
   display: inline-block;
   box-shadow: none;
@@ -44,4 +53,14 @@ button {
 
 .-hidden {
   display: none;
+}
+
+%reset-input {
+  font-size: 14px;
+  margin: 0;
+  border: 1px solid $border1;
+  box-shadow: none;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
 }

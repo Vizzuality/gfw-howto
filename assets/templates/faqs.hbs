@@ -1,0 +1,16 @@
+<ul class="m-faqs-list">
+  {{#each groups}}
+    {{#each this}}
+    <li data-app="{{this.category}}" data-order="{{this.order}}">
+      <h3 class="toggle">
+        {{this.title}}
+        <span class="arrow"><svg><use xlink:href="#icon-arrowdown"></use></svg></span>
+      </h3>
+      <div class="content m-faqs-content">
+        {{{this.content}}}
+      </div>
+    </li>
+    {{/each}}
+  {{/each}}
+</ul>
+<ul class="m-faqs-pagination"></ul>

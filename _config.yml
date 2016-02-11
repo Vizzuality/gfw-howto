@@ -1,4 +1,93 @@
 name: How to portal
-markdown: redcarpet
-highlighter: pygments # or rouge or null
+permalink: none
+
+baseurl: "/gfw-howto" # the subpath of your site, e.g. /blog/
+url: "http://vizzuality.github.io/" # the base hostname & protocol for your site
+
+
+gems:
+  - jekyll-archives
+
 exclude: ["node_modules", "gulpfile.js", "package.json"]
+
+jekyll-archives:
+  enabled: [categories,tags]
+  layouts:
+    # year: year
+    # month: month
+    # day: day
+    tag: tag
+    category: category
+  permalinks:
+    # year: '/:year/'
+    # month: '/:year/:month/'
+    # day: '/:year/:month/:day/'
+    category: '/apps/:name/'
+    tag: '/themes/:name/'
+
+
+# CATEGORIES
+categories_info:
+  gfw:
+    order: 1
+    title: Gfw
+    description: "Empowering people everywhere to better manage and conserve forest landscapes through an interactive online forest monitoring system."
+    slug: gfw
+  climate:
+    order: 2
+    title: Climate
+    description: "GFW Climate catalyzes action on climate change by providing timely, credible answers to questions about carbon emissions from tropical deforestation."
+    slug: climate
+  fires:
+    order: 3
+    title: Fires
+    description: "Global Forest Watch Fires (GFW Fires) is an online platform for monitoring and responding to forest and land fires in the ASEAN region using near real-time information."
+    slug: fires
+  commodities:
+    order: 4
+    title: Commodities
+    description: "Global Forest Watch Commodities is an online platform that empowers companies to analyze the impact of key commodities on forests, using the latest and most powerful data available."
+    slug: commodities
+
+
+tags_info:
+  visualize_data:
+    order: 1
+    title: Visualize data
+    description: "Some data are produced directly by WRI and our partners, such as FORMA alerts, Intact Forest Landscapes, and some forest use data."
+    slug: visualize data
+  view_statistics:
+    order: 2
+    title: View statistics
+    description: "These courses are designed to provide an in-depth understanding of the ways can support a variety of professional."
+    slug: view statistics
+  analyze_data:
+    order: 3
+    title: Analyze data
+    description: "Description analyze_data"
+    slug: analyze data
+  suscribe_to_alerts:
+    order: 4
+    title: Suscribe to alerts
+    description: "Description suscribe_to_alerts"
+    slug: suscribe to alerts
+  submit_a_story:
+    order: 5
+    title: Submit a story
+    description: "Description submit_a_story"
+    slug: submit a story
+  tutorial_videos:
+    order: 6
+    title: Tutorial videos
+    description: "Description tutorial_videos"
+    slug: tutorial videos
+  webinars:
+    order: 7
+    title: Webinars
+    description: "Description webinars"
+    slug: webinars
+  training_modules:
+    order: 8
+    title: Training modules
+    description: "Description training_modules"
+    slug: training modules

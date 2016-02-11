@@ -1,0 +1,43 @@
+.m-section {
+
+  &.-padding {
+    padding: 40px 15px;
+    border-top: 1px solid $border1;
+
+    @media (min-width: $br-mobile){
+      padding: 70px 40px;
+    }
+  }
+
+  header {
+    h2 {
+      font-size: 30px;
+      line-height: 1.25;
+      font-weight: 300;
+      color: $dark;
+
+      @media (min-width: $br-mobile){
+        font-size: 35px;
+      }
+
+      a {
+        color: inherit;
+      }
+    }
+  }
+
+  .m-category-grid {
+    > li {
+      display: none;
+      border-top: 1px solid $border1;
+      padding: 40px 15px;
+      @media (min-width: $br-mobile){
+        padding: 40px;
+      }
+
+      &.-active {
+        display: block;
+      }
+    }
+  }
+}

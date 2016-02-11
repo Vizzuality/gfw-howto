@@ -1,9 +1,48 @@
 ---
 layout: default
 ---
-<h2>{{ page.title }}</h2>
-<p class="meta">{{ page.date | date_to_string }}</p>
 
-<div class="post">
-{{ content }}
-</div>
+<header class="m-header">
+  {% include breadcrumbs.html %}
+  <h2>
+    {{page.title}}
+  </h2>
+  <h3>{{page.description}}</h3>
+</header>
+
+<section class="m-post">
+  {{ content }}
+</section>
+
+<section class="m-section -padding">
+  <header>
+    <h2>You may find this interesting</h2>
+  </header>
+
+  <div class="m-content-grid">
+    <ul>
+      {% if page.previous.url %}
+      <li class="m-content-item">
+        <a href="{{site.baseurl}}{{page.previous.url}}">
+          <div class="img"></div>
+          <div class="content">
+            <h3>{{page.previous.title}}</h3>
+            <p>{{page.previous.description}}</p>
+          </div>
+        </a>
+      </li>
+      {% endif %}
+      {% if page.next.url %}
+      <li class="m-content-item">
+        <a href="{{site.baseurl}}{{page.next.url}}">
+          <div class="img"></div>
+          <div class="content">
+            <h3>{{page.next.title}}</h3>
+            <p>{{page.next.description}}</p>
+          </div>
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,167 @@
+.m-aside,.m-search {
+  padding: 20px 40px;
+  border-top: 1px solid $border1;
+
+  &:first-child {
+    border-top: none;
+  }
+}
+
+.m-aside {
+  h2 {
+    font-size: 13px;
+    font-weight: 500;
+    color: $light;
+    padding: 0 0 10px;
+  }
+
+  ul {
+    &.-submenu {
+      margin: 0 0 10px;
+      li {
+        a {
+          padding: 2px 0 2px 28px;
+        }
+      }
+    }
+
+    li {
+
+      &.toggle-themes {
+        cursor: pointer;
+        padding-left: 28px;
+        &:hover {
+          color: $primary-color;
+        }
+      }
+
+      a {
+        display: block;
+        position: relative;
+        font-size: 14px;
+        color: $dark;
+        padding: 5px 0 5px 28px;
+
+        &:hover, &.-active {
+          color: $primary-color;
+          svg {
+            fill: $primary-color;
+          }
+        }
+
+        &.fires {
+          &:hover, &.-active {
+            color: $red;
+            svg {
+              fill: $red;
+            }
+          }
+        }
+
+        &.commodities {
+          &:hover, &.-active {
+            color: $orange;
+            svg {
+              fill: $orange;
+            }
+          }
+        }
+
+        &.climate {
+          &:hover, &.-active {
+            color: $blue;
+            svg {
+              fill: $blue;
+            }
+          }
+        }
+
+        svg {
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0%;
+          transform: translate(0%,-60%);
+          width: 20px;
+          height: 20px;
+          fill: $dark;
+        }
+      }
+    }
+  }
+}
+
+
+// Search module
+.m-search {
+  .search-container {
+    position: relative;
+
+    svg {
+      display: none;
+      fill: $dark;
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translate(0,-50%);
+
+      &.-search {
+        left: 10px;
+      }
+
+      &.-cross {
+        left: auto;
+        right: 10px;
+        cursor: pointer;
+        &:hover {
+          fill: $red;
+        }
+      }
+
+      &.-active {
+        display: block;
+      }
+    }
+
+    input {
+      @extend %reset-input;
+      display: block;
+      width: 100%;
+      padding: 6px calc(6px + 14px + 10px);
+
+    }
+  }
+
+  .search-results {
+    background: #eee;
+    padding: 10px 20px;
+    display: none;
+
+    &.-active {
+      display: block;
+    }
+
+    li {
+      font-size: 14px;
+      line-height: 1.25;
+      margin: 5px 0 0;
+
+      &.-highlight {
+        a {
+          color: $primary-color;
+        }
+      }
+
+      a {
+        color: $dark;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+}
