@@ -15,7 +15,7 @@
     }
 
     li {
-      padding: 20px;
+      padding: 20px 20px 40px;
       width: 100%;
       margin: 15px 0 0;
       color: $white;
@@ -26,37 +26,29 @@
         padding: 40px;
       }
 
-      &.-gfw {
-        background: $primary-color;
-        &:hover {
-          background: lighten($primary-color,5%);
-        }
+      &.-gfw { background: $primary-color;}
+      &.-fires { background: $red;}
+      &.-commodities { background: $orange;}
+      &.-climate { background: $blue;}
+
+      @media (min-width: $br-mobile){
+        &.-gfw:hover { background: lighten($primary-color,5%);}
+        &.-fires:hover { background: lighten($red,5%);}
+        &.-commodities:hover { background: lighten($orange,5%);}
+        &.-climate:hover { background: lighten($blue,5%);}
       }
-      &.-fires {
-        background: $red;
-        &:hover {
-          background: lighten($red,5%);
-        }
-      }
-      &.-commodities {
-        background: $orange;
-        &:hover {
-          background: lighten($orange,5%);
-        }
-      }
-      &.-climate {
-        background: $blue;
-        &:hover {
-          background: lighten($blue,5%);
-        }
-      }
+
 
       h2 {
         color: $white;
         text-transform: uppercase;
-        font-size: 21px;
+        font-size: 19px;
         position: relative;
-        margin: 0 0 30px;
+        margin: 0 0 20px;
+        @media (min-width: $br-mobile){
+          margin: 0 0 30px;
+          font-size: 21px;
+        }
       }
 
       svg {
@@ -66,8 +58,14 @@
         right: 0;
         transform: translate(0,-50%);
         fill: $white;
-        width: 35px;
-        height: 35px;
+        width: 20px;
+        height: 20px;
+
+        @media (min-width: $br-mobile){
+          width: 35px;
+          height: 35px;
+        }
+
       }
 
       p {

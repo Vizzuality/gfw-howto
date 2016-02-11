@@ -53,12 +53,13 @@
             top: 4px;
             color: $primary-color;
             text-transform: uppercase;
-            font-size: 21px;
+            font-size: 19px;
             padding: 0 0 0 40px;
 
             @media (min-width: $br-mobile){
               padding: 25px 0 0;
               top: 0;
+              font-size: 21px;
             }
 
           }
@@ -73,9 +74,11 @@
             }
           }
 
-          &:hover {
-            h2 {
-              text-decoration: underline;
+          @media (min-width: $br-mobile){
+            &:hover {
+              h2 {
+                text-decoration: underline;
+              }
             }
           }
         }
@@ -142,20 +145,22 @@
           transform: translate(-50%,-50%);
         }
 
-        &:hover {
-          background: none;
-          svg {
-            fill: $light;
+        @media (min-width: $br-mobile){
+          &:hover {
+            background: none;
+            svg {
+              fill: $light;
+            }
           }
         }
       }
 
-      &:hover {
-        color: $white;
-        background: $primary-color;
+      @media (min-width: $br-mobile){
+        &:hover {
+          color: $white;
+          background: $primary-color;
+        }
       }
-
-
     }
 
     button {

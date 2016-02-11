@@ -22,11 +22,10 @@
         display: block;
         @media (min-width: $br-mobile){
           padding: 50px;
-        }
-
-        &:hover {
-          h3 {
-            text-decoration: underline;
+          &:hover {
+            h3 {
+              text-decoration: underline;
+            }
           }
         }
       }
@@ -114,9 +113,12 @@
       text-decoration: none;
       text-transform: uppercase;
 
-      &:hover {
-        background: darken($white,5%);
+      @media (min-width: $br-mobile){
+        &:hover {
+          background: darken($white,5%);
+        }
       }
+
 
       svg {
         display: inline-block;

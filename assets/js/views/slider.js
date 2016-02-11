@@ -89,6 +89,7 @@
       if (this.slider) {
         current = Math.ceil(this.slider.returnIndex()/2);
       }
+      console.log(current);
       // Set current
       this.$sliderNavigationItems.removeClass('-active');
       this.$sliderNavigation.find('li[data-index='+current+']').addClass('-active');

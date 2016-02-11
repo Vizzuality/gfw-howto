@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visualize country data
-order: 1
+order: 2
 published: True
 description: "Global Forest Watch offers a wide range of content and capabilities to serve a variety of users and purposes."
 thumbnail: "/assets/images/gfw/visualize-country-data/thumbnail.jpg"

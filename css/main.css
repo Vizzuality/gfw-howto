@@ -454,9 +454,9 @@ button {
       display: block; }
       @media (min-width: 850px) {
         .m-blog ul li a {
-          padding: 50px; } }
-      .m-blog ul li a:hover h3 {
-        text-decoration: underline; }
+          padding: 50px; }
+          .m-blog ul li a:hover h3 {
+            text-decoration: underline; } }
     .m-blog ul li .img {
       padding-bottom: 170px;
       background: #555;
@@ -521,8 +521,9 @@ button {
     border-radius: 50px;
     text-decoration: none;
     text-transform: uppercase; }
-    .m-blog .m-blog-link a:hover {
-      background: #f2f2f2; }
+    @media (min-width: 850px) {
+      .m-blog .m-blog-link a:hover {
+        background: #f2f2f2; } }
     .m-blog .m-blog-link a svg {
       display: inline-block;
       fill: #555;
@@ -581,7 +582,10 @@ button {
     display: block; }
 
 .m-faqs-content {
-  padding: 10px 10px 40px; }
+  padding: 0px 0px 40px; }
+  @media (min-width: 850px) {
+    .m-faqs-content {
+      padding: 10px 10px 40px; } }
   .m-faqs-content > * {
     padding-top: 20px; }
     .m-faqs-content > *:first-child {
@@ -1225,7 +1229,7 @@ button {
       .m-by-app ul {
         margin: -4% 0 0; } }
     .m-by-app ul li {
-      padding: 20px;
+      padding: 20px 20px 40px;
       width: 100%;
       margin: 15px 0 0;
       color: #FFF;
@@ -1237,26 +1241,31 @@ button {
           padding: 40px; } }
       .m-by-app ul li.-gfw {
         background: #97bd3d; }
-        .m-by-app ul li.-gfw:hover {
-          background: #a2c64e; }
       .m-by-app ul li.-fires {
         background: #ed1846; }
-        .m-by-app ul li.-fires:hover {
-          background: #ef3059; }
       .m-by-app ul li.-commodities {
         background: #e98300; }
-        .m-by-app ul li.-commodities:hover {
-          background: #ff9104; }
       .m-by-app ul li.-climate {
         background: #5b80a0; }
+      @media (min-width: 850px) {
+        .m-by-app ul li.-gfw:hover {
+          background: #a2c64e; }
+        .m-by-app ul li.-fires:hover {
+          background: #ef3059; }
+        .m-by-app ul li.-commodities:hover {
+          background: #ff9104; }
         .m-by-app ul li.-climate:hover {
-          background: #6a8daa; }
+          background: #6a8daa; } }
       .m-by-app ul li h2 {
         color: #FFF;
         text-transform: uppercase;
-        font-size: 21px;
+        font-size: 19px;
         position: relative;
-        margin: 0 0 30px; }
+        margin: 0 0 20px; }
+        @media (min-width: 850px) {
+          .m-by-app ul li h2 {
+            margin: 0 0 30px;
+            font-size: 21px; } }
       .m-by-app ul li svg {
         display: block;
         position: absolute;
@@ -1265,8 +1274,12 @@ button {
         -webkit-transform: translate(0, -50%);
                 transform: translate(0, -50%);
         fill: #FFF;
-        width: 35px;
-        height: 35px; }
+        width: 20px;
+        height: 20px; }
+        @media (min-width: 850px) {
+          .m-by-app ul li svg {
+            width: 35px;
+            height: 35px; } }
       .m-by-app ul li p {
         color: #FFF;
         font-size: 14px; }
@@ -1277,7 +1290,7 @@ button {
   position: relative; }
   .m-by-faqs a {
     display: block;
-    padding: 20px;
+    padding: 20px 20px 40px;
     border: 1px solid #E5E5DF; }
     @media (min-width: 850px) {
       .m-by-faqs a {
@@ -1285,9 +1298,13 @@ button {
   .m-by-faqs h2 {
     color: #97bd3d;
     text-transform: uppercase;
-    font-size: 21px;
+    font-size: 19px;
     position: relative;
-    margin: 0 0 30px; }
+    margin: 0 0 20px; }
+    @media (min-width: 850px) {
+      .m-by-faqs h2 {
+        margin: 0 0 30px;
+        font-size: 21px; } }
   .m-by-faqs svg {
     display: block;
     position: absolute;
@@ -1300,7 +1317,11 @@ button {
     height: 35px; }
   .m-by-faqs p {
     color: #555;
-    font-size: 14px; }
+    font-size: 14px;
+    font-weight: 300; }
+    @media (min-width: 850px) {
+      .m-by-faqs p {
+        font-size: 19px; } }
 
 .m-by-theme {
   padding: 25px 0 0; }
@@ -1345,12 +1366,13 @@ button {
             top: 4px;
             color: #97bd3d;
             text-transform: uppercase;
-            font-size: 21px;
+            font-size: 19px;
             padding: 0 0 0 40px; }
             @media (min-width: 850px) {
               .m-by-theme .m-slider ul li a h2 {
                 padding: 25px 0 0;
-                top: 0; } }
+                top: 0;
+                font-size: 21px; } }
           .m-by-theme .m-slider ul li a p {
             padding: 15px 0 0;
             font-size: 14px;
@@ -1359,8 +1381,9 @@ button {
             @media (min-width: 850px) {
               .m-by-theme .m-slider ul li a p {
                 max-width: 75%; } }
-          .m-by-theme .m-slider ul li a:hover h2 {
-            text-decoration: underline; }
+          @media (min-width: 850px) {
+            .m-by-theme .m-slider ul li a:hover h2 {
+              text-decoration: underline; } }
   .m-by-theme .m-slider-navigation {
     padding: 15px 0 0; }
     @media (min-width: 850px) {
@@ -1414,13 +1437,15 @@ button {
           left: 50%;
           -webkit-transform: translate(-50%, -50%);
                   transform: translate(-50%, -50%); }
-        .m-by-theme .m-slider-navigation .item.-arrow:hover {
-          background: none; }
-          .m-by-theme .m-slider-navigation .item.-arrow:hover svg {
-            fill: #b6b6ba; }
-      .m-by-theme .m-slider-navigation .item:hover {
-        color: #FFF;
-        background: #97bd3d; }
+        @media (min-width: 850px) {
+          .m-by-theme .m-slider-navigation .item.-arrow:hover {
+            background: none; }
+            .m-by-theme .m-slider-navigation .item.-arrow:hover svg {
+              fill: #b6b6ba; } }
+      @media (min-width: 850px) {
+        .m-by-theme .m-slider-navigation .item:hover {
+          color: #FFF;
+          background: #97bd3d; } }
     .m-by-theme .m-slider-navigation button {
       position: absolute;
       border: none; }
