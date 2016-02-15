@@ -1339,8 +1339,8 @@ button {
     .m-by-theme .m-slider ul {
       display: inline-block; }
       .m-by-theme .m-slider ul li {
-        position: relative;
         display: inline-block;
+        width: 1px;
         vertical-align: top; }
         .m-by-theme .m-slider ul li a {
           display: block; }
