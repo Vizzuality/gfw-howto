@@ -21,6 +21,7 @@
     "handlebars": "2.0.0",
     "fuse.js": "^1.3.1",
     "chosen-bower": "^1.1.0",
-    "simplePagination.js": "jquery.simplePagination#*"
+    "simplePagination.js": "jquery.simplePagination#*",
+    "enquire": "^2.1.2"
   }
 }
