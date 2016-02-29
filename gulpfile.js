@@ -115,7 +115,13 @@ gulp.task('templates', function(){
 });
 
 gulp.task('bower_install', function() {
-    return gulp.src(mainBowerFiles(), { base: '/bower_components' })
+    return gulp.src(mainBowerFiles({
+        overrides: {
+            'lory' : {
+                main: paths.asset+'/js/lib/lory.min.js'
+            }
+        }
+    }), { base: '/bower_components' })
         .pipe(concat('vendor.js'))
         .pipe(gulp.dest('_site/js'))
         .pipe(gulp.dest('js'));
