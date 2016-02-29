@@ -1343,7 +1343,8 @@ button {
         width: 1px;
         vertical-align: top; }
         .m-by-theme .m-slider ul li a {
-          display: block; }
+          display: block;
+          position: relative; }
           .m-by-theme .m-slider ul li a > * {
             padding: 25px 0 0; }
             .m-by-theme .m-slider ul li a > *:first-child {
