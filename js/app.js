@@ -15,8 +15,6 @@
       'click .toggle-themes' : 'toggleThemes'
     },
 
-    submenuTemplate: HandlebarsTemplates['aside-submenu'],
-
     model: new (Backbone.Model.extend({
       defaults: {
         collapsed: true
@@ -79,9 +77,6 @@
       if (!!this.model.get('id')) {
         var $el = this.$el.find('#aside-'+this.model.get('id'));
         $el.addClass('-active');
-        if ($el.hasClass('-theme')) {
-          $el.parent().append(this.submenuTemplate({ submenu: this.model.get('submenu') }));
-        }
       }
     },
 
