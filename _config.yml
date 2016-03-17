@@ -48,6 +48,11 @@ categories_info:
     title: Commodities
     description: "Global Forest Watch Commodities is an online platform that empowers companies to analyze the impact of key commodities on forests, using the latest and most powerful data available."
     slug: commodities
+  odp:
+    order: 5
+    title: Open data portal
+    description: ""
+    slug: odp
 
 
 tags_info:

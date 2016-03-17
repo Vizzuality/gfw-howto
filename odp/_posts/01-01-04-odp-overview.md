@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Subscribe to a Data Shape on the Map
-order: 10
+title: ODP Overview
+order: 1
 published: True
 description: "Global Forest Watch offers a wide range of content and capabilities to serve a variety of users and purposes. Whether you arrive at GFW with a clear purpose or are simply exploring different features, we can help you learn to use the platform."
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
-tags: [suscribe to alerts]
-categories: [gfw]
+tags: [tutorial videos]
+categories: [odp]
 mobile: true
 ---
 
