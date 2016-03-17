@@ -28,7 +28,6 @@
       this.cache();
 
       // inits
-      this.toggleThemes();
       this.highlight();
     },
 
@@ -44,23 +43,6 @@
 
     setListeners: function() {
       this.model.on('change:id', this.getData.bind(this));
-    },
-
-    // Themes behaviour
-    toggleThemes: function() {
-      if (! !!this.model.get('id')) {
-        if (this.model.get('collapsed')) {
-          var arr = _.union(
-            _.first(this.model.get('themes'), 4),
-            [$('<li>').addClass('toggle-themes').html('. . .')]
-          );
-          this.renderThemes(arr);
-        } else {
-          var arr = this.model.get('themes');
-          this.renderThemes(arr);
-        }
-        this.model.set('collapsed', !this.model.get('collapsed'));
-      }
     },
 
     renderThemes: function(arr) {
