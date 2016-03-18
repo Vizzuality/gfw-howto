@@ -51,7 +51,7 @@ categories_info:
   odp:
     order: 5
     title: Open data portal
-    description: ""
+    description: "Browse, learn more about, and download the data displayed on Global Forest Watch."
     slug: odp
 
 

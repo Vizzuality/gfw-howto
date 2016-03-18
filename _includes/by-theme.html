@@ -9,7 +9,7 @@
             <a href="{{site.baseurl}}/themes/{{ tag[1].slug | slugify }}">
               <svg><use xlink:href="#icon-{{ tag[1].slug | downcase | remove:' ' }}"></use></svg>
               <h2>{{ tag[1].title }}</h2>
-              <p>{{ tag[1].description }}</p>
+              <!-- <p>{{ tag[1].description }}</p> -->
             </a>
           </li>
         {% endfor %}
