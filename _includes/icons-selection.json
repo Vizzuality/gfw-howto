@@ -105,7 +105,7 @@
 				"attrs": [],
 				"isMulticolor": false,
 				"tags": [
-					"analyzedata"
+					"analyzedataandsuscribetoalerts"
 				],
 				"grid": 0
 			},
@@ -114,7 +114,7 @@
 				"order": 1,
 				"id": 4,
 				"prevSize": 32,
-				"name": "analyzedata"
+				"name": "analyzedataandsuscribetoalerts"
 			},
 			"setIdx": 0,
 			"setId": 24,
@@ -537,6 +537,30 @@
 			"setIdx": 0,
 			"setId": 24,
 			"iconIdx": 22
+		},
+		{
+			"icon": {
+				"paths": [
+					"M456.192 371.104h-189.952l280.288 379.904 280.224-379.904h-189.952v-367.392h-180.608v367.392zM17.152 1000.096h1058.688v-435.904h-124.544v311.36h-809.6v-311.36h-124.544v435.904z"
+				],
+				"attrs": [],
+				"isMulticolor": false,
+				"width": 1088,
+				"grid": 0,
+				"tags": [
+					"OpenData"
+				]
+			},
+			"attrs": [],
+			"properties": {
+				"order": 8,
+				"id": 0,
+				"prevSize": 32,
+				"name": "OpenData"
+			},
+			"setIdx": 0,
+			"setId": 2,
+			"iconIdx": 0
 		}
 	],
 	"height": 1024,
