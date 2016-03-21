@@ -1370,7 +1370,8 @@ button {
             color: #97bd3d;
             text-transform: uppercase;
             font-size: 19px;
-            padding: 0 0 0 40px; }
+            padding: 0 0 0 40px;
+            white-space: normal; }
             @media (min-width: 850px) {
               .m-by-theme .m-slider ul li a h2 {
                 padding: 25px 0 0;
