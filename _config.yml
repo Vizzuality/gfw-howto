@@ -66,11 +66,11 @@ tags_info:
     title: View statistics
     description: "These courses are designed to provide an in-depth understanding of the ways can support a variety of professional."
     slug: view statistics
-  analyze_data:
+  analyze_data_and_suscribe_to_alerts:
     order: 3
     title: Analyze data and suscribe to alerts
     description: "Description analyze_data"
-    slug: analyze data
+    slug: analyze data and suscribe to alerts
   submit_a_story:
     order: 5
     title: Submit a story
