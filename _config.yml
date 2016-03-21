@@ -33,21 +33,21 @@ categories_info:
     title: Gfw
     description: "Empowering people everywhere to better manage and conserve forest landscapes through an interactive online forest monitoring system."
     slug: gfw
-  climate:
-    order: 2
-    title: Climate
-    description: "GFW Climate catalyzes action on climate change by providing timely, credible answers to questions about carbon emissions from tropical deforestation."
-    slug: climate
   fires:
-    order: 3
+    order: 2
     title: Fires
     description: "Global Forest Watch Fires (GFW Fires) is an online platform for monitoring and responding to forest and land fires in the ASEAN region using near real-time information."
     slug: fires
   commodities:
-    order: 4
+    order: 3
     title: Commodities
     description: "Global Forest Watch Commodities is an online platform that empowers companies to analyze the impact of key commodities on forests, using the latest and most powerful data available."
     slug: commodities
+  climate:
+    order: 4
+    title: Climate
+    description: "GFW Climate catalyzes action on climate change by providing timely, credible answers to questions about carbon emissions from tropical deforestation."
+    slug: climate
   odp:
     order: 5
     title: Open data portal
@@ -68,14 +68,9 @@ tags_info:
     slug: view statistics
   analyze_data:
     order: 3
-    title: Analyze data
+    title: Analyze data and suscribe to alerts
     description: "Description analyze_data"
     slug: analyze data
-  suscribe_to_alerts:
-    order: 4
-    title: Suscribe to alerts
-    description: "Description suscribe_to_alerts"
-    slug: suscribe to alerts
   submit_a_story:
     order: 5
     title: Submit a story
