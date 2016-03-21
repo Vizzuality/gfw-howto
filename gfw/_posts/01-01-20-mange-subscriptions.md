@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Analyze a User-Defined Area
-order: 5
+title: Manage Subscriptions
+order: 20
 published: True
 description: "Global Forest Watch offers a wide range of content and capabilities to serve a variety of users and purposes. Whether you arrive at GFW with a clear purpose or are simply exploring different features, we can help you learn to use the platform."
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"

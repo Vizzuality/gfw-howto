@@ -15,8 +15,6 @@
       'click .toggle-themes' : 'toggleThemes'
     },
 
-    submenuTemplate: HandlebarsTemplates['aside-submenu'],
-
     model: new (Backbone.Model.extend({
       defaults: {
         collapsed: true
@@ -30,7 +28,6 @@
       this.cache();
 
       // inits
-      this.toggleThemes();
       this.highlight();
     },
 
@@ -48,23 +45,6 @@
       this.model.on('change:id', this.getData.bind(this));
     },
 
-    // Themes behaviour
-    toggleThemes: function() {
-      if (! !!this.model.get('id')) {
-        if (this.model.get('collapsed')) {
-          var arr = _.union(
-            _.first(this.model.get('themes'), 4),
-            [$('<li>').addClass('toggle-themes').html('. . .')]
-          );
-          this.renderThemes(arr);
-        } else {
-          var arr = this.model.get('themes');
-          this.renderThemes(arr);
-        }
-        this.model.set('collapsed', !this.model.get('collapsed'));
-      }
-    },
-
     renderThemes: function(arr) {
       this.$asideThemeView.html(this.parseThemes(arr));
     },
@@ -79,9 +59,6 @@
       if (!!this.model.get('id')) {
         var $el = this.$el.find('#aside-'+this.model.get('id'));
         $el.addClass('-active');
-        if ($el.hasClass('-theme')) {
-          $el.parent().append(this.submenuTemplate({ submenu: this.model.get('submenu') }));
-        }
       }
     },
 

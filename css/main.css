@@ -1247,6 +1247,8 @@ button {
         background: #e98300; }
       .m-by-app ul li.-climate {
         background: #5b80a0; }
+      .m-by-app ul li.-odp {
+        background: #97bd3d; }
       @media (min-width: 850px) {
         .m-by-app ul li.-gfw:hover {
           background: #a2c64e; }
@@ -1255,7 +1257,9 @@ button {
         .m-by-app ul li.-commodities:hover {
           background: #ff9104; }
         .m-by-app ul li.-climate:hover {
-          background: #6a8daa; } }
+          background: #6a8daa; }
+        .m-by-app ul li.-odp:hover {
+          background: #a2c64e; } }
       .m-by-app ul li h2 {
         color: #FFF;
         text-transform: uppercase;
@@ -1359,8 +1363,6 @@ button {
             fill: #97bd3d; }
             @media (min-width: 850px) {
               .m-by-theme .m-slider ul li a svg {
-                width: 50px;
-                height: 50px;
                 position: relative; } }
           .m-by-theme .m-slider ul li a h2 {
             position: relative;
@@ -1368,7 +1370,8 @@ button {
             color: #97bd3d;
             text-transform: uppercase;
             font-size: 19px;
-            padding: 0 0 0 40px; }
+            padding: 0 0 0 40px;
+            white-space: normal; }
             @media (min-width: 850px) {
               .m-by-theme .m-slider ul li a h2 {
                 padding: 25px 0 0;
