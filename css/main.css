@@ -400,9 +400,9 @@ button {
     width: 100%;
     position: relative;
     border: 1px solid #E5E5DF; }
-    .m-content-grid .m-content-item a:hover.-video:before {
+    .m-content-grid .m-content-item a:hover .img.-video:before {
       background: #97bd3d; }
-    .m-content-grid .m-content-item a:hover.-video:after {
+    .m-content-grid .m-content-item a:hover .img.-video:after {
       border-left-color: #FFF; }
   .m-content-grid .m-content-item .img {
     background-image: url("/assets/images/thumbnail-post.png");
