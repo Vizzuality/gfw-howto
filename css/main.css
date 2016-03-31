@@ -400,13 +400,40 @@ button {
     width: 100%;
     position: relative;
     border: 1px solid #E5E5DF; }
+    .m-content-grid .m-content-item a:hover.-video:before {
+      background: #97bd3d; }
+    .m-content-grid .m-content-item a:hover.-video:after {
+      border-left-color: #FFF; }
   .m-content-grid .m-content-item .img {
     background-image: url("/assets/images/thumbnail-post.png");
+    background-color: #555;
     background-size: cover;
     width: 100%;
     height: 0;
     padding-bottom: 50%;
-    border-bottom: 1px solid #E5E5DF; }
+    border-bottom: 1px solid #E5E5DF;
+    position: relative; }
+    .m-content-grid .m-content-item .img.-video:before, .m-content-grid .m-content-item .img.-video:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%); }
+    .m-content-grid .m-content-item .img.-video:before {
+      width: 60px;
+      height: 60px;
+      background: #FFF;
+      border-radius: 50%;
+      z-index: 1; }
+    .m-content-grid .m-content-item .img.-video:after {
+      width: 0px;
+      height: 0px;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 20px solid #97bd3d;
+      margin: 0 0 0 2px;
+      z-index: 2; }
   .m-content-grid .m-content-item .content {
     padding: 30px 15px; }
     @media (min-width: 850px) {
@@ -1155,6 +1182,16 @@ button {
     display: block;
     max-width: 100%;
     border: 1px solid #E5E5DF; }
+  .m-post .video {
+    padding-bottom: 56.2790%;
+    position: relative;
+    overflow: hidden; }
+    .m-post .video iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }
 
 .m-toggle-howto {
   position: absolute;
