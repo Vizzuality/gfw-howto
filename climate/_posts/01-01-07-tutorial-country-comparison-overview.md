@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Data
-order: 5
+title: Country Comparison Overview
+order: 7
 published: True
-description: "Global Forest Watch offers a wide range of content and capabilities to serve a variety of users and purposes. Whether you arrive at GFW with a clear purpose or are simply exploring different features, we can help you learn to use the platform."
-thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
+description: ""
+thumbnail: "video"
 tags: [tutorial videos]
-categories: [commodities]
+categories: [climate]
 mobile: true
 ---
 
