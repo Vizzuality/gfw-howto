@@ -1172,6 +1172,8 @@ button {
         position: absolute;
         top: 0;
         left: 0;
+        font-size: 16px;
+        font-weight: 500;
         display: inline-block;
         margin: 0 5px 0 0;
         content: counter(mycounter) ".";
