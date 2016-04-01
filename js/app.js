@@ -639,7 +639,7 @@
       'climate/:id' : 'post',
       'fires/:id' : 'post',
       'commodities/:id' : 'post',
-
+      'odp/:id': 'post'
     },
 
     ParamsModel: Backbone.Model.extend({}),
