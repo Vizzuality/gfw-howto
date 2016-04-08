@@ -29,7 +29,7 @@ mobile: false
   <p>If you want to adjust the time period you are analyzing, simply drag the handles on the timeline or select a different time interval. If you want to change the type of data, you can also choose a different data set under the Forest Change menu on the map. Your results will update immediately based on your selection.</p>
   <p>You can then subscribe to the activated forest change alerts for the area by clicking the <strong>“Subscribe”</strong> button, download the data for your area of interest directly from the map (not available for all Forest Change data), or discard your analysis.</p>
   <p><strong>SUBSCRIBE</strong> Click <strong>“Subscribe”</strong> and you will be prompted to <strong>1)</strong> Log in using your Twitter, Facebook, or Google account (the first time you log in you will be prompted to create a profile), <strong>2)</strong> Enter the email address where you would like to receive notifications for the subscription, <strong>3)</strong> Name your subscription, and <strong>4)</strong> Click the link sent to your email to confirm the subscription. </p>
-  <div class="img-two-columns">
+  <div class="image-grid">
     <img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop5.png"/>
     <img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop6.png"/>
     <img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop7.png"/>

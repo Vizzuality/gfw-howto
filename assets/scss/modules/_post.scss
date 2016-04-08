@@ -85,6 +85,18 @@
     border: 1px solid $border1;
   }
 
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;    
+    > * {
+      width: 47.5%;
+      height: auto;
+      margin: 2.5% 0;
+    }
+  }
+
   .video {
     padding-bottom: 56.2790%;
     position: relative;
