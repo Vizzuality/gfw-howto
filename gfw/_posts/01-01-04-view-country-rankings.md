@@ -4,7 +4,7 @@ title: View Country Rankings
 order: 4
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/view-country-rankings/thumbnail.jpg"
+thumbnail: "/assets/images/gfw/view-country-rankings/thumbnail.png"
 imagepath: "/assets/images/gfw/view-country-rankings"
 tags: [view statistics]
 categories: [gfw]

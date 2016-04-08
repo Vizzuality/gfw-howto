@@ -4,7 +4,7 @@ title: Visualize country data
 order: 2
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/visualize-country-data/thumbnail.jpg"
+thumbnail: "/assets/images/gfw/visualize-country-data/thumbnail.png"
 imagepath: "/assets/images/gfw/visualize-country-data"
 tags: [visualize data]
 categories: [gfw]
