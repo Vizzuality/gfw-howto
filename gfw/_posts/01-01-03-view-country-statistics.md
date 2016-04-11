@@ -34,10 +34,10 @@ mobile: true
   <h3>View national and subnational forest statistics</h3>
   <p><strong>1.</strong> Navigate to the Country Profiles</a>.
   <p><strong>2.</strong> Select a country from the list that appears. To view statistics and graphs for a subnational jurisdiction (e.g., province, district) tap the “Select Jurisdiction” button located under the country name.</p>
-  <p>
+  <div class="image-grid-mobile">
     <img src="{{site.baseurl}}{{page.imagepath}}/mobile/mobile1.png"/>
-    <img src="{{site.baseurl}}{{page.imagepath}}/mobile/mobile1.png"/>
-  </p>
+    <img src="{{site.baseurl}}{{page.imagepath}}/mobile/mobile2.png"/>
+  </div>
   <p><strong>3.</strong> To view statistics and graphs related to tree cover loss and gain, forest type, economy, land tenure, and more, simply scroll down.</p>
   <p><strong>4.</strong> Learn more about or share each statistic and graph by selecting the information or share icons, when available.</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/mobile/mobile3.png"/></p>

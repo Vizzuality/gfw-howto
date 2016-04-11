@@ -67,11 +67,11 @@ mobile: true
   <h3>Visualize global data on the GFW Interactive Map</h3>
   <p><strong>1.</strong>  Navigate to the <a href="http://www.globalforestwatch.org/map" target="_blank">GFW Interactive Map</a>.</p>
   <p><strong>2.</strong>  Available data layers are organized by category within the Data Layers drop down menu. Tap on Global Data or Country Data and then search through the categories to select the data layer(s) you want to display. Once the layers are selected, tap Go to Map. Tree cover loss and gain are displayed by default.</p>
-  <p>
+  <div class="image-grid-mobile">
     <img src="{{site.baseurl}}{{page.imagepath}}/mobile/mobile1.png"/>
     <img src="{{site.baseurl}}{{page.imagepath}}/mobile/mobile2.png"/>
     <img src="{{site.baseurl}}{{page.imagepath}}/mobile/mobile3.png"/>
-  </p>
+  </div>
   <p><strong>3.</strong>  Tap the information icon next to each layer name to learn more about each data layer. This includes information such as data resolution, frequency, cautions, and a link to learn more or download the data set on the <a class="mobile-friendly" href="http://data.globalforestwatch.org/" target="_blank">Open Data Portal</a>.</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/mobile/mobile4.png"/></p>
   <p><strong>4.</strong>  View activated layers by tapping on the data legend on the right-hand side of the map.</p>
@@ -83,10 +83,10 @@ mobile: true
   <p><strong>7.</strong>  Share your map view, zoom in and out, refresh the page, search the Google base map and geo-locate your position using the buttons along the right side of the map.</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/mobile/mobile8.png"/></p>
   <p><strong>8.</strong>  Change the base map to view data with a different map background. Tap on the Data Layers button and then the Basemaps button. Once you select a basemap, tap Return to Map. </p>
-  <p>
+  <div class="image-grid-mobile">
     <img src="{{site.baseurl}}{{page.imagepath}}/mobile/mobile9.png"/>
     <img src="{{site.baseurl}}{{page.imagepath}}/mobile/mobile10.png"/>
-  </p>
+  </div>
 
   <h3>Visualize data for different time periods</h3>
   <p>For most data layers under the Forest Change tab, the default view shows cumulative data points over the entire study period. However, most of these layers can also be viewed for other specified time periods. The specific time intervals (e.g., annual, monthly, and daily) vary for each data layer.</p>

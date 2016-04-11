@@ -97,6 +97,16 @@
     }
   }
 
+  .image-grid-mobile {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;    
+    > * {
+      margin: 2.5% 5% 2.5% 0;
+    }
+  }
+
   .video {
     padding-bottom: 56.2790%;
     position: relative;
