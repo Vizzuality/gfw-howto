@@ -6,27 +6,62 @@ subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius
 
 <header class="m-header">
   <h2>Walkthrough</h2>
-  <p>Here you have a basic and quick example of a walkthrough</p>
-  <!-- <p>First of all, the difference between action and event is that an action will be triggered by us and an event will be triggered by the user.</p> -->
-  {% include code/walkthrough.html %}  
 </header>
 
 <section class="m-post">
   <div class="content" style="display: block;">
-    <h2>Step</h2>
-    <p>First of all, each step belongs to a category (and it can only have one) and it has an 'options' param. Those are the basic params that a step should have.</p>
-    <p>For each category the options are different, here you have the list of categories. We are going to explain in detail each one. Even if the step has multiple options, for each step you can only set one of them</p>
+    <p>In this documentation we are going to learn how to create walkthroughs. The first thing we should know is that a walkthrough have the following params:</p>
     <ul>
-      <li><a href="#walkthrough-layers">Layers</a></li>
-      <li><a href="#walkthrough-tab">Tab</a></li>
-      <li><a href="#walkthrough-timeline">Timeline</a></li>
-      <li><a href="#walkthrough-country">Country</a></li>
-      <li><a href="#walkthrough-analysis">Analysis</a></li>
-      <li><a href="#walkthrough-map">Map</a></li>
+      <li><code class="code">name</code> (string)</li>
+      <li><code class="code">slug</code> (string)</li>
+      <li><code class="code">steps</code> (array)</li>
+    </ul>
+    <p>The most basic thing before we start a new walkthrough is to know the difference between <strong>actions</strong> and <strong>events</strong>.</p>
+    <p><strong>Actions</strong>: They are steps handled and triggered by us (the creator of the walkthrough). For example, at step 3 we we decided to change the active layers of the map, the range of dates...</p>
+    <p><strong>Events</strong>: They are steps where we expect an iteraction from the user. For example, we expect a change on the timeline, a change in the layers...</p>
+    <!-- {% include code/walkthrough.html %}   -->
+
+
+
+
+
+
+    <h2>Steps</h2>
+    <p>First of all, each step must have a type, it belongs to a category (it can only have one) and it has an 'options' param. Those are the basic params that a step should have.</p>
+    <ul>
+      <li><code class="code">type</code> - (string)</li>
+      <li><code class="code">category</code> - (string)</li>
+      <li><code class="code">options</code> (object)</li>
+    </ul>
+    <h3>Types</h3>
+    <p>The difference between action and event is that an action will be triggered by us and an event will be triggered by the user.</p>
+    <ul>
+      <li><a href="#walkthrough-actions">Action steps</a> - <code class="code">action</code></li>
+      <li><a href="#walkthrough-events">Event steps</a> - <code class="code">event</code></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+    <!-- ACTION STEPS -->
+    <h2 id="walkthrough-actions">Action Steps</h2>
+    <h3>Categories</h3>
+    <ul>
+      <li><a href="#walkthrough-layers">Layers</a> - <code class="code">layers</code></li>
+      <li><a href="#walkthrough-tab">Tab</a> - <code class="code">tab</code></li>
+      <li><a href="#walkthrough-timeline">Timeline</a> - <code class="code">timeline</code></li>
+      <li><a href="#walkthrough-country">Country</a> - <code class="code">country</code></li>
+      <li><a href="#walkthrough-analysis">Analysis</a> - <code class="code">analysis</code></li>
+      <li><a href="#walkthrough-map">Map</a> - <code class="code">map</code></li>
     </ul> 
     <!-- Layers -->
     <h3 id="walkthrough-layers">Layers</h3>
-    <p>We need to set a 'layers' param equal to an array of layer slugs. You can find here the slugs <a href="https://wri-01.cartodb.com/tables/layerspec_nuclear_hazard" target="_blank">Layerspec</a>. If you want to set a country layer, you should first set the <a href="#walkthrough-country">country</a></p>
+    <p>We need to set a <code class="code">layers</code> param equal to an array of layer slugs. You can find the slugs here <a href="https://wri-01.cartodb.com/tables/layerspec_nuclear_hazard" target="_blank">Layerspec</a>. If you want to set a country layer, you should first set the <a href="#walkthrough-country">country</a></p>
     {% include code/layers.html %} 
 
     <!-- Tab -->
@@ -73,6 +108,20 @@ subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eius
       <li>Tree height => 'treeheight'</li>
     </ul>
     {% include code/map.html %} 
+
+    
+
+
+
+
+
+
+
+
+    <!-- EVENTS -->
+    <h2 id="walkthrough-actions">Events Steps</h2>
+
+
 
   </div>
 </section>

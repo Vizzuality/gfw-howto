@@ -3,14 +3,15 @@
 [{
   name: 'Glad alerts',
   slug: 'glad-alerts',
-  id: 1,
   // see step documentation
   steps: [{
+    type: 'action',
     category: 'layers',
     options: {
       layers: ['loss', 'forestgain', ...]
     }
   },{
+    type: 'action',
     category: 'timeline',
     options: {
       dates: {

@@ -93,6 +93,13 @@
     border: 1px solid $border1;
   }
 
+  .code {
+    background: #EEE;
+    padding: 0 5px;
+    border-radius: 5px;
+    color: #117CDD;    
+  }
+
   .image-grid {
     display: flex;
     flex-wrap: wrap;
