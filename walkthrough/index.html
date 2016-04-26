@@ -1,0 +1,78 @@
+---
+layout: default
+title: "Walkthrough documentation"
+subtitle: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud."
+---
+
+<header class="m-header">
+  <h2>Walkthrough</h2>
+  <p>Here you have a basic and quick example of a walkthrough</p>
+  <!-- <p>First of all, the difference between action and event is that an action will be triggered by us and an event will be triggered by the user.</p> -->
+  {% include code/walkthrough.html %}  
+</header>
+
+<section class="m-post">
+  <div class="content" style="display: block;">
+    <h2>Step</h2>
+    <p>First of all, each step belongs to a category (and it can only have one) and it has an 'options' param. Those are the basic params that a step should have.</p>
+    <p>For each category the options are different, here you have the list of categories. We are going to explain in detail each one. Even if the step has multiple options, for each step you can only set one of them</p>
+    <ul>
+      <li><a href="#walkthrough-layers">Layers</a></li>
+      <li><a href="#walkthrough-tab">Tab</a></li>
+      <li><a href="#walkthrough-timeline">Timeline</a></li>
+      <li><a href="#walkthrough-country">Country</a></li>
+      <li><a href="#walkthrough-analysis">Analysis</a></li>
+      <li><a href="#walkthrough-map">Map</a></li>
+    </ul> 
+    <!-- Layers -->
+    <h3 id="walkthrough-layers">Layers</h3>
+    <p>We need to set a 'layers' param equal to an array of layer slugs. You can find here the slugs <a href="https://wri-01.cartodb.com/tables/layerspec_nuclear_hazard" target="_blank">Layerspec</a>. If you want to set a country layer, you should first set the <a href="#walkthrough-country">country</a></p>
+    {% include code/layers.html %} 
+
+    <!-- Tab -->
+    <h3 id="walkthrough-tab">Tab</h3>
+    <p>We can set an active tab or a subtab (like the analysis ones).</p>
+    <ul>
+      <li>Country => 'countries-tab'</li>
+      <li>Analysis => 'analysis-tab'</li>
+      <li>Basemaps => 'basemaps-tab'</li>
+      <li>High res => 'hd-tab'</li>
+    </ul>
+    {% include code/tab.html %} 
+    
+    <!-- Timeline -->
+    <h3 id="walkthrough-timeline">Timeline</h3>
+    <p>We need to set a 'dates' param equal to an object with a 'begin' and 'end' param. Of course, the dates should be between the range of dates allowed by the current forest change layer. The format of the dates should be 'dd/mm/YYYY'</p>
+    {% include code/timeline.html %} 
+
+    <!-- Country -->
+    <h3 id="walkthrough-country">Country</h3>
+    <p>We need to set an 'iso' param with 2 params: 'country' and 'region'</p>
+    {% include code/country.html %} 
+
+    <!-- Analysis -->
+    <h3 id="walkthrough-analysis">Analysis</h3>
+    <p>We must specify the type of the analysis, so the 'analysis' param is mandatory. we have 3 different types of analysis:</p>
+    <ul>
+      <li>'draw' - Draw or upload shape</li>
+      <li>'country' - Country or region</li>
+      <li>'area' - Area</li>
+    </ul>
+    {% include code/analysis.html %} 
+
+    <!-- Map -->
+    <h3 id="walkthrough-map">Map</h3>
+    <p>We have different possibilities here. We can set a zoom level, a location or a basemap. Just remember that you can only change one thing per step. For the basemaps, here you have a list of the ids of the basemaps.</p>
+    <ul>
+      <li>Default => 'grayscale'</li>
+      <li>Terrain => 'terrain'</li>
+      <li>Satellite => 'satellite'</li>
+      <li>Dark Matter => 'dark'</li>
+      <li>Positron => 'positron'</li>
+      <li>Roads => 'hybrid'</li>
+      <li>Tree height => 'treeheight'</li>
+    </ul>
+    {% include code/map.html %} 
+
+  </div>
+</section>
