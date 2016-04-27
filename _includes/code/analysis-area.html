@@ -1,0 +1,26 @@
+{% highlight javascript %}
+// AREA ANALYSIS STEP EXAMPLE
+[{
+  type: 'action',
+  category: 'analysis',
+  options: {
+    // Choose one of these ['draw','country','area']  
+    analysis: 'area', // String
+
+    // Choose one of these ['id','geometry']  
+    type: 'id',
+
+    // Depending on the type we will need
+    // id => area_id (protected_areas, concessions)
+    area_id: 4357,
+
+    // geometry => shape (geojson)
+    shape: {
+      type: "Feature",
+      geometry: { 
+        // ... 
+      }
+    } 
+  }
+}]
+{% endhighlight %}

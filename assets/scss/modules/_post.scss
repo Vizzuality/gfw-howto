@@ -38,6 +38,11 @@
     font-weight: 500;
   }
 
+  h4 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
   ul {
     list-style-type: disc;
     color: $dark;
@@ -97,7 +102,11 @@
     background: #EEE;
     padding: 0 5px;
     border-radius: 5px;
-    color: #117CDD;    
+    color: #117CDD;
+    
+    &.-string {
+      color: #555;
+    }
   }
 
   .image-grid {

@@ -1138,6 +1138,9 @@ button {
   .m-post h3 {
     font-size: 16px;
     font-weight: 500; }
+  .m-post h4 {
+    font-size: 14px;
+    font-weight: 500; }
   .m-post ul {
     list-style-type: disc;
     color: #555; }
@@ -1177,6 +1180,8 @@ button {
     padding: 0 5px;
     border-radius: 5px;
     color: #117CDD; }
+    .m-post .code.-string {
+      color: #555; }
   .m-post .image-grid {
     display: -ms-flexbox;
     display: flex;

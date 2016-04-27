@@ -1,0 +1,18 @@
+{% highlight javascript %}
+// COUNTRY ANALYSIS STEP EXAMPLE
+[{
+  type: 'action',
+  category: 'analysis',
+  options: {
+    // Choose one of these ['draw','country','area']  
+    analysis: 'country', // String
+
+    // Country is mandatory; Region isn't
+    iso: {
+      country: 'BRA',
+      region: 1
+    }
+
+  }
+}]
+{% endhighlight %}

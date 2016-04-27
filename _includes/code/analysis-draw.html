@@ -1,5 +1,5 @@
 {% highlight javascript %}
-// ANALYSIS STEP EXAMPLE
+// DRAW ANALYSIS STEP EXAMPLE
 [{
   type: 'action',
   category: 'analysis',
@@ -7,6 +7,13 @@
     // Choose one of these ['draw','country','area']  
     analysis: 'draw', // String
 
+    // Set the geometry as geojson
+    shape: {
+      type: "Feature",
+      geometry: { 
+        // ... 
+      }
+    }
   }
 }]
 {% endhighlight %}
