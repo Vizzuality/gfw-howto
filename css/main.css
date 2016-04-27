@@ -1179,7 +1179,8 @@ button {
     background: #EEE;
     padding: 0 5px;
     border-radius: 5px;
-    color: #117CDD; }
+    color: #008080;
+    font-weight: 400; }
     .m-post .code.-string {
       color: #555; }
   .m-post .image-grid {
