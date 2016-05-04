@@ -60,10 +60,12 @@ button {
   margin: 0 auto;
   padding: 0px;
   width: 100%;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   @media (min-width: 850px) {
     .l-wrapper {
       max-width: 1024px;
@@ -150,6 +152,7 @@ button {
 
 .m-breadcrumbs {
   position: relative;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   text-transform: uppercase;
@@ -369,16 +372,20 @@ button {
   padding: 20px 0 0; }
   .m-content-grid ul {
     margin: 0;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
     @media (min-width: 850px) {
       .m-content-grid ul {
         margin: -4% 0 0; } }
     .m-content-grid ul li {
+      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
       width: 100%;
@@ -452,10 +459,12 @@ button {
         text-decoration: underline; }
 
 .m-blog ul {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .m-blog ul li {
     position: relative;
     width: 100%;
@@ -515,19 +524,23 @@ button {
 .m-blog .m-blog-link {
   background: #555;
   padding: 30px 0;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center; }
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .m-blog .m-blog-link a {
     position: relative;
     width: auto;
     height: 50px;
     line-height: 54px;
+    display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    -ms-flex-item-align: center;
-        align-self: center;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
     margin: 0 auto;
     padding: 0px 42px;
     color: #555;
@@ -541,10 +554,12 @@ button {
     .m-blog .m-blog-link a svg {
       display: inline-block;
       fill: #555;
+      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-item-align: center;
-          align-self: center;
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center;
       width: 30px;
       height: 30px;
       margin: 0 5px 0 0; }
@@ -1028,12 +1043,15 @@ button {
     cursor: default; }
 
 .simple-pagination {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 40px 0 0;
   margin: 0 auto;
   position: relative;
@@ -1184,27 +1202,35 @@ button {
     .m-post .code.-string {
       color: #555; }
   .m-post .image-grid {
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-align: start;
-        align-items: flex-start; }
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
     .m-post .image-grid > * {
       width: 47.5%;
       height: auto;
       margin: 2.5% 0; }
   .m-post .image-grid-mobile {
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
-    -ms-flex-align: start;
-        align-items: flex-start; }
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
     .m-post .image-grid-mobile > * {
       margin: 2.5% 5% 2.5% 0; }
   .m-post .video {
@@ -1223,11 +1249,13 @@ button {
   top: -60px;
   right: 0px;
   font-size: 10px;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   z-index: 2;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   min-width: 130px;
   border-radius: 20px;
   background: #97bd3d;
@@ -1276,12 +1304,15 @@ button {
       padding: 50px 0 0; } }
   .m-by-app ul {
     margin: 0;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
     @media (min-width: 850px) {
       .m-by-app ul {
         margin: -4% 0 0; } }
@@ -1452,10 +1483,12 @@ button {
         padding: 50px 0 0; } }
     .m-by-theme .m-slider-navigation ul {
       position: relative;
+      display: -webkit-inline-flex;
       display: -ms-inline-flexbox;
       display: inline-flex;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       left: 50%;
       -webkit-transform: translate(-50%, 0);
               transform: translate(-50%, 0); }
