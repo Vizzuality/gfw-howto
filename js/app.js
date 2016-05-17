@@ -766,7 +766,6 @@
     },
 
     homePage: function() {
-      this.sliderView = new root.app.View.SliderView();
       this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
       this.searchView = new root.app.View.SearchView();
     },
@@ -778,7 +777,6 @@
     },
 
     appPage: function(id) {
-      this.sliderView = new root.app.View.SliderView();
       this.asideView = new root.app.View.AsideView({
         options: {
           model: {
@@ -789,7 +787,6 @@
     },
 
     themePage: function(id) {
-      this.sliderView = new root.app.View.SliderView();
       this.asideView = new root.app.View.AsideView({
         options: {
           model: {

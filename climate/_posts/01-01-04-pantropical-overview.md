@@ -3,7 +3,7 @@ layout: post
 title: Pantropical Overview
 order: 4
 published: True
-description: "Global Forest Watch offers a wide range of content and capabilities to serve a variety of users and purposes. Whether you arrive at GFW with a clear purpose or are simply exploring different features, we can help you learn to use the platform."
+description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
 tags: [view statistics]
 categories: [climate]

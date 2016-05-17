@@ -29,7 +29,6 @@
   .m-category-grid {
     > li {
       display: none;
-      border-top: 1px solid $border1;
       padding: 40px 15px;
       @media (min-width: $br-mobile){
         padding: 40px;

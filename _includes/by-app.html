@@ -4,11 +4,9 @@
     {% for category in site.categories_info %}
       <li class="-{{ category[1].slug }}">
         <a href="{{site.baseurl}}/apps/{{ category[1].slug | slugify }}">
-          <h2>
-            {{ category[1].title }}
-            <svg><use xlink:href="#icon-{{ category[1].slug | downcase | remove:' ' }}"></use></svg>
-          </h2>
-          <p>{{category[1].description}}</p>
+          <svg><use xlink:href="#icon-{{ category[1].slug | downcase | remove:' ' }}"></use></svg>
+          <h2>{{ category[1].title }}</h2>
+          <!-- <p>{{category[1].description}}</p> -->
         </a>
       </li>
     {% endfor %}

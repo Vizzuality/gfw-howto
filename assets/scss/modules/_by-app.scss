@@ -21,9 +21,9 @@
       color: $white;
       position: relative;
       @media (min-width: $br-mobile){
-        width: 48%;
+        width: 22%;
         margin: 4% 0 0;
-        padding: 40px;
+        padding: 40px 10px;
       }
 
       &.-gfw { background: $primary-color;}
@@ -39,35 +39,28 @@
         &.-commodities:hover { background: lighten($orange,5%);}
         &.-climate:hover { background: lighten($blue,5%);}
         &.-odp:hover { background: lighten($primary-color,5%);}
-
       }
 
 
       h2 {
         color: $white;
         text-transform: uppercase;
-        font-size: 19px;
+        text-align: center;
+        font-size: 14px;
         position: relative;
-        margin: 0 0 20px;
-        @media (min-width: $br-mobile){
-          margin: 0 0 30px;
-          font-size: 21px;
-        }
+        line-height: 1.2;
       }
 
       svg {
-        display: block;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translate(0,-50%);
+        display: block;        
         fill: $white;
         width: 20px;
         height: 20px;
+        margin: 0 auto 15px;
 
         @media (min-width: $br-mobile){
-          width: 35px;
-          height: 35px;
+          width: 66px;
+          height: 66px;
         }
 
       }
