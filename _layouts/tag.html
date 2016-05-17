@@ -20,20 +20,22 @@ layout: default
           {% assign sorted_posts = site.posts | sort: 'order' %}          
           {% for post in sorted_posts %}
             {% if post.tags contains page.title %}
-              <li class="m-content-item" data-categories="{{post.categories | join: ' '}}">
-                <a href="{{site.baseurl}}{{ post.url }}">
-                  <div class="img {% if post.thumbnail == 'video' %}-video{% endif %}" {% if post.thumbnail %} style="background-image: url({{site.baseurl}}{{post.thumbnail}})"{% endif %}></div>
+              <li class="m-content-item" data-categories="{{post.categories | join: ' '}}">  
+                <div class="box">                
+                  <a href="{{site.baseurl}}{{ post.url }}" class="img {% if post.thumbnail == 'video' %}-video{% endif %}" {% if post.thumbnail %} style="background-image: url({{site.baseurl}}{{post.thumbnail}})"{% endif %}></a>
                   <div class="content">
-                    <h3>{{ post.title }}</h3>
+                    <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
                     <div class="m-apps-tag">
-                      {% for category in post.categories %}
-                        {% assign categoryCustom = site.categories_info[category] %}
-                        <span>{{categoryCustom.title}}</span>
-                      {% endfor %}
+                      <ul>
+                        {% for category in post.categories %}
+                          {% assign categoryCustom = site.categories_info[category] %}
+                          <li><a class="{{categoryCustom.slug}}" href="{{site.baseurl}}/apps/{{categoryCustom.slug}}">{{categoryCustom.title}}</a></li>
+                        {% endfor %}                        
+                      </ul>
                     </div>
                     <p>{{ post.description }}</p>
-                  </div>
-                </a>
+                  </div>              
+                </div>              
               </li>
             {% endif %}
           {% endfor %}        

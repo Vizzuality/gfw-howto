@@ -1,0 +1,47 @@
+.m-checkbox {
+	input[type="checkbox"] {
+		display: none;
+	}
+
+	input[type="checkbox"]:checked + label {
+		color: $black;
+		span svg {
+			display: block;
+		}
+	}
+
+	label {
+		display: block;
+		position: relative;
+		padding-left: 25px;
+		color: $dark;
+		cursor: pointer;
+		
+		span {
+			position: absolute;
+			display: block;
+			width: 20px;
+			height: 20px;
+			border: 1px solid $border1;
+			left: 0;
+			top: 50%;
+			margin: -10px 0 0;
+			background: $white;
+			border-radius: 4px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			svg {
+				width: 14px;
+				height: 14px;
+				fill: $primary-color;
+				display: none;
+			}
+		}
+
+		&:hover {
+			color: $black;
+		}
+	}
+}

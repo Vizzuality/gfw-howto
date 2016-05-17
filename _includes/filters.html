@@ -1,9 +1,14 @@
-<div id="filtersView" class="m-filter">
+<div id="filtersView" class="m-filters">
 	<ul>
 		{% for category in site.categories_info %}
 			<li>
-				<input id="checkbox-{{ category[1].slug }}" type="checkbox" name="checkbox-category" class="js-checkbox-category" data-category="{{ category[1].slug }}"/>
-				<label for="checkbox-{{ category[1].slug }}">{{ category[1].title }}</label>
+				<div class="m-checkbox">
+					<input id="checkbox-{{ category[1].slug }}" type="checkbox" name="checkbox-category" class="js-checkbox-category" data-category="{{ category[1].slug }}"/>
+					<label for="checkbox-{{ category[1].slug }}">
+						<span><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use></svg></span>
+						{{ category[1].title }}
+					</label>					
+				</div>
 			</li>
 		{% endfor %}		
 	</ul>
