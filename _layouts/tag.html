@@ -25,6 +25,12 @@ layout: default
                   <div class="img {% if post.thumbnail == 'video' %}-video{% endif %}" {% if post.thumbnail %} style="background-image: url({{site.baseurl}}{{post.thumbnail}})"{% endif %}></div>
                   <div class="content">
                     <h3>{{ post.title }}</h3>
+                    <div class="m-apps-tag">
+                      {% for category in post.categories %}
+                        {% assign categoryCustom = site.categories_info[category] %}
+                        <span>{{categoryCustom.title}}</span>
+                      {% endfor %}
+                    </div>
                     <p>{{ post.description }}</p>
                   </div>
                 </a>
