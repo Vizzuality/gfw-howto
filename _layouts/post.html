@@ -8,6 +8,14 @@ layout: default
     {{page.title}}
   </h2>
   <h3>{{page.description}}</h3>
+  <div class="m-apps-tag">
+    <ul>
+      {% for category in page.categories %}
+        {% assign categoryCustom = site.categories_info[category] %}
+        <li><a class="{{categoryCustom.slug}}" href="{{site.baseurl}}/apps/{{categoryCustom.slug}}">{{categoryCustom.title}}</a></li>
+      {% endfor %}                        
+    </ul>    
+  </div>
 </header>
 
 <section class="m-post">
