@@ -1,0 +1,16 @@
+.m-ranking {
+	display: flex;
+	justify-content: space-between;
+
+	.col {
+		width: 48%;
+		padding: 40px;
+		border: 1px solid $border1;
+	}
+
+	header {
+		h2 {
+			font-size: 21px;
+		}
+	}
+}

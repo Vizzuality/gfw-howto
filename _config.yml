@@ -13,15 +13,9 @@ exclude: ["node_modules", "gulpfile.js", "package.json"]
 jekyll-archives:
   enabled: [categories,tags]
   layouts:
-    # year: year
-    # month: month
-    # day: day
     tag: tag
     category: category
   permalinks:
-    # year: '/:year/'
-    # month: '/:year/:month/'
-    # day: '/:year/:month/:day/'
     category: '/apps/:name/'
     tag: '/themes/:name/'
 
