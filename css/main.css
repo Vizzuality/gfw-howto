@@ -300,28 +300,31 @@ button {
   position: relative; }
   .m-search .search-container svg {
     display: none;
-    fill: #555;
-    width: 14px;
-    height: 14px;
+    fill: #B6B6BA;
+    width: 32px;
+    height: 32px;
     position: absolute;
     top: 50%;
-    left: 10px;
+    left: 20px;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%); }
     .m-search .search-container svg.-search {
-      left: 10px; }
+      left: 20px; }
     .m-search .search-container svg.-cross {
       left: auto;
-      right: 10px;
+      right: 20px;
       cursor: pointer; }
       .m-search .search-container svg.-cross:hover {
         fill: #ed1846; }
     .m-search .search-container svg.-active {
       display: block; }
   .m-search .search-container input {
+    font-family: inherit;
+    font-size: 21px;
     display: block;
     width: 100%;
-    padding: 6px calc(6px + 14px + 10px); }
+    padding: 20px calc(6px + 32px + 30px);
+    margin: 20px 0 0; }
 
 .m-search .search-results {
   background: #eee;

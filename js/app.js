@@ -308,7 +308,6 @@
       this.collection.fetch().done(function(){
         this.cache();
         this.initFuse();
-        console.log('hello');
       }.bind(this));
     },
 
@@ -332,7 +331,6 @@
         maxPatternLength: 32,
         keys: ['title','content','category','tags']
       });
-      console.log(this.fuse);
     },
 
     search: function(e) {

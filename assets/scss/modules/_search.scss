@@ -1,0 +1,74 @@
+// Search module
+.m-search {
+  .search-container {
+    position: relative;
+
+    svg {
+      display: none;
+      fill: #B6B6BA;
+      width: 32px;
+      height: 32px;
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      transform: translate(0,-50%);
+
+      &.-search {
+        left: 20px;
+      }
+
+      &.-cross {
+        left: auto;
+        right: 20px;
+        cursor: pointer;
+        &:hover {
+          fill: $red;
+        }
+      }
+
+      &.-active {
+        display: block;
+      }
+    }
+
+    input {
+      @extend %reset-input;
+      font-family: inherit;
+      font-size: 21px;
+      display: block;
+      width: 100%;
+      padding: 20px calc(6px + 32px + 30px);
+      margin: 20px 0 0;
+    }
+  }
+
+  .search-results {
+    background: #eee;
+    padding: 10px 20px;
+    display: none;
+
+    &.-active {
+      display: block;
+    }
+
+    li {
+      font-size: 14px;
+      line-height: 1.25;
+      margin: 5px 0 0;
+
+      &.-highlight {
+        a {
+          color: $primary-color;
+        }
+      }
+
+      a {
+        color: $dark;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}

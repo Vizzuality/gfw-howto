@@ -27,7 +27,7 @@
   }
 
   ul {
-    
+
     &.-collapsed {
       display: none;
     }
@@ -87,79 +87,4 @@
       }
     }
   }
-}
-
-
-// Search module
-.m-search {
-  .search-container {
-    position: relative;
-
-    svg {
-      display: none;
-      fill: $dark;
-      width: 14px;
-      height: 14px;
-      position: absolute;
-      top: 50%;
-      left: 10px;
-      transform: translate(0,-50%);
-
-      &.-search {
-        left: 10px;
-      }
-
-      &.-cross {
-        left: auto;
-        right: 10px;
-        cursor: pointer;
-        &:hover {
-          fill: $red;
-        }
-      }
-
-      &.-active {
-        display: block;
-      }
-    }
-
-    input {
-      @extend %reset-input;
-      display: block;
-      width: 100%;
-      padding: 6px calc(6px + 14px + 10px);
-
-    }
-  }
-
-  .search-results {
-    background: #eee;
-    padding: 10px 20px;
-    display: none;
-
-    &.-active {
-      display: block;
-    }
-
-    li {
-      font-size: 14px;
-      line-height: 1.25;
-      margin: 5px 0 0;
-
-      &.-highlight {
-        a {
-          color: $primary-color;
-        }
-      }
-
-      a {
-        color: $dark;
-
-        &:hover {
-          color: $primary-color;
-        }
-      }
-    }
-  }
-
 }
