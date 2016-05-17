@@ -305,14 +305,22 @@ button {
     display: flex;
     -webkit-justify-content: flex-start;
         -ms-flex-pack: start;
-            justify-content: flex-start; }
+            justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
     .m-apps-tag ul > li {
       text-transform: uppercase;
-      font-size: 11px; }
+      font-size: 11px;
+      margin-right: 20px; }
+      .m-apps-tag ul > li:last-child {
+        margin-right: 0px; }
       .m-apps-tag ul > li a {
         background: rgba(151, 189, 61, 0.25);
         color: #97bd3d;
-        padding: 2px 10px 0; }
+        padding: 4px 10px 2px;
+        display: block;
+        margin: 0 0 5px; }
         .m-apps-tag ul > li a.fires {
           background: rgba(237, 24, 70, 0.25);
           color: #ed1846; }
@@ -403,7 +411,7 @@ button {
 
 .m-content-grid {
   padding: 20px 0 0; }
-  .m-content-grid ul {
+  .m-content-grid > ul {
     margin: 0;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -415,9 +423,9 @@ button {
         -ms-flex-wrap: wrap;
             flex-wrap: wrap; }
     @media (min-width: 850px) {
-      .m-content-grid ul {
+      .m-content-grid > ul {
         margin: -4% 0 0; } }
-    .m-content-grid ul li {
+    .m-content-grid > ul > li {
       display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
@@ -425,10 +433,10 @@ button {
       margin: 15px 0 0;
       position: relative; }
       @media (min-width: 850px) {
-        .m-content-grid ul li {
+        .m-content-grid > ul > li {
           width: 48%;
           margin: 4% 0 0; } }
-      .m-content-grid ul li.-invisible {
+      .m-content-grid > ul > li.-invisible {
         display: none; }
   .m-content-grid .m-content-item .box {
     display: block;
@@ -1474,7 +1482,21 @@ button {
     padding: 40px;
     border: 1px solid #E5E5DF; }
   .m-ranking header h2 {
-    font-size: 21px; }
+    font-size: 21px;
+    padding: 0 0 15px; }
+  .m-ranking h3 {
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #97bd3d;
+    font-weight: 500;
+    margin: 0 0 5px; }
+    .m-ranking h3 a {
+      color: #97bd3d; }
+  .m-ranking .ranking-list > li {
+    padding: 10px 0;
+    border-top: 1px solid #E5E5DF; }
+    .m-ranking .ranking-list > li:first-child {
+      border-top: none; }
 
 .highlight {
   background: #eee;

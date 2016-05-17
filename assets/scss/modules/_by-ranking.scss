@@ -8,9 +8,34 @@
 		border: 1px solid $border1;
 	}
 
-	header {
+	header {	
 		h2 {
 			font-size: 21px;
+			padding: 0 0 15px;
 		}
 	}
+
+	h3 {
+		font-size: 13px;
+		text-transform: uppercase;
+		color: $primary-color;
+		font-weight: 500;
+		margin: 0 0 5px;
+		
+		a {
+			color: $primary-color;
+		}
+	}
+
+	.ranking-list {
+		> li {
+			padding: 10px 0;
+			border-top: 1px solid $border1;
+			
+			&:first-child {
+				border-top: none;
+			}
+		}
+	}
+
 }
