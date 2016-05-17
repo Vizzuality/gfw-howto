@@ -33,8 +33,8 @@
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
       this.listenTo(this.router, 'route:faqs', this.faqsPage);
-      this.listenTo(this.router, 'route:category', this.appPage);
-      this.listenTo(this.router, 'route:tag', this.themePage);
+      this.listenTo(this.router, 'route:category', this.categoryPage);
+      this.listenTo(this.router, 'route:tag', this.tagPage);
       this.listenTo(this.router, 'route:post', this.postPage);
     },
 
@@ -56,11 +56,7 @@
       this.asideView = new root.app.View.AsideView({ options: { model: { id: 'faqs' }}});
     },
 
-    appPage: function(id) {
-      this.asideView = new root.app.View.AsideView({});
-    },
-
-    themePage: function(id) {
+    categoryPage: function(id) {
       this.filtersView = new root.app.View.FiltersView({});
       this.contentView = new root.app.View.ContentView({});      
       this.asideView = new root.app.View.AsideView({
@@ -70,6 +66,10 @@
           }
         }
       });
+    },
+
+    tagPage: function(id) {
+      this.asideView = new root.app.View.AsideView({});
     },
 
     postPage: function() {

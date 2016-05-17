@@ -4,51 +4,24 @@
       <h2 class="-bold">MOST POPULAR QUESTIONS</h2>
     </header>
     <ul class="ranking-list">
-      <li>
-        <h3><a href="#">What is global forest watch?</a></h3>
-        <div class="m-apps-tag">
-          <ul>     
-            <li><a class="gfw" href="/apps/gfw">GFW</a></li>
-            <li><a class="climate" href="/apps/climate">Climate</a></li>
-          </ul>
-        </div>          
-      </li>
-      <li>
-        <h3><a href="#">What is global forest watch?</a></h3>
-        <div class="m-apps-tag">
-          <ul>     
-            <li><a class="gfw" href="/apps/gfw">GFW</a></li>
-            <li><a class="climate" href="/apps/climate">Climate</a></li>
-          </ul>
-        </div>          
-      </li>
-      <li>
-        <h3><a href="#">What is global forest watch?</a></h3>
-        <div class="m-apps-tag">
-          <ul>     
-            <li><a class="gfw" href="/apps/gfw">GFW</a></li>
-            <li><a class="climate" href="/apps/climate">Climate</a></li>
-          </ul>
-        </div>          
-      </li>
-      <li>
-        <h3><a href="#">Does gfw distinguish tree plantations from natural forests?</a></h3>
-        <div class="m-apps-tag">
-          <ul>     
-            <li><a class="gfw" href="/apps/gfw">GFW</a></li>
-            <li><a class="climate" href="/apps/climate">Climate</a></li>
-          </ul>
-        </div>          
-      </li>
-      <li>
-        <h3><a href="#">What is global forest watch?</a></h3>
-        <div class="m-apps-tag">
-          <ul>     
-            <li><a class="gfw" href="/apps/gfw">GFW</a></li>
-            <li><a class="climate" href="/apps/climate">Climate</a></li>
-          </ul>
-        </div>          
-      </li>
+      {% assign sorted_posts = site.posts %}          
+      {% for post in sorted_posts %}
+        {% if post.categories contains 'faqs' %}
+          {% if post.star %}
+            <li>
+              <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
+              <div class="m-apps-tag">
+                <ul>     
+                  {% for tag in post.tags %}
+                    {% assign tagCustom = site.tags_info[tag] %}
+                    <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
+                  {% endfor %}                        
+                </ul>
+              </div>            
+            </li>
+          {% endif %}
+        {% endif %}
+      {% endfor %}        
     </ul>
     <a class="link" href="{{site.baseurl}}/faqs">VIEW ALL FAQ’S ></a>
   </div>
@@ -57,38 +30,24 @@
       <h2 class="-bold">POPULAR SUBJECTS</h2>
     </header>
     <ul class="ranking-list">
-      <li>
-        <h3><a href="#">Visualize data on gfw</a></h3>
-        <p>Navigate to GFW Interactive Map, available global data layers are organized by category across …</p>
-        <div class="m-apps-tag">
-          <ul>     
-            <li><a class="gfw" href="/apps/gfw">GFW</a></li>
-            <li><a class="climate" href="/apps/climate">Climate</a></li>
-            <li><a class="commodities" href="/apps/commodities">Commodities</a></li>
-            <li><a class="fires" href="/apps/fires">Fires</a></li>
-          </ul>
-        </div>          
-      </li>
-      <li>
-        <h3><a href="#">Visualize data on gfw</a></h3>
-        <p>Navigate to GFW Interactive Map, available global data layers are organized by category across …</p>
-        <div class="m-apps-tag">
-          <ul>     
-            <li><a class="gfw" href="/apps/gfw">GFW</a></li>
-            <li><a class="climate" href="/apps/climate">Climate</a></li>
-          </ul>
-        </div>          
-      </li>
-      <li>
-        <h3><a href="#">Visualize data on gfw</a></h3>
-        <p>Navigate to GFW Interactive Map, available global data layers are organized by category across …</p>
-        <div class="m-apps-tag">
-          <ul>     
-            <li><a class="commodities" href="/apps/commodities">Commodities</a></li>
-            <li><a class="fires" href="/apps/fires">Fires</a></li>
-          </ul>
-        </div>          
-      </li>
+      {% assign sorted_posts = site.posts %}          
+      {% for post in sorted_posts %}
+        {% unless post.categories contains 'faqs' %}
+          {% if post.star %}
+            <li>
+              <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
+              <div class="m-apps-tag">
+                <ul>     
+                  {% for tag in post.tags %}
+                    {% assign tagCustom = site.tags_info[tag] %}
+                    <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
+                  {% endfor %}                        
+                </ul>
+              </div>            
+            </li>
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
     </ul>
   </div>
 </div>

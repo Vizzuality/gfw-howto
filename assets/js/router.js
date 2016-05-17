@@ -12,9 +12,9 @@
       // HOME
       'faqs(/)': 'faqs',
       // APP
-      'apps/:id(/)': 'category',
+      'categories/:id(/)': 'category',
       //THEME
-      'themes/:id(/)': 'tag',
+      'tags/:id(/)': 'tag',
       // POST
       'gfw/:id' : 'post',
       'climate/:id' : 'post',

@@ -133,11 +133,11 @@ gulp.task('bower_install', function() {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-  gulp.watch(['_config.yml'], ['jekyll-rebuild']);
-  gulp.watch([paths.asset+'/scss/*.scss', paths.asset+'/scss/modules/*.scss'], ['sass']);
-  gulp.watch(['*.html', '**/*.html', '_layouts/*.html', '_includes/*.html', 'climate/**/*.md', 'gfw/**/*.md', 'commodities/**/*.md', 'fires/**/*.md', 'faqs/**/*', 'odp/**/*.md',], ['jekyll-rebuild']);
+  gulp.watch(['*.html', '**/*.html', '_layouts/*.html', '_includes/*.html', '_posts/**/*.md'], ['jekyll-rebuild']);
   gulp.watch([paths.asset+'/js/**/*.js', paths.asset+'/templates/*.hbs'], ['js']);
   gulp.watch([paths.asset+'/templates/*.hbs'], ['templates']);
+  gulp.watch(['_config.yml'], ['jekyll-rebuild']);
+  gulp.watch([paths.asset+'/scss/*.scss', paths.asset+'/scss/modules/*.scss'], ['sass']);
 });
 
 /**
