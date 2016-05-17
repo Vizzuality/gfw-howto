@@ -2,33 +2,31 @@
   <h2 class="js-toggle-list" data-submenu="subjects-submenu">Subjects <svg><use xlink:href="#icon-arrowdown"></use></svg></h2>
   <ul id="subjects-submenu">
     {% for tag in site.tags_info %}
+      {% if tag[1].type == "subject" %}
       <li>
         <a class="-theme" id="aside-{{ tag[0] | slugify }}" href="{{site.baseurl}}/themes/{{ tag[0] | slugify }}">
           <!-- <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:'_' }}"></use></svg> -->
           {{ tag[1].title }}
         </a>
       </li>
+      {% endif %}
     {% endfor %}
-      <li>
-        <a id="aside-faqs" href="{{site.baseurl}}/faqs">
-          <!-- <svg><use xlink:href="#icon-faqs"></use></svg> -->
-          FAQ's
-        </a>
-      </li>
   </ul>
 </div>
 
 <div class="m-aside">
   <h2 class="js-toggle-list" data-submenu="materials-submenu">Materials <svg><use xlink:href="#icon-arrowdown"></use></svg></h2>
   <ul id="materials-submenu">
-  {% for category in site.categories_info | sort: 'order' %}
-    <li>
-      <a class="-app {{ category[0] | slugify }}" id="aside-{{ category[0] | slugify }}" href="{{site.baseurl}}/apps/{{ category[0] | slugify }}">
-        <!-- <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:'_' }}"></use></svg> -->
-        {{ category[1].title }}
-      </a>
-    </li>
-  {% endfor %}
+    {% for tag in site.tags_info %}
+      {% if tag[1].type == "material" %}
+      <li>
+        <a class="-theme" id="aside-{{ tag[0] | slugify }}" href="{{site.baseurl}}/themes/{{ tag[0] | slugify }}">
+          <!-- <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:'_' }}"></use></svg> -->
+          {{ tag[1].title }}
+        </a>
+      </li>
+      {% endif %}
+    {% endfor %}
   </ul>
 </div>
 

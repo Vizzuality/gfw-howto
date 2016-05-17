@@ -61,33 +61,74 @@ tags_info:
     title: Visualize data
     description: "Some data are produced directly by WRI and our partners, such as FORMA alerts, Intact Forest Landscapes, and some forest use data."
     slug: visualize data
+    type: subject
   view_statistics:
     order: 2
     title: View statistics
     description: "These courses are designed to provide an in-depth understanding of the ways can support a variety of professional."
     slug: view statistics
+    type: subject
   analyze_data_and_suscribe_to_alerts:
     order: 3
     title: Analyze data and suscribe to alerts
     description: "Description analyze_data"
     slug: analyze data and suscribe to alerts
+    type: subject
   submit_a_story:
     order: 5
     title: Submit a story
     description: "Description submit_a_story"
     slug: submit a story
-  tutorial_videos:
+    type: subject
+  download_data:
     order: 6
+    title: Download data
+    description: "Description download_data"
+    slug: download data
+    type: subject
+  gis:
+    order: 7
+    title: GIS
+    description: "Description gis"
+    slug: gis
+    type: subject
+  text_and_screenshots:
+    order: 8
+    title: Text & Screenshots
+    description: "Description text_and_screenshots"
+    slug: text and screenshots
+    type: material    
+  tutorial_videos:
+    order: 9
     title: Tutorial videos
     description: "Description tutorial_videos"
     slug: tutorial videos
+    type: material    
   webinars:
-    order: 7
+    order: 10
     title: Webinars
     description: "Description webinars"
     slug: webinars
+    type: material    
+  faqs:
+    order: 11
+    title: FAQ’s
+    description: "Description faqs"
+    slug: faqs
+    type: material    
   training_modules:
-    order: 8
+    order: 12
     title: Training modules
     description: "Description training_modules"
     slug: training modules
+    type: material    
+  blogs:
+    order: 13
+    title: Blogs
+    description: "Description blogs"
+    slug: blogs
+    type: material    
+
+
+
+
