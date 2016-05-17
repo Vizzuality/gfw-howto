@@ -22,7 +22,7 @@ layout: default
   {{ content }}
 </section>
 
-<section class="m-section -padding">
+<section class="m-section -padding -border">
   <header>
     <h2>You may find this interesting</h2>
   </header>
@@ -31,24 +31,40 @@ layout: default
     <ul>
       {% if page.previous.url %}
       <li class="m-content-item">
-        <a href="{{site.baseurl}}{{page.previous.url}}">
-          <div class="img {% if page.previous.thumbnail == 'video' %}-video{% endif %}" {% if page.previous.thumbnail %} style="background-image: url({{site.baseurl}}{{page.previous.thumbnail}})"{% endif %}></div>
+        <div class="box">                
+          <a href="{{site.baseurl}}{{ page.previous.url }}" class="img {% if page.previous.thumbnail == 'video' %}-video{% endif %}" {% if page.previous.thumbnail %} style="background-image: url({{site.baseurl}}{{page.previous.thumbnail}})"{% endif %}></a>
           <div class="content">
-            <h3>{{page.previous.title}}</h3>
-            <p>{{page.previous.description}}</p>
-          </div>
-        </a>
+            <h3><a href="{{site.baseurl}}{{ page.previous.url }}">{{ page.previous.title }}</a></h3>
+            <div class="m-apps-tag">
+              <ul>
+                {% for category in page.previous.categories %}
+                  {% assign categoryCustom = site.categories_info[category] %}
+                  <li><a class="{{categoryCustom.slug}}" href="{{site.baseurl}}/apps/{{categoryCustom.slug}}">{{categoryCustom.title}}</a></li>
+                {% endfor %}                        
+              </ul>
+            </div>
+            <p>{{ page.previous.description }}</p>
+          </div>              
+        </div>              
       </li>
       {% endif %}
       {% if page.next.url %}
       <li class="m-content-item">
-        <a href="{{site.baseurl}}{{page.next.url}}">
-          <div class="img {% if page.next.thumbnail == 'video' %}-video{% endif %}" {% if page.next.thumbnail %} style="background-image: url({{site.baseurl}}{{page.next.thumbnail}})"{% endif %}></div>
+        <div class="box">                
+          <a href="{{site.baseurl}}{{ page.next.url }}" class="img {% if page.next.thumbnail == 'video' %}-video{% endif %}" {% if page.next.thumbnail %} style="background-image: url({{site.baseurl}}{{page.next.thumbnail}})"{% endif %}></a>
           <div class="content">
-            <h3>{{page.next.title}}</h3>
-            <p>{{page.next.description}}</p>
-          </div>
-        </a>
+            <h3><a href="{{site.baseurl}}{{ page.next.url }}">{{ page.next.title }}</a></h3>
+            <div class="m-apps-tag">
+              <ul>
+                {% for category in page.next.categories %}
+                  {% assign categoryCustom = site.categories_info[category] %}
+                  <li><a class="{{categoryCustom.slug}}" href="{{site.baseurl}}/apps/{{categoryCustom.slug}}">{{categoryCustom.title}}</a></li>
+                {% endfor %}                        
+              </ul>
+            </div>
+            <p>{{ page.next.description }}</p>
+          </div>              
+        </div>              
       </li>
       {% endif %}
     </ul>

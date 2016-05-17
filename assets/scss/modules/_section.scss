@@ -19,6 +19,10 @@
       font-weight: 300;
       color: $dark;
 
+      &.-bold {
+        font-weight: 400;
+      }
+
       @media (min-width: $br-mobile){
         font-size: 35px;
       }

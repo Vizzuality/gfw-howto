@@ -200,6 +200,8 @@ button {
       .m-header h2 {
         font-size: 47px;
         padding-right: 75px; } }
+    .m-header h2.-bold {
+      font-weight: 400; }
     .m-header h2.-toggle {
       padding-right: 200px;
       display: block; }
@@ -280,32 +282,11 @@ button {
     font-size: 14px;
     color: #555;
     padding: 5px 0; }
-    .m-aside ul li a:hover, .m-aside ul li a.-active {
-      color: #97bd3d; }
-      .m-aside ul li a:hover svg, .m-aside ul li a.-active svg {
-        fill: #97bd3d; }
-    .m-aside ul li a.fires:hover, .m-aside ul li a.fires.-active {
-      color: #ed1846; }
-      .m-aside ul li a.fires:hover svg, .m-aside ul li a.fires.-active svg {
-        fill: #ed1846; }
-    .m-aside ul li a.commodities:hover, .m-aside ul li a.commodities.-active {
-      color: #e98300; }
-      .m-aside ul li a.commodities:hover svg, .m-aside ul li a.commodities.-active svg {
-        fill: #e98300; }
-    .m-aside ul li a.climate:hover, .m-aside ul li a.climate.-active {
-      color: #5b80a0; }
-      .m-aside ul li a.climate:hover svg, .m-aside ul li a.climate.-active svg {
-        fill: #5b80a0; }
-    .m-aside ul li a svg {
-      display: block;
-      position: absolute;
-      top: 50%;
-      left: 0%;
-      -webkit-transform: translate(0%, -60%);
-              transform: translate(0%, -60%);
-      width: 20px;
-      height: 20px;
-      fill: #555; }
+    .m-aside ul li a:hover {
+      color: #333; }
+    .m-aside ul li a.-active {
+      font-weight: 500;
+      color: #333; }
 
 .m-apps-tag {
   display: block; }
@@ -412,6 +393,8 @@ button {
   line-height: 1.25;
   font-weight: 300;
   color: #555; }
+  .m-section header h2.-bold {
+    font-weight: 400; }
   @media (min-width: 850px) {
     .m-section header h2 {
       font-size: 35px; } }
@@ -647,7 +630,7 @@ button {
     display: block;
     width: 20px;
     height: 20px;
-    border: 1px solid #E5E5DF;
+    border: 1px solid #CCC;
     left: 0;
     top: 50%;
     margin: -10px 0 0;
