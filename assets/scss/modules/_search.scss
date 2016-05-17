@@ -34,11 +34,28 @@
     input {
       @extend %reset-input;
       font-family: inherit;
-      font-size: 21px;
+      font-size: 19px;
       display: block;
       width: 100%;
       padding: 20px calc(6px + 32px + 30px);
       margin: 20px 0 0;
+      font-weight: 300;
+
+      &::-webkit-input-placeholder {
+         font-style: italic;
+      }
+
+      &:-moz-placeholder { /* Firefox 18- */
+         font-style: italic;  
+      }
+
+      &::-moz-placeholder {  /* Firefox 19+ */
+         font-style: italic;  
+      }
+
+      &:-ms-input-placeholder {  
+         font-style: italic;  
+      }      
     }
   }
 
