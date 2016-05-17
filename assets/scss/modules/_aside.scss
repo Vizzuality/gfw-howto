@@ -8,7 +8,7 @@
 
   h2 {
     position: relative;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: $primary-color;
     margin: 0 0 10px;
@@ -24,6 +24,18 @@
       width: 12px;
       height: 12px;
       fill: $primary-color;
+      transform: rotate(0deg);
+      transition: $transition1;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &.-collapsed {
+      svg {
+        transform: rotate(90deg);
+      }
     }
   }
 

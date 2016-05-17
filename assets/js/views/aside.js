@@ -48,6 +48,7 @@
       var submenuId = $(e.currentTarget).data('submenu');
       var $submenu = $('#'+submenuId);
 
+      $(e.currentTarget).toggleClass('-collapsed');
       $submenu.toggleClass('-collapsed');
     },
 

@@ -55,6 +55,13 @@ button {
   display: none;
 }
 
+.link {
+  color: $primary-color;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 %reset-input {
   font-size: 14px;
   margin: 0;

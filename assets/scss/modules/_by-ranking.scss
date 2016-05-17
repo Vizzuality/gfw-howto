@@ -20,7 +20,6 @@
 		text-transform: uppercase;
 		color: $primary-color;
 		font-weight: 500;
-		margin: 0 0 5px;
 		
 		a {
 			color: $primary-color;
@@ -30,12 +29,21 @@
 	.ranking-list {
 		> li {
 			padding: 15px 0;
-			border-top: 1px solid $border1;
-			
-			&:first-child {
-				border-top: none;
-			}
+			border-bottom: 1px solid $border1;		
+
+			> * {
+				margin: 5px 0 0;
+				&:first-child {
+					margin-top: 0;
+				}
+			}	
 		}
+	}
+
+	.link {
+		font-size: 13px;
+		display: block;
+		margin: 20px 0 0;
 	}
 
 }

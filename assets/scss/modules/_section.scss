@@ -32,9 +32,9 @@
   .m-category-grid {
     > li {
       display: none;
-      padding: 40px 15px;
+      padding: 20px 15px;
       @media (min-width: $br-mobile){
-        padding: 40px;
+        padding: 20px 40px;
       }
 
       &.-active {

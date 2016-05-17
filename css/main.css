@@ -46,6 +46,11 @@ button {
 .-hidden {
   display: none; }
 
+.link {
+  color: #97bd3d; }
+  .link:hover {
+    text-decoration: underline; }
+
 .m-search .search-container input {
   font-size: 14px;
   margin: 0;
@@ -186,7 +191,7 @@ button {
       padding: 70px 40px 0; } }
   .m-header h2 {
     font-size: 40px;
-    font-weight: 400;
+    font-weight: 300;
     position: relative;
     display: inline-block;
     padding: 15px 0;
@@ -244,7 +249,7 @@ button {
     border-top: none; }
   .m-aside h2 {
     position: relative;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 500;
     color: #97bd3d;
     margin: 0 0 10px;
@@ -258,7 +263,15 @@ button {
       margin: -6px 0 0;
       width: 12px;
       height: 12px;
-      fill: #97bd3d; }
+      fill: #97bd3d;
+      -webkit-transform: rotate(0deg);
+              transform: rotate(0deg);
+      transition: all 0.15s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
+    .m-aside h2:hover {
+      text-decoration: underline; }
+    .m-aside h2.-collapsed svg {
+      -webkit-transform: rotate(90deg);
+              transform: rotate(90deg); }
   .m-aside ul.-collapsed {
     display: none; }
   .m-aside ul li a {
@@ -306,7 +319,7 @@ button {
     .m-apps-tag ul > li {
       text-transform: uppercase;
       font-size: 11px;
-      margin-right: 20px; }
+      margin-right: 10px; }
       .m-apps-tag ul > li:last-child {
         margin-right: 0px; }
       .m-apps-tag ul > li a {
@@ -407,10 +420,10 @@ button {
 
 .m-section .m-category-grid > li {
   display: none;
-  padding: 40px 15px; }
+  padding: 20px 15px; }
   @media (min-width: 850px) {
     .m-section .m-category-grid > li {
-      padding: 40px; } }
+      padding: 20px 40px; } }
   .m-section .m-category-grid > li.-active {
     display: block; }
 
@@ -1459,15 +1472,20 @@ button {
     font-size: 13px;
     text-transform: uppercase;
     color: #97bd3d;
-    font-weight: 500;
-    margin: 0 0 5px; }
+    font-weight: 500; }
     .m-ranking h3 a {
       color: #97bd3d; }
   .m-ranking .ranking-list > li {
     padding: 15px 0;
-    border-top: 1px solid #E5E5DF; }
-    .m-ranking .ranking-list > li:first-child {
-      border-top: none; }
+    border-bottom: 1px solid #E5E5DF; }
+    .m-ranking .ranking-list > li > * {
+      margin: 5px 0 0; }
+      .m-ranking .ranking-list > li > *:first-child {
+        margin-top: 0; }
+  .m-ranking .link {
+    font-size: 13px;
+    display: block;
+    margin: 20px 0 0; }
 
 .highlight {
   background: #eee;
