@@ -186,7 +186,7 @@ button {
   position: relative; }
   @media (min-width: 850px) {
     .m-header {
-      padding: 70px 40px; } }
+      padding: 70px 40px 0; } }
   .m-header h2 {
     font-size: 40px;
     font-weight: 300;
@@ -345,11 +345,13 @@ button {
         color: #97bd3d; }
 
 .m-section.-padding {
-  padding: 40px 15px;
-  border-top: 1px solid #E5E5DF; }
+  padding: 40px 15px; }
   @media (min-width: 850px) {
     .m-section.-padding {
-      padding: 70px 40px; } }
+      padding: 50px 40px 0; } }
+
+.m-section.-border {
+  border-top: 1px solid #E5E5DF; }
 
 .m-section header h2 {
   font-size: 30px;

@@ -3,7 +3,7 @@ layout: post
 title: Overview
 order: 12
 published: True
-description: "Use this video to learn how to use Global Forest Watch, an interactive online forest monitoring and alert system designed to empower people everywhere with the information they need to better manage and conserve forest landscapes."
+description: ""
 thumbnail: "video"
 tags: [tutorial videos]
 categories: [gfw]

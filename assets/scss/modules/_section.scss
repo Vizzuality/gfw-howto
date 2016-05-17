@@ -2,11 +2,14 @@
 
   &.-padding {
     padding: 40px 15px;
-    border-top: 1px solid $border1;
 
     @media (min-width: $br-mobile){
-      padding: 70px 40px;
+      padding: 50px 40px 0;
     }
+  }
+
+  &.-border {
+    border-top: 1px solid $border1;
   }
 
   header {

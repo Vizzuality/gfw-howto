@@ -3,7 +3,7 @@ layout: post
 title: Submit a Story
 order: 11
 published: True
-description: "Do you have a story to share or do you want to report something you have seen on the ground? The GFW Interactive Map allows you to upload geotagged comments, photos, or videos to the GFW map for everyone to see."
+description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
 tags: [submit a story]
 categories: [gfw]
