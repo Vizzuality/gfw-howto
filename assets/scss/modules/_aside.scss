@@ -1,46 +1,44 @@
-.m-aside,.m-search {
+.m-aside {
   padding: 20px 40px;
   border-top: 1px solid $border1;
 
   &:first-child {
     border-top: none;
   }
-}
 
-.m-aside {
   h2 {
+    position: relative;
     font-size: 13px;
     font-weight: 500;
-    color: $light;
-    padding: 0 0 10px;
+    color: $primary-color;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+
+    svg {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0;
+      margin: -6px 0 0;
+      width: 12px;
+      height: 12px;
+      fill: $primary-color;
+    }
   }
 
   ul {
-    &.-submenu {
-      margin: 0 0 10px;
-      li {
-        a {
-          padding: 2px 0 2px 28px;
-        }
-      }
+    
+    &.-collapsed {
+      display: none;
     }
 
     li {
-
-      &.toggle-themes {
-        cursor: pointer;
-        padding-left: 28px;
-        &:hover {
-          color: $primary-color;
-        }
-      }
-
       a {
         display: block;
         position: relative;
         font-size: 14px;
         color: $dark;
-        padding: 5px 0 5px 28px;
+        padding: 5px 0;
 
         &:hover, &.-active {
           color: $primary-color;

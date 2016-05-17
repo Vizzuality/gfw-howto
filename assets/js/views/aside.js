@@ -12,19 +12,16 @@
     el: '#asideView',
 
     events: {
-      'click .toggle-themes' : 'toggleThemes'
+      'click .js-toggle-list' : 'toggleSubmenu'
     },
 
     model: new (Backbone.Model.extend({
-      defaults: {
-        collapsed: true
-      }
     })),
 
     initialize: function(settings) {
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
-      this.setListeners();
+      this.listeners();
       this.cache();
 
       // inits
@@ -32,27 +29,11 @@
     },
 
     cache: function() {
-      // html vars
-      this.$asideThemeView = $('#asideThemeView');
-      this.$contentThemeNames = $('#contentThemeView > li');
-
       // model vars
       this.model.set(this.options.model);
-      this.model.set('themes',this.$asideThemeView.find('li'));
     },
 
-    setListeners: function() {
-      this.model.on('change:id', this.getData.bind(this));
-    },
-
-    renderThemes: function(arr) {
-      this.$asideThemeView.html(this.parseThemes(arr));
-    },
-
-    parseThemes: function(arr) {
-      return _.reduce(arr, function(memo, item){
-        return memo + $(item)[0].outerHTML;
-      }, '');
+    listeners: function() {
     },
 
     highlight: function() {
@@ -62,16 +43,12 @@
       }
     },
 
-    getData: function() {
-      var submenu =  _.compact(_.map(this.$contentThemeNames, function(el) {
-        if ($(el).hasClass('-active')) {
-          return {
-            title: $(el).data('title'),
-            id: $(el).data('id')
-          }
-        }
-      }));
-      this.model.set('submenu', submenu);
+    toggleSubmenu: function(e) {
+      e && e.preventDefault();
+      var submenuId = $(e.currentTarget).data('submenu');
+      var $submenu = $('#'+submenuId);
+
+      $submenu.toggleClass('-collapsed');
     },
 
   });

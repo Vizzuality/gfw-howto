@@ -48,6 +48,7 @@
     homePage: function() {
       this.sliderView = new root.app.View.SliderView();
       this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
+      this.searchView = new root.app.View.SearchView();
     },
 
     faqsPage: function() {
@@ -85,7 +86,6 @@
 
     setGlobalViews: function() {
       this.blogView = new root.app.View.BlogView();
-      this.searchView = new root.app.View.SearchView();
     }
 
   });

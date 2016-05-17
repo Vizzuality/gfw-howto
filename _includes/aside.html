@@ -1,26 +1,17 @@
-<div id="searchView" class="m-search">
-  <div class="search-container">
-    <svg class="-active -search"><use xlink:href="#icon-search"></use></svg>
-    <svg id="search-close" class="-cross"><use xlink:href="#icon-cross"></use></svg>
-    <input id="search-input" type="text" placeholder="Search">
-  </div>
-  <ul id="search-results" class="search-results"></ul>
-</div>
-
 <div class="m-aside">
-  <h2>SEARCH BY THEME</h2>
-  <ul id="asideThemeView">
+  <h2 class="js-toggle-list" data-submenu="subjects-submenu">Subjects <svg><use xlink:href="#icon-arrowdown"></use></svg></h2>
+  <ul id="subjects-submenu">
     {% for tag in site.tags_info %}
       <li>
         <a class="-theme" id="aside-{{ tag[0] | slugify }}" href="{{site.baseurl}}/themes/{{ tag[0] | slugify }}">
-          <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:'_' }}"></use></svg>
+          <!-- <svg><use xlink:href="#icon-{{ tag[0] | downcase | remove:'_' }}"></use></svg> -->
           {{ tag[1].title }}
         </a>
       </li>
     {% endfor %}
       <li>
         <a id="aside-faqs" href="{{site.baseurl}}/faqs">
-          <svg><use xlink:href="#icon-faqs"></use></svg>
+          <!-- <svg><use xlink:href="#icon-faqs"></use></svg> -->
           FAQ's
         </a>
       </li>
@@ -28,12 +19,12 @@
 </div>
 
 <div class="m-aside">
-  <h2>SEARCH BY APPLICATION</h2>
-  <ul>
+  <h2 class="js-toggle-list" data-submenu="materials-submenu">Materials <svg><use xlink:href="#icon-arrowdown"></use></svg></h2>
+  <ul id="materials-submenu">
   {% for category in site.categories_info | sort: 'order' %}
     <li>
       <a class="-app {{ category[0] | slugify }}" id="aside-{{ category[0] | slugify }}" href="{{site.baseurl}}/apps/{{ category[0] | slugify }}">
-        <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:'_' }}"></use></svg>
+        <!-- <svg><use xlink:href="#icon-{{ category[0] | downcase | remove:'_' }}"></use></svg> -->
         {{ category[1].title }}
       </a>
     </li>

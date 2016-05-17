@@ -12,19 +12,16 @@
     el: '#asideView',
 
     events: {
-      'click .toggle-themes' : 'toggleThemes'
+      'click .js-toggle-list' : 'toggleSubmenu'
     },
 
     model: new (Backbone.Model.extend({
-      defaults: {
-        collapsed: true
-      }
     })),
 
     initialize: function(settings) {
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
-      this.setListeners();
+      this.listeners();
       this.cache();
 
       // inits
@@ -32,27 +29,11 @@
     },
 
     cache: function() {
-      // html vars
-      this.$asideThemeView = $('#asideThemeView');
-      this.$contentThemeNames = $('#contentThemeView > li');
-
       // model vars
       this.model.set(this.options.model);
-      this.model.set('themes',this.$asideThemeView.find('li'));
     },
 
-    setListeners: function() {
-      this.model.on('change:id', this.getData.bind(this));
-    },
-
-    renderThemes: function(arr) {
-      this.$asideThemeView.html(this.parseThemes(arr));
-    },
-
-    parseThemes: function(arr) {
-      return _.reduce(arr, function(memo, item){
-        return memo + $(item)[0].outerHTML;
-      }, '');
+    listeners: function() {
     },
 
     highlight: function() {
@@ -62,16 +43,12 @@
       }
     },
 
-    getData: function() {
-      var submenu =  _.compact(_.map(this.$contentThemeNames, function(el) {
-        if ($(el).hasClass('-active')) {
-          return {
-            title: $(el).data('title'),
-            id: $(el).data('id')
-          }
-        }
-      }));
-      this.model.set('submenu', submenu);
+    toggleSubmenu: function(e) {
+      e && e.preventDefault();
+      var submenuId = $(e.currentTarget).data('submenu');
+      var $submenu = $('#'+submenuId);
+
+      $submenu.toggleClass('-collapsed');
     },
 
   });
@@ -331,6 +308,7 @@
       this.collection.fetch().done(function(){
         this.cache();
         this.initFuse();
+        console.log('hello');
       }.bind(this));
     },
 
@@ -354,6 +332,7 @@
         maxPatternLength: 32,
         keys: ['title','content','category','tags']
       });
+      console.log(this.fuse);
     },
 
     search: function(e) {
@@ -791,6 +770,7 @@
     homePage: function() {
       this.sliderView = new root.app.View.SliderView();
       this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
+      this.searchView = new root.app.View.SearchView();
     },
 
     faqsPage: function() {
@@ -828,7 +808,6 @@
 
     setGlobalViews: function() {
       this.blogView = new root.app.View.BlogView();
-      this.searchView = new root.app.View.SearchView();
     }
 
   });
