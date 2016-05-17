@@ -1,0 +1,10 @@
+<div id="filtersView" class="m-filter">
+	<ul>
+		{% for category in site.categories_info %}
+			<li>
+				<input id="checkbox-{{ category[1].slug }}" type="checkbox" name="checkbox-category" class="js-checkbox-category" data-category="{{ category[1].slug }}"/>
+				<label for="checkbox-{{ category[1].slug }}">{{ category[1].title }}</label>
+			</li>
+		{% endfor %}		
+	</ul>
+</div>

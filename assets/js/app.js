@@ -57,16 +57,12 @@
     },
 
     appPage: function(id) {
-      this.asideView = new root.app.View.AsideView({
-        options: {
-          model: {
-            id: id
-          }
-        }
-      });
+      this.asideView = new root.app.View.AsideView({});
     },
 
     themePage: function(id) {
+      this.filtersView = new root.app.View.FiltersView({});
+      this.contentView = new root.app.View.ContentView({});      
       this.asideView = new root.app.View.AsideView({
         options: {
           model: {

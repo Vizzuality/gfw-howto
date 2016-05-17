@@ -18,7 +18,11 @@
         width: 48%;
         margin: 4% 0 0;
       }
+      &.-invisible {
+        display: none;
+      }
     }
+
   }
 
   .m-content-item {

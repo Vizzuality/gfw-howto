@@ -398,6 +398,8 @@ button {
         .m-content-grid ul li {
           width: 48%;
           margin: 4% 0 0; } }
+      .m-content-grid ul li.-invisible {
+        display: none; }
   .m-content-grid .m-content-item a {
     display: block;
     width: 100%;

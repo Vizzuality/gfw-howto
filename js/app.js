@@ -132,6 +132,61 @@
   root.app.Model = root.app.Model || {};
 
   // View for display results
+  root.app.View.ContentView = Backbone.View.extend({
+
+    el: '#contentView',
+
+    model: new (Backbone.Model.extend({
+      defaults: {
+        filters: []
+      }
+    })),
+
+    initialize: function(settings) {
+      var opts = settings && settings.options ? settings.options : {};
+      this.options = _.extend({}, this.defaults, opts);
+      this.listeners();
+      this.cache();
+    },
+
+    cache: function() {
+      this.$cards = this.$el.find('.m-content-item');
+    },
+
+    listeners: function() {
+      this.model.on('change:filters', this.filter.bind(this));
+
+      Backbone.Events.on('Filters/change', function(filters){
+        this.model.set('filters', _.clone(filters));
+      }.bind(this));
+    },
+
+    filter: function() {
+      var filters = this.model.get('filters');
+
+      if (!!filters.length) {
+        _.each(this.$cards, function(card){
+          var visible = _.intersection(filters, $(card).data('categories').split(' ')); 
+          $(card).toggleClass('-invisible', ! !!visible.length);
+        }.bind(this));
+      } else {
+        this.$cards.toggleClass('-invisible', false);
+      }
+    }
+
+  });
+
+})(this);
+
+(function(root) {
+
+  'use strict';
+
+  root.app = root.app || {};
+  root.app.View = root.app.View || {};
+  root.app.Model = root.app.Model || {};
+
+  // View for display results
   root.app.View.FaqsView = Backbone.View.extend({
 
     el: '#faqsView',
@@ -269,6 +324,63 @@
     filterByApp: function(e) {
       var value = $(e.currentTarget).val();
       Backbone.Events.trigger('faqs/filter', value);
+    }
+
+  });
+
+})(this);
+
+(function(root) {
+
+  'use strict';
+
+  root.app = root.app || {};
+  root.app.View = root.app.View || {};
+  root.app.Model = root.app.Model || {};
+
+  // View for display results
+  root.app.View.FiltersView = Backbone.View.extend({
+
+    el: '#filtersView',
+
+    events: {
+      'change .js-checkbox-category' : 'setFilters'
+    },
+
+    model: new (Backbone.Model.extend({
+      defaults: {
+        filters: []
+      }
+    })),
+
+    initialize: function(settings) {
+      var opts = settings && settings.options ? settings.options : {};
+      this.options = _.extend({}, this.defaults, opts);
+      this.listeners();
+      this.cache();
+    },
+
+    cache: function() {
+      this.$checkbox = this.$el.find('[name="checkbox-category"]');
+    },
+
+    listeners: function() {
+      this.model.on('change:filters', this.changeFilters.bind(this));
+    },
+
+    setFilters: function() {
+      var filters = _.compact(_.map(this.$checkbox, function(el){
+        var checked = $(el).is(':checked');
+        if (checked) {
+          return $(el).data('category')
+        }
+      }.bind(this)));
+
+      this.model.set('filters', _.clone(filters));
+    },
+
+    changeFilters: function() {
+      Backbone.Events.trigger('Filters/change', this.model.get('filters'));
     }
 
   });
@@ -777,16 +889,12 @@
     },
 
     appPage: function(id) {
-      this.asideView = new root.app.View.AsideView({
-        options: {
-          model: {
-            id: id
-          }
-        }
-      });
+      this.asideView = new root.app.View.AsideView({});
     },
 
     themePage: function(id) {
+      this.filtersView = new root.app.View.FiltersView({});
+      this.contentView = new root.app.View.ContentView({});      
       this.asideView = new root.app.View.AsideView({
         options: {
           model: {
