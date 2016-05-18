@@ -3,8 +3,8 @@
     
     <li data-app="{{this.category}}" data-order="{{this.order}}">
       <h3 class="toggle">
-        <span>{{this.title}}</span>
-        <div class="m-apps-tag">
+        <span class="title">{{this.title}}</span>
+        <div class="m-apps-tag -inline">
           <ul>
             {{#each this.tags_info}}
               <li><a class="{{this.slug}}" href="{{this.url}}">{{this.title}}</a></li>

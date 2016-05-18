@@ -121,20 +121,22 @@
 
     initPaginate: function(page){
       // pagination
-      this.$paginationContainer.pagination({
-        items: this.collection.getCount(),
-        itemsOnPage: this.model.get('itemsOnPage'),
-        currentPage: page + 1,
-        displayedPages: 3,
-        selectOnClick: false,
-        prevText: ' ',
-        nextText: ' ',
-        onPageClick: _.bind(function(page, e){
-          e && e.preventDefault();
-          this.render(page-1)
-          this.$paginationContainer.pagination('drawPage', page);
-        }, this )
-      });
+      if (this.collection.getCount() > this.model.get('itemsOnPage')) {      
+        this.$paginationContainer.pagination({
+          items: this.collection.getCount(),
+          itemsOnPage: this.model.get('itemsOnPage'),
+          currentPage: page + 1,
+          displayedPages: 3,
+          selectOnClick: false,
+          prevText: ' ',
+          nextText: ' ',
+          onPageClick: _.bind(function(page, e){
+            e && e.preventDefault();
+            this.render(page-1)
+            this.$paginationContainer.pagination('drawPage', page);
+          }, this )
+        });
+      }
     },
 
     // Events

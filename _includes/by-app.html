@@ -3,7 +3,7 @@
   <ul>
     {% for tag in site.tags_info %}
       <li class="-{{ tag[1].slug }}">
-        <a href="{{site.baseurl}}/apps/{{ tag[1].slug | slugify }}">
+        <a href="{{site.baseurl}}/tags/{{ tag[1].slug | slugify }}">
           <svg><use xlink:href="#icon-{{ tag[1].slug | downcase | remove:' ' }}"></use></svg>
           <h2>{{ tag[1].title }}</h2>
           <!-- <p>{{tag[1].description}}</p> -->

@@ -1,7 +1,7 @@
 .m-faqs {
-  padding: 0 15px 40px;
+  padding: 0px 15px 40px;
   @media (min-width: $br-mobile){
-    padding: 0 40px 40px;
+    padding: 40px 40px 40px;
   }
 }
 
@@ -17,6 +17,10 @@
       font-weight: 500;
       font-size: 13px;
       padding-right: 65px;
+
+      .title {
+        padding-right: 10px;
+      }
 
       .arrow {
         position: absolute;

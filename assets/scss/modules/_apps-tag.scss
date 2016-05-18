@@ -1,6 +1,10 @@
 .m-apps-tag {
   display: block;
 
+  &.-inline {
+    display: inline-block;
+  }
+
   ul {
     display: flex;
     justify-content: flex-start;

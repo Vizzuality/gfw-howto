@@ -4,7 +4,7 @@
     padding: 40px 15px;
 
     @media (min-width: $br-mobile){
-      padding: 70px 40px 0;
+      padding: 0px 40px 50px;
     }
   }
 
@@ -25,6 +25,7 @@
 
       @media (min-width: $br-mobile){
         font-size: 35px;
+        margin: 0 0 20px;
       }
 
       a {
@@ -38,7 +39,7 @@
       display: none;
       padding: 20px 15px;
       @media (min-width: $br-mobile){
-        padding: 20px 40px;
+        padding: 0px 40px 40px;
       }
 
       &.-active {
