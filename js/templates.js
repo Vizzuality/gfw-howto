@@ -18,7 +18,7 @@ this["HandlebarsTemplates"]["blog"] = Handlebars.template({"1":function(depth0,h
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.blogposts : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</ul>\n<div class=\"m-blog-link\">\n  <a target=\"_blank\" href=\"http://blog.globalforestwatch.org/\">\n    <svg class=\"icon\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#icon-f-blog\"></use></svg>\n    Read our blog\n  </a>\n</div>\n";
 },"useData":true});
-this["HandlebarsTemplates"]["faqs"] = Handlebars.template({"1":function(depth0,helpers,partials,data,blockParams,depths) {
+this["HandlebarsTemplates"]["faqs"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
   return "    \n    <li data-app=\""
@@ -28,29 +28,27 @@ this["HandlebarsTemplates"]["faqs"] = Handlebars.template({"1":function(depth0,h
     + "\">\n      <h3 class=\"toggle\">\n        <span>"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
     + "</span>\n        <div class=\"m-apps-tag\">\n          <ul>\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tags_info : depth0),{"name":"each","hash":{},"fn":this.program(2, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tags_info : depth0),{"name":"each","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "          </ul>\n        </div>\n        <span class=\"arrow\"><svg><use xlink:href=\"#icon-arrowdown\"></use></svg></span>\n      </h3>\n      <div class=\"content m-faqs-content\">\n        "
     + ((stack1 = alias1((depth0 != null ? depth0.content : depth0), depth0)) != null ? stack1 : "")
     + "\n      </div>\n    </li>\n    \n";
-},"2":function(depth0,helpers,partials,data,blockParams,depths) {
+},"2":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;
 
   return "              <li><a class=\""
     + alias2(alias1((depth0 != null ? depth0.slug : depth0), depth0))
     + "\" href=\""
-    + alias2(alias1((depths[2] != null ? depths[2].baseurl : depths[2]), depth0))
-    + "/tags/"
-    + alias2(alias1((depth0 != null ? depth0.slug : depth0), depth0))
+    + alias2(alias1((depth0 != null ? depth0.url : depth0), depth0))
     + "\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
     + "</a></li>\n";
-},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data,blockParams,depths) {
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "<ul class=\"m-faqs-list\">\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.list : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0, blockParams, depths),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.list : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</ul>\n<ul class=\"m-faqs-pagination\"></ul>\n";
-},"useData":true,"useDepths":true});
+},"useData":true});
 this["HandlebarsTemplates"]["search"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1;
 

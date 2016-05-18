@@ -1,5 +1,5 @@
 <ul class="m-faqs-list">
-  {{#each list}}
+  {{#each this.list}}
     
     <li data-app="{{this.category}}" data-order="{{this.order}}">
       <h3 class="toggle">
@@ -7,7 +7,7 @@
         <div class="m-apps-tag">
           <ul>
             {{#each this.tags_info}}
-              <li><a class="{{this.slug}}" href="{{../../baseurl}}/tags/{{this.slug}}">{{this.title}}</a></li>
+              <li><a class="{{this.slug}}" href="{{this.url}}">{{this.title}}</a></li>
             {{/each}}
           </ul>
         </div>

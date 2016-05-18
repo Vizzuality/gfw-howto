@@ -33,8 +33,10 @@
       parse: function(response){
         var response = _.map(response, function(el){
           el.tags = (!!el.tags && !!el.tags.length) ? el.tags.split(', ') : [];
-          el.tags_info = _.map(el.tags, function(tag){
-            return window.gfw_howto.tags[tag];
+          el.tags_info = _.map(el.tags, function(_tag){
+            var tag = window.gfw_howto.tags[_tag];
+            tag.url = baseurl + '/tags/' + tag.slug;
+            return tag;
           })
           return el;
         })
@@ -137,12 +139,15 @@
 
     // Events
     toggleFaq: function(e) {
+      var is_link = !!$(e.target).closest('a').length;
       var $parent = $(e.currentTarget).parent();
-      if ($parent.hasClass('-selected')) {
-        this.$listItems.removeClass('-selected');
-      } else {
-        this.$listItems.removeClass('-selected');
-        $parent.addClass('-selected');
+      if (!is_link) {      
+        if ($parent.hasClass('-selected')) {
+          this.$listItems.removeClass('-selected');
+        } else {
+          this.$listItems.removeClass('-selected');
+          $parent.addClass('-selected');
+        }
       }
     },
 
