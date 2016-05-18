@@ -3,23 +3,20 @@
     <header>
       <h2 class="-bold">MOST POPULAR QUESTIONS</h2>
     </header>
-    <ul class="ranking-list">
-      {% assign sorted_posts = site.posts %}          
-      {% for post in sorted_posts %}
-        {% if post.categories contains 'faqs' %}
-          {% if post.star %}
-            <li>
-              <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
-              <div class="m-apps-tag">
-                <ul>     
-                  {% for tag in post.tags %}
-                    {% assign tagCustom = site.tags_info[tag] %}
-                    <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
-                  {% endfor %}                        
-                </ul>
-              </div>            
-            </li>
-          {% endif %}
+    <ul class="ranking-list">          
+      {% for post in site.faqs_sorted_posts %}        
+        {% if post.star %}
+          <li>
+            <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
+            <div class="m-apps-tag">
+              <ul>     
+                {% for tag in post.tags %}
+                  {% assign tagCustom = site.tags_info[tag] %}
+                  <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
+                {% endfor %}                        
+              </ul>
+            </div>            
+          </li>
         {% endif %}
       {% endfor %}        
     </ul>
@@ -30,23 +27,20 @@
       <h2 class="-bold">POPULAR SUBJECTS</h2>
     </header>
     <ul class="ranking-list">
-      {% assign sorted_posts = site.posts %}          
-      {% for post in sorted_posts %}
-        {% unless post.categories contains 'faqs' %}
-          {% if post.star %}
-            <li>
-              <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
-              <div class="m-apps-tag">
-                <ul>     
-                  {% for tag in post.tags %}
-                    {% assign tagCustom = site.tags_info[tag] %}
-                    <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
-                  {% endfor %}                        
-                </ul>
-              </div>            
-            </li>
-          {% endif %}
-        {% endunless %}
+      {% for post in site.sorted_posts %}
+        {% if post.star %}
+          <li>
+            <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
+            <div class="m-apps-tag">
+              <ul>     
+                {% for tag in post.tags %}
+                  {% assign tagCustom = site.tags_info[tag] %}
+                  <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
+                {% endfor %}                        
+              </ul>
+            </div>            
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
   </div>

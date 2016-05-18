@@ -45,7 +45,7 @@ gulp.task('jekyll-build-prod', [], function (done) {
  * Rebuild Jekyll & do page reload
  */
 gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
-    browserSync.reload();
+    // browserSync.reload();
 });
 
 /**
@@ -133,7 +133,7 @@ gulp.task('bower_install', function() {
  * Watch html/md files, run jekyll & reload BrowserSync
  */
 gulp.task('watch', function () {
-  gulp.watch(['*.html', '**/*.html', '_layouts/*.html', '_includes/*.html', '_posts/**/*.md'], ['jekyll-rebuild']);
+  gulp.watch(['*.html', '**/*.html', '_layouts/*.html', '_includes/*.html', '_posts/**/*.md', '_plugins/*.rb'], ['jekyll-rebuild']);
   gulp.watch([paths.asset+'/js/**/*.js', paths.asset+'/templates/*.hbs'], ['js']);
   gulp.watch([paths.asset+'/templates/*.hbs'], ['templates']);
   gulp.watch(['_config.yml'], ['jekyll-rebuild']);
