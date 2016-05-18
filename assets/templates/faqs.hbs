@@ -1,16 +1,23 @@
 <ul class="m-faqs-list">
-  {{#each groups}}
-    {{#each this}}
+  {{#each list}}
+    
     <li data-app="{{this.category}}" data-order="{{this.order}}">
       <h3 class="toggle">
-        {{this.title}}
+        <span>{{this.title}}</span>
+        <div class="m-apps-tag">
+          <ul>
+            {{#each this.tags_info}}
+              <li><a class="{{this.slug}}" href="{{baseurl}}/tags/{{this.slug}}">{{this.title}}</a></li>
+            {{/each}}
+          </ul>
+        </div>
         <span class="arrow"><svg><use xlink:href="#icon-arrowdown"></use></svg></span>
       </h3>
       <div class="content m-faqs-content">
         {{{this.content}}}
       </div>
     </li>
-    {{/each}}
+    
   {{/each}}
 </ul>
 <ul class="m-faqs-pagination"></ul>

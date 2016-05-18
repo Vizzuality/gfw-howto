@@ -43,7 +43,6 @@
           return $(el).data('tag')
         }
       }.bind(this)));
-      console.log(filters);
       this.model.set('filters', _.clone(filters));
     },
 

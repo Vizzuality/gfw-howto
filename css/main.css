@@ -1401,7 +1401,7 @@ button {
     transition: all 0.25s cubic-bezier(0.445, 0.05, 0.55, 0.95); }
     @media (min-width: 850px) {
       .m-toggle-howto span {
-        padding: 5px 10px; } }
+        padding: 6px 10px 5px; } }
     .m-toggle-howto span.-active {
       color: #555; }
 

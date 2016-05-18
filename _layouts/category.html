@@ -12,34 +12,38 @@ layout: default
 </header>
 
 
-<div class="m-section">
-  <ul id="contentView" class="m-category-grid">
-    <li class="-active">
-      <div class="m-content-grid">
-        <ul>
-          {% for post in site.sorted_posts %}
-            {% if post.categories contains page.title %}
-              <li class="m-content-item" data-tags="{{post.tags | join: ' '}}">  
-                <div class="box">                
-                  <a href="{{site.baseurl}}{{ post.url }}" class="img {% if post.thumbnail == 'video' %}-video{% endif %}" {% if post.thumbnail %} style="background-image: url({{site.baseurl}}{{post.thumbnail}})"{% endif %}></a>
-                  <div class="content">
-                    <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
-                    <div class="m-apps-tag">
-                      <ul>
-                        {% for tag in post.tags %}
-                          {% assign tagCustom = site.tags_info[tag] %}
-                          <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
-                        {% endfor %}                        
-                      </ul>
-                    </div>
-                    <p>{{ post.description }}</p>
+{% if slug == 'faqs' %}
+  {% include faqs.html %}
+{% else %}  
+  <div class="m-section">
+    <ul id="contentView" class="m-category-grid">
+      <li class="-active">
+        <div class="m-content-grid">
+          <ul>
+            {% for post in site.sorted_posts %}
+              {% if post.categories contains page.title %}
+                <li class="m-content-item" data-tags="{{post.tags | join: ' '}}">  
+                  <div class="box">                
+                    <a href="{{site.baseurl}}{{ post.url }}" class="img {% if post.thumbnail == 'video' %}-video{% endif %}" {% if post.thumbnail %} style="background-image: url({{site.baseurl}}{{post.thumbnail}})"{% endif %}></a>
+                    <div class="content">
+                      <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
+                      <div class="m-apps-tag">
+                        <ul>
+                          {% for tag in post.tags %}
+                            {% assign tagCustom = site.tags_info[tag] %}
+                            <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
+                          {% endfor %}                        
+                        </ul>
+                      </div>
+                      <p>{{ post.description }}</p>
+                    </div>              
                   </div>              
-                </div>              
-              </li>
-            {% endif %}
-          {% endfor %}        
-        </ul>
-      </div>
-    </li>
-  </ul>
-</div>
+                </li>
+              {% endif %}
+            {% endfor %}        
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+{% endif %}

@@ -32,7 +32,6 @@
 
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
-      this.listenTo(this.router, 'route:faqs', this.faqsPage);
       this.listenTo(this.router, 'route:category', this.categoryPage);
       this.listenTo(this.router, 'route:tag', this.tagPage);
       this.listenTo(this.router, 'route:post', this.postPage);
@@ -50,15 +49,10 @@
       this.searchView = new root.app.View.SearchView();
     },
 
-    faqsPage: function() {
-      this.faqsView = new root.app.View.FaqsView();
-      this.faqsSelectView = new root.app.View.FaqsSelectView();
-      this.asideView = new root.app.View.AsideView({ options: { model: { id: 'faqs' }}});
-    },
-
     categoryPage: function(id) {
       this.filtersView = new root.app.View.FiltersView({});
-      this.contentView = new root.app.View.ContentView({});      
+      this.faqsView = new root.app.View.FaqsView();         
+      this.contentView = new root.app.View.ContentView({});   
       this.asideView = new root.app.View.AsideView({
         options: {
           model: {
