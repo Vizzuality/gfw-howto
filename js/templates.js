@@ -49,6 +49,25 @@ this["HandlebarsTemplates"]["faqs"] = Handlebars.template({"1":function(depth0,h
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.list : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</ul>\n<ul class=\"m-faqs-pagination\"></ul>\n";
 },"useData":true});
+this["HandlebarsTemplates"]["googlegroups"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "      <li>\n        <h3><a href=\""
+    + alias2(alias1((depth0 != null ? depth0.link : depth0), depth0))
+    + "\" target=\"_blank\">"
+    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
+    + "</a></h3>\n        <p>"
+    + alias2(alias1((depth0 != null ? depth0.pubDate : depth0), depth0))
+    + "</p>\n        <p>"
+    + alias2(alias1((depth0 != null ? depth0.description : depth0), depth0))
+    + "</p>\n      </li>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<div class=\"col -w100\">\n  <header>\n    <h2 class=\"-bold\">MOST POPULAR QUESTIONS</h2>\n  </header>\n  <ul class=\"ranking-list\">\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.discussions : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "  </ul>\n  <a class=\"link\" href=\"https://groups.google.com/forum/#!forum/globalforestwatch\" target=\"_blank\">VISIT GFW FORUM > ></a>\n</div>";
+},"useData":true});
 this["HandlebarsTemplates"]["search"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1;
 

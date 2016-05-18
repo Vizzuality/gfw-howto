@@ -395,7 +395,8 @@ button {
       padding: 0px 40px 50px; } }
 
 .m-section.-border {
-  border-top: 1px solid #E5E5DF; }
+  border-top: 1px solid #E5E5DF;
+  padding-top: 40px; }
 
 .m-section header h2 {
   font-size: 30px;
@@ -682,7 +683,7 @@ button {
   padding: 0px 15px 40px; }
   @media (min-width: 850px) {
     .m-faqs {
-      padding: 40px 40px 40px; } }
+      padding: 0px 40px 40px; } }
 
 .m-faqs-list > li {
   border-top: 1px solid #E5E5DF; }
@@ -1496,6 +1497,8 @@ button {
     width: 48%;
     padding: 40px;
     border: 1px solid #E5E5DF; }
+    .m-ranking .col.-w100 {
+      width: 100%; }
   .m-ranking header h2 {
     font-size: 21px;
     padding: 0 0 15px;

@@ -1,0 +1,15 @@
+<div class="col -w100">
+  <header>
+    <h2 class="-bold">MOST POPULAR QUESTIONS</h2>
+  </header>
+  <ul class="ranking-list">
+    {{#each discussions}}
+      <li>
+        <h3><a href="{{this.link}}" target="_blank">{{this.title}}</a></h3>
+        <p>{{this.pubDate}}</p>
+        <p>{{this.description}}</p>
+      </li>
+    {{/each}}
+  </ul>
+  <a class="link" href="https://groups.google.com/forum/#!forum/globalforestwatch" target="_blank">VISIT GFW FORUM > ></a>
+</div>

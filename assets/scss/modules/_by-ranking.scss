@@ -6,6 +6,10 @@
 		width: 48%;
 		padding: 40px;
 		border: 1px solid $border1;
+		
+		&.-w100 {
+			width: 100%;
+		}
 	}
 
 	header {	

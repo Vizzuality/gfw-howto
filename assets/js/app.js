@@ -47,6 +47,7 @@
     homePage: function() {
       this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
       this.searchView = new root.app.View.SearchView();
+      this.googleGroupView = new root.app.View.GoogleGroupView();
     },
 
     categoryPage: function(id) {
