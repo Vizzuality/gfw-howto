@@ -1,12 +1,12 @@
 <div class="m-by-app">
   <!-- Grid -->
   <ul>
-    {% for category in site.categories_info %}
-      <li class="-{{ category[1].slug }}">
-        <a href="{{site.baseurl}}/apps/{{ category[1].slug | slugify }}">
-          <svg><use xlink:href="#icon-{{ category[1].slug | downcase | remove:' ' }}"></use></svg>
-          <h2>{{ category[1].title }}</h2>
-          <!-- <p>{{category[1].description}}</p> -->
+    {% for tag in site.tags_info %}
+      <li class="-{{ tag[1].slug }}">
+        <a href="{{site.baseurl}}/apps/{{ tag[1].slug | slugify }}">
+          <svg><use xlink:href="#icon-{{ tag[1].slug | downcase | remove:' ' }}"></use></svg>
+          <h2>{{ tag[1].title }}</h2>
+          <!-- <p>{{tag[1].description}}</p> -->
         </a>
       </li>
     {% endfor %}

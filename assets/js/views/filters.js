@@ -12,7 +12,7 @@
     el: '#filtersView',
 
     events: {
-      'change .js-checkbox-category' : 'setFilters'
+      'change .js-checkbox-tag' : 'setFilters'
     },
 
     model: new (Backbone.Model.extend({
@@ -29,7 +29,7 @@
     },
 
     cache: function() {
-      this.$checkbox = this.$el.find('[name="checkbox-category"]');
+      this.$checkbox = this.$el.find('[name="checkbox-tag"]');
     },
 
     listeners: function() {
@@ -40,10 +40,10 @@
       var filters = _.compact(_.map(this.$checkbox, function(el){
         var checked = $(el).is(':checked');
         if (checked) {
-          return $(el).data('category')
+          return $(el).data('tag')
         }
       }.bind(this)));
-
+      console.log(filters);
       this.model.set('filters', _.clone(filters));
     },
 

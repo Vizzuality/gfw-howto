@@ -16,12 +16,12 @@ jekyll-archives:
     tag: tag
     category: category
   permalinks:
-    category: '/apps/:name/'
-    tag: '/themes/:name/'
+    category: '/categories/:name/'
+    tag: '/tags/:name/'
 
 
-# CATEGORIES
-categories_info:
+# TAGS
+tags_info:
   gfw:
     order: 1
     title: Gfw
@@ -48,8 +48,8 @@ categories_info:
     description: "Browse, learn more about, and download the data displayed on Global Forest Watch."
     slug: odp
 
-
-tags_info:
+# CATEGORIES
+categories_info:
   visualize_data:
     order: 1
     title: Visualize data

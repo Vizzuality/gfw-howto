@@ -41,7 +41,7 @@
 
       if (!!filters.length) {
         _.each(this.$cards, function(card){
-          var visible = _.intersection(filters, $(card).data('categories').split(' ')); 
+          var visible = _.intersection(filters, $(card).data('tags').split(' ')); 
           $(card).toggleClass('-invisible', ! !!visible.length);
         }.bind(this));
       } else {

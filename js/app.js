@@ -167,7 +167,7 @@
 
       if (!!filters.length) {
         _.each(this.$cards, function(card){
-          var visible = _.intersection(filters, $(card).data('categories').split(' ')); 
+          var visible = _.intersection(filters, $(card).data('tags').split(' ')); 
           $(card).toggleClass('-invisible', ! !!visible.length);
         }.bind(this));
       } else {
@@ -345,7 +345,7 @@
     el: '#filtersView',
 
     events: {
-      'change .js-checkbox-category' : 'setFilters'
+      'change .js-checkbox-tag' : 'setFilters'
     },
 
     model: new (Backbone.Model.extend({
@@ -362,7 +362,7 @@
     },
 
     cache: function() {
-      this.$checkbox = this.$el.find('[name="checkbox-category"]');
+      this.$checkbox = this.$el.find('[name="checkbox-tag"]');
     },
 
     listeners: function() {
@@ -373,10 +373,10 @@
       var filters = _.compact(_.map(this.$checkbox, function(el){
         var checked = $(el).is(':checked');
         if (checked) {
-          return $(el).data('category')
+          return $(el).data('tag')
         }
       }.bind(this)));
-
+      console.log(filters);
       this.model.set('filters', _.clone(filters));
     },
 
@@ -721,9 +721,9 @@
       // HOME
       'faqs(/)': 'faqs',
       // APP
-      'apps/:id(/)': 'category',
+      'categories/:id(/)': 'category',
       //THEME
-      'themes/:id(/)': 'tag',
+      'tags/:id(/)': 'tag',
       // POST
       'gfw/:id' : 'post',
       'climate/:id' : 'post',
@@ -866,8 +866,8 @@
     setListeners: function() {
       this.listenTo(this.router, 'route:home', this.homePage);
       this.listenTo(this.router, 'route:faqs', this.faqsPage);
-      this.listenTo(this.router, 'route:category', this.appPage);
-      this.listenTo(this.router, 'route:tag', this.themePage);
+      this.listenTo(this.router, 'route:category', this.categoryPage);
+      this.listenTo(this.router, 'route:tag', this.tagPage);
       this.listenTo(this.router, 'route:post', this.postPage);
     },
 
@@ -889,11 +889,7 @@
       this.asideView = new root.app.View.AsideView({ options: { model: { id: 'faqs' }}});
     },
 
-    appPage: function(id) {
-      this.asideView = new root.app.View.AsideView({});
-    },
-
-    themePage: function(id) {
+    categoryPage: function(id) {
       this.filtersView = new root.app.View.FiltersView({});
       this.contentView = new root.app.View.ContentView({});      
       this.asideView = new root.app.View.AsideView({
@@ -903,6 +899,10 @@
           }
         }
       });
+    },
+
+    tagPage: function(id) {
+      this.asideView = new root.app.View.AsideView({});
     },
 
     postPage: function() {
