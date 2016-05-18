@@ -392,11 +392,11 @@ button {
   padding: 40px 15px; }
   @media (min-width: 850px) {
     .m-section.-padding {
-      padding: 0px 40px 50px; } }
+      padding: 0px 40px 70px; } }
 
 .m-section.-border {
   border-top: 1px solid #E5E5DF;
-  padding-top: 40px; }
+  padding-top: 70px; }
 
 .m-section header h2 {
   font-size: 30px;
