@@ -10,9 +10,9 @@ layout: default
   <h3>{{page.description}}</h3>
   <div class="m-apps-tag">
     <ul>
-      {% for category in page.categories %}
-        {% assign categoryCustom = site.categories_info[category] %}
-        <li><a class="{{categoryCustom.slug}}" href="{{site.baseurl}}/apps/{{categoryCustom.slug}}">{{categoryCustom.title}}</a></li>
+      {% for tag in page.tags %}
+        {% assign tagCustom = site.tags_info[tag] %}
+        <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
       {% endfor %}                        
     </ul>    
   </div>
@@ -37,9 +37,9 @@ layout: default
             <h3><a href="{{site.baseurl}}{{ page.previous.url }}">{{ page.previous.title }}</a></h3>
             <div class="m-apps-tag">
               <ul>
-                {% for category in page.previous.categories %}
-                  {% assign categoryCustom = site.categories_info[category] %}
-                  <li><a class="{{categoryCustom.slug}}" href="{{site.baseurl}}/apps/{{categoryCustom.slug}}">{{categoryCustom.title}}</a></li>
+                {% for tag in page.previous.tags %}
+                  {% assign tagCustom = site.tags_info[tag] %}
+                  <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
                 {% endfor %}                        
               </ul>
             </div>
@@ -56,9 +56,9 @@ layout: default
             <h3><a href="{{site.baseurl}}{{ page.next.url }}">{{ page.next.title }}</a></h3>
             <div class="m-apps-tag">
               <ul>
-                {% for category in page.next.categories %}
-                  {% assign categoryCustom = site.categories_info[category] %}
-                  <li><a class="{{categoryCustom.slug}}" href="{{site.baseurl}}/apps/{{categoryCustom.slug}}">{{categoryCustom.title}}</a></li>
+                {% for tag in page.next.tags %}
+                  {% assign tagCustom = site.tags_info[tag] %}
+                  <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
                 {% endfor %}                        
               </ul>
             </div>

@@ -14,13 +14,7 @@
       // APP
       'categories/:id(/)': 'category',
       //THEME
-      'tags/:id(/)': 'tag',
-      // POST
-      'gfw/:id' : 'post',
-      'climate/:id' : 'post',
-      'fires/:id' : 'post',
-      'commodities/:id' : 'post',
-      'odp/:id': 'post'
+      'tags/:id(/)': 'tag'
     },
 
     ParamsModel: Backbone.Model.extend({}),

@@ -658,6 +658,10 @@
     },
 
     initialize: function(settings) {
+      if (! !!this.$el.length) {
+        return;
+      }
+
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
 
@@ -723,13 +727,7 @@
       // APP
       'categories/:id(/)': 'category',
       //THEME
-      'tags/:id(/)': 'tag',
-      // POST
-      'gfw/:id' : 'post',
-      'climate/:id' : 'post',
-      'fires/:id' : 'post',
-      'commodities/:id' : 'post',
-      'odp/:id': 'post'
+      'tags/:id(/)': 'tag'
     },
 
     ParamsModel: Backbone.Model.extend({}),
@@ -912,6 +910,7 @@
 
     setGlobalViews: function() {
       this.blogView = new root.app.View.BlogView();
+      this.toggleView = new root.app.View.ToggleView();
     }
 
   });

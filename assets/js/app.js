@@ -79,6 +79,7 @@
 
     setGlobalViews: function() {
       this.blogView = new root.app.View.BlogView();
+      this.toggleView = new root.app.View.ToggleView();
     }
 
   });
