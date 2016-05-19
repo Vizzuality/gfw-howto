@@ -1,5 +1,16 @@
+<div class="m-aside">  
+  <div id="searchAsideView" class="m-search -small">
+    <div class="search-container">
+      <svg class="-active -search"><use xlink:href="#icon-search"></use></svg>
+      <svg id="search-close" class="-cross"><use xlink:href="#icon-cross"></use></svg>
+      <input id="search-input" type="text" placeholder="How do I analyze data?">
+    </div>
+    <ul id="search-results" class="search-results"></ul>
+  </div>  
+</div>
+
 <div class="m-aside">
-  <h2 class="js-toggle-list" data-submenu="subjects-submenu">Subjects <svg><use xlink:href="#icon-arrowdown"></use></svg></h2>
+  <h2 class="js-toggle-list" data-submenu="subjects-submenu">Subjects <svg><use xlink:href="#icon-arrowup"></use></svg></h2>
   <ul id="subjects-submenu">
     {% for category in site.categories_info %}
       {% if category[1].type == "subject" %}
@@ -14,7 +25,7 @@
 </div>
 
 <div class="m-aside">
-  <h2 class="js-toggle-list" data-submenu="materials-submenu">Materials <svg><use xlink:href="#icon-arrowdown"></use></svg></h2>
+  <h2 class="js-toggle-list" data-submenu="materials-submenu">Materials <svg><use xlink:href="#icon-arrowup"></use></svg></h2>
   <ul id="materials-submenu">
     {% for category in site.categories_info %}
       {% if category[1].type == "material" %}

@@ -14,9 +14,8 @@
   // View for display results
   root.app.View.SearchView = Backbone.View.extend({
 
-    el: '#searchView',
-
     events: {
+      'focus #search-input' : 'search',
       'keyup #search-input' : 'search',
       'click #search-close' : 'removeResults'
     },
@@ -26,8 +25,14 @@
     initialize: function(settings) {
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
-      this.collection = new root.app.Collection.SearchCollection();
+      
+      // Check if it's home page
+      if(!!this.options.is_home) {
+        this.$el.parents('.m-aside').hide();
+        return;
+      };
 
+      this.collection = new root.app.Collection.SearchCollection();
       this.collection.fetch().done(function(){
         this.cache();
         this.initFuse();

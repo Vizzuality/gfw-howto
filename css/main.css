@@ -250,9 +250,9 @@ button {
 
 .m-aside {
   padding: 20px 40px;
-  border-top: 1px solid #E5E5DF; }
-  .m-aside:first-child {
-    border-top: none; }
+  border-bottom: 1px solid #E5E5DF; }
+  .m-aside:last-child {
+    border-bottom: none; }
   .m-aside h2 {
     position: relative;
     font-size: 14px;
@@ -276,8 +276,8 @@ button {
     .m-aside h2:hover {
       text-decoration: underline; }
     .m-aside h2.-collapsed svg {
-      -webkit-transform: rotate(90deg);
-              transform: rotate(90deg); }
+      -webkit-transform: rotate(-180deg);
+              transform: rotate(-180deg); }
   .m-aside ul.-collapsed {
     display: none; }
   .m-aside ul li a {
@@ -287,10 +287,11 @@ button {
     color: #555;
     padding: 5px 0; }
     .m-aside ul li a:hover {
-      color: #333; }
+      color: #97bd3d; }
     .m-aside ul li a.-active {
       font-weight: 500;
-      color: #333; }
+      color: #333;
+      cursor: default; }
 
 .m-apps-tag {
   display: block; }
@@ -387,6 +388,22 @@ button {
       color: #555; }
       .m-search .search-results li a:hover {
         color: #97bd3d; }
+
+.m-search.-small .search-container svg {
+  width: 16px;
+  height: 16px; }
+  .m-search.-small .search-container svg.-search {
+    left: 10px; }
+  .m-search.-small .search-container svg.-cross {
+    right: 10px; }
+
+.m-search.-small .search-container input {
+  font-size: 12px;
+  display: block;
+  width: 100%;
+  padding: 8px calc(6px + 10px + 15px);
+  margin: 0;
+  font-weight: 300; }
 
 .m-section.-padding {
   padding: 40px 15px; }
@@ -1507,7 +1524,9 @@ button {
     font-size: 13px;
     text-transform: uppercase;
     color: #97bd3d;
-    font-weight: 500; }
+    font-weight: 500;
+    display: inline-block;
+    padding-right: 10px; }
     .m-ranking h3 a {
       color: #97bd3d; }
   .m-ranking .ranking-list > li {

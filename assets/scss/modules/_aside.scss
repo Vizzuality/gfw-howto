@@ -1,9 +1,9 @@
 .m-aside {
   padding: 20px 40px;
-  border-top: 1px solid $border1;
+  border-bottom: 1px solid $border1;
 
-  &:first-child {
-    border-top: none;
+  &:last-child {
+    border-bottom: none;
   }
 
   h2 {
@@ -34,7 +34,7 @@
 
     &.-collapsed {
       svg {
-        transform: rotate(90deg);
+        transform: rotate(-180deg);
       }
     }
   }
@@ -54,12 +54,13 @@
         padding: 5px 0;
 
         &:hover {
-          color: #333;
+          color: $primary-color;
         }
 
         &.-active {
           font-weight: 500;
           color: #333;
+          cursor: default;
         }
       }
     }

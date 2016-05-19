@@ -88,4 +88,30 @@
       }
     }
   }
+
+  &.-small {
+    .search-container {
+      svg {
+        width: 16px;
+        height: 16px;
+
+        &.-search {
+          left: 10px;
+        }
+
+        &.-cross {
+          right: 10px;
+        }
+      }
+  
+      input {
+        font-size: 12px;
+        display: block;
+        width: 100%;
+        padding: 8px calc(6px + 10px + 15px);
+        margin: 0;
+        font-weight: 300;
+      }
+    }
+  }
 }

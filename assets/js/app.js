@@ -26,7 +26,6 @@
 
     initialize: function() {
       this.router = new root.app.Router();
-      this.setGlobalViews();
       this.setListeners();
     },
 
@@ -42,11 +41,14 @@
         pushState: true,
         root: (!!baseurl) ? baseurl : "/"
       });
+      this.setGlobalViews();
     },
 
     homePage: function() {
       this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
-      this.searchView = new root.app.View.SearchView();
+      this.searchView = new root.app.View.SearchView({
+        el: '#searchView'
+      });
       this.googleGroupView = new root.app.View.GoogleGroupView();
     },
 
@@ -75,6 +77,13 @@
     setGlobalViews: function() {
       this.blogView = new root.app.View.BlogView();
       this.toggleView = new root.app.View.ToggleView();
+      
+      this.searchAsideView = new root.app.View.SearchView({
+        el: '#searchAsideView',
+        options: {
+          is_home: (this.router.routes[Backbone.history.getFragment()] == 'home')
+        }
+      });      
     }
 
   });

@@ -513,9 +513,8 @@
   // View for display results
   root.app.View.SearchView = Backbone.View.extend({
 
-    el: '#searchView',
-
     events: {
+      'focus #search-input' : 'search',
       'keyup #search-input' : 'search',
       'click #search-close' : 'removeResults'
     },
@@ -525,8 +524,14 @@
     initialize: function(settings) {
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
-      this.collection = new root.app.Collection.SearchCollection();
+      
+      // Check if it's home page
+      if(!!this.options.is_home) {
+        this.$el.parents('.m-aside').hide();
+        return;
+      };
 
+      this.collection = new root.app.Collection.SearchCollection();
       this.collection.fetch().done(function(){
         this.cache();
         this.initFuse();
@@ -964,7 +969,6 @@
 
     initialize: function() {
       this.router = new root.app.Router();
-      this.setGlobalViews();
       this.setListeners();
     },
 
@@ -980,11 +984,14 @@
         pushState: true,
         root: (!!baseurl) ? baseurl : "/"
       });
+      this.setGlobalViews();
     },
 
     homePage: function() {
       this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
-      this.searchView = new root.app.View.SearchView();
+      this.searchView = new root.app.View.SearchView({
+        el: '#searchView'
+      });
       this.googleGroupView = new root.app.View.GoogleGroupView();
     },
 
@@ -1013,6 +1020,13 @@
     setGlobalViews: function() {
       this.blogView = new root.app.View.BlogView();
       this.toggleView = new root.app.View.ToggleView();
+      
+      this.searchAsideView = new root.app.View.SearchView({
+        el: '#searchAsideView',
+        options: {
+          is_home: (this.router.routes[Backbone.history.getFragment()] == 'home')
+        }
+      });      
     }
 
   });
