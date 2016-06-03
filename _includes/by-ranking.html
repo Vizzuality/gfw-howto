@@ -8,14 +8,6 @@
         {% if post.star %}
           <li>
             <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
-            <div class="m-apps-tag -inline">
-              <ul>     
-                {% for tag in post.tags %}
-                  {% assign tagCustom = site.tags_info[tag] %}
-                  <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
-                {% endfor %}                        
-              </ul>
-            </div>            
           </li>
         {% endif %}
       {% endfor %}        
@@ -31,14 +23,6 @@
         {% if post.star %}
           <li>
             <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
-            <div class="m-apps-tag -inline">
-              <ul>     
-                {% for tag in post.tags %}
-                  {% assign tagCustom = site.tags_info[tag] %}
-                  <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
-                {% endfor %}                        
-              </ul>
-            </div>            
           </li>
         {% endif %}
       {% endfor %}

@@ -46,8 +46,6 @@ tags_info:
     description: "GFW Climate catalyzes action on climate change by providing timely, credible answers to questions about carbon emissions from tropical deforestation."
     slug: climate
     type: app    
-  
-
   odp:
     order: 5
     title: Open data portal
