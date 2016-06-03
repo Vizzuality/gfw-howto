@@ -5,9 +5,9 @@ order: 6
 published: True
 description: ""
 thumbnail: "video"
+video: P_-0NRTHZyM
 categories: [tutorial videos]
 tags: [climate]
-mobile: true
 ---
 
 <div id="desktopContent" class="content">

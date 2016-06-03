@@ -5,9 +5,9 @@ order: 5
 published: True
 description: ""
 thumbnail: "video"
+video: KtLLhLQfWa4
 categories: [tutorial videos]
 tags: [commodities]
-mobile: true
 ---
 
 <div id="desktopContent" class="content">

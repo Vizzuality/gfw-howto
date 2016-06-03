@@ -772,10 +772,6 @@
     },
 
     initialize: function(settings) {
-      if (! !!this.$el.length) {
-        return;
-      }
-
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
 

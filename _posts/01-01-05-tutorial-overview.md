@@ -5,9 +5,9 @@ order: 5
 published: True
 description: ""
 thumbnail: "video"
+video: gGZcF9t_SIM
 categories: [tutorial videos]
 tags: [odp]
-mobile: true
 ---
 
 <div id="desktopContent" class="content">

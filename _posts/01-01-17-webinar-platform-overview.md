@@ -5,6 +5,7 @@ order: 17
 published: True
 description: ""
 thumbnail: "video"
+video: VQXUnesPJT0
 categories: [webinars]
 tags: [gfw]
 mobile: false

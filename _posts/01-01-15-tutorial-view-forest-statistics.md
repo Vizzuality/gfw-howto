@@ -5,6 +5,7 @@ order: 15
 published: True
 description: ""
 thumbnail: "video"
+video: q8wGUBLPvGU
 categories: [tutorial videos]
 tags: [gfw]
 mobile: false

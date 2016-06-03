@@ -25,7 +25,13 @@ layout: default
             {% if post.tags contains page.title and post.categories contains category[1].slug %}            
               <li class="m-content-item">
                 <div class="box">                
-                  <a href="{{site.baseurl}}{{ post.url }}" class="img {% if post.thumbnail == 'video' %}-video{% endif %}" {% if post.thumbnail %} style="background-image: url({{site.baseurl}}{{post.thumbnail}})"{% endif %}></a>
+                  <a href="{{site.baseurl}}{{ post.url }}" class="img {% if post.video %}-video{% endif %}" 
+                    {% if post.video %} 
+                      style="background-image: url(http://img.youtube.com/vi/{{post.video}}/0.jpg)" 
+                    {% else %} 
+                      style="background-image: url({{site.baseurl}}{{post.thumbnail}})" 
+                    {% endif %}>  
+                  </a>
                   <div class="content">
                     <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
                     <div class="m-apps-tag">

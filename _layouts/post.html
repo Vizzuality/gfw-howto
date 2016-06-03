@@ -32,7 +32,13 @@ layout: default
       {% if page.previous.url %}
       <li class="m-content-item">
         <div class="box">                
-          <a href="{{site.baseurl}}{{ page.previous.url }}" class="img {% if page.previous.thumbnail == 'video' %}-video{% endif %}" {% if page.previous.thumbnail %} style="background-image: url({{site.baseurl}}{{page.previous.thumbnail}})"{% endif %}></a>
+          <a href="{{site.baseurl}}{{ page.previous.url }}" class="img {% if page.previous.video %}-video{% endif %}" 
+            {% if page.previous.video %} 
+              style="background-image: url(http://img.youtube.com/vi/{{page.previous.video}}/0.jpg)" 
+            {% else %} 
+              style="background-image: url({{site.baseurl}}{{page.previous.thumbnail}})" 
+            {% endif %}>  
+          </a>
           <div class="content">
             <h3><a href="{{site.baseurl}}{{ page.previous.url }}">{{ page.previous.title }}</a></h3>
             <div class="m-apps-tag">
@@ -51,7 +57,13 @@ layout: default
       {% if page.next.url %}
       <li class="m-content-item">
         <div class="box">                
-          <a href="{{site.baseurl}}{{ page.next.url }}" class="img {% if page.next.thumbnail == 'video' %}-video{% endif %}" {% if page.next.thumbnail %} style="background-image: url({{site.baseurl}}{{page.next.thumbnail}})"{% endif %}></a>
+          <a href="{{site.baseurl}}{{ page.next.url }}" class="img {% if page.next.video %}-video{% endif %}" 
+            {% if page.next.video %} 
+              style="background-image: url(http://img.youtube.com/vi/{{page.next.video}}/0.jpg)" 
+            {% else %} 
+              style="background-image: url({{site.baseurl}}{{page.next.thumbnail}})" 
+            {% endif %}>  
+          </a>
           <div class="content">
             <h3><a href="{{site.baseurl}}{{ page.next.url }}">{{ page.next.title }}</a></h3>
             <div class="m-apps-tag">

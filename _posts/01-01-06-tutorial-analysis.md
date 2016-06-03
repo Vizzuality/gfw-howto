@@ -5,9 +5,9 @@ order: 6
 published: True
 description: ""
 thumbnail: "video"
+video: 5ZFB4JHWUqM
 categories: [tutorial videos]
 tags: [commodities]
-mobile: true
 star: True
 ---
 
