@@ -5,7 +5,7 @@ order: 2
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
-categories: [analyze data and suscribe to alerts]
+categories: [subscribe to alerts]
 tags: [fires]
 mobile: true
 ---

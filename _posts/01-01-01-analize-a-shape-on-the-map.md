@@ -6,7 +6,7 @@ published: True
 description: ""
 thumbnail: "/assets/images/gfw/analize-a-shape-on-the-map/thumbnail.png"
 imagepath: "/assets/images/gfw/analize-a-shape-on-the-map"
-categories: [analyze data and suscribe to alerts]
+categories: [analyze data]
 tags: [gfw]
 mobile: false
 star: True

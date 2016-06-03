@@ -5,7 +5,7 @@ order: 3
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
-categories: [analyze data and suscribe to alerts]
+categories: [analyze data]
 tags: [commodities]
 mobile: true
 star: True

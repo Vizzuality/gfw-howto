@@ -7,7 +7,7 @@ description: ""
 thumbnail: "video"
 video: RtcrS7dmhcI
 categories: [webinars]
-tags: [gfw]
+tags: [gfw,small grants fund]
 mobile: false
 ---
 

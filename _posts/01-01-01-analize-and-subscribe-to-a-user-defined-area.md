@@ -6,7 +6,7 @@ published: True
 description: ""
 thumbnail: "/assets/images/gfw/analize-and-subscribe-to-a-user-defined-area/thumbnail.png"
 imagepath: "/assets/images/gfw/analize-and-subscribe-to-a-user-defined-area"
-categories: [analyze data and suscribe to alerts]
+categories: [analyze data]
 tags: [gfw]
 mobile: false
 ---

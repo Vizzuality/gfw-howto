@@ -27,46 +27,74 @@ tags_info:
     title: Gfw
     description: "Empowering people everywhere to better manage and conserve forest landscapes through an interactive online forest monitoring system."
     slug: gfw
+    type: app    
   fires:
     order: 2
     title: Fires
     description: "Global Forest Watch Fires (GFW Fires) is an online platform for monitoring and responding to forest and land fires in the ASEAN region using near real-time information."
     slug: fires
+    type: app    
   commodities:
     order: 3
     title: Commodities
     description: "Global Forest Watch Commodities is an online platform that empowers companies to analyze the impact of key commodities on forests, using the latest and most powerful data available."
     slug: commodities
+    type: app    
   climate:
     order: 4
     title: Climate
     description: "GFW Climate catalyzes action on climate change by providing timely, credible answers to questions about carbon emissions from tropical deforestation."
     slug: climate
+    type: app    
+  
+
   odp:
     order: 5
     title: Open data portal
     description: "Browse, learn more about, and download the data displayed on Global Forest Watch."
     slug: odp
+    type: tool    
+  map_builder:
+    order: 6
+    title: Map Builder
+    description: "Map Builder"
+    slug: map builder
+    type: tool    
+  small_grants_fund:
+    order: 7
+    title: Small Grants Fund
+    description: "Small Grants Fund"
+    slug: small grants fund
+    type: tool    
+
+
+
 
 # CATEGORIES
 categories_info:
   visualize_data:
     order: 1
-    title: Visualize data
+    title: Visualize Data
     description: "Some data are produced directly by WRI and our partners, such as FORMA alerts, Intact Forest Landscapes, and some forest use data."
     slug: visualize data
     type: subject
   view_statistics:
     order: 2
-    title: View statistics
+    title: View Statistics
     description: "These courses are designed to provide an in-depth understanding of the ways can support a variety of professional."
     slug: view statistics
     type: subject
-  analyze_data_and_suscribe_to_alerts:
+  analyze_data:
     order: 3
-    title: Analyze data and suscribe to alerts
+    title: Analyze Data
     description: "Description analyze_data"
-    slug: analyze data and suscribe to alerts
+    slug: analyze data
+    type: subject
+  subscribe_to_alerts:
+    order: 4
+    title: Subscribe to Alerts
+    description: "Description subscribe_to_alerts"
+    slug: subscribe to alerts
     type: subject
   submit_a_story:
     order: 5
@@ -86,12 +114,14 @@ categories_info:
     description: "Description gis"
     slug: gis
     type: subject
-  text_and_screenshots:
+  create_custom_maps:
     order: 8
-    title: Text & Screenshots
-    description: "Description text_and_screenshots"
-    slug: text and screenshots
-    type: material    
+    title: Create Custom Maps
+    description: "Description create_custom_maps"
+    slug: create custom maps
+    type: subject
+
+ 
   tutorial_videos:
     order: 9
     title: Tutorial videos

@@ -6,7 +6,7 @@ published: True
 description: ""
 thumbnail: "/assets/images/gfw/analyze-a-country-or-subnational-jurisdiction/thumbnail.png"
 imagepath: "/assets/images/gfw/analyze-a-country-or-subnational-jurisdiction"
-categories: [analyze data and suscribe to alerts]
+categories: [analyze data]
 tags: [gfw]
 mobile: false
 ---
