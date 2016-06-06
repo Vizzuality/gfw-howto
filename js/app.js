@@ -204,7 +204,7 @@
     model: new (Backbone.Model.extend({
       defaults: {
         filters: [],
-        itemsOnPage: 5
+        itemsOnPage: 10
       }
     })),
 
