@@ -3,7 +3,6 @@ title: I am familiar with a particular geographic area and believe your data set
 published: True
 tags: [gfw]
 categories: [faqs]
-star: True
 ---
 
 <p>First, please make sure you understand the differences in the data layers and their respective methodologies.</p>
