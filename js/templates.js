@@ -73,12 +73,12 @@ this["HandlebarsTemplates"]["search"] = Handlebars.template({"1":function(depth0
 
   return ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.results : depth0),{"name":"each","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"2":function(depth0,helpers,partials,data) {
-    var alias1=this.lambda, alias2=this.escapeExpression;
+    var stack1, alias1=this.lambda;
 
   return "    <li><a href=\""
-    + alias2(alias1((depth0 != null ? depth0.url : depth0), depth0))
+    + this.escapeExpression(alias1((depth0 != null ? depth0.url : depth0), depth0))
     + "\">"
-    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
+    + ((stack1 = alias1((depth0 != null ? depth0.title : depth0), depth0)) != null ? stack1 : "")
     + "</a></li>\n";
 },"4":function(depth0,helpers,partials,data) {
     return "    <li>No data available</li>\n";
