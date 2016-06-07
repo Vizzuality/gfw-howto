@@ -3,7 +3,6 @@ title: WHY DO FORESTS MATTER?
 published: True
 tags: [gfw]
 categories: [faqs]
-star: True
 ---
 
 <p>Human society and the global economy are inextricably linked to forests. More than 1 billion people depend on forests for their livelihood. Forest ecosystems also play a critical role in stabilizing the climate; providing food, water, wood products, and vital medicines; and supporting much of the world’s biodiversity.</p>

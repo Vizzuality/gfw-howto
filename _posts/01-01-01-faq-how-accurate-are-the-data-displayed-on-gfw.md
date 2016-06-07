@@ -3,7 +3,6 @@ title: How accurate are the data displayed on Global Forest Watch?
 published: True
 tags: [gfw]
 categories: [faqs]
-star: True
 ---
 
 <p>The accuracy of the data displayed on GFW is variable. Methodologies and cautions for specific data sets are available on the <a href="http://data.globalforestwatch.org/">Open Data Portal</a>.</p>

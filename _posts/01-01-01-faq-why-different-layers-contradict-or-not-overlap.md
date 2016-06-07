@@ -3,7 +3,6 @@ title: Why do different data layers contradict each other or not overlap exactly
 published: True
 tags: [gfw]
 categories: [faqs]
-star: True
 ---
 
 <p>Different data sets measure different things and are derived using different methodologies. Such differences can lead to results that may manifest as contradictory layers on the GFW platform. In some cases, a lack of available high-quality data may cause a greater margin of error for certain data sets.</p>

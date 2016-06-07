@@ -3,7 +3,6 @@ title: Do you have these data sets available for every country?
 published: True
 tags: [gfw]
 categories: [faqs]
-star: True
 ---
 
 <p>GFW aims to provide data with global coverage, but this isn’t always possible. The geographic coverage of each data set is described on the <a href="http://data.globalforestwatch.org/">Open Data Portal</a>.</p>

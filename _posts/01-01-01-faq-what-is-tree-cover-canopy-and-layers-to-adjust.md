@@ -3,7 +3,6 @@ title: What is tree cover canopy (TCC) density and what layers allow me to adjus
 published: True
 tags: [gfw]
 categories: [faqs]
-star: True
 ---
 
 <p>Not all forests have the same footprint. Some forests are dense, like the tropical Amazon, with canopies that blanket almost every inch of ground for miles. Others forests are sparse, such as the savannah woodlands of North Africa where the canopies do not close or interlace. There are many shades in between. As a result, there is no global consensus on how much tree cover is needed to constitute a forest and it is important to be able to adjust the tree cover canopy density according to different user or country definitions of “forest.”</p>
