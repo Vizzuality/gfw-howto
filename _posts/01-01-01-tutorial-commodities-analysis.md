@@ -8,7 +8,6 @@ thumbnail: "video"
 video: 5ZFB4JHWUqM
 categories: [tutorial videos]
 tags: [commodities]
-star: True
 ---
 
 <div id="desktopContent" class="content">

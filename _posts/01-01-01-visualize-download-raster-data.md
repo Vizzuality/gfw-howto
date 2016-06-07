@@ -9,6 +9,7 @@ imagepath: "/assets/images/odp/download-raster-data"
 categories: [visualize data]
 tags: [odp]
 mobile: false
+star: True
 ---
 
 <div id="desktopContent" class="content">

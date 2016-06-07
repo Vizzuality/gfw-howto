@@ -9,6 +9,7 @@ imagepath: "/assets/images/odp/find-data"
 categories: [visualize data]
 tags: [odp]
 mobile: false
+star: True
 ---
 
 <div id="desktopContent" class="content">
