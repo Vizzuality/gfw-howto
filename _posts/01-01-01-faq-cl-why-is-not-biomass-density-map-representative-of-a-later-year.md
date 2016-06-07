@@ -1,5 +1,5 @@
 ---
-title: Why is not the biomass density map representative of a later year?
+title: Why isn't the biomass density map representative of a later year?
 published: True
 tags: [climate]
 categories: [faqs]

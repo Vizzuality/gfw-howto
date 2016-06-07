@@ -1,5 +1,5 @@
 ---
-title: What is the difference between biomass and carbon?
+title: What's the difference between biomass and carbon?
 published: True
 tags: [climate]
 categories: [faqs]
