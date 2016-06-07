@@ -1,7 +1,7 @@
 ---
 title: Who is behind global forest watch?
 published: True
-tags: [gfw, fires, commodities, climate]
+tags: [gfw, climate]
 categories: [faqs]
 star: True
 ---

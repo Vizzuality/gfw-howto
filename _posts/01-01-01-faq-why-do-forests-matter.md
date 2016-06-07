@@ -1,5 +1,5 @@
 ---
-title: WHY DO FORESTS MATTER?
+title: Why do forests matter?
 published: True
 tags: [gfw]
 categories: [faqs]

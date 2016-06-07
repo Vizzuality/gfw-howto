@@ -1,7 +1,7 @@
 ---
 title: What does it mean that Global Forest Watch is in “beta”?
 published: True
-tags: [gfw]
+tags: [gfw, climate]
 categories: [faqs]
 ---
 
