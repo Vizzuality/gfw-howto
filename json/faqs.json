@@ -11,7 +11,7 @@ layout: null
       "date"     : "{{ post.date }}",
       "app"      : "{{ post.app }}",
       "order"    : "{{ post.order }}",
-      "content"  : "{{ post.content | strip_newlines }}"
+      "content"  : {{ post.content | jsonify }}
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
 ]

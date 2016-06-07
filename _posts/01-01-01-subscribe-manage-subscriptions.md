@@ -11,9 +11,6 @@ tags: [gfw]
 mobile: false
 ---
 
-
-
-
 <div id="desktopContent" class="content">
   <p>Read below to learn how to manage subscriptions for your areas of interest. When you subscribe to alerts for an area you will be notified of new forest change via emails. Each email contains new activity detected by GFW’s Tree Cover Change or alert systems. Please be aware that not all alert systems may cover the area you selected. To learn more about each system, click on the information icons that appear in the drop-down menu under Forest Change on the interactive map.</p>
   <p><strong>1.</strong> To view and manage your subscriptions, log in to My GFW using the “Log in to My GFW” button in the toolbar at the top of the page. (Log in with your Twitter, Facebook, or Google account).</p>
@@ -29,13 +26,6 @@ mobile: false
   <p><strong>6.</strong> You can also create a profile on My GFW, which helps us understand how Global Forest Watch data and features are used. </p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop6.png"/></p>
 </div>
-
-
-
-
-
-
-
 
 <div id="mobileContent" class="content">
 </div>
