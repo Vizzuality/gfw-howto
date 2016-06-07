@@ -22,7 +22,7 @@ layout: default
           <ul>
             {% for post in site.sorted_posts %}
               {% if post.categories contains page.title %}
-                <li class="m-content-item" data-tags="{{post.tags | join: ' '}}">  
+                <li class="m-content-item" data-tags="{{post.tags | join: ' ' | replace:'_','-'}}">  
                   <div class="box">   
                     <a href="{{site.baseurl}}{{ post.url }}" class="img {% if post.video %}-video{% endif %}" 
                       {% if post.video %} 

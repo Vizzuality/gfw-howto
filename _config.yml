@@ -56,13 +56,13 @@ tags_info:
     order: 6
     title: Map Builder
     description: "Map Builder"
-    slug: map builder
+    slug: map-builder
     type: tool    
   small_grants_fund:
     order: 7
     title: Small Grants Fund
     description: "Small Grants Fund"
-    slug: small grants fund
+    slug: small-grants-fund
     type: tool    
 
 
