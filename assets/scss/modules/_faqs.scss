@@ -71,11 +71,13 @@
     padding: 10px 10px 40px;
   }
   // Elements
-  > * {
-    padding-top: 20px;
+  .content {  
+    > * {
+      padding-top: 20px;
 
-    &:first-child {
-      padding-top: 0;
+      &:first-child {
+        padding-top: 0;
+      }
     }
   }
 

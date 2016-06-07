@@ -786,9 +786,9 @@ button {
   @media (min-width: 850px) {
     .m-faqs-content {
       padding: 10px 10px 40px; } }
-  .m-faqs-content > * {
+  .m-faqs-content .content > * {
     padding-top: 20px; }
-    .m-faqs-content > *:first-child {
+    .m-faqs-content .content > *:first-child {
       padding-top: 0; }
   .m-faqs-content a:not(.btn) {
     color: #97bd3d; }
@@ -1310,12 +1310,10 @@ button {
   @media (min-width: 850px) {
     .m-post {
       padding: 40px; } }
-  .m-post .content {
-    display: none; }
-    .m-post .content > * {
-      padding-top: 20px; }
-      .m-post .content > *:first-child {
-        padding-top: 0; }
+  .m-post .content > * {
+    padding-top: 20px; }
+    .m-post .content > *:first-child {
+      padding-top: 0; }
   .m-post a:not(.btn) {
     color: #97bd3d; }
     .m-post a:not(.btn):hover {
