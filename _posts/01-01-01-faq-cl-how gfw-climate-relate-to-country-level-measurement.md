@@ -1,7 +1,7 @@
 ---
 title: How does GFW Climate relate to country-level measurement, reporting and verification (MRV)?
 published: True
-tags: [gfw]
+tags: [climate]
 categories: [faqs]
 ---
 

@@ -3,7 +3,6 @@ title: Does GFW distinguish tree plantations from natural forests?
 published: True
 tags: [gfw]
 categories: [faqs]
-star: True
 ---
 
 <p>Tree plantations are not distinguished from natural forests in the case of several key data sets hosted on GFW (including 2000 tree cover, UMD/Google tree cover loss and gain, FORMA alerts, and QUICC alerts). Tree cover loss may include cases of tree plantations being harvested, and tree cover gain may include cases where natural forests are replaced with tree plantations.</p>
