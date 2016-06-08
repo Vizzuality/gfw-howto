@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Analysis
+title: Analysis Tool
 published: True
 description: ""
 thumbnail: "video"
