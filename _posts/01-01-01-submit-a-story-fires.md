@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Submit a Story
+title: Submit a Story to the fires map
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
 categories: [submit a story]
-tags: [fires]
+tags: [fires, gfw]
 mobile: true
 ---
 
