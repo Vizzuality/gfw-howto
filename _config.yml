@@ -1,7 +1,7 @@
 name: How to portal
 permalink: none
 
-baseurl: "/gfw-howto" # the subpath of your site, e.g. /blog/
+baseurl: "/howto" # the subpath of your site, e.g. /blog/
 url: "http://vizzuality.github.io/" # the base hostname & protocol for your site
 
 
