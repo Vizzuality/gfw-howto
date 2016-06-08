@@ -1,0 +1,27 @@
+<ul id="contentView" class="m-category-grid">
+  <li class="-active">
+    <div class="m-content-grid">
+      <ul>
+        {{#each blogposts}} 
+          <li class="m-content-item" data-tags="">  
+            <div class="box">   
+              <a href="{{this.link}}" class="img" style="background-color: #000;"></a>
+              <div class="content">
+                <h3><a href="{{this.link}}">{{this.title }}</a></h3>
+                <div class="m-apps-tag">
+                  {{!-- <ul>
+                    {% for tag in post.tags %}
+                      {% assign tagCustom = site.tags_info[tag] %}
+                      <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}">{{tagCustom.title}}</a></li>
+                    {% endfor %}                        
+                  </ul> --}}
+                </div>
+                {{!-- <p>{{ this.description }}</p> --}}
+              </div>              
+            </div>              
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+  </li>
+</ul>
