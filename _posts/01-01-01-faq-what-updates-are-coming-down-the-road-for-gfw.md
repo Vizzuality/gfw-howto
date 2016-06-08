@@ -5,6 +5,7 @@ tags: [gfw]
 categories: [faqs]
 layout: post
 star: True
+order: 5
 ---
 <div class="content">
 	<p>You asked, and we listened. Here is how we are addressing user feedback to improve GFW.</p>

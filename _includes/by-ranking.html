@@ -4,7 +4,7 @@
       <h2 class="-bold">MOST POPULAR QUESTIONS</h2>
     </header>
     <ul class="ranking-list">          
-      {% for post in site.faqs_sorted_posts %}        
+      {% for post in site.faqs_sorted_posts_order %}        
         {% if post.star %}
           <li>
             <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
