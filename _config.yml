@@ -106,18 +106,19 @@ categories_info:
     description: "Description download_data"
     slug: download data
     type: subject
-  gis:
-    order: 7
-    title: GIS
-    description: "Description gis"
-    slug: gis
-    type: subject
   create_custom_maps:
-    order: 8
+    order: 7
     title: Create Custom Maps
     description: "Description create_custom_maps"
     slug: create custom maps
     type: subject
+  gis:
+    order: 8
+    title: GIS
+    description: "Description gis"
+    slug: gis
+    type: subject
+  
 
  
   tutorial_videos:
