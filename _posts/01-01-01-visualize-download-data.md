@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Download data in the open data portal
-order: 2
 published: True
 description: ""
 thumbnail: "/assets/images/odp/download-data/thumbnail.png"
@@ -9,6 +8,8 @@ imagepath: "/assets/images/odp/download-data"
 categories: [visualize data]
 tags: [odp]
 mobile: false
+star: True
+order: 4
 ---
 
 <div id="desktopContent" class="content">

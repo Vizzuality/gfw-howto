@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Analysis
-order: 6
 published: True
 description: ""
 thumbnail: "video"

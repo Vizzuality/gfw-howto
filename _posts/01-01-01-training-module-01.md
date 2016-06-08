@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Teacher Training Module
-order: 19
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"

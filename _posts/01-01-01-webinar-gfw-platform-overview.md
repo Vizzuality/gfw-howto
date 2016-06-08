@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Platform Overview
-order: 17
 published: True
 description: ""
 thumbnail: "video"

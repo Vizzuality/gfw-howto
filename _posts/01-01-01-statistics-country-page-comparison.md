@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Country Page Comparison
-order: 3
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"

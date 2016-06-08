@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Small Grants Fund
-order: 18
 published: True
 description: ""
 thumbnail: "video"
@@ -10,8 +9,6 @@ categories: [webinars]
 tags: [gfw,small_grants_fund]
 mobile: false
 ---
-
-
 
 
 <div id="desktopContent" class="content">

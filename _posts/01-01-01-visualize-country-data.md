@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Visualize country data
-order: 2
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-country-data/thumbnail.png"
@@ -10,6 +9,7 @@ categories: [visualize data]
 tags: [gfw]
 mobile: true
 star: True
+order: 5
 ---
 
 

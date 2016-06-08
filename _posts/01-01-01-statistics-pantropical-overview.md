@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Pantropical Overview
-order: 4
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"

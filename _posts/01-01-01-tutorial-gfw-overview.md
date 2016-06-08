@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Overview
-order: 12
 published: True
 description: ""
 thumbnail: "video"

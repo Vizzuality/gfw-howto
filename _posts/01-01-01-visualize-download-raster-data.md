@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Download raster data in the open data portal
-order: 4
 published: True
 description: ""
 thumbnail: "/assets/images/odp/download-raster-data/thumbnail.png"
@@ -10,6 +9,7 @@ categories: [visualize data]
 tags: [odp]
 mobile: false
 star: True
+order: 7
 ---
 
 <div id="desktopContent" class="content">

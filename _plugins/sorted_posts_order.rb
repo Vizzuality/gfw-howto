@@ -1,5 +1,5 @@
 module Jekyll
-  class FaqsSortedPostsOrder < Jekyll::Generator
+  class SortedPostsOrder < Jekyll::Generator
     safe true
     priority :lowest
 
@@ -7,14 +7,14 @@ module Jekyll
       sorted_posts = []
 
       site.posts.docs.each do |post|
-        # First include only posts of 'faq' category
-        sorted_posts << post if post['categories'].include? 'faqs' and post['order']
+        # First remove all posts that belong to the faqs category and have an order
+        sorted_posts << post if !post['categories'].include? 'faqs' and post['order']
       end
 
       # # Then sort them according to order
       sorted_posts = sorted_posts.sort{ |a,b| a.data["order"] <=> b.data["order"] } 
 
-      site.config["faqs_sorted_posts_order"] = sorted_posts
+      site.config["sorted_posts_order"] = sorted_posts
     end
   end
 end

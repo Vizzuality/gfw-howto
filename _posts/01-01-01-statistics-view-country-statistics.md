@@ -1,7 +1,6 @@
 ---
 layout: post
 title: View Country Statistics
-order: 3
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/view-country-statistics/thumbnail.png"

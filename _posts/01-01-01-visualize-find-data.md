@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Find data in the open data portal
-order: 1
 published: True
 description: ""
 thumbnail: "/assets/images/odp/find-data/thumbnail.png"
@@ -10,6 +9,7 @@ categories: [visualize data]
 tags: [odp]
 mobile: false
 star: True
+order: 6
 ---
 
 <div id="desktopContent" class="content">

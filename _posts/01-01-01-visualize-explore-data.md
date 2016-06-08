@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Explore data in the open data portal
-order: 3
 published: True
 description: ""
 thumbnail: "/assets/images/odp/explore-data/thumbnail.png"
