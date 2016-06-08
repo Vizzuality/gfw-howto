@@ -84,7 +84,7 @@ gulp.task('sass-prod', function () {
             includePaths: ['scss'],
             onError: browserSync.notify
         }))
-        .pipe(preprocess({context: {BASEURL: '/gfw-howto'}}))
+        .pipe(preprocess({context: {BASEURL: '/howto'}}))
         .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
         .pipe(gulp.dest('_site/css'))
         .pipe(browserSync.reload({stream:true}))
