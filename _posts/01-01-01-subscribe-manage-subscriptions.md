@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Manage Subscriptions
-order: 20
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/manage-subscriptions/thumbnail.png"
@@ -9,6 +8,8 @@ imagepath: "/assets/images/gfw/manage-subscriptions"
 categories: [subscribe to alerts]
 tags: [gfw]
 mobile: false
+star: True
+order: 3
 ---
 
 <div id="desktopContent" class="content">

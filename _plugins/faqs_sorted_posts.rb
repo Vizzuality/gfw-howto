@@ -7,7 +7,7 @@ module Jekyll
       sorted_posts = []
 
       site.posts.docs.each do |post|
-        # First remove all posts that belong to the 'faqs' category
+        # First include only posts of 'faq' category
         sorted_posts << post if post['categories'].include? 'faqs'
       end
 

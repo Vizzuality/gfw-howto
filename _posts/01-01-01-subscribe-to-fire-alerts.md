@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Subscribe to fire alerts
-order: 2
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
@@ -9,8 +8,6 @@ categories: [subscribe to alerts]
 tags: [fires]
 mobile: true
 ---
-
-
 
 
 <div id="desktopContent" class="content">

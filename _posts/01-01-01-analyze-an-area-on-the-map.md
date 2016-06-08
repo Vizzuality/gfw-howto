@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Analyze an area on the map
-order: 2
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"

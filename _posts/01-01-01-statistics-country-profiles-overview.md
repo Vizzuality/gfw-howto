@@ -1,14 +1,12 @@
 ---
 layout: post
 title: Country Profiles Overview
-order: 2
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
 categories: [view statistics]
 tags: [climate]
 mobile: true
-star: True
 ---
 
 

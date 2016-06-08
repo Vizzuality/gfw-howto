@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Analyze Forest Change
-order: 16
 published: True
 description: ""
 thumbnail: "video"

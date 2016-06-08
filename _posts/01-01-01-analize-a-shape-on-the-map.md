@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Analyze a Shape on the Map
-order: 10
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/analize-a-shape-on-the-map/thumbnail.png"
@@ -10,6 +9,7 @@ categories: [analyze data]
 tags: [gfw]
 mobile: false
 star: True
+order: 9
 ---
 
 

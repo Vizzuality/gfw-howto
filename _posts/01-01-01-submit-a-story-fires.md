@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Submit a Story
-order: 3
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
@@ -9,8 +8,6 @@ categories: [submit a story]
 tags: [fires]
 mobile: true
 ---
-
-
 
 
 <div id="desktopContent" class="content">

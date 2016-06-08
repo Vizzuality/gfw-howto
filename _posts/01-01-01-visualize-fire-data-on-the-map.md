@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Visualize fire data on the map
-order: 1
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"

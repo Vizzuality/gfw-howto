@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Submit a Story
-order: 11
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
@@ -9,9 +8,6 @@ categories: [submit a story]
 tags: [gfw]
 mobile: true
 ---
-
-
-
 
 <div id="desktopContent" class="content">
   <p><strong>1.</strong>  Go to the Submit a Story page.</p>
@@ -22,13 +18,6 @@ mobile: true
   <p><strong>6.</strong>  See your story immediately by selecting the “user stories” layer on the GFW map.</p>
   <p><a href="/stories/new" class="btn green medium uppercase">Submit a story</a></p>
 </div>
-
-
-
-
-
-
-
 
 <div id="mobileContent" class="content">
   <p><strong>1.</strong>  Tap the Submit a Story button on the homepage.</p>

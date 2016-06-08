@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Visualize Global Data on GFW
-order: 1
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.png"
@@ -10,6 +9,7 @@ categories: [visualize data]
 tags: [gfw]
 mobile: true
 star: True
+order: 1
 ---
 
 
