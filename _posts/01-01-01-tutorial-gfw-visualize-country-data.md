@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Visualize Country Data
-order: 14
 published: True
 description: ""
 thumbnail: "video"

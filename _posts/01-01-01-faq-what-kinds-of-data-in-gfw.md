@@ -5,6 +5,7 @@ tags: [gfw]
 categories: [faqs]
 layout: post
 star: True
+order: 4
 ---
 <div class="content">
 	<p>GFW seeks to bring together the most current, reliable, and robust data to monitor forest change around the world. GFW incorporates and integrates a wide range of data sets that can be overlaid and compared, including:</p>

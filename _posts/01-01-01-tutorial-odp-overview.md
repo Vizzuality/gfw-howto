@@ -1,7 +1,6 @@
 ---
 layout: post
 title: ODP Overview
-order: 5
 published: True
 description: ""
 thumbnail: "video"

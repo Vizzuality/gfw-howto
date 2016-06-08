@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Pantropical Overview
-order: 6
 published: True
 description: ""
 thumbnail: "video"

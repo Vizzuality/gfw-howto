@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Visualize Global Data
-order: 13
 published: True
 description: ""
 thumbnail: "video"

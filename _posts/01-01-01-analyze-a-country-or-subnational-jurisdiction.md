@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Analyze a Country or Subnational Jurisdiction
-order: 9
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/analyze-a-country-or-subnational-jurisdiction/thumbnail.png"
