@@ -1,15 +1,17 @@
 <div id="filtersView" class="m-filters">
 	<ul>
 		{% for tag in site.tags_info %}
-			<li>
-				<div class="m-checkbox">
-					<input id="checkbox-{{ tag[1].slug }}" type="checkbox" name="checkbox-tag" class="js-checkbox-tag" data-tag="{{ tag[1].slug }}"/>
-					<label for="checkbox-{{ tag[1].slug }}">
-						<span><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use></svg></span>
-						{{ tag[1].title }}
-					</label>					
-				</div>
-			</li>
+			{% if tag[1].title != 'Small Grants Fund' or category.type == 'material' %}
+				<li>
+					<div class="m-checkbox">
+						<input id="checkbox-{{ tag[1].slug }}" type="checkbox" name="checkbox-tag" class="js-checkbox-tag" data-tag="{{ tag[1].slug }}"/>
+						<label for="checkbox-{{ tag[1].slug }}">
+							<span><svg class="icon"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#icon-check"></use></svg></span>
+							{{ tag[1].title }}
+						</label>					
+					</div>
+				</li>
+			{% endif %}
 		{% endfor %}		
 	</ul>
 </div>
