@@ -8,7 +8,10 @@ layout: default
   {% assign category = site.categories_info[slug] %}
   <h2>{{category.title}}</h2>
 
-  {% include filters.html %}
+  {% if category.title != 'Blogs' %}
+    {% include filters.html %}
+  {% endif %}
+  
 </header>
 
 
