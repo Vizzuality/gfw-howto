@@ -56,6 +56,7 @@
       this.filtersView = new root.app.View.FiltersView({});
       this.faqsView = new root.app.View.FaqsView();         
       this.contentView = new root.app.View.ContentView({});   
+      this.blogListView = new root.app.View.BlogListView();
       this.asideView = new root.app.View.AsideView({
         options: {
           model: {

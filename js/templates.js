@@ -18,6 +18,23 @@ this["HandlebarsTemplates"]["blog"] = Handlebars.template({"1":function(depth0,h
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.blogposts : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "</ul>\n<div class=\"m-blog-link\">\n  <a target=\"_blank\" href=\"http://blog.globalforestwatch.org/\">\n    <svg class=\"icon\"><use xmlns:xlink=\"http://www.w3.org/1999/xlink\" xlink:href=\"#icon-f-blog\"></use></svg>\n    Read our blog\n  </a>\n</div>\n";
 },"useData":true});
+this["HandlebarsTemplates"]["blogList"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var alias1=this.lambda, alias2=this.escapeExpression;
+
+  return "          <li class=\"m-content-item\" data-tags=\"\">  \n            <div class=\"box\">   \n              <a href=\""
+    + alias2(alias1((depth0 != null ? depth0.link : depth0), depth0))
+    + "\" class=\"img\"></a>\n              <div class=\"content\">\n                <h3><a href=\""
+    + alias2(alias1((depth0 != null ? depth0.link : depth0), depth0))
+    + "\">"
+    + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
+    + "</a></h3>\n              </div>              \n            </div>              \n          </li>\n";
+},"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return "<ul id=\"contentView\" class=\"m-category-grid\">\n  <li class=\"-active\">\n    <div class=\"m-content-grid\">\n      <ul>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.blogposts : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "      </ul>\n    </div>\n  </li>\n</ul>\n";
+},"useData":true});
 this["HandlebarsTemplates"]["faqs"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 

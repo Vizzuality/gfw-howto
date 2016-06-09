@@ -8,12 +8,17 @@ layout: default
   {% assign category = site.categories_info[slug] %}
   <h2>{{category.title}}</h2>
 
-  {% include filters.html %}
+  {% if category.title != 'Blogs' %}
+    {% include filters.html %}
+  {% endif %}
+  
 </header>
 
 
 {% if slug == 'faqs' %}
   <div id="faqsView" class="m-faqs"></div>
+{% else if slug == 'blogs' %}  
+  <div id="blogListView" class="m-section"></div>
 {% else %}  
   <div class="m-section">
     <ul id="contentView" class="m-category-grid">
