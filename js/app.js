@@ -172,16 +172,6 @@
 
     parse: function() {
       return this.model.get('items');
-      // var groups = _.groupBy(_.map(this.model.get('items'), function(item){
-      //   item.categories = (!!item.categories) ? this.slugify(item.categories) : 'default';
-      //   return item;
-      // }.bind(this)), 'categories');
-
-      // var items = _.map(_.sample(groups,this.options.sample), function(group){
-      //   return _.sample(group);
-      // });
-
-      // return items;
     },
 
     slugify: function(text) {
