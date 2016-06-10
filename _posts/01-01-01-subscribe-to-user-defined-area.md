@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Subscribe to a user-defined area (draw or upload a shape)
+title: Subscribe to a User-Defined area (draw or upload a shape)
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
