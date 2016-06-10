@@ -281,7 +281,7 @@
           el.tags = (!!el.tags && !!el.tags.length) ? el.tags.split(', ') : [];
           el.tags_info = _.map(el.tags, function(_tag){
             var tag = window.gfw_howto.tags[_tag];
-            tag.url = baseurl + '/tags/' + tag.slug;
+            tag.url = baseurl + '/tags/' + tag.slug + '/';
             return tag;
           })
           return el;
