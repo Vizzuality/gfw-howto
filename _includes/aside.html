@@ -15,7 +15,7 @@
     {% for category in site.categories_info %}
       {% if category[1].type == "subject" %}
       <li>
-        <a class="-theme" id="aside-{{ category[0] | slugify }}" href="{{site.baseurl}}/categories/{{ category[0] | slugify }}">
+        <a class="-theme" id="aside-{{ category[0] | slugify }}" href="{{site.baseurl}}/categories/{{ category[0] | slugify }}/">
           {{ category[1].title }}
         </a>
       </li>
@@ -30,7 +30,7 @@
     {% for category in site.categories_info %}
       {% if category[1].type == "material" %}
       <li>
-        <a class="-theme" id="aside-{{ category[0] | slugify }}" href="{{site.baseurl}}/categories/{{ category[0] | slugify }}">
+        <a class="-theme" id="aside-{{ category[0] | slugify }}" href="{{site.baseurl}}/categories/{{ category[0] | slugify }}/">
           {{ category[1].title }}
         </a>
       </li>
