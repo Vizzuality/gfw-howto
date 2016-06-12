@@ -576,37 +576,6 @@ button {
           padding: 50px; }
           .m-blog ul li a:hover h3 {
             text-decoration: underline; } }
-    .m-blog ul li .img {
-      padding-bottom: 170px;
-      background: #555;
-      background-repeat: no-repeat; }
-      @media (min-width: 850px) {
-        .m-blog ul li .img {
-          padding-bottom: 270px; } }
-      .m-blog ul li .img.-feature-posts {
-        background: url("/assets/images/categories/feature-posts.jpg") center;
-        background-size: cover; }
-      .m-blog ul li .img.-guest-post {
-        background: url("/assets/images/categories/guest-post.jpg") center;
-        background-size: cover; }
-      .m-blog ul li .img.-zooming-in {
-        background: url("/assets/images/categories/zooming-in.jpg") center;
-        background-size: cover; }
-      .m-blog ul li .img.-updates {
-        background: url("/assets/images/categories/updates.jpg") center;
-        background-size: cover; }
-      .m-blog ul li .img.-map-of-the-week {
-        background: url("/assets/images/categories/map-of-the-week.jpg") center;
-        background-size: cover; }
-      .m-blog ul li .img.-news-roundups {
-        background: url("/assets/images/categories/news-roundups.jpg") center;
-        background-size: cover; }
-      .m-blog ul li .img.-gfw-user-profile {
-        background: url("/assets/images/categories/gfw-user-profile.jpg") center;
-        background-size: cover; }
-      .m-blog ul li .img.-uncategorized {
-        background: url("/assets/images/categories/guest-post.jpg") center;
-        background-size: cover; }
     .m-blog ul li h3 {
       font-size: 21px;
       text-transform: uppercase;
@@ -649,6 +618,38 @@ button {
       width: 30px;
       height: 30px;
       margin: 0 5px 0 0; }
+
+.m-blog .img, .m-content-item .img {
+  padding-bottom: 170px;
+  background: #555;
+  background-repeat: no-repeat; }
+  @media (min-width: 850px) {
+    .m-blog .img, .m-content-item .img {
+      padding-bottom: 270px; } }
+  .m-blog .img.-feature-posts, .m-content-item .img.-feature-posts {
+    background: url("/assets/images/categories/feature-posts.jpg") center;
+    background-size: cover; }
+  .m-blog .img.-guest-post, .m-content-item .img.-guest-post {
+    background: url("/assets/images/categories/guest-post.jpg") center;
+    background-size: cover; }
+  .m-blog .img.-zooming-in, .m-content-item .img.-zooming-in {
+    background: url("/assets/images/categories/zooming-in.jpg") center;
+    background-size: cover; }
+  .m-blog .img.-updates, .m-content-item .img.-updates {
+    background: url("/assets/images/categories/updates.jpg") center;
+    background-size: cover; }
+  .m-blog .img.-map-of-the-week, .m-content-item .img.-map-of-the-week {
+    background: url("/assets/images/categories/map-of-the-week.jpg") center;
+    background-size: cover; }
+  .m-blog .img.-news-roundups, .m-content-item .img.-news-roundups {
+    background: url("/assets/images/categories/news-roundups.jpg") center;
+    background-size: cover; }
+  .m-blog .img.-gfw-user-profile, .m-content-item .img.-gfw-user-profile {
+    background: url("/assets/images/categories/gfw-user-profile.jpg") center;
+    background-size: cover; }
+  .m-blog .img.-uncategorized, .m-content-item .img.-uncategorized {
+    background: url("/assets/images/categories/guest-post.jpg") center;
+    background-size: cover; }
 
 .m-filters {
   background: #f7f8f8;

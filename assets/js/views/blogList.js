@@ -45,7 +45,11 @@
     },
 
     parse: function() {
-      return this.model.get('items');
+      // console.log(this.model.get('items'));
+      return _.map(this.model.get('items'), function(item){
+        item.categorySlug = this.slugify(item.categories);
+        return item;
+      }.bind(this));
     },
 
     slugify: function(text) {

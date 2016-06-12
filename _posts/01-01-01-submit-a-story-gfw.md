@@ -3,20 +3,22 @@ layout: post
 title: Submit a Story
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
+thumbnail: "/assets/images/gfw/submit-a-story/thumbnail.png"
+imagepath: "/assets/images/gfw/submit-a-story"
 categories: [submit a story]
 tags: [gfw]
 mobile: true
 ---
 
 <div id="desktopContent" class="content">
-  <p><strong>1.</strong>  Go to the Submit a Story page.</p>
+  <p><strong>1.</strong>  Go to the <a href="http://www.globalforestwatch.org/stories/new" target="_blank">Submit a Story</a> page.</p>
   <p><strong>2.</strong>  Enter your story title, location, and date. You can select the story location by moving the flag in the embedded map.</p>
   <p><strong>3.</strong>  Enter your story content in the Details box.</p>
   <p><strong>4.</strong>  Upload a photo or video file to your story (optional). Maximum upload size is 5MB.</p>
   <p><strong>5.</strong>  Click “Submit Story.”</p>
   <p><strong>6.</strong>  See your story immediately by selecting the “user stories” layer on the GFW map.</p>
   <p><a href="/stories/new" class="btn green medium uppercase">Submit a story</a></p>
+  <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop1.png"/></p>  
 </div>
 
 <div id="mobileContent" class="content">

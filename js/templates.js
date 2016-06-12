@@ -23,7 +23,9 @@ this["HandlebarsTemplates"]["blogList"] = Handlebars.template({"1":function(dept
 
   return "          <li class=\"m-content-item\" data-tags=\"\">  \n            <div class=\"box\">   \n              <a href=\""
     + alias2(alias1((depth0 != null ? depth0.link : depth0), depth0))
-    + "\" class=\"img\"></a>\n              <div class=\"content\">\n                <h3><a href=\""
+    + "\" class=\"img -"
+    + alias2(alias1((depth0 != null ? depth0.categorySlug : depth0), depth0))
+    + "\"></a>\n              <div class=\"content\">\n                <h3><a href=\""
     + alias2(alias1((depth0 != null ? depth0.link : depth0), depth0))
     + "\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))

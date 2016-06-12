@@ -30,55 +30,6 @@
         }
       }
 
-      .img {
-        padding-bottom: 170px;
-        background: $dark;
-        background-repeat: no-repeat;
-        @media (min-width: $br-mobile){
-          padding-bottom: 270px;
-        }
-
-        &.-feature-posts {
-          background: url($baseurl + '/assets/images/categories/feature-posts.jpg') center;
-          background-size: cover;
-        }
-
-        &.-guest-post {
-          background: url($baseurl + '/assets/images/categories/guest-post.jpg') center;
-          background-size: cover;
-        }
-
-        &.-zooming-in {
-          background: url($baseurl + '/assets/images/categories/zooming-in.jpg') center;
-          background-size: cover;
-        }
-
-        &.-updates {
-          background: url($baseurl + '/assets/images/categories/updates.jpg') center;
-          background-size: cover;
-        }
-
-        &.-map-of-the-week {
-          background: url($baseurl + '/assets/images/categories/map-of-the-week.jpg') center;
-          background-size: cover;
-        }
-
-        &.-news-roundups {
-          background: url($baseurl + '/assets/images/categories/news-roundups.jpg') center;
-          background-size: cover;
-        }
-
-        &.-gfw-user-profile {
-          background: url($baseurl + '/assets/images/categories/gfw-user-profile.jpg') center;
-          background-size: cover;
-        }
-
-        &.-uncategorized {
-          background: url($baseurl + '/assets/images/categories/guest-post.jpg') center;
-          background-size: cover;
-        }
-      }
-
       h3 {
         font-size: 21px;
         text-transform: uppercase;
@@ -129,6 +80,57 @@
         height: 30px;
         margin: 0 5px 0 0;
       }
+    }
+  }
+}
+
+.m-blog, .m-content-item {
+  .img {
+    padding-bottom: 170px;
+    background: $dark;
+    background-repeat: no-repeat;
+    @media (min-width: $br-mobile){
+      padding-bottom: 270px;
+    }
+
+    &.-feature-posts {
+      background: url($baseurl + '/assets/images/categories/feature-posts.jpg') center;
+      background-size: cover;
+    }
+
+    &.-guest-post {
+      background: url($baseurl + '/assets/images/categories/guest-post.jpg') center;
+      background-size: cover;
+    }
+
+    &.-zooming-in {
+      background: url($baseurl + '/assets/images/categories/zooming-in.jpg') center;
+      background-size: cover;
+    }
+
+    &.-updates {
+      background: url($baseurl + '/assets/images/categories/updates.jpg') center;
+      background-size: cover;
+    }
+
+    &.-map-of-the-week {
+      background: url($baseurl + '/assets/images/categories/map-of-the-week.jpg') center;
+      background-size: cover;
+    }
+
+    &.-news-roundups {
+      background: url($baseurl + '/assets/images/categories/news-roundups.jpg') center;
+      background-size: cover;
+    }
+
+    &.-gfw-user-profile {
+      background: url($baseurl + '/assets/images/categories/gfw-user-profile.jpg') center;
+      background-size: cover;
+    }
+
+    &.-uncategorized {
+      background: url($baseurl + '/assets/images/categories/guest-post.jpg') center;
+      background-size: cover;
     }
   }
 }
