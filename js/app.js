@@ -985,7 +985,8 @@
      * Change url with params
      */
     updateUrl: function() {
-      var url = location.pathname.slice(1) + '?' + this._serializeParams();
+      var href = (!!baseurl) ? location.pathname.replace(baseurl,'') : location.pathname;
+      var url = href + '?' + this._serializeParams();
       this.navigate(url, { trigger: false });
     },
 

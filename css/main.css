@@ -87,7 +87,7 @@ button {
   width: 60px;
   height: 60px;
   margin: 0 0 0 15px;
-  background-image: url("/howto/assets/images/logo.png");
+  background-image: url("/assets/images/logo.png");
   background-size: contain; }
   @media (min-width: 850px) {
     .l-logo {
@@ -492,7 +492,7 @@ button {
 
 .m-content-grid .m-content-item .img {
   display: block;
-  background-image: url("/howto/assets/images/thumbnail-post.png");
+  background-image: url("/assets/images/thumbnail-post.png");
   background-color: #555;
   background-size: cover;
   background-position: center;
@@ -584,28 +584,28 @@ button {
         .m-blog ul li .img {
           padding-bottom: 270px; } }
       .m-blog ul li .img.-feature-posts {
-        background: url("/howto/assets/images/categories/feature-posts.jpg") center;
+        background: url("/assets/images/categories/feature-posts.jpg") center;
         background-size: cover; }
       .m-blog ul li .img.-guest-post {
-        background: url("/howto/assets/images/categories/guest-post.jpg") center;
+        background: url("/assets/images/categories/guest-post.jpg") center;
         background-size: cover; }
       .m-blog ul li .img.-zooming-in {
-        background: url("/howto/assets/images/categories/zooming-in.jpg") center;
+        background: url("/assets/images/categories/zooming-in.jpg") center;
         background-size: cover; }
       .m-blog ul li .img.-updates {
-        background: url("/howto/assets/images/categories/updates.jpg") center;
+        background: url("/assets/images/categories/updates.jpg") center;
         background-size: cover; }
       .m-blog ul li .img.-map-of-the-week {
-        background: url("/howto/assets/images/categories/map-of-the-week.jpg") center;
+        background: url("/assets/images/categories/map-of-the-week.jpg") center;
         background-size: cover; }
       .m-blog ul li .img.-news-roundups {
-        background: url("/howto/assets/images/categories/news-roundups.jpg") center;
+        background: url("/assets/images/categories/news-roundups.jpg") center;
         background-size: cover; }
       .m-blog ul li .img.-gfw-user-profile {
-        background: url("/howto/assets/images/categories/gfw-user-profile.jpg") center;
+        background: url("/assets/images/categories/gfw-user-profile.jpg") center;
         background-size: cover; }
       .m-blog ul li .img.-uncategorized {
-        background: url("/howto/assets/images/categories/guest-post.jpg") center;
+        background: url("/assets/images/categories/guest-post.jpg") center;
         background-size: cover; }
     .m-blog ul li h3 {
       font-size: 21px;
@@ -935,7 +935,7 @@ button {
       .m-select .chosen-container.with-selection .chosen-single abbr {
         display: block; }
       .m-select .chosen-container.with-selection .chosen-single div b {
-        background: url("/howto/assets/images/arrow-down.svg") center no-repeat;
+        background: url("/assets/images/arrow-down.svg") center no-repeat;
         background-size: contain; }
   .m-select .chosen-container-single {
     outline: none; }
@@ -976,7 +976,7 @@ button {
         width: 14px;
         margin: 0 auto;
         height: 100%;
-        background: url("/howto/assets/images/arrow-down.svg") center no-repeat;
+        background: url("/assets/images/arrow-down.svg") center no-repeat;
         background-size: contain; }
     .m-select .chosen-container-single .chosen-search {
       position: relative;
@@ -1259,13 +1259,13 @@ button {
     left: 50%; }
 
 .simple-pagination.light-theme .prev:before {
-  background: url("/howto/assets/images/arrow-left.svg") center no-repeat;
+  background: url("/assets/images/arrow-left.svg") center no-repeat;
   -webkit-transform: translate(-55%, -50%);
           transform: translate(-55%, -50%);
   background-size: contain; }
 
 .simple-pagination.light-theme .next:before {
-  background: url("/howto/assets/images/arrow-right.svg") center no-repeat;
+  background: url("/assets/images/arrow-right.svg") center no-repeat;
   -webkit-transform: translate(-45%, -50%);
           transform: translate(-45%, -50%);
   background-size: contain; }
