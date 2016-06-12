@@ -24,7 +24,7 @@ jekyll-archives:
 tags_info:
   gfw:
     order: 1
-    title: Gfw
+    title: GFW
     description: "Empowering people everywhere to better manage and conserve forest landscapes through an interactive online forest monitoring system."
     slug: gfw
     type: app    
@@ -48,7 +48,7 @@ tags_info:
     type: app    
   odp:
     order: 5
-    title: Open data portal
+    title: Open Data Portal
     description: "Browse, learn more about, and download the data displayed on Global Forest Watch."
     slug: odp
     type: tool    
