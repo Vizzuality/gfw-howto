@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Download raster data in the open data portal
+title: Download raster data from the open data portal
 published: True
 description: ""
 thumbnail: "/assets/images/odp/download-raster-data/thumbnail.png"
 imagepath: "/assets/images/odp/download-raster-data"
-categories: [visualize data]
+categories: [download data]
 tags: [odp]
 mobile: false
 star: True
