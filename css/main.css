@@ -1316,13 +1316,13 @@ button {
         padding: 0; }
   .m-post ol {
     counter-reset: mycounter; }
-    .m-post ol li {
+    .m-post ol > li {
       margin-top: 20px;
       padding-left: 15px;
       position: relative; }
-      .m-post ol li:first-child {
+      .m-post ol > li:first-child {
         margin-top: 0; }
-      .m-post ol li:before {
+      .m-post ol > li:before {
         position: absolute;
         top: 0;
         left: 0;
@@ -1332,7 +1332,7 @@ button {
         margin: 0 5px 0 0;
         content: counter(mycounter) ".";
         counter-increment: mycounter; }
-      .m-post ol li > * {
+      .m-post ol > li > * {
         margin-top: 10px; }
   .m-post img {
     display: block;

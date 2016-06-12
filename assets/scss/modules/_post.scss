@@ -60,7 +60,7 @@
   ol {
     counter-reset: mycounter;
 
-    li {
+    > li {
       margin-top: 20px;
       padding-left: 15px;
       position: relative;
