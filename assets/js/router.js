@@ -73,7 +73,7 @@
      * Change url with params
      */
     updateUrl: function() {
-      var url = location.pathname.slice(1) + '?' + this._serializeParams();
+      var url = location.pathname + '?' + this._serializeParams();
       this.navigate(url, { trigger: false });
     },
 
