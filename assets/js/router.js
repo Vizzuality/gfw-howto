@@ -22,6 +22,23 @@
       this.options = _.extend({}, this.defaults, opts);
 
       this.params = new this.ParamsModel(); // This object save the URL params
+      this.updateParams();
+      this.listeners();
+    },
+
+    listeners: function() {
+      Backbone.Events.on('Route/update', function(name,value){
+        this.setParams(name,value);
+        this.updateUrl();
+      }.bind(this));
+    },
+    
+    /**
+     * Get params
+     */
+    getParams: function() {
+      var params = this.params.toJSON();
+      return (_.isEmpty(params)) ? this.updateParams() : params;
     },
 
     /**
@@ -65,20 +82,9 @@
      * @param  {String} routeName
      * @param  {Array} params
      */
-    updateParams: function(params, routeName) {
-      if (this.options.decoded && params[0]) {
-        try {
-          params = this._decodeParams(params[0]);
-        } catch(err) {
-          console.error('Invalid params. ' + err);
-          params = null;
-          return this.navigate('map');
-        }
-        this.params.clear({ silent: true }).set({ config: params });
-      } else {
-        var p = this._unserializeParams();
-        this.params.clear({ silent: true }).set(this._unserializeParams());
-      }
+    updateParams: function() {
+      var p = this._unserializeParams();
+      this.params.clear({ silent: true }).set(p);
     },
 
     /**
@@ -107,7 +113,7 @@
      * @return {String}
      */
     _serializeParams: function() {
-      return this.params ? $.param(this.params.attributes) : null;
+      return this.params ? decodeURIComponent($.param(this.params.attributes)) : null;
     }
 
   });

@@ -33,7 +33,6 @@
       this.listenTo(this.router, 'route:home', this.homePage);
       this.listenTo(this.router, 'route:category', this.categoryPage);
       this.listenTo(this.router, 'route:tag', this.tagPage);
-      this.listenTo(this.router, 'route:post', this.postPage);
     },
 
     start: function() {
@@ -42,6 +41,8 @@
         root: (!!baseurl) ? baseurl : "/"
       });
       this.setGlobalViews();
+      Backbone.Events.trigger('Route/go', this.router.getParams())
+
     },
 
     homePage: function() {
@@ -52,7 +53,7 @@
       this.googleGroupView = new root.app.View.GoogleGroupView();
     },
 
-    categoryPage: function(id) {
+    categoryPage: function(id, params) {
       this.filtersView = new root.app.View.FiltersView({});
       this.faqsView = new root.app.View.FaqsView();         
       this.contentView = new root.app.View.ContentView({});   
@@ -68,11 +69,6 @@
 
     tagPage: function(id) {
       this.asideView = new root.app.View.AsideView({});
-    },
-
-    postPage: function() {
-      this.toggleView = new root.app.View.ToggleView();
-      this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
     },
 
     setGlobalViews: function() {

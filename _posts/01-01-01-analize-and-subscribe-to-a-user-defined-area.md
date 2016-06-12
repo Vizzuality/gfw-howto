@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Analize and Subscribe to a User-Defined Area
+title: Analyze and Subscribe to a User-Defined Area
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/analize-and-subscribe-to-a-user-defined-area/thumbnail.png"

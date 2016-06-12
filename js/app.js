@@ -475,14 +475,20 @@
     },
 
     cache: function() {
+      // model vars
+      this.model.set(this.options.model);
       this.$checkbox = this.$el.find('[name="checkbox-tag"]');
     },
 
     listeners: function() {
-      this.model.on('change:filters', this.changeFilters.bind(this));
+      Backbone.Events.on('Route/go',this.routerGo.bind(this));
+      this.model.on('change:filters', this.publishFilters.bind(this));
     },
-
-    setFilters: function() {
+ 
+    /**
+     * UI EVENTS
+     */
+    setFilters: function(e) {
       var filters = _.compact(_.map(this.$checkbox, function(el){
         var checked = $(el).is(':checked');
         if (checked) {
@@ -492,9 +498,30 @@
       this.model.set('filters', _.clone(filters));
     },
 
-    changeFilters: function() {
+    updateFilterCheckboxes: function() {
+      var filters = this.model.get('filters');
+      _.each(this.$checkbox, function(el){
+        var tag = $(el).data('tag');
+        var is_checked = _.contains(filters, tag);
+        $(el).prop( "checked", is_checked);
+      })
+    },
+
+    /**
+     * STATE EVENTS
+     */
+    routerGo: function(params) {
+      if (!!params && !!params.filters) {
+        var filters = JSON.parse(params.filters);
+        this.model.set('filters', _.clone(filters));
+        this.updateFilterCheckboxes();
+      }
+    },
+
+    publishFilters: function() {
       Backbone.Events.trigger('Filters/change', this.model.get('filters'));
-    }
+      Backbone.Events.trigger('Route/update', 'filters', this.model.get('filters'));
+    },
 
   });
 
@@ -907,6 +934,23 @@
       this.options = _.extend({}, this.defaults, opts);
 
       this.params = new this.ParamsModel(); // This object save the URL params
+      this.updateParams();
+      this.listeners();
+    },
+
+    listeners: function() {
+      Backbone.Events.on('Route/update', function(name,value){
+        this.setParams(name,value);
+        this.updateUrl();
+      }.bind(this));
+    },
+    
+    /**
+     * Get params
+     */
+    getParams: function() {
+      var params = this.params.toJSON();
+      return (_.isEmpty(params)) ? this.updateParams() : params;
     },
 
     /**
@@ -950,20 +994,9 @@
      * @param  {String} routeName
      * @param  {Array} params
      */
-    updateParams: function(params, routeName) {
-      if (this.options.decoded && params[0]) {
-        try {
-          params = this._decodeParams(params[0]);
-        } catch(err) {
-          console.error('Invalid params. ' + err);
-          params = null;
-          return this.navigate('map');
-        }
-        this.params.clear({ silent: true }).set({ config: params });
-      } else {
-        var p = this._unserializeParams();
-        this.params.clear({ silent: true }).set(this._unserializeParams());
-      }
+    updateParams: function() {
+      var p = this._unserializeParams();
+      this.params.clear({ silent: true }).set(p);
     },
 
     /**
@@ -992,7 +1025,7 @@
      * @return {String}
      */
     _serializeParams: function() {
-      return this.params ? $.param(this.params.attributes) : null;
+      return this.params ? decodeURIComponent($.param(this.params.attributes)) : null;
     }
 
   });
@@ -1034,7 +1067,6 @@
       this.listenTo(this.router, 'route:home', this.homePage);
       this.listenTo(this.router, 'route:category', this.categoryPage);
       this.listenTo(this.router, 'route:tag', this.tagPage);
-      this.listenTo(this.router, 'route:post', this.postPage);
     },
 
     start: function() {
@@ -1043,6 +1075,8 @@
         root: (!!baseurl) ? baseurl : "/"
       });
       this.setGlobalViews();
+      Backbone.Events.trigger('Route/go', this.router.getParams())
+
     },
 
     homePage: function() {
@@ -1053,7 +1087,7 @@
       this.googleGroupView = new root.app.View.GoogleGroupView();
     },
 
-    categoryPage: function(id) {
+    categoryPage: function(id, params) {
       this.filtersView = new root.app.View.FiltersView({});
       this.faqsView = new root.app.View.FaqsView();         
       this.contentView = new root.app.View.ContentView({});   
@@ -1069,11 +1103,6 @@
 
     tagPage: function(id) {
       this.asideView = new root.app.View.AsideView({});
-    },
-
-    postPage: function() {
-      this.toggleView = new root.app.View.ToggleView();
-      this.asideView = new root.app.View.AsideView({ options: { model: { id: null }}});
     },
 
     setGlobalViews: function() {

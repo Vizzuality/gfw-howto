@@ -29,14 +29,20 @@
     },
 
     cache: function() {
+      // model vars
+      this.model.set(this.options.model);
       this.$checkbox = this.$el.find('[name="checkbox-tag"]');
     },
 
     listeners: function() {
-      this.model.on('change:filters', this.changeFilters.bind(this));
+      Backbone.Events.on('Route/go',this.routerGo.bind(this));
+      this.model.on('change:filters', this.publishFilters.bind(this));
     },
-
-    setFilters: function() {
+ 
+    /**
+     * UI EVENTS
+     */
+    setFilters: function(e) {
       var filters = _.compact(_.map(this.$checkbox, function(el){
         var checked = $(el).is(':checked');
         if (checked) {
@@ -46,9 +52,30 @@
       this.model.set('filters', _.clone(filters));
     },
 
-    changeFilters: function() {
+    updateFilterCheckboxes: function() {
+      var filters = this.model.get('filters');
+      _.each(this.$checkbox, function(el){
+        var tag = $(el).data('tag');
+        var is_checked = _.contains(filters, tag);
+        $(el).prop( "checked", is_checked);
+      })
+    },
+
+    /**
+     * STATE EVENTS
+     */
+    routerGo: function(params) {
+      if (!!params && !!params.filters) {
+        var filters = JSON.parse(params.filters);
+        this.model.set('filters', _.clone(filters));
+        this.updateFilterCheckboxes();
+      }
+    },
+
+    publishFilters: function() {
       Backbone.Events.trigger('Filters/change', this.model.get('filters'));
-    }
+      Backbone.Events.trigger('Route/update', 'filters', this.model.get('filters'));
+    },
 
   });
 
