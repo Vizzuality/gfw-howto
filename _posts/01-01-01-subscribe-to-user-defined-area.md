@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Subscribe to a User-Defined area (draw or upload a shape)
+title: Subscribe to a User-Defined Area (Draw or Upload a Shape)
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
@@ -16,6 +16,7 @@ mobile: false
   <p><strong>3.</strong> Select the Analyze and Subscribe icon on the right-hand side of the map, and choose “Draw or Upload Shape.”</p>
     <ul>
       <li>To <strong>subscribe to a user-drawn shape</strong>, select “Start drawing” and click with your mouse to draw a shape in the map. <strong>Note</strong>: You can drag the points to edit your shape after you’re finished drawing.
+      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop4.gif"/></p>
         <ul>
           <li>The analysis results will appear in the window on the right side of the map. </li>
           <li>You can then subscribe to the activated forest change data set for the area by clicking the <strong>“Subscribe”</strong> button.</li>

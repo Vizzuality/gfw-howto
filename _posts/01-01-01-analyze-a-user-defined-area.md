@@ -3,16 +3,14 @@ layout: post
 title: Analyze a User-Defined Area (Draw or Update a Shape)
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/analize-and-subscribe-to-a-user-defined-area/thumbnail.png"
-imagepath: "/assets/images/gfw/analize-and-subscribe-to-a-user-defined-area"
+thumbnail: "/assets/images/gfw/analyze-a-user-defined-area/thumbnail.png"
+imagepath: "/assets/images/gfw/analyze-a-user-defined-area"
 categories: [analyze data]
 tags: [gfw]
 mobile: false
 star: True
 order: 2
 ---
-
-
 
 
 <div id="desktopContent" class="content">
