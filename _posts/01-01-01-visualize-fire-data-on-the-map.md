@@ -3,7 +3,7 @@ layout: post
 title: Visualize fire data on the map
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
+thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.png"
 categories: [visualize data]
 tags: [fires]
 mobile: true

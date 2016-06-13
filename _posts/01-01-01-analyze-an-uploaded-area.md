@@ -3,7 +3,7 @@ layout: post
 title: Analyze an uploaded area
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
+thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.png"
 categories: [analyze data]
 tags: [commodities]
 mobile: true

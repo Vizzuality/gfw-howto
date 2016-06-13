@@ -3,7 +3,7 @@ layout: post
 title: Teacher Training Module
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
+thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.png"
 categories: [training modules]
 tags: [gfw]
 mobile: false

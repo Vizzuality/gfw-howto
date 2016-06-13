@@ -11,8 +11,6 @@ mobile: true
 ---
 
 
-
-
 <div id='desktopContent' class='content'>
   <h3>View national and subnational forest statistics</h3>
   <p><strong>1.</strong> Navigate to the <a href='/countries' target='_blank'>Country Profiles</a>.</p>

@@ -3,7 +3,7 @@ layout: post
 title: Analyze an area on the map
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
+thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.png"
 categories: [analyze data]
 tags: [commodities]
 mobile: true

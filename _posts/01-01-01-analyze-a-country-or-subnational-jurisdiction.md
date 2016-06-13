@@ -26,18 +26,7 @@ mobile: false
   <p><strong>8.</strong> If you want to <strong>change the type of data</strong>, you can also choose a different data set under the Forest Change menu on the map. Your results will update immediately based on your selection.</p>
   <p><strong>9.</strong> You can then subscribe to the activated forest change alerts for the area by clicking the <strong>“Subscribe”</strong> button, download the data for your area of interest directly from the map (not available for all Forest Change data), or discard your analysis.</p>
   <p><strong>10.</strong> <strong>NOTE</strong>: You can also analyze forest change within a country from the <strong>Country Profiles</strong>. Once you arrive at the Country Profiles, select a country and, if desired, select a subnational jurisdiction (e.g., state, county, province) using the drop-down menu under the country name. Click “analyze on map.” You will then be directed to the map and results will appear for an analysis of tree cover loss and gain.</p>
-
-  
-  <!-- <div class="image-grid">
-    <img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop5.png"/>
-    <img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop6.png"/>
-    <img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop7.png"/>
-    <img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop8.png"/>
-  </div>
- 
-  <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop9.png"/></p> -->
 </div>
-
 
 
 <div id="mobileContent" class="content">

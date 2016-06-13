@@ -89,18 +89,19 @@
       }
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
+      this.listeners();
       this.collection.fetch().done(function() {
-        this.setListeners();
         this.render(0)
       }.bind(this));
     },
 
-    setListeners: function() {
+    listeners: function() {
       this.model.on('change:filters', function(){
         this.render(0);
       }.bind(this));
 
       Backbone.Events.on('Filters/change', function(filters){
+        console.log(filters);
         this.model.set('filters', _.clone(filters));
       }.bind(this));
     },
