@@ -3,8 +3,8 @@ layout: post
 title: Analyze a Shape on the Map
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/analize-a-shape-on-the-map/thumbnail.png"
-imagepath: "/assets/images/gfw/analize-a-shape-on-the-map"
+thumbnail: "/assets/images/gfw/analyze-a-shape-on-the-map/thumbnail.png"
+imagepath: "/assets/images/gfw/analyze-a-shape-on-the-map"
 categories: [analyze data]
 tags: [gfw]
 mobile: false

@@ -3,7 +3,7 @@ layout: post
 title: Pantropical Overview
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
+thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.png"
 categories: [view statistics]
 tags: [climate]
 mobile: true

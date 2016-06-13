@@ -3,7 +3,7 @@ layout: post
 title: Subscribe to fire alerts
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.jpg"
+thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.png"
 categories: [subscribe to alerts]
 tags: [fires]
 mobile: true
