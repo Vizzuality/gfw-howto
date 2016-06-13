@@ -14,21 +14,21 @@ mobile: false
 <div id="desktopContent" class="content">
   
   <p>GFW Map Builder is an application template for ArcGIS online that lets you turn custom maps into interactive applications.</p>
-  <h3>STEPS FOR USING THE MAP BUILDER TEMPLATE</h3>
-  <p>Global Forest Watch Map Builder lets you create custom web applications using ArcGIS Online. The Map Builder template turns web maps into interactive applications that include the same analysis power as Global Forest Watch. To get an idea of what your application will look like and how it will work, view our tutorial on the Map Builder Interactive Map. The process can be broken down into several steps, which vary depending on whether you have a (free) public ArcGIS account or an organizational ArcGIS account:</p>
+  <h4>STEPS FOR USING THE MAP BUILDER TEMPLATE</h4>
+  <p>Global Forest Watch Map Builder lets you create custom web applications using ArcGIS Online. The Map Builder template turns web maps into interactive applications that include the same analysis power as Global Forest Watch. To get an idea of what your application will look like and how it will work, view our <a href="https://youtu.be/k3uchlrWF7o?list=PLh91mManXhdnr_r85vYAiiv19ntHIYObd">tutorial on the Map Builder Interactive Map</a>. The process can be broken down into several steps, which vary depending on whether you have a (free) public ArcGIS account or an organizational ArcGIS account:</p>
 
 
   <p><strong>1.</strong> Create a web map in ArcGIS Online that you want to feature in your web application.</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/image1.png"/></p>
   <ul>
-    <li>If you don’t have an account with ArcGIS, you can create a free public account for non-commercial use. See our tutorial on creating a map in ArcGIS if you need help.</li>
+    <li>If you don’t have an account with ArcGIS, you can create a free public account for non-commercial use. See our <a href="https://youtu.be/iUQq0br-Gjc?list=PLh91mManXhdnr_r85vYAiiv19ntHIYObd">tutorial on creating a map in ArcGIS</a> if you need help.</li>
     <li>The location, data sets, metadata, and styling of your web map will be carried over into your application.</li>
     <li>You can also search in ArcGIS for any data sets from Global Forest Watch that you want to include in your web map.</li>
   </ul>
   <p><strong>2.</strong> Register the Map Builder Web Application Template with your ArcGIS Online account.</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/image2.png"/></p>
   <ul>
-    <li>For public ArcGIS account holders, this means creating a new configurable application in ArcGIS and entering the Map Builder URL: http://my.gfw-mapbuilder.org/v1.latest/.</li>
+    <li>For public ArcGIS account holders, this means creating a new configurable application in ArcGIS and entering the Map Builder URL: <a href="http://my.gfw-mapbuilder.org/v1.latest/">http://my.gfw-mapbuilder.org/v1.latest/</a>.</li>
     <li>Organizational ArcGIS account holders will create a new group in your organization and then share the GFW Map Builder Template to that group. You will also edit the settings in your organizational account so that you can configure your web apps using application templates.</li>
   </ul>
   <p><strong>3.</strong> Configure, or customize, your web application.</p>
