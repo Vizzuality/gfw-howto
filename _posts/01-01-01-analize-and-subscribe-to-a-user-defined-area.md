@@ -34,8 +34,6 @@ order: 2
         <li>If you want to <strong>change the type of data</strong>, you can also choose a different data set under the Forest Change menu on the map. Your results will update immediately based on your selection.</li>
         <li>You can then subscribe to the activated forest change data set for the area by clicking the <strong>“Subscribe”</strong> button, download the data for your area of interest directly from the map (not available for all Forest Change data), or discard your analysis.</li>
       </ul>
-     
-      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop9.png"/></p>
     </li>
     <li>
       <p>To <strong>analyze uploaded data</strong>, click the button that says “Click to Pick a File or Drop One Here” to select a data set from your computer to upload. You can also drag a data set directly from your computer’s file explorer or finder. Note: Data can be uploaded in the following formats: <strong>Unzipped</strong>: .bna, .csv, .dxf, .gtx, .txt, json, .geojson, .rss, .georss, .xml, .gml, .gmt, . gpx, .itf, .kml, .kmz. <strong>Zipped</strong>: .shp, dbf, .shx, .gml, .xsd, .itf, .ili, .tab, .map, .id, .dat, .vrt.  Point features are not supported and the maximum recommended file size is 1 MB. Note: You can drag the points to edit your shape once it’s uploaded to the map.</p>
