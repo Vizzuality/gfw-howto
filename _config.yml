@@ -84,13 +84,13 @@ categories_info:
     type: subject
   analyze_data:
     order: 3
-    title: Analyze Data
+    title: Analyze Forest Change Data
     description: "Description analyze_data"
     slug: analyze data
     type: subject
   subscribe_to_alerts:
     order: 4
-    title: Subscribe to Alerts
+    title: Subscribe to Forest Change Data
     description: "Description subscribe_to_alerts"
     slug: subscribe to alerts
     type: subject
