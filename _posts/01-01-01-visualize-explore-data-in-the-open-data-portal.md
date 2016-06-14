@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Explore data in the open data portal
+title: Explore Data in the Open Data Portal
 published: True
 description: ""
-thumbnail: "/assets/images/odp/explore-data/thumbnail.png"
-imagepath: "/assets/images/odp/explore-data"
+thumbnail: "/assets/images/odp/explore-data-in-the-open-data-portal/thumbnail.png"
+imagepath: "/assets/images/odp/explore-data-in-the-open-data-portal"
 categories: [visualize data]
 tags: [odp]
 mobile: false

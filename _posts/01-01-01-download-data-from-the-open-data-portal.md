@@ -3,8 +3,8 @@ layout: post
 title: Download data from the open data portal
 published: True
 description: ""
-thumbnail: "/assets/images/odp/download-data/thumbnail.png"
-imagepath: "/assets/images/odp/download-data"
+thumbnail: "/assets/images/odp/download-data-from-the-open-data-portal/thumbnail.png"
+imagepath: "/assets/images/odp/download-data-from-the-open-data-portal"
 categories: [download data]
 tags: [odp]
 mobile: false

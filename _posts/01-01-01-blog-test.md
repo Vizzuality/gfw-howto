@@ -1,7 +1,7 @@
 ---
 title: Blog test
 published: True
-tags: [climate]
+tags: []
 categories: [blogs]
 layout: post
 ---

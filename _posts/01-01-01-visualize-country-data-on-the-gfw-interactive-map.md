@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visualize country data
+title: Visualize Country Data on the GFW Interactive Map
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/visualize-country-data/thumbnail.png"
