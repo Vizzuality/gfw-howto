@@ -118,6 +118,7 @@ categories_info:
     description: "Description gis"
     slug: gis
     type: subject
+    disabled: true
   
 
  

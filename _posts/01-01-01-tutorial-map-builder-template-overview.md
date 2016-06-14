@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Overview Text for the Map Builder section of the How To Portal
+title: Map Builder Template Overview
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/overview-text-for-the-map/thumbnail.png"
-imagepath: "/assets/images/gfw/overview-text-for-the-map"
+thumbnail: "/assets/images/map-builder/map-builder-template-overview/thumbnail.png"
+imagepath: "/assets/images/map-builder/map-builder-template-overview"
 categories: [create custom maps]
-tags: [gfw]
+tags: [map_builder]
 mobile: false
 ---
 
