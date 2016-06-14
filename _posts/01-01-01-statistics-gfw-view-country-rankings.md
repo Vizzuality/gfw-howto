@@ -1,6 +1,6 @@
 ---
 layout: post
-title: View Country Rankings
+title: View Country Rankings for Tree Cover, Tree Cover Loss, and Tree Cover Gain
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/view-country-rankings/thumbnail.png"

@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Country Page Comparison
+title: Compare Climate Statistics for Countries, Subnational Jurisdictions, and Areas of Interest
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.png"
-imagepath: "/assets/images/gfw/statistics-country-page-comparison"
+thumbnail: "/assets/images/climate/statistics-climate-country-comparison/thumbnail.png"
+imagepath: "/assets/images/climate/statistics-climate-country-comparison"
 categories: [view statistics]
 tags: [climate]
 ---

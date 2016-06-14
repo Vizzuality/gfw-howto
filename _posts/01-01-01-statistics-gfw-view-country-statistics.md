@@ -1,6 +1,6 @@
 ---
 layout: post
-title: View Country Statistics
+title: View National and Subnational Forest Statistics
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/view-country-statistics/thumbnail.png"
