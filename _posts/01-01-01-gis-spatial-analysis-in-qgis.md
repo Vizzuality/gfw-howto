@@ -34,7 +34,7 @@ order: 9
   </ol>
 
   <h3>Project Data</h3>
-  <p><a href="http://help.arcgis.com/en/sdk/10.0/arcobjects_net/conceptualhelp/index.html" target="_blank">Projections</a> determine how 3D data are adjusted to a 2D map. All GFW data is in the projection WGS84, which is a global projection that is good for displaying global web-based data. However, when running an analysis that requires accurate distance measures, the data must be reprojected.</p>
+  <p><a href="{{site.baseurl}}/categories/gis/">Projections</a> determine how 3D data are adjusted to a 2D map. All GFW data is in the projection WGS84, which is a global projection that is good for displaying global web-based data. However, when running an analysis that requires accurate distance measures, the data must be reprojected.</p>
   <ol>
     <li>Open a QGIS session and add the Forest Titles data to your map.</li>
     <li>
@@ -78,7 +78,7 @@ order: 9
   </ol>
 
   <h3>Next Steps</h3>
-  <p>There are a number of vector geoprocessing analyses that can be run with QGIS. Explore the other geoprocessing tools available for analysis, such as dissolve. Take a look at the QGIS documentation, especially on vector analysis, to learn more.</p>
+  <p>There are a number of vector geoprocessing analyses that can be run with QGIS. Explore the other geoprocessing tools available for analysis, such as dissolve. Take a look at the QGIS <a href="http://docs.qgis.org/2.8/en/docs/training_manual/vector_analysis/index.html" target="_blank">documentation</a>, especially on vector analysis, to learn more.</p>
 </div>
 
 

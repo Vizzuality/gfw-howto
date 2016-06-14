@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Find data in the open data portal
-published: False
+title: Find Data in the Open Data Portal
+published: True
 description: ""
-thumbnail: "/assets/images/odp/find-data/thumbnail.png"
-imagepath: "/assets/images/odp/find-data"
+thumbnail: "/assets/images/odp/find-data-in-the-open-data-portal/thumbnail.png"
+imagepath: "/assets/images/odp/find-data-in-the-open-data-portal"
 categories: [visualize data]
 tags: [odp]
 mobile: false

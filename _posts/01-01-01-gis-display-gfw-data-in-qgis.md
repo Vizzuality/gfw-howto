@@ -14,7 +14,7 @@ order: 9
 
 
 <div id="desktopContent" class="content">
-  <p>This tutorial is for new or beginning GIS users who would like to use free, open source GIS software to make a custom display of Global Forest Watch (GFW) data. Also see our <a href="link to GIS tutorial">tutorial</a> covering basic analyses with spatial data in QGIS.</p>
+  <p>This tutorial is for new or beginning GIS users who would like to use free, open source GIS software to make a custom display of Global Forest Watch (GFW) data. Also see our <a href="{{site.baseurl}}/gis/gis-spatial-analysis-in-qgis.html">tutorial</a> covering basic analyses with spatial data in QGIS.</p>
   <h3>Download QGIS and Global Forest Watch Data</h3>
   <ol>
     <li>Download and install QGIS from the QGIS project <a href="http://www.qgis.org/en/site/forusers/download.html" target="_blank">website</a>. QGIS is available for a variety of systems, including Windows, Mac OS X, and Linux.</li>
