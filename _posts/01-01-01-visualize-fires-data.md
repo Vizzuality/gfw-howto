@@ -1,17 +1,20 @@
 ---
 layout: post
-title: Subscribe to fire alerts
+title: Visualize Fires Data
 published: False
 description: ""
-thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.png"
-categories: [subscribe to alerts]
+thumbnail: "/assets/images/gfw/visualize-fires-data/thumbnail.png"
+categories: [visualize data]
 tags: [fires]
 mobile: true
 ---
 
 
+
+
 <div id="desktopContent" class="content">
 </div>
+
 
 
 <div id="mobileContent" class="content">

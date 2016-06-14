@@ -8,7 +8,13 @@
 
   // Model for getting the data
   root.app.Collection.SearchCollection = Backbone.Collection.extend({
-    url: baseurl + '/json/search.json'
+    url: baseurl + '/json/search.json',
+    parse: function(response) {
+      // Remove the categories that you don't want to search in
+      return _.compact(_.map(response, function(item) {
+        return (item.category != 'blogs') ? item : null;
+      }))
+    }
   });
 
   // View for display results

@@ -45,7 +45,7 @@
     list-style-type: disc;
     color: $dark;
 
-    > li{
+    > li {
       list-style-type: disc;
       padding: 10px 0 0;
       margin-left: 20px;
@@ -53,6 +53,21 @@
 
       &:first-child{
         padding: 0;
+      }
+    }
+
+    &.-lower-roman {
+      margin: 10px 0 0;
+      list-style-type: lower-roman;
+      > li {
+        list-style-type: lower-roman;
+      }
+    }
+
+    &.-lower-alpha {
+      list-style-type: lower-alpha;
+      > li {
+        list-style-type: lower-alpha;
       }
     }
   }
@@ -73,7 +88,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
         display: inline-block;
         margin: 0 5px 0 0;

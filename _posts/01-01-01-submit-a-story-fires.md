@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Submit a Story to the fires map
-published: True
+published: False
 description: ""
 thumbnail: "/assets/images/fires/submit-a-story/thumbnail.png"
 imagepath: "/assets/images/fires/submit-a-story"
