@@ -1,13 +1,15 @@
 ---
 layout: post
-title: Subscribe to fire alerts
+title: Analyze an area on the map
 published: False
 description: ""
 thumbnail: "/assets/images/gfw/visualize-global-data/thumbnail.png"
-categories: [subscribe to alerts]
+categories: [analyze data]
 tags: [fires]
 mobile: true
 ---
+
+
 
 
 <div id="desktopContent" class="content">

@@ -1344,6 +1344,15 @@ button {
       line-height: 1.5; }
       .m-post ul > li:first-child {
         padding: 0; }
+    .m-post ul.-lower-roman {
+      margin: 10px 0 0;
+      list-style-type: lower-roman; }
+      .m-post ul.-lower-roman > li {
+        list-style-type: lower-roman; }
+    .m-post ul.-lower-alpha {
+      list-style-type: lower-alpha; }
+      .m-post ul.-lower-alpha > li {
+        list-style-type: lower-alpha; }
   .m-post ol {
     counter-reset: mycounter; }
     .m-post ol > li {
@@ -1356,7 +1365,7 @@ button {
         position: absolute;
         top: 0;
         left: 0;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
         display: inline-block;
         margin: 0 5px 0 0;
