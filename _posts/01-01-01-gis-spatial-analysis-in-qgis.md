@@ -34,7 +34,7 @@ order: 9
   </ol>
 
   <h3>Project Data</h3>
-  <p><a href="{{site.baseurl}}/categories/gis/">Projections</a> determine how 3D data are adjusted to a 2D map. All GFW data is in the projection WGS84, which is a global projection that is good for displaying global web-based data. However, when running an analysis that requires accurate distance measures, the data must be reprojected.</p>
+  <p><a href="http://resources.esri.com/help/9.3/arcgisengine/dotnet/89b720a5-7339-44b0-8b58-0f5bf2843393.htm" target="_blank">Projections</a> determine how 3D data are adjusted to a 2D map. All GFW data is in the projection WGS84, which is a global projection that is good for displaying global web-based data. However, when running an analysis that requires accurate distance measures, the data must be reprojected.</p>
   <ol>
     <li>Open a QGIS session and add the Forest Titles data to your map.</li>
     <li>
