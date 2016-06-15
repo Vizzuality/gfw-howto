@@ -1,17 +1,17 @@
 ---
 layout: post
-title: Build a Custom Web App in ArcGIS (for public accounts)
+title: Map Builder Interactive Map Overview
 published: True
 description: ""
 thumbnail: "video"
-video: u2CIfBU6RCs
+video: k3uchlrWF7o
 categories: [tutorial videos]
 tags: [map_builder]
 ---
 
 <div id="desktopContent" class="content">
   <div class="video">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/u2CIfBU6RCs" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/k3uchlrWF7o" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 

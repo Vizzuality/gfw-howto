@@ -6,7 +6,7 @@ description: ""
 thumbnail: "/assets/images/gis/gis-display-gfw-data-in-qgis/thumbnail.png"
 imagepath: "/assets/images/gis/gis-display-gfw-data-in-qgis"
 categories: [gis]
-tags: []
+tags: [odp]
 mobile: false
 star: True
 order: 9

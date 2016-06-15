@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Analyze a User-Defined Area (Draw or Update a Shape)
+title: Analyze a User-Defined Area (Draw or Upload a Shape)
 published: True
 description: ""
 thumbnail: "/assets/images/gfw/analyze-a-user-defined-area/thumbnail.png"

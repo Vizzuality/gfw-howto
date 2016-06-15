@@ -55,13 +55,13 @@ tags_info:
   map_builder:
     order: 6
     title: Map Builder
-    description: "Map Builder"
+    description: "The Global Forest Watch Map Builder is an application template for ArcGIS Online that lets anyone turn custom maps into interactive web applications."
     slug: map-builder
     type: tool    
   small_grants_fund:
     order: 7
     title: Small Grants Fund
-    description: "Small Grants Fund"
+    description: "The Small Grants Fund seeks to promote uptake of Global Forest Watch by civil society organizations to use in their research, advocacy, and fieldwork."
     slug: small-grants-fund
     type: tool    
 
