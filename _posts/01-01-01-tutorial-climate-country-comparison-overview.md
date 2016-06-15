@@ -4,7 +4,7 @@ title: Country Comparison Overview
 published: True
 description: ""
 thumbnail: "video"
-video: P_-0NRTHZyM
+video: _WDf3qp0Fkc
 categories: [tutorial videos]
 tag: [climate]
 ---
