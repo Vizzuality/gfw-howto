@@ -3,8 +3,8 @@ layout: post
 title: Analyze a User-Drawn Polygon
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/analyze-a-user-drawn-polygon/thumbnail.png"
-imagepath: "/assets/images/gfw/analyze-a-user-drawn-polygon"
+thumbnail: "/assets/images/climate/analyze-a-user-drawn-polygon/thumbnail.png"
+imagepath: "/assets/images/climate/analyze-a-user-drawn-polygon"
 categories: [analyze data]
 tags: [climate]
 mobile: false
