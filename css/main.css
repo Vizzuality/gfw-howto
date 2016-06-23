@@ -1512,7 +1512,7 @@ button {
           margin: 4% 0 0; } }
       .m-by-app ul li > a {
         display: block;
-        padding: 20px 20px 40px; }
+        padding: 20px; }
         @media (min-width: 850px) {
           .m-by-app ul li > a {
             padding: 40px 10px; } }
@@ -1562,11 +1562,24 @@ button {
   display: flex;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .m-ranking > * {
+    margin: 40px 0 0; }
+    .m-ranking > *:first-child {
+      margin: 0; }
+    @media (min-width: 850px) {
+      .m-ranking > * {
+        margin: 0; } }
   .m-ranking .col {
-    width: 48%;
+    width: 100%;
     padding: 40px;
     border: 1px solid #E5E5DF; }
+    @media (min-width: 850px) {
+      .m-ranking .col {
+        width: 48%; } }
     .m-ranking .col.-w100 {
       width: 100%; }
   .m-ranking header h2 {
@@ -1584,7 +1597,8 @@ button {
       color: #97bd3d; }
   .m-ranking .ranking-list > li {
     padding: 15px 0;
-    border-bottom: 1px solid #E5E5DF; }
+    border-bottom: 1px solid #E5E5DF;
+    word-break: break-word; }
     .m-ranking .ranking-list > li > * {
       margin: 5px 0 0; }
       .m-ranking .ranking-list > li > *:first-child {
