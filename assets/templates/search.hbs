@@ -1,7 +1,7 @@
 {{#if results}}
   {{#each results}}
   	{{#if this.category_info.slug}}
-	  	<li class="-group"><a href="/categories/{{this.category_info.slug}}/">{{{this.category_info.title}}}</a></li>
+	  	<li class="-group"><a href="{{this.category_info.url}}/">{{{this.category_info.title}}}</a></li>
 			{{#each this.posts}}
 				<li><a href="{{this.url}}">{{{this.title}}}</a></li>
 			{{/each}}

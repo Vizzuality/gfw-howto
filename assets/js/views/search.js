@@ -129,7 +129,7 @@
 
         if (!!key_slugify) {
           var category_info = window.gfw_howto.categories[key_slugify];
-          category_info.slug = this.slugify(category_info.slug);
+          category_info.url = window.gfw_howto.baseurl + /categories/ + this.slugify(category_info.slug);
 
           return {
             category_info: category_info,

@@ -103,8 +103,8 @@ this["HandlebarsTemplates"]["search"] = Handlebars.template({"1":function(depth0
 },"3":function(depth0,helpers,partials,data) {
     var stack1, alias1=this.lambda;
 
-  return "	  	<li class=\"-group\"><a href=\"/categories/"
-    + this.escapeExpression(alias1(((stack1 = (depth0 != null ? depth0.category_info : depth0)) != null ? stack1.slug : stack1), depth0))
+  return "	  	<li class=\"-group\"><a href=\""
+    + this.escapeExpression(alias1(((stack1 = (depth0 != null ? depth0.category_info : depth0)) != null ? stack1.url : stack1), depth0))
     + "/\">"
     + ((stack1 = alias1(((stack1 = (depth0 != null ? depth0.category_info : depth0)) != null ? stack1.title : stack1), depth0)) != null ? stack1 : "")
     + "</a></li>\n"
