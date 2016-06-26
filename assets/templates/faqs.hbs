@@ -1,6 +1,6 @@
 <ul class="m-faqs-list">
   {{#each this.list}}
-    
+    {{#if this.title}}
     <li data-app="{{this.category}}" data-order="{{this.order}}">
       <h3 class="toggle">
         <span class="title">{{{this.title}}}</span>
@@ -17,6 +17,7 @@
         {{{this.content}}}
       </div>
     </li>
+    {{/if}}
     
   {{/each}}
 </ul>

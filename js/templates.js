@@ -38,20 +38,25 @@ this["HandlebarsTemplates"]["blogList"] = Handlebars.template({"1":function(dept
     + "      </ul>\n    </div>\n  </li>\n</ul>\n";
 },"useData":true});
 this["HandlebarsTemplates"]["faqs"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"if","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "    \n";
+},"2":function(depth0,helpers,partials,data) {
     var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "    \n    <li data-app=\""
+  return "    <li data-app=\""
     + alias2(alias1((depth0 != null ? depth0.category : depth0), depth0))
     + "\" data-order=\""
     + alias2(alias1((depth0 != null ? depth0.order : depth0), depth0))
     + "\">\n      <h3 class=\"toggle\">\n        <span class=\"title\">"
     + ((stack1 = alias1((depth0 != null ? depth0.title : depth0), depth0)) != null ? stack1 : "")
     + "</span>\n        <div class=\"m-apps-tag -inline\">\n          <ul>\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tags_info : depth0),{"name":"each","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tags_info : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "          </ul>\n        </div>\n        <span class=\"arrow\"><svg><use xlink:href=\"#icon-arrowdown\"></use></svg></span>\n      </h3>\n      <div class=\"content m-faqs-content\">\n        "
     + ((stack1 = alias1((depth0 != null ? depth0.content : depth0), depth0)) != null ? stack1 : "")
-    + "\n      </div>\n    </li>\n    \n";
-},"2":function(depth0,helpers,partials,data) {
+    + "\n      </div>\n    </li>\n";
+},"3":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;
 
   return "              <li><a class=\""
