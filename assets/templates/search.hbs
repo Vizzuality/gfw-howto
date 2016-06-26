@@ -1,6 +1,11 @@
 {{#if results}}
   {{#each results}}
-    <li><a href="{{this.url}}">{{{this.title}}}</a></li>
+  	{{#if this.category_info.slug}}
+	  	<li class="-group"><a href="/categories/{{this.category_info.slug}}/">{{{this.category_info.title}}}</a></li>
+			{{#each this.posts}}
+				<li><a href="{{this.url}}">{{{this.title}}}</a></li>
+			{{/each}}
+  	{{/if}}    
   {{/each}}
 {{else}}
     <li>No data available</li>

@@ -405,9 +405,14 @@ button {
   .m-search .search-results li {
     font-size: 14px;
     line-height: 1.25;
-    margin: 5px 0 0; }
+    margin: 5px 0 0;
+    margin-left: 10px; }
     .m-search .search-results li.-highlight a {
       color: #97bd3d; }
+    .m-search .search-results li.-group {
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-left: 0; }
     .m-search .search-results li a {
       color: #555; }
       .m-search .search-results li a:hover {

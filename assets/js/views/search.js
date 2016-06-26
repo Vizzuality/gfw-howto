@@ -59,7 +59,7 @@
         caseSensitive: false,
         includeScore: false,
         shouldSort: true,
-        threshold: 0.6,
+        threshold: 0.4,
         location: 0,
         distance: 100,
         maxPatternLength: 32,
@@ -89,13 +89,13 @@
     },
 
     indexResults: function(direction) {
-      if (!!this.results.length) {
+      if (!!this.resultsLength) {
         switch(direction) {
           case 'up':
             (this.searchIndex != 0) ? this.searchIndex-- : this.searchIndex = 0;
           break;
           case 'down':
-            (this.searchIndex < this.results.length - 1) ? this.searchIndex++ : this.searchIndex = this.results.length - 1;
+            (this.searchIndex < this.resultsLength - 1) ? this.searchIndex++ : this.searchIndex = this.resultsLength - 1;
           break;
         }
       }
@@ -113,10 +113,31 @@
     },
 
     setResults: function(val) {
-      this.results = this.fuse.search(val).slice(0, 5);
-      this.$searchResults.addClass('-active').html(this.resultsTemplate({ results: (!!this.results.length) ? this.results : null }));
+      this.results = this.parseResults(val);
+      this.resultsLength = this.results.length + _.flatten(_.pluck(_.flatten(this.results), 'posts')).length;
+      
+      this.$searchResults.addClass('-active').html(this.resultsTemplate({ 
+        results: (!!this.resultsLength) ? this.results.slice(0,4) : null 
+      }));
       // svg addClass
       this.$searchClose.addClass('-active');
+    },
+
+    parseResults: function(val) {
+      return _.map(_.groupBy(this.fuse.search(val), 'category'), function(group, key){
+        var key_slugify = key.replace(/\s/g, '_');
+
+        if (!!key_slugify) {
+          var category_info = window.gfw_howto.categories[key_slugify];
+          category_info.slug = this.slugify(category_info.slug);
+
+          return {
+            category_info: category_info,
+            posts: _.first(group,5),
+          } 
+        }
+
+      }.bind(this));
     },
 
     removeResults: function() {
@@ -126,7 +147,16 @@
       this.$searchResults.removeClass('-active').html(this.resultsTemplate({ results: []}));
       // svg removeClass
       this.$searchClose.removeClass('-active');
-    }
+    },
+
+    slugify: function(text) {
+      return text.toString().toLowerCase().trim()
+      .replace(/\s+/g, '-')           // Replace spaces with -
+      .replace(/&/g, '-and-')         // Replace & with 'and'
+      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+      .replace(/\-\-+/g, '-');        // Replace multiple - with single -
+    },
+
 
   });
 

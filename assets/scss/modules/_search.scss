@@ -72,11 +72,18 @@
       font-size: 14px;
       line-height: 1.25;
       margin: 5px 0 0;
+      margin-left: 10px;
 
       &.-highlight {
         a {
           color: $primary-color;
         }
+      }
+
+      &.-group {
+        font-weight: 500;
+        text-transform: uppercase;
+        margin-left: 0;
       }
 
       a {
