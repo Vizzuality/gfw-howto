@@ -283,6 +283,11 @@
       parse: function(response){
         var response = _.map(response, function(el){
           el.tags = (!!el.tags && !!el.tags.length) ? el.tags.split(', ') : [];
+
+          el.tags_slugs = _.map(el.tags, function(_tag){
+            return _tag.replace(/_/g, '-')
+          })
+
           el.tags_info = _.map(el.tags, function(_tag){
             var tag = window.gfw_howto.tags[_tag];
             tag.url = baseurl + '/tags/' + tag.slug + '/';
@@ -297,10 +302,9 @@
         this.filters = filters;
         this.itemsOnPage = itemsOnPage;
         if(!!this.filters.length) {
-          
           // If a filter exists
           this.collection = _.filter(_.sortBy(this.toJSON(), 'title'), function(el){
-            var is_selected = _.intersection(this.filters,el.tags);
+            var is_selected = _.intersection(this.filters,el.tags_slugs);
             return !!is_selected.length;
           }.bind(this));
           
@@ -319,7 +323,7 @@
         if (!!this.filters.length) {
           
           this.collection = _.filter(_.sortBy(this.toJSON(), 'title'), function(el){
-            var is_selected = _.intersection(this.filters,el.tags);
+            var is_selected = _.intersection(this.filters,el.tags_slugs);
             return !!is_selected.length;
           }.bind(this));
           return this.collection.length
@@ -351,7 +355,6 @@
       }.bind(this));
 
       Backbone.Events.on('Filters/change', function(filters){
-        console.log(filters);
         this.model.set('filters', _.clone(filters));
       }.bind(this));
     },
