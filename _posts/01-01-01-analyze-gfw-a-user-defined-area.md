@@ -38,11 +38,11 @@ order: 2
       <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop10.png"/></p>
       
         <ul>
-          <li>Your shape(s) will then show up on the map and the analysis results will appear in the right-hand window. <strong>Note</strong>: If you upload more than one shape at a time, the analysis tool will sum up the area of your shapes in the forest change calculation.</li>
-          <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop11.png"/></p>
-          Image of shapefile uploaded
-          <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop12.png"/></p>
-          Image of analysis result
+          <li>
+            Your shape(s) will then show up on the map and the analysis results will appear in the right-hand window. <strong>Note</strong>: If you upload more than one shape at a time, the analysis tool will sum up the area of your shapes in the forest change calculation.
+            <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop11.png"/></p>
+            <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop12.png"/></p>
+          </li>
           <li>If you want to <strong>adjust the time period</strong> you are analyzing, simply drag the handles on the timeline or select a different time interval.</li>
           <li>If you want to <strong>change the type of data</strong>, you can also choose a different data set under the Forest Change menu on the map. Your results will update immediately based on your selection.</li>
         </ul>

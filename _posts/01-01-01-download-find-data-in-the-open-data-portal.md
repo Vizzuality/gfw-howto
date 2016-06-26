@@ -5,7 +5,7 @@ published: True
 description: ""
 thumbnail: "/assets/images/odp/find-data-in-the-open-data-portal/thumbnail.png"
 imagepath: "/assets/images/odp/find-data-in-the-open-data-portal"
-categories: [visualize data]
+categories: [download data]
 tags: [odp]
 mobile: false
 star: True
