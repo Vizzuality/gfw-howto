@@ -53,7 +53,7 @@
         this.itemsOnPage = itemsOnPage;
         if(!!this.filters.length) {
           // If a filter exists
-          this.collection = _.filter(_.sortBy(this.toJSON(), 'title'), function(el){
+          this.collection = _.filter(this.toJSON(), function(el){
             var is_selected = _.intersection(this.filters,el.tags_slugs);
             return !!is_selected.length;
           }.bind(this));
@@ -63,7 +63,7 @@
         } else {
           
           // If a filter doesn't exist
-          this.collection = _.sortBy(this.toJSON(), 'title');
+          this.collection = this.toJSON();
           return this.collection.slice(page*this.itemsOnPage, (page*this.itemsOnPage) + this.itemsOnPage);
 
         }
@@ -72,7 +72,7 @@
       getCount: function() {
         if (!!this.filters.length) {
           
-          this.collection = _.filter(_.sortBy(this.toJSON(), 'title'), function(el){
+          this.collection = _.filter(this.toJSON(), function(el){
             var is_selected = _.intersection(this.filters,el.tags_slugs);
             return !!is_selected.length;
           }.bind(this));
