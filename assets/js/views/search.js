@@ -23,12 +23,13 @@
     events: {
       'focus #search-input' : 'search',
       'keyup #search-input' : 'search',
-      'click #search-close' : 'removeResults'
+      'click #search-close' : 'removeResults',
+      'click .js-result-link' : 'clickResult'
     },
 
     resultsTemplate: HandlebarsTemplates['search'],
 
-    initialize: function(settings) {
+    initialize: function(settings) {      
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
       
@@ -66,6 +67,7 @@
         keys: ['title','content','category','tags']
       });
     },
+
 
     search: function(e) {
       var val = $(e.currentTarget).val();
@@ -108,8 +110,19 @@
     },
 
     selectResult: function() {
-      var href = this.$searchResults.children('li').eq(this.searchIndex).children('a').attr('href');
-      window.location = href;
+      var $link = this.$searchResults.children('li').eq(this.searchIndex).children('a')
+      if ($link.data('category') == 'faqs') {
+        window.location = baseurl + '/categories/faqs/?slug=' + $link.data('slug');
+      } else {
+        window.location = $link.attr('href');
+      }
+    },
+
+    clickResult: function(e) {
+      if ($(e.currentTarget).data('category') == 'faqs') {
+        e && e.preventDefault();  
+        window.location = baseurl + '/categories/faqs/?slug=' + $(e.currentTarget).data('slug');        
+      }
     },
 
     setResults: function(val) {
@@ -129,11 +142,16 @@
 
         if (!!key_slugify) {
           var category_info = window.gfw_howto.categories[key_slugify];
-          category_info.url = window.gfw_howto.baseurl + /categories/ + this.slugify(category_info.slug);
+          category_info.slug = this.slugify(category_info.slug);
+          category_info.url = window.gfw_howto.baseurl + /categories/ + category_info.slug;
 
           return {
             category_info: category_info,
-            posts: _.first(group,5),
+            posts: _.map(_.first(group,5), function(post){
+              post.slug = this.slugify(post.title);
+              post.category_info = category_info;
+              return post;
+            }.bind(this)),
           } 
         }
 
@@ -149,6 +167,12 @@
       this.$searchClose.removeClass('-active');
     },
 
+    /**
+     * HELPERS
+     * slugify 
+     * @param  {[string]} text
+     * @return {[string]} text
+     */
     slugify: function(text) {
       return text.toString().toLowerCase().trim()
       .replace(/\s+/g, '-')           // Replace spaces with -

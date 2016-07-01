@@ -1,7 +1,7 @@
 <ul class="m-faqs-list">
   {{#each this.list}}
     {{#if this.title}}
-    <li data-app="{{this.category}}" data-order="{{this.order}}">
+    <li data-app="{{this.category}}" data-order="{{this.order}}" data-slug="{{this.slug}}">
       <h3 class="toggle">
         <span class="title">{{{this.title}}}</span>
         <div class="m-apps-tag -inline">
