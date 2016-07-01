@@ -7,7 +7,7 @@
       {% for post in site.faqs_sorted_posts_order %}        
         {% if post.star %}
           <li>
-            <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
+            <h3><a href="{{site.baseurl}}/categories/faqs?slug={{ post.title | slugify }}">{{ post.title }}</a></h3>
           </li>
         {% endif %}
       {% endfor %}        

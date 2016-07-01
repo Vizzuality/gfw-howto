@@ -24,7 +24,7 @@
       'focus #search-input' : 'search',
       'keyup #search-input' : 'search',
       'click #search-close' : 'removeResults',
-      'click .js-result-link' : 'clickGoToResult'
+      'click .js-result-link' : 'clickResult'
     },
 
     resultsTemplate: HandlebarsTemplates['search'],
@@ -68,11 +68,6 @@
       });
     },
 
-    clickGoToResult: function(e) {
-      if ($(e.currentTarget).data('category') == 'faqs') {
-        e && e.preventDefault();  
-      }
-    },
 
     search: function(e) {
       var val = $(e.currentTarget).val();
@@ -117,9 +112,16 @@
     selectResult: function() {
       var $link = this.$searchResults.children('li').eq(this.searchIndex).children('a')
       if ($link.data('category') == 'faqs') {
-        console.log('faq');
+        window.location = baseurl + '/categories/faqs/?slug=' + $link.data('slug');
       } else {
         window.location = $link.attr('href');
+      }
+    },
+
+    clickResult: function(e) {
+      if ($(e.currentTarget).data('category') == 'faqs') {
+        e && e.preventDefault();  
+        window.location = baseurl + '/categories/faqs/?slug=' + $(e.currentTarget).data('slug');        
       }
     },
 
@@ -146,9 +148,10 @@
           return {
             category_info: category_info,
             posts: _.map(_.first(group,5), function(post){
+              post.slug = this.slugify(post.title);
               post.category_info = category_info;
               return post;
-            }),
+            }.bind(this)),
           } 
         }
 

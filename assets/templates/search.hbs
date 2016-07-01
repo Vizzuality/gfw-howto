@@ -3,7 +3,7 @@
   	{{#if category_info.slug}}
 	  	<li class="-group"><a href="{{category_info.url}}/">{{{category_info.title}}}</a></li>
 			{{#each posts}}
-				<li><a class="js-result-link" data-category="{{category_info.slug}}" href="{{url}}">{{{title}}}</a></li>
+				<li><a class="js-result-link" data-slug="{{slug}}" data-category="{{category_info.slug}}" href="{{url}}">{{{title}}}</a></li>
 			{{/each}}
   	{{/if}}    
   {{/each}}

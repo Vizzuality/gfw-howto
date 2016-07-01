@@ -55,7 +55,12 @@
           // var params = _.pick(value, 'id', 'opacity', 'order');
           // this.params.set(name, JSON.stringify(params));
         } else {
-          this.params.set(name, JSON.stringify(value));
+          if (!!value) {
+            this.params.set(name, JSON.stringify(value));  
+          } else {
+            this.params.unset(name, { silent: true });
+          }
+          
         }
       } else if (typeof value === 'object' && _.isArray(value)) {
         if (keys && _.isArray(keys)) {

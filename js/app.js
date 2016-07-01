@@ -264,13 +264,14 @@
     template: HandlebarsTemplates['faqs'],
 
     events: {
-      'click .toggle' : 'toggleFaq'
+      'click .toggle' : 'onClickFaq'
     },
 
     model: new (Backbone.Model.extend({
       defaults: {
+        page: null,
         filters: [],
-        itemsOnPage: 10
+        itemsOnPage: 12
       }
     })),
 
@@ -282,6 +283,7 @@
       // we will prevent sort each time our results
       parse: function(response){
         var response = _.map(response, function(el){
+
           el.tags = (!!el.tags && !!el.tags.length) ? el.tags.split(', ') : [];
 
           el.tags_slugs = _.map(el.tags, function(_tag){
@@ -305,7 +307,7 @@
       getFaqs: function(filters,page,itemsOnPage) {
         this.filters = filters;
         this.itemsOnPage = itemsOnPage;
-        if(!!this.filters.length) {
+        if(!!this.filters && !!this.filters.length) {
           // If a filter exists
           this.collection = _.filter(this.toJSON(), function(el){
             var is_selected = _.intersection(this.filters,el.tags_slugs);
@@ -315,28 +317,43 @@
           return this.collection.slice(page*this.itemsOnPage, (page*this.itemsOnPage) + this.itemsOnPage)
 
         } else {
-          
           // If a filter doesn't exist
           this.collection = this.toJSON();
           return this.collection.slice(page*this.itemsOnPage, (page*this.itemsOnPage) + this.itemsOnPage);
-
         }
       },
 
       getCount: function() {
-        if (!!this.filters.length) {
-          
+        if (!!this.filters && !!this.filters.length) {
           this.collection = _.filter(this.toJSON(), function(el){
             var is_selected = _.intersection(this.filters,el.tags_slugs);
             return !!is_selected.length;
           }.bind(this));
+          
           return this.collection.length
 
         } else {
-
           return this.toJSON().length;
-
         }
+      },
+
+      getPageFromSlug: function(filters,slug,itemsOnPage) {          
+        if(!!this.filters && !!this.filters.length) {
+          // If a filter exists
+          this.collection = _.filter(this.toJSON(), function(el){
+            var is_selected = _.intersection(this.filters,el.tags_slugs);
+            return !!is_selected.length;
+          }.bind(this));
+        } else {
+          // If a filter doesn't exist
+          this.collection = this.toJSON();
+        }
+
+        var index = _.findIndex(this.collection, {slug: slug});
+        if (index >= 0) {
+          return Math.floor(index/itemsOnPage);
+        }
+        return 0;
       },
 
       /**
@@ -364,67 +381,118 @@
       this.options = _.extend({}, this.defaults, opts);
       this.listeners();
       this.collection.fetch().done(function() {
-        this.render(0)
+        this.render()
       }.bind(this));
     },
 
     listeners: function() {
+      // Model listeners
       this.model.on('change:filters', function(){
-        this.render(0);
+        this.model.set('slug', null);
+        this.model.set('page', 0);
+        this.render();
       }.bind(this));
 
+      this.model.on('change:slug', function(){
+        this.render();
+        Backbone.Events.trigger('Route/update', 'slug', this.model.get('slug'));
+      }.bind(this));
+
+      // Backbone listeners
+      Backbone.Events.on('Route/go',this.routerGo.bind(this));
       Backbone.Events.on('Filters/change', function(filters){
         this.model.set('filters', _.clone(filters));
       }.bind(this));
     },
 
     cache: function() {
-      this.$listItems = this.$el.find('.m-faqs-list li');
+      this.$htmlbody = $('html,body');
+      this.$listItems = this.$el.find('.m-faqs-list');
       this.$paginationContainer = this.$el.find('.m-faqs-pagination');
     },
 
-    render: function(page) {
+    render: function() {
+      this.model.set('page', this.getPage());
       this.$el.html(this.template({
         baseurl: window.gfw_howto.baseurl,
-        list: this.collection.getFaqs(this.model.get('filters'),page,this.model.get('itemsOnPage'))
+        list: this.collection.getFaqs(this.model.get('filters'),this.model.get('page'),this.model.get('itemsOnPage'))
       }));
       this.cache();
-      this.initPaginate(page);
+      this.initPaginate();
+      this.toggleFaq();
     },
 
-    initPaginate: function(page){
+    initPaginate: function(){
       // pagination
       if (this.collection.getCount() > this.model.get('itemsOnPage')) {      
         this.$paginationContainer.pagination({
           items: this.collection.getCount(),
           itemsOnPage: this.model.get('itemsOnPage'),
-          currentPage: page + 1,
+          currentPage: this.model.get('page') + 1,
           displayedPages: 3,
           selectOnClick: false,
           prevText: ' ',
           nextText: ' ',
           onPageClick: _.bind(function(page, e){
             e && e.preventDefault();
-            this.render(page-1)
+            this.model.set('slug', null);
+            this.model.set('page', page - 1);
+            this.render()
             this.$paginationContainer.pagination('drawPage', page);
+            this.$htmlbody.animate({
+              scrollTop: 0,
+            },250);
+
           }, this )
         });
       }
+      Backbone.Events.trigger('Route/update', 'page', this.model.get('page'));
     },
 
     // Events
-    toggleFaq: function(e) {
+    onClickFaq: function(e) {
       var is_link = !!$(e.target).closest('a').length;
       var $parent = $(e.currentTarget).parent();
       if (!is_link) {      
         if ($parent.hasClass('-selected')) {
-          this.$listItems.removeClass('-selected');
+          this.model.set('slug', null);
         } else {
-          this.$listItems.removeClass('-selected');
-          $parent.addClass('-selected');
+          this.model.set('slug', $parent.data('slug'));
         }
       }
     },
+
+    toggleFaq: function() {
+      var slug = this.model.get('slug');
+      if (!!slug) {  
+        var $current = this.$listItems.children('li[data-slug="'+slug+'"]');   
+        this.$listItems.children('li').removeClass('-selected');
+        $current.addClass('-selected');
+                
+        this.$htmlbody.animate({
+          scrollTop: (!!$current) ? $current.offset().top : 0,
+        },250);
+      }
+    },
+
+    getPage: function() {
+      if (!!this.model.get('slug') && !this.model.get('page')) {
+        return this.collection.getPageFromSlug(this.model.get('filters'), this.model.get('slug'), this.model.get('itemsOnPage'));
+      }
+      return this.model.get('page') || 0;
+    },
+
+
+    // ROUTER GO
+    routerGo: function(params) {
+      if (!!params) {      
+        this.model.set({
+          slug: params.slug,
+          page: params.page
+        }, { silent: true });
+      }
+    },
+
 
   });
 
@@ -637,7 +705,7 @@
       'focus #search-input' : 'search',
       'keyup #search-input' : 'search',
       'click #search-close' : 'removeResults',
-      'click .js-result-link' : 'clickGoToResult'
+      'click .js-result-link' : 'clickResult'
     },
 
     resultsTemplate: HandlebarsTemplates['search'],
@@ -681,11 +749,6 @@
       });
     },
 
-    clickGoToResult: function(e) {
-      if ($(e.currentTarget).data('category') == 'faqs') {
-        e && e.preventDefault();  
-      }
-    },
 
     search: function(e) {
       var val = $(e.currentTarget).val();
@@ -730,9 +793,16 @@
     selectResult: function() {
       var $link = this.$searchResults.children('li').eq(this.searchIndex).children('a')
       if ($link.data('category') == 'faqs') {
-        console.log('faq');
+        window.location = baseurl + '/categories/faqs/?slug=' + $link.data('slug');
       } else {
         window.location = $link.attr('href');
+      }
+    },
+
+    clickResult: function(e) {
+      if ($(e.currentTarget).data('category') == 'faqs') {
+        e && e.preventDefault();  
+        window.location = baseurl + '/categories/faqs/?slug=' + $(e.currentTarget).data('slug');        
       }
     },
 
@@ -759,9 +829,10 @@
           return {
             category_info: category_info,
             posts: _.map(_.first(group,5), function(post){
+              post.slug = this.slugify(post.title);
               post.category_info = category_info;
               return post;
-            }),
+            }.bind(this)),
           } 
         }
 
@@ -1049,7 +1120,12 @@
           // var params = _.pick(value, 'id', 'opacity', 'order');
           // this.params.set(name, JSON.stringify(params));
         } else {
-          this.params.set(name, JSON.stringify(value));
+          if (!!value) {
+            this.params.set(name, JSON.stringify(value));  
+          } else {
+            this.params.unset(name, { silent: true });
+          }
+          
         }
       } else if (typeof value === 'object' && _.isArray(value)) {
         if (keys && _.isArray(keys)) {
