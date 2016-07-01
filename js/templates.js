@@ -49,6 +49,8 @@ this["HandlebarsTemplates"]["faqs"] = Handlebars.template({"1":function(depth0,h
     + alias2(alias1((depth0 != null ? depth0.category : depth0), depth0))
     + "\" data-order=\""
     + alias2(alias1((depth0 != null ? depth0.order : depth0), depth0))
+    + "\" data-slug=\""
+    + alias2(alias1((depth0 != null ? depth0.slug : depth0), depth0))
     + "\">\n      <h3 class=\"toggle\">\n        <span class=\"title\">"
     + ((stack1 = alias1((depth0 != null ? depth0.title : depth0), depth0)) != null ? stack1 : "")
     + "</span>\n        <div class=\"m-apps-tag -inline\">\n          <ul>\n"
@@ -110,12 +112,14 @@ this["HandlebarsTemplates"]["search"] = Handlebars.template({"1":function(depth0
     + "</a></li>\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.posts : depth0),{"name":"each","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"4":function(depth0,helpers,partials,data) {
-    var stack1, alias1=this.lambda;
+    var stack1, helper, alias1=this.escapeExpression, alias2=helpers.helperMissing, alias3="function";
 
-  return "				<li><a href=\""
-    + this.escapeExpression(alias1((depth0 != null ? depth0.url : depth0), depth0))
+  return "				<li><a class=\"js-result-link\" data-category=\""
+    + alias1(this.lambda(((stack1 = (depth0 != null ? depth0.category_info : depth0)) != null ? stack1.slug : stack1), depth0))
+    + "\" href=\""
+    + alias1(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(depth0,{"name":"url","hash":{},"data":data}) : helper)))
     + "\">"
-    + ((stack1 = alias1((depth0 != null ? depth0.title : depth0), depth0)) != null ? stack1 : "")
+    + ((stack1 = ((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper))) != null ? stack1 : "")
     + "</a></li>\n";
 },"6":function(depth0,helpers,partials,data) {
     return "    <li>No data available</li>\n";

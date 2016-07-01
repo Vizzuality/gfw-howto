@@ -43,8 +43,12 @@
             tag.url = baseurl + '/tags/' + tag.slug + '/';
             return tag;
           })
+
+          el.slug = this.slugify(el.title);
+
           return el;
-        })
+        }.bind(this));
+        
         return response;
       },
 
@@ -83,7 +87,22 @@
           return this.toJSON().length;
 
         }
-      }
+      },
+
+      /**
+       * HELPERS
+       * slugify 
+       * @param  {[string]} text
+       * @return {[string]} text
+       */
+      slugify: function(text) {
+        return text.toString().toLowerCase().trim()
+        .replace(/\s+/g, '-')           // Replace spaces with -
+        .replace(/&/g, '-and-')         // Replace & with 'and'
+        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+        .replace(/\-\-+/g, '-');        // Replace multiple - with single -
+      },
+
 
     })),
 
@@ -156,8 +175,6 @@
         }
       }
     },
-
-
 
   });
 

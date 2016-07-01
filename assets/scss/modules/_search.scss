@@ -84,6 +84,11 @@
         font-weight: 500;
         text-transform: uppercase;
         margin-left: 0;
+        margin-top: 20px;
+      }
+
+      &:first-child {
+        margin-top: 0;
       }
 
       a {
