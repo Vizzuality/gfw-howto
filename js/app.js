@@ -1050,11 +1050,13 @@
           this.$desktopContent.show(0);
           this.$mobileContent.hide(0);
           this.$skitter.css({ left: '0%' });
+          ga('send', 'event', 'How to', 'Change Mode', 'Change to desktop’');
         break;
         case 'mobile':
           this.$desktopContent.hide(0);
           this.$mobileContent.show(0);
           this.$skitter.css({ left: '50%' });
+          ga('send', 'event', 'How to', 'Change Mode', 'Change to mobile');
         break;
       }
     }
