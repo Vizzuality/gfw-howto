@@ -46,6 +46,12 @@ tags_info:
     description: "GFW Climate catalyzes action on climate change by providing timely, credible answers to questions about carbon emissions from tropical deforestation."
     slug: climate
     type: app    
+  water:
+    order: 5
+    title: Water
+    description: "View critical watershed information, understand type and severity of threats such as forest changes to watershed health, and screen for cost-effective, sustainable solutions."
+    slug: water
+    type: app    
   odp:
     order: 5
     title: Open Data Portal

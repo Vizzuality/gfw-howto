@@ -27,18 +27,23 @@
         margin: 0 0 5px;
                 
         &.fires {
-        background: rgba($red, 0.25);
+          background: rgba($red, 0.25);
           color: $red; 
         }
         
         &.commodities {
-        background: rgba($orange, 0.25);
+          background: rgba($orange, 0.25);
           color: $orange; 
         }
         
         &.climate {
-        background: rgba($blue, 0.25);
+          background: rgba($blue, 0.25);
           color: $blue; 
+        }
+
+        &.water {
+          background: rgba($blue-water, 0.25);
+          color: $blue-water; 
         }
 
         &:hover {
