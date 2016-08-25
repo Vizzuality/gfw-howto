@@ -37,6 +37,7 @@
       &.-fires { background: $red;}
       &.-commodities { background: $orange;}
       &.-climate { background: $blue;}
+      &.-water { background: $blue-water;}
 
 
       @media (min-width: $br-mobile){
@@ -45,6 +46,7 @@
         &.-fires:hover { background: lighten($red,5%);}
         &.-commodities:hover { background: lighten($orange,5%);}
         &.-climate:hover { background: lighten($blue,5%);}
+        &.-water:hover { background: $blue-water;}
       }
 
 

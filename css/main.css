@@ -68,10 +68,12 @@ button {
   margin: 0 auto;
   padding: 0px;
   width: 100%;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   @media (min-width: 850px) {
     .l-wrapper {
       max-width: 1024px;
@@ -187,6 +189,7 @@ button {
 
 .m-breadcrumbs {
   position: relative;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   text-transform: uppercase;
@@ -259,6 +262,8 @@ button {
         fill: #e98300; }
       .m-header h2 svg.-climate {
         fill: #5b80a0; }
+      .m-header h2 svg.-water {
+        fill: #4099ce; }
   .m-header h3 {
     font-size: 15px;
     font-weight: 300; }
@@ -327,12 +332,15 @@ button {
   .m-apps-tag.-inline {
     display: inline-block; }
   .m-apps-tag ul {
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
     .m-apps-tag ul > li {
       text-transform: uppercase;
       font-size: 11px;
@@ -354,6 +362,9 @@ button {
         .m-apps-tag ul > li a.climate {
           background: rgba(91, 128, 160, 0.25);
           color: #5b80a0; }
+        .m-apps-tag ul > li a.water {
+          background: rgba(64, 153, 206, 0.25);
+          color: #4099ce; }
         .m-apps-tag ul > li a:hover {
           text-decoration: underline; }
 
@@ -474,13 +485,17 @@ button {
 
 .m-content-grid > ul {
   margin: 0;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
   .m-content-grid > ul > li {
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
@@ -566,10 +581,12 @@ button {
       text-decoration: underline; }
 
 .m-blog ul {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .m-blog ul li {
     position: relative;
     width: 100%;
@@ -598,19 +615,23 @@ button {
 .m-blog .m-blog-link {
   background: #555;
   padding: 30px 0;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center; }
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .m-blog .m-blog-link a {
     position: relative;
     width: auto;
     height: 50px;
     line-height: 54px;
+    display: -webkit-inline-flex;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    -ms-flex-item-align: center;
-        align-self: center;
+    -webkit-align-self: center;
+        -ms-flex-item-align: center;
+            align-self: center;
     margin: 0 auto;
     padding: 0px 42px;
     color: #555;
@@ -624,10 +645,12 @@ button {
     .m-blog .m-blog-link a svg {
       display: inline-block;
       fill: #555;
+      display: -webkit-flex;
       display: -ms-flexbox;
       display: flex;
-      -ms-flex-item-align: center;
-          align-self: center;
+      -webkit-align-self: center;
+          -ms-flex-item-align: center;
+              align-self: center;
       width: 30px;
       height: 30px;
       margin: 0 5px 0 0; }
@@ -672,10 +695,12 @@ button {
       padding: 30px 40px 15px;
       margin: 0 0 40px; } }
   .m-filters ul {
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
     .m-filters ul li {
       width: 100%;
       font-size: 16px;
@@ -712,12 +737,15 @@ button {
     margin: -10px 0 0;
     background: #FFF;
     border-radius: 4px;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-align: center;
-        align-items: center;
-    -ms-flex-pack: center;
-        justify-content: center; }
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
     .m-checkbox label span svg {
       width: 14px;
       height: 14px;
@@ -1207,12 +1235,15 @@ button {
     cursor: default; }
 
 .simple-pagination {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 40px 0 0;
   margin: 0 auto;
   position: relative;
@@ -1370,27 +1401,35 @@ button {
     .m-post .code.-string {
       color: #555; }
   .m-post .image-grid {
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-align: start;
-        align-items: flex-start; }
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
     .m-post .image-grid > * {
       width: 47.5%;
       height: auto;
       margin: 2.5% 0; }
   .m-post .image-grid-mobile {
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: start;
-        justify-content: flex-start;
-    -ms-flex-align: start;
-        align-items: flex-start; }
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start; }
     .m-post .image-grid-mobile > * {
       margin: 2.5% 5% 2.5% 0; }
   .m-post .video {
@@ -1409,11 +1448,13 @@ button {
   top: -60px;
   right: 0px;
   font-size: 10px;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   z-index: 2;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   min-width: 130px;
   border-radius: 20px;
   background: #97bd3d;
@@ -1462,12 +1503,15 @@ button {
       padding: 0; } }
   .m-by-app ul {
     margin: 0;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: justify;
-        justify-content: space-between;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
     @media (min-width: 850px) {
       .m-by-app ul {
         margin: -4% 0 0; } }
@@ -1495,6 +1539,8 @@ button {
         background: #e98300; }
       .m-by-app ul li.-climate {
         background: #5b80a0; }
+      .m-by-app ul li.-water {
+        background: #4099ce; }
       @media (min-width: 850px) {
         .m-by-app ul li:hover {
           background: #a2c64e; }
@@ -1505,7 +1551,9 @@ button {
         .m-by-app ul li.-commodities:hover {
           background: #ff9104; }
         .m-by-app ul li.-climate:hover {
-          background: #6a8daa; } }
+          background: #6a8daa; }
+        .m-by-app ul li.-water:hover {
+          background: #4099ce; } }
       .m-by-app ul li h2 {
         color: #FFF;
         text-transform: uppercase;
@@ -1528,12 +1576,15 @@ button {
         font-size: 14px; }
 
 .m-ranking {
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: justify;
-      justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap; }
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
   .m-ranking > * {
     margin: 40px 0 0; }
     .m-ranking > *:first-child {
