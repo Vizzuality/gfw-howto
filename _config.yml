@@ -27,43 +27,43 @@ tags_info:
     title: GFW
     description: "Empowering people everywhere to better manage and conserve forest landscapes through an interactive online forest monitoring system."
     slug: gfw
-    type: app    
+    type: app
   fires:
     order: 2
     title: Fires
     description: "Global Forest Watch Fires (GFW Fires) is an online platform for monitoring and responding to forest and land fires in the ASEAN region using near real-time information."
     slug: fires
-    type: app    
+    type: app
   commodities:
     order: 3
     title: Commodities
     description: "Global Forest Watch Commodities is an online platform that empowers companies to analyze the impact of key commodities on forests, using the latest and most powerful data available."
     slug: commodities
-    type: app    
+    type: app
   climate:
     order: 4
     title: Climate
     description: "GFW Climate catalyzes action on climate change by providing timely, credible answers to questions about carbon emissions from tropical deforestation."
     slug: climate
-    type: app    
+    type: app
   odp:
     order: 5
     title: Open Data Portal
     description: "Browse, learn more about, and download the data displayed on Global Forest Watch."
     slug: odp
-    type: tool    
-  map_builder:
+    type: tool
+  map-builder:
     order: 6
     title: Map Builder
     description: "The Global Forest Watch Map Builder is an application template for ArcGIS Online that lets anyone turn custom maps into interactive web applications."
     slug: map-builder
-    type: tool    
+    type: tool
   small_grants_fund:
     order: 7
     title: Small Grants Fund
     description: "The Small Grants Fund seeks to promote uptake of Global Forest Watch by civil society organizations to use in their research, advocacy, and fieldwork."
     slug: small-grants-fund
-    type: tool    
+    type: tool
 
 
 
@@ -118,40 +118,36 @@ categories_info:
     description: "Description gis"
     slug: gis
     type: subject
-  
 
- 
+
+
   tutorial_videos:
     order: 9
     title: Tutorial videos
     description: "Description tutorial_videos"
     slug: tutorial videos
-    type: material    
+    type: material
   webinars:
     order: 10
     title: Webinars
     description: "Description webinars"
     slug: webinars
-    type: material    
+    type: material
   faqs:
     order: 11
     title: FAQ’s
     description: "Description faqs"
     slug: faqs
-    type: material    
+    type: material
   training_modules:
     order: 12
     title: Training modules
     description: "Description training_modules"
     slug: training modules
-    type: material    
+    type: material
   blogs:
     order: 13
     title: Blogs
     description: "Description blogs"
     slug: blogs
-    type: material    
-
-
-
-
+    type: material

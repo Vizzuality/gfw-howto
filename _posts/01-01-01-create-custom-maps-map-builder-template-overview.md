@@ -6,13 +6,13 @@ description: ""
 thumbnail: "/assets/images/map-builder/map-builder-template-overview/thumbnail.png"
 imagepath: "/assets/images/map-builder/map-builder-template-overview"
 categories: [create custom maps]
-tags: [map_builder]
+tags: [map-builder]
 mobile: false
 ---
 
 
 <div id="desktopContent" class="content">
-  
+
   <p>GFW Map Builder is an application template for ArcGIS online that lets you turn custom maps into interactive applications.</p>
   <h4>STEPS FOR USING THE MAP BUILDER TEMPLATE</h4>
   <p>Global Forest Watch Map Builder lets you create custom web applications using ArcGIS Online. The Map Builder template turns web maps into interactive applications that include the same analysis power as Global Forest Watch. To get an idea of what your application will look like and how it will work, view our <a href="https://youtu.be/k3uchlrWF7o?list=PLh91mManXhdnr_r85vYAiiv19ntHIYObd" target="_blank">tutorial on the Map Builder Interactive Map</a>. The process can be broken down into several steps, which vary depending on whether you have a (free) public ArcGIS account or an organizational ArcGIS account:</p>
