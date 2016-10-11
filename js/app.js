@@ -264,13 +264,14 @@
     template: HandlebarsTemplates['faqs'],
 
     events: {
-      'click .toggle' : 'toggleFaq'
+      'click .toggle' : 'onClickFaq'
     },
 
     model: new (Backbone.Model.extend({
       defaults: {
+        page: null,
         filters: [],
-        itemsOnPage: 10
+        itemsOnPage: 12
       }
     })),
 
@@ -282,54 +283,93 @@
       // we will prevent sort each time our results
       parse: function(response){
         var response = _.map(response, function(el){
+
           el.tags = (!!el.tags && !!el.tags.length) ? el.tags.split(', ') : [];
+
+          el.tags_slugs = _.map(el.tags, function(_tag){
+            return _tag.replace(/_/g, '-')
+          })
+
           el.tags_info = _.map(el.tags, function(_tag){
             var tag = window.gfw_howto.tags[_tag];
             tag.url = baseurl + '/tags/' + tag.slug + '/';
             return tag;
           })
+
+          el.slug = this.slugify(el.title);
+
           return el;
-        })
+        }.bind(this));
+        
         return response;
       },
 
       getFaqs: function(filters,page,itemsOnPage) {
         this.filters = filters;
         this.itemsOnPage = itemsOnPage;
-        if(!!this.filters.length) {
-          
+        if(!!this.filters && !!this.filters.length) {
           // If a filter exists
-          this.collection = _.filter(_.sortBy(this.toJSON(), 'title'), function(el){
-            var is_selected = _.intersection(this.filters,el.tags);
+          this.collection = _.filter(this.toJSON(), function(el){
+            var is_selected = _.intersection(this.filters,el.tags_slugs);
             return !!is_selected.length;
           }.bind(this));
           
           return this.collection.slice(page*this.itemsOnPage, (page*this.itemsOnPage) + this.itemsOnPage)
 
         } else {
-          
           // If a filter doesn't exist
-          this.collection = _.sortBy(this.toJSON(), 'title');
+          this.collection = this.toJSON();
           return this.collection.slice(page*this.itemsOnPage, (page*this.itemsOnPage) + this.itemsOnPage);
-
         }
       },
 
       getCount: function() {
-        if (!!this.filters.length) {
-          
-          this.collection = _.filter(_.sortBy(this.toJSON(), 'title'), function(el){
-            var is_selected = _.intersection(this.filters,el.tags);
+        if (!!this.filters && !!this.filters.length) {
+          this.collection = _.filter(this.toJSON(), function(el){
+            var is_selected = _.intersection(this.filters,el.tags_slugs);
             return !!is_selected.length;
           }.bind(this));
+          
           return this.collection.length
 
         } else {
-
           return this.toJSON().length;
-
         }
-      }
+      },
+
+      getPageFromSlug: function(filters,slug,itemsOnPage) {          
+        if(!!this.filters && !!this.filters.length) {
+          // If a filter exists
+          this.collection = _.filter(this.toJSON(), function(el){
+            var is_selected = _.intersection(this.filters,el.tags_slugs);
+            return !!is_selected.length;
+          }.bind(this));
+        } else {
+          // If a filter doesn't exist
+          this.collection = this.toJSON();
+        }
+
+        var index = _.findIndex(this.collection, {slug: slug});
+        if (index >= 0) {
+          return Math.floor(index/itemsOnPage);
+        }
+        return 0;
+      },
+
+      /**
+       * HELPERS
+       * slugify 
+       * @param  {[string]} text
+       * @return {[string]} text
+       */
+      slugify: function(text) {
+        return text.toString().toLowerCase().trim()
+        .replace(/\s+/g, '-')           // Replace spaces with -
+        .replace(/&/g, '-and-')         // Replace & with 'and'
+        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+        .replace(/\-\-+/g, '-');        // Replace multiple - with single -
+      },
+
 
     })),
 
@@ -341,69 +381,117 @@
       this.options = _.extend({}, this.defaults, opts);
       this.listeners();
       this.collection.fetch().done(function() {
-        this.render(0)
+        this.render()
       }.bind(this));
     },
 
     listeners: function() {
+      // Model listeners
       this.model.on('change:filters', function(){
-        this.render(0);
+        this.model.set('slug', null);
+        this.model.set('page', 0);
+        this.render();
       }.bind(this));
 
+      this.model.on('change:slug', function(){
+        this.render();
+        Backbone.Events.trigger('Route/update', 'slug', this.model.get('slug'));
+      }.bind(this));
+
+      // Backbone listeners
+      Backbone.Events.on('Route/go',this.routerGo.bind(this));
       Backbone.Events.on('Filters/change', function(filters){
-        console.log(filters);
         this.model.set('filters', _.clone(filters));
       }.bind(this));
     },
 
     cache: function() {
-      this.$listItems = this.$el.find('.m-faqs-list li');
+      this.$htmlbody = $('html,body');
+      this.$listItems = this.$el.find('.m-faqs-list');
       this.$paginationContainer = this.$el.find('.m-faqs-pagination');
     },
 
-    render: function(page) {
+    render: function() {
+      this.model.set('page', this.getPage());
       this.$el.html(this.template({
         baseurl: window.gfw_howto.baseurl,
-        list: this.collection.getFaqs(this.model.get('filters'),page,this.model.get('itemsOnPage'))
+        list: this.collection.getFaqs(this.model.get('filters'),this.model.get('page'),this.model.get('itemsOnPage'))
       }));
       this.cache();
-      this.initPaginate(page);
+      this.initPaginate();
+      this.toggleFaq();
     },
 
-    initPaginate: function(page){
+    initPaginate: function(){
       // pagination
       if (this.collection.getCount() > this.model.get('itemsOnPage')) {      
         this.$paginationContainer.pagination({
           items: this.collection.getCount(),
           itemsOnPage: this.model.get('itemsOnPage'),
-          currentPage: page + 1,
+          currentPage: this.model.get('page') + 1,
           displayedPages: 3,
           selectOnClick: false,
           prevText: ' ',
           nextText: ' ',
           onPageClick: _.bind(function(page, e){
             e && e.preventDefault();
-            this.render(page-1)
+            this.model.set('slug', null);
+            this.model.set('page', page - 1);
+            this.render()
             this.$paginationContainer.pagination('drawPage', page);
+            this.$htmlbody.animate({
+              scrollTop: 0,
+            },250);
+
           }, this )
         });
       }
+      Backbone.Events.trigger('Route/update', 'page', this.model.get('page'));
     },
 
     // Events
-    toggleFaq: function(e) {
+    onClickFaq: function(e) {
       var is_link = !!$(e.target).closest('a').length;
       var $parent = $(e.currentTarget).parent();
       if (!is_link) {      
         if ($parent.hasClass('-selected')) {
-          this.$listItems.removeClass('-selected');
+          this.model.set('slug', null);
         } else {
-          this.$listItems.removeClass('-selected');
-          $parent.addClass('-selected');
+          this.model.set('slug', $parent.data('slug'));
         }
       }
     },
 
+    toggleFaq: function() {
+      var slug = this.model.get('slug');
+      if (!!slug) {  
+        var $current = this.$listItems.children('li[data-slug="'+slug+'"]');   
+        this.$listItems.children('li').removeClass('-selected');
+        $current.addClass('-selected');
+                
+        this.$htmlbody.animate({
+          scrollTop: (!!$current) ? $current.offset().top : 0,
+        },250);
+      }
+    },
+
+    getPage: function() {
+      if (!!this.model.get('slug') && !this.model.get('page')) {
+        return this.collection.getPageFromSlug(this.model.get('filters'), this.model.get('slug'), this.model.get('itemsOnPage'));
+      }
+      return this.model.get('page') || 0;
+    },
+
+
+    // ROUTER GO
+    routerGo: function(params) {
+      if (!!params) {      
+        this.model.set({
+          slug: params.slug,
+          page: params.page
+        }, { silent: true });
+      }
+    },
 
 
   });
@@ -616,12 +704,13 @@
     events: {
       'focus #search-input' : 'search',
       'keyup #search-input' : 'search',
-      'click #search-close' : 'removeResults'
+      'click #search-close' : 'removeResults',
+      'click .js-result-link' : 'clickResult'
     },
 
     resultsTemplate: HandlebarsTemplates['search'],
 
-    initialize: function(settings) {
+    initialize: function(settings) {      
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
       
@@ -652,13 +741,14 @@
         caseSensitive: false,
         includeScore: false,
         shouldSort: true,
-        threshold: 0.6,
+        threshold: 0.4,
         location: 0,
         distance: 100,
         maxPatternLength: 32,
         keys: ['title','content','category','tags']
       });
     },
+
 
     search: function(e) {
       var val = $(e.currentTarget).val();
@@ -682,13 +772,13 @@
     },
 
     indexResults: function(direction) {
-      if (!!this.results.length) {
+      if (!!this.resultsLength) {
         switch(direction) {
           case 'up':
             (this.searchIndex != 0) ? this.searchIndex-- : this.searchIndex = 0;
           break;
           case 'down':
-            (this.searchIndex < this.results.length - 1) ? this.searchIndex++ : this.searchIndex = this.results.length - 1;
+            (this.searchIndex < this.resultsLength - 1) ? this.searchIndex++ : this.searchIndex = this.resultsLength - 1;
           break;
         }
       }
@@ -701,15 +791,52 @@
     },
 
     selectResult: function() {
-      var href = this.$searchResults.children('li').eq(this.searchIndex).children('a').attr('href');
-      window.location = href;
+      var $link = this.$searchResults.children('li').eq(this.searchIndex).children('a')
+      if ($link.data('category') == 'faqs') {
+        window.location = baseurl + '/categories/faqs/?slug=' + $link.data('slug');
+      } else {
+        window.location = $link.attr('href');
+      }
+    },
+
+    clickResult: function(e) {
+      if ($(e.currentTarget).data('category') == 'faqs') {
+        e && e.preventDefault();  
+        window.location = baseurl + '/categories/faqs/?slug=' + $(e.currentTarget).data('slug');        
+      }
     },
 
     setResults: function(val) {
-      this.results = this.fuse.search(val).slice(0, 5);
-      this.$searchResults.addClass('-active').html(this.resultsTemplate({ results: (!!this.results.length) ? this.results : null }));
+      this.results = this.parseResults(val);
+      this.resultsLength = this.results.length + _.flatten(_.pluck(_.flatten(this.results), 'posts')).length;
+      
+      this.$searchResults.addClass('-active').html(this.resultsTemplate({ 
+        results: (!!this.resultsLength) ? this.results.slice(0,4) : null 
+      }));
       // svg addClass
       this.$searchClose.addClass('-active');
+    },
+
+    parseResults: function(val) {
+      return _.map(_.groupBy(this.fuse.search(val), 'category'), function(group, key){
+        var key_slugify = key.replace(/\s/g, '_');
+
+        if (!!key_slugify) {
+          var category_info = window.gfw_howto.categories[key_slugify];
+          category_info.slug = this.slugify(category_info.slug);
+          category_info.url = window.gfw_howto.baseurl + /categories/ + category_info.slug;
+
+          return {
+            category_info: category_info,
+            posts: _.map(_.first(group,5), function(post){
+              post.slug = this.slugify(post.title);
+              post.category_info = category_info;
+              return post;
+            }.bind(this)),
+          } 
+        }
+
+      }.bind(this));
     },
 
     removeResults: function() {
@@ -719,7 +846,22 @@
       this.$searchResults.removeClass('-active').html(this.resultsTemplate({ results: []}));
       // svg removeClass
       this.$searchClose.removeClass('-active');
-    }
+    },
+
+    /**
+     * HELPERS
+     * slugify 
+     * @param  {[string]} text
+     * @return {[string]} text
+     */
+    slugify: function(text) {
+      return text.toString().toLowerCase().trim()
+      .replace(/\s+/g, '-')           // Replace spaces with -
+      .replace(/&/g, '-and-')         // Replace & with 'and'
+      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+      .replace(/\-\-+/g, '-');        // Replace multiple - with single -
+    },
+
 
   });
 
@@ -908,11 +1050,13 @@
           this.$desktopContent.show(0);
           this.$mobileContent.hide(0);
           this.$skitter.css({ left: '0%' });
+          ga('send', 'event', 'How to', 'Change Mode', 'Change to desktop’');
         break;
         case 'mobile':
           this.$desktopContent.hide(0);
           this.$mobileContent.show(0);
           this.$skitter.css({ left: '50%' });
+          ga('send', 'event', 'How to', 'Change Mode', 'Change to mobile');
         break;
       }
     }
@@ -978,7 +1122,12 @@
           // var params = _.pick(value, 'id', 'opacity', 'order');
           // this.params.set(name, JSON.stringify(params));
         } else {
-          this.params.set(name, JSON.stringify(value));
+          if (!!value) {
+            this.params.set(name, JSON.stringify(value));  
+          } else {
+            this.params.unset(name, { silent: true });
+          }
+          
         }
       } else if (typeof value === 'object' && _.isArray(value)) {
         if (keys && _.isArray(keys)) {

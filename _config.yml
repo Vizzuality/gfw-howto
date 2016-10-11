@@ -46,20 +46,26 @@ tags_info:
     description: "GFW Climate catalyzes action on climate change by providing timely, credible answers to questions about carbon emissions from tropical deforestation."
     slug: climate
     type: app
-  odp:
+  water:
     order: 5
+    title: Water
+    description: "View critical watershed information, understand type and severity of threats such as forest changes to watershed health, and screen for cost-effective, sustainable solutions."
+    slug: water
+    type: app
+  odp:
+    order: 6
     title: Open Data Portal
     description: "Browse, learn more about, and download the data displayed on Global Forest Watch."
     slug: odp
     type: tool
   map-builder:
-    order: 6
+    order: 7
     title: Map Builder
     description: "The Global Forest Watch Map Builder is an application template for ArcGIS Online that lets anyone turn custom maps into interactive web applications."
     slug: map-builder
     type: tool
   small_grants_fund:
-    order: 7
+    order: 8
     title: Small Grants Fund
     description: "The Small Grants Fund seeks to promote uptake of Global Forest Watch by civil society organizations to use in their research, advocacy, and fieldwork."
     slug: small-grants-fund

@@ -23,12 +23,13 @@
     events: {
       'focus #search-input' : 'search',
       'keyup #search-input' : 'search',
-      'click #search-close' : 'removeResults'
+      'click #search-close' : 'removeResults',
+      'click .js-result-link' : 'clickResult'
     },
 
     resultsTemplate: HandlebarsTemplates['search'],
 
-    initialize: function(settings) {
+    initialize: function(settings) {      
       var opts = settings && settings.options ? settings.options : {};
       this.options = _.extend({}, this.defaults, opts);
       
@@ -59,13 +60,14 @@
         caseSensitive: false,
         includeScore: false,
         shouldSort: true,
-        threshold: 0.6,
+        threshold: 0.4,
         location: 0,
         distance: 100,
         maxPatternLength: 32,
         keys: ['title','content','category','tags']
       });
     },
+
 
     search: function(e) {
       var val = $(e.currentTarget).val();
@@ -89,13 +91,13 @@
     },
 
     indexResults: function(direction) {
-      if (!!this.results.length) {
+      if (!!this.resultsLength) {
         switch(direction) {
           case 'up':
             (this.searchIndex != 0) ? this.searchIndex-- : this.searchIndex = 0;
           break;
           case 'down':
-            (this.searchIndex < this.results.length - 1) ? this.searchIndex++ : this.searchIndex = this.results.length - 1;
+            (this.searchIndex < this.resultsLength - 1) ? this.searchIndex++ : this.searchIndex = this.resultsLength - 1;
           break;
         }
       }
@@ -108,15 +110,52 @@
     },
 
     selectResult: function() {
-      var href = this.$searchResults.children('li').eq(this.searchIndex).children('a').attr('href');
-      window.location = href;
+      var $link = this.$searchResults.children('li').eq(this.searchIndex).children('a')
+      if ($link.data('category') == 'faqs') {
+        window.location = baseurl + '/categories/faqs/?slug=' + $link.data('slug');
+      } else {
+        window.location = $link.attr('href');
+      }
+    },
+
+    clickResult: function(e) {
+      if ($(e.currentTarget).data('category') == 'faqs') {
+        e && e.preventDefault();  
+        window.location = baseurl + '/categories/faqs/?slug=' + $(e.currentTarget).data('slug');        
+      }
     },
 
     setResults: function(val) {
-      this.results = this.fuse.search(val).slice(0, 5);
-      this.$searchResults.addClass('-active').html(this.resultsTemplate({ results: (!!this.results.length) ? this.results : null }));
+      this.results = this.parseResults(val);
+      this.resultsLength = this.results.length + _.flatten(_.pluck(_.flatten(this.results), 'posts')).length;
+      
+      this.$searchResults.addClass('-active').html(this.resultsTemplate({ 
+        results: (!!this.resultsLength) ? this.results.slice(0,4) : null 
+      }));
       // svg addClass
       this.$searchClose.addClass('-active');
+    },
+
+    parseResults: function(val) {
+      return _.map(_.groupBy(this.fuse.search(val), 'category'), function(group, key){
+        var key_slugify = key.replace(/\s/g, '_');
+
+        if (!!key_slugify) {
+          var category_info = window.gfw_howto.categories[key_slugify];
+          category_info.slug = this.slugify(category_info.slug);
+          category_info.url = window.gfw_howto.baseurl + /categories/ + category_info.slug;
+
+          return {
+            category_info: category_info,
+            posts: _.map(_.first(group,5), function(post){
+              post.slug = this.slugify(post.title);
+              post.category_info = category_info;
+              return post;
+            }.bind(this)),
+          } 
+        }
+
+      }.bind(this));
     },
 
     removeResults: function() {
@@ -126,7 +165,22 @@
       this.$searchResults.removeClass('-active').html(this.resultsTemplate({ results: []}));
       // svg removeClass
       this.$searchClose.removeClass('-active');
-    }
+    },
+
+    /**
+     * HELPERS
+     * slugify 
+     * @param  {[string]} text
+     * @return {[string]} text
+     */
+    slugify: function(text) {
+      return text.toString().toLowerCase().trim()
+      .replace(/\s+/g, '-')           // Replace spaces with -
+      .replace(/&/g, '-and-')         // Replace & with 'and'
+      .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+      .replace(/\-\-+/g, '-');        // Replace multiple - with single -
+    },
+
 
   });
 

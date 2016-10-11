@@ -38,20 +38,27 @@ this["HandlebarsTemplates"]["blogList"] = Handlebars.template({"1":function(dept
     + "      </ul>\n    </div>\n  </li>\n</ul>\n";
 },"useData":true});
 this["HandlebarsTemplates"]["faqs"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"if","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + "    \n";
+},"2":function(depth0,helpers,partials,data) {
     var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
-  return "    \n    <li data-app=\""
+  return "    <li data-app=\""
     + alias2(alias1((depth0 != null ? depth0.category : depth0), depth0))
     + "\" data-order=\""
     + alias2(alias1((depth0 != null ? depth0.order : depth0), depth0))
+    + "\" data-slug=\""
+    + alias2(alias1((depth0 != null ? depth0.slug : depth0), depth0))
     + "\">\n      <h3 class=\"toggle\">\n        <span class=\"title\">"
     + ((stack1 = alias1((depth0 != null ? depth0.title : depth0), depth0)) != null ? stack1 : "")
     + "</span>\n        <div class=\"m-apps-tag -inline\">\n          <ul>\n"
-    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tags_info : depth0),{"name":"each","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.tags_info : depth0),{"name":"each","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
     + "          </ul>\n        </div>\n        <span class=\"arrow\"><svg><use xlink:href=\"#icon-arrowdown\"></use></svg></span>\n      </h3>\n      <div class=\"content m-faqs-content\">\n        "
     + ((stack1 = alias1((depth0 != null ? depth0.content : depth0), depth0)) != null ? stack1 : "")
-    + "\n      </div>\n    </li>\n    \n";
-},"2":function(depth0,helpers,partials,data) {
+    + "\n      </div>\n    </li>\n";
+},"3":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;
 
   return "              <li><a class=\""
@@ -92,19 +99,36 @@ this["HandlebarsTemplates"]["search"] = Handlebars.template({"1":function(depth0
 
   return ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.results : depth0),{"name":"each","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"2":function(depth0,helpers,partials,data) {
+    var stack1;
+
+  return ((stack1 = helpers['if'].call(depth0,((stack1 = (depth0 != null ? depth0.category_info : depth0)) != null ? stack1.slug : stack1),{"name":"if","hash":{},"fn":this.program(3, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
+},"3":function(depth0,helpers,partials,data) {
     var stack1, alias1=this.lambda;
 
-  return "    <li><a href=\""
-    + this.escapeExpression(alias1((depth0 != null ? depth0.url : depth0), depth0))
-    + "\">"
-    + ((stack1 = alias1((depth0 != null ? depth0.title : depth0), depth0)) != null ? stack1 : "")
-    + "</a></li>\n";
+  return "	  	<li class=\"-group\"><a href=\""
+    + this.escapeExpression(alias1(((stack1 = (depth0 != null ? depth0.category_info : depth0)) != null ? stack1.url : stack1), depth0))
+    + "/\">"
+    + ((stack1 = alias1(((stack1 = (depth0 != null ? depth0.category_info : depth0)) != null ? stack1.title : stack1), depth0)) != null ? stack1 : "")
+    + "</a></li>\n"
+    + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.posts : depth0),{"name":"each","hash":{},"fn":this.program(4, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"4":function(depth0,helpers,partials,data) {
+    var stack1, helper, alias1=helpers.helperMissing, alias2="function", alias3=this.escapeExpression;
+
+  return "				<li><a class=\"js-result-link\" data-slug=\""
+    + alias3(((helper = (helper = helpers.slug || (depth0 != null ? depth0.slug : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"slug","hash":{},"data":data}) : helper)))
+    + "\" data-category=\""
+    + alias3(this.lambda(((stack1 = (depth0 != null ? depth0.category_info : depth0)) != null ? stack1.slug : stack1), depth0))
+    + "\" href=\""
+    + alias3(((helper = (helper = helpers.url || (depth0 != null ? depth0.url : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"url","hash":{},"data":data}) : helper)))
+    + "\">"
+    + ((stack1 = ((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias1),(typeof helper === alias2 ? helper.call(depth0,{"name":"title","hash":{},"data":data}) : helper))) != null ? stack1 : "")
+    + "</a></li>\n";
+},"6":function(depth0,helpers,partials,data) {
     return "    <li>No data available</li>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
-  return ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.results : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(4, data, 0),"data":data})) != null ? stack1 : "")
+  return ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.results : depth0),{"name":"if","hash":{},"fn":this.program(1, data, 0),"inverse":this.program(6, data, 0),"data":data})) != null ? stack1 : "")
     + "\n";
 },"useData":true});
 this["HandlebarsTemplates"]["slider"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {

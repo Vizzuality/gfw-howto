@@ -107,7 +107,9 @@ button {
       position: absolute;
       bottom: 0;
       right: 0;
-      font-size: 9px;
+      line-height: 1;
+      font-weight: 500;
+      font-size: 10px;
       text-transform: uppercase;
       -webkit-transform: translate(5px, 8px);
               transform: translate(5px, 8px); }
@@ -257,6 +259,8 @@ button {
         fill: #e98300; }
       .m-header h2 svg.-climate {
         fill: #5b80a0; }
+      .m-header h2 svg.-water {
+        fill: #4099ce; }
   .m-header h3 {
     font-size: 15px;
     font-weight: 300; }
@@ -352,6 +356,9 @@ button {
         .m-apps-tag ul > li a.climate {
           background: rgba(91, 128, 160, 0.25);
           color: #5b80a0; }
+        .m-apps-tag ul > li a.water {
+          background: rgba(64, 153, 206, 0.25);
+          color: #4099ce; }
         .m-apps-tag ul > li a:hover {
           text-decoration: underline; }
 
@@ -405,9 +412,17 @@ button {
   .m-search .search-results li {
     font-size: 14px;
     line-height: 1.25;
-    margin: 5px 0 0; }
+    margin: 5px 0 0;
+    margin-left: 10px; }
     .m-search .search-results li.-highlight a {
       color: #97bd3d; }
+    .m-search .search-results li.-group {
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-left: 0;
+      margin-top: 20px; }
+    .m-search .search-results li:first-child {
+      margin-top: 0; }
     .m-search .search-results li a {
       color: #555; }
       .m-search .search-results li a:hover {
@@ -1493,6 +1508,8 @@ button {
         background: #e98300; }
       .m-by-app ul li.-climate {
         background: #5b80a0; }
+      .m-by-app ul li.-water {
+        background: #4099ce; }
       @media (min-width: 850px) {
         .m-by-app ul li:hover {
           background: #a2c64e; }
@@ -1503,7 +1520,9 @@ button {
         .m-by-app ul li.-commodities:hover {
           background: #ff9104; }
         .m-by-app ul li.-climate:hover {
-          background: #6a8daa; } }
+          background: #6a8daa; }
+        .m-by-app ul li.-water:hover {
+          background: #4099ce; } }
       .m-by-app ul li h2 {
         color: #FFF;
         text-transform: uppercase;
