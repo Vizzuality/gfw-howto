@@ -6,7 +6,7 @@ description: ""
 thumbnail: "video"
 video: iUQq0br-Gjc
 categories: [tutorial videos]
-tags: [map_builder]
+tags: [map-builder]
 ---
 
 <div id="desktopContent" class="content">
