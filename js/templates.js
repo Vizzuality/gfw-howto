@@ -41,7 +41,7 @@ this["HandlebarsTemplates"]["faqs"] = Handlebars.template({"1":function(depth0,h
     var stack1;
 
   return ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.title : depth0),{"name":"if","hash":{},"fn":this.program(2, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "    \n";
+    + "\n";
 },"2":function(depth0,helpers,partials,data) {
     var stack1, alias1=this.lambda, alias2=this.escapeExpression;
 
@@ -68,12 +68,15 @@ this["HandlebarsTemplates"]["faqs"] = Handlebars.template({"1":function(depth0,h
     + "\">"
     + alias2(alias1((depth0 != null ? depth0.title : depth0), depth0))
     + "</a></li>\n";
+},"5":function(depth0,helpers,partials,data) {
+    return "  <ul class=\"m-faqs-pagination\"></ul>\n";
 },"compiler":[6,">= 2.0.0-beta.1"],"main":function(depth0,helpers,partials,data) {
     var stack1;
 
   return "<ul class=\"m-faqs-list\">\n"
     + ((stack1 = helpers.each.call(depth0,(depth0 != null ? depth0.list : depth0),{"name":"each","hash":{},"fn":this.program(1, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "")
-    + "</ul>\n<ul class=\"m-faqs-pagination\"></ul>\n";
+    + "</ul>\n"
+    + ((stack1 = helpers['if'].call(depth0,(depth0 != null ? depth0.pagination : depth0),{"name":"if","hash":{},"fn":this.program(5, data, 0),"inverse":this.noop,"data":data})) != null ? stack1 : "");
 },"useData":true});
 this["HandlebarsTemplates"]["googlegroups"] = Handlebars.template({"1":function(depth0,helpers,partials,data) {
     var alias1=this.lambda, alias2=this.escapeExpression;

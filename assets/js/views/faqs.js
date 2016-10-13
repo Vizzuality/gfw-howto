@@ -21,6 +21,7 @@
       defaults: {
         page: null,
         filters: [],
+        pagination: true,
         itemsOnPage: 12
       }
     })),
@@ -29,7 +30,7 @@
 
       url: baseurl + '/json/faqs.json',
 
-      // Me may use a comparator function, 
+      // Me may use a comparator function,
       // we will prevent sort each time our results
       parse: function(response){
         var response = _.map(response, function(el){
@@ -50,26 +51,30 @@
 
           return el;
         }.bind(this));
-        
+
         return response;
       },
 
-      getFaqs: function(filters,page,itemsOnPage) {
-        this.filters = filters;
-        this.itemsOnPage = itemsOnPage;
+      getFaqs: function(params) {
+        this.filters = params.filters;
+        this.itemsOnPage = params.itemsOnPage;
         if(!!this.filters && !!this.filters.length) {
           // If a filter exists
           this.collection = _.filter(this.toJSON(), function(el){
             var is_selected = _.intersection(this.filters,el.tags_slugs);
             return !!is_selected.length;
           }.bind(this));
-          
-          return this.collection.slice(page*this.itemsOnPage, (page*this.itemsOnPage) + this.itemsOnPage)
+
+          return params.pagination
+            ? this.collection.slice(params.page*this.itemsOnPage, (params.page*this.itemsOnPage) + this.itemsOnPage)
+            : this.collection;
 
         } else {
           // If a filter doesn't exist
           this.collection = this.toJSON();
-          return this.collection.slice(page*this.itemsOnPage, (page*this.itemsOnPage) + this.itemsOnPage);
+          return params.pagination
+            ? this.collection.slice(params.page*this.itemsOnPage, (params.page*this.itemsOnPage) + this.itemsOnPage)
+            : this.collection;
         }
       },
 
@@ -79,7 +84,7 @@
             var is_selected = _.intersection(this.filters,el.tags_slugs);
             return !!is_selected.length;
           }.bind(this));
-          
+
           return this.collection.length
 
         } else {
@@ -87,7 +92,7 @@
         }
       },
 
-      getPageFromSlug: function(filters,slug,itemsOnPage) {          
+      getPageFromSlug: function(filters,slug,itemsOnPage) {
         if(!!this.filters && !!this.filters.length) {
           // If a filter exists
           this.collection = _.filter(this.toJSON(), function(el){
@@ -108,7 +113,7 @@
 
       /**
        * HELPERS
-       * slugify 
+       * slugify
        * @param  {[string]} text
        * @return {[string]} text
        */
@@ -128,7 +133,9 @@
         return;
       }
       var opts = settings && settings.options ? settings.options : {};
+      var params = settings && settings.params ? settings.params : {};
       this.options = _.extend({}, this.defaults, opts);
+      this.model.set(params);
       this.listeners();
       this.collection.fetch().done(function() {
         this.render()
@@ -165,16 +172,20 @@
       this.model.set('page', this.getPage());
       this.$el.html(this.template({
         baseurl: window.gfw_howto.baseurl,
-        list: this.collection.getFaqs(this.model.get('filters'),this.model.get('page'),this.model.get('itemsOnPage'))
+        list: this.collection.getFaqs(this.model.attributes),
+        pagination: this.model.attributes.pagination
       }));
       this.cache();
-      this.initPaginate();
+
+      if (this.model.get('pagination')) {
+        this.initPaginate();
+      }
       this.toggleFaq();
     },
 
     initPaginate: function(){
       // pagination
-      if (this.collection.getCount() > this.model.get('itemsOnPage')) {      
+      if (this.collection.getCount() > this.model.get('itemsOnPage')) {
         this.$paginationContainer.pagination({
           items: this.collection.getCount(),
           itemsOnPage: this.model.get('itemsOnPage'),
@@ -203,7 +214,7 @@
     onClickFaq: function(e) {
       var is_link = !!$(e.target).closest('a').length;
       var $parent = $(e.currentTarget).parent();
-      if (!is_link) {      
+      if (!is_link) {
         if ($parent.hasClass('-selected')) {
           this.model.set('slug', null);
         } else {
@@ -214,11 +225,11 @@
 
     toggleFaq: function() {
       var slug = this.model.get('slug');
-      if (!!slug) {  
-        var $current = this.$listItems.children('li[data-slug="'+slug+'"]');   
+      if (!!slug) {
+        var $current = this.$listItems.children('li[data-slug="'+slug+'"]');
         this.$listItems.children('li').removeClass('-selected');
         $current.addClass('-selected');
-                
+
         this.$htmlbody.animate({
           scrollTop: (!!$current) ? $current.offset().top : 0,
         },250);
@@ -235,7 +246,7 @@
 
     // ROUTER GO
     routerGo: function(params) {
-      if (!!params) {      
+      if (!!params) {
         this.model.set({
           slug: params.slug,
           page: params.page

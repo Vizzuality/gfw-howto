@@ -22,15 +22,15 @@ layout: default
         <div class="m-content-grid">
           <ul>
           {% for post in sorted_posts %}
-            {% if post.tags contains page.title and post.categories contains category[1].slug %}            
+            {% if post.tags contains page.title and post.categories contains category[1].slug %}
               <li class="m-content-item">
-                <div class="box">                
-                  <a href="{{site.baseurl}}{{ post.url }}" class="img {% if post.video %}-video{% endif %}" 
-                    {% if post.video %} 
-                      style="background-image: url(http://img.youtube.com/vi/{{post.video}}/0.jpg)" 
-                    {% else %} 
-                      style="background-image: url({{site.baseurl}}{{post.thumbnail}})" 
-                    {% endif %}>  
+                <div class="box">
+                  <a href="{{site.baseurl}}{{ post.url }}" class="img {% if post.video %}-video{% endif %}"
+                    {% if post.video %}
+                      style="background-image: url(http://img.youtube.com/vi/{{post.video}}/0.jpg)"
+                    {% else %}
+                      style="background-image: url({{site.baseurl}}{{post.thumbnail}})"
+                    {% endif %}>
                   </a>
                   <div class="content">
                     <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
@@ -39,12 +39,12 @@ layout: default
                         {% for tag in post.tags %}
                           {% assign tagCustom = site.tags_info[tag] %}
                           <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
-                        {% endfor %}                        
+                        {% endfor %}
                       </ul>
                     </div>
                     <p>{{ post.description }}</p>
-                  </div>              
-                </div>              
+                  </div>
+                </div>
               </li>
             {% endif %}
           {% endfor %}
@@ -52,5 +52,11 @@ layout: default
         </div>
       </li>
     {% endfor %}
+    <li class="-active">
+      <header>
+        <h2><a href="{{site.baseurl}}/categories/faqs/">FAQ's</a></h2>
+      </header>
+      <div id="faqsView"></div>
+    </li>
   </ul>
 </div>
