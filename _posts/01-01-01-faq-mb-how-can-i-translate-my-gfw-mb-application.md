@@ -1,5 +1,5 @@
 ---
-title: How can I translate my GFW Map Builder application?
+title: How can I add a second language to my GFW Map Builder application?
 published: True
 tags: [map-builder]
 categories: [faqs]
