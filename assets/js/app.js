@@ -55,8 +55,8 @@
 
     categoryPage: function(id, params) {
       this.filtersView = new root.app.View.FiltersView({});
-      this.faqsView = new root.app.View.FaqsView();         
-      this.contentView = new root.app.View.ContentView({});   
+      this.faqsView = new root.app.View.FaqsView();
+      this.contentView = new root.app.View.ContentView({});
       this.blogListView = new root.app.View.BlogListView();
       this.asideView = new root.app.View.AsideView({
         options: {
@@ -69,18 +69,24 @@
 
     tagPage: function(id) {
       this.asideView = new root.app.View.AsideView({});
+      this.faqsView = new root.app.View.FaqsView({
+        params: {
+          pagination: false,
+          filters: [id]
+        }
+      });
     },
 
     setGlobalViews: function() {
       this.blogView = new root.app.View.BlogView();
       this.toggleView = new root.app.View.ToggleView();
-      
+
       this.searchAsideView = new root.app.View.SearchView({
         el: '#searchAsideView',
         options: {
           is_home: (this.router.routes[Backbone.history.getFragment()] == 'home')
         }
-      });      
+      });
     }
 
   });
