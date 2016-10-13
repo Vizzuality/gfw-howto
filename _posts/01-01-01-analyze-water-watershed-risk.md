@@ -37,7 +37,10 @@ mobile: false
   <p><strong>11.</strong> To use geographic coordinates, type in the latitude and longitude into the text boxes and click “Go”.</p>
   <p><strong>12.</strong> The watershed risk analysis results will appear on the right-hand side of the map. See above for more information about the analysis results.</p>
   <p><strong>13.</strong> You can now click on “Full Report” to get a more detailed watershed analysis for your custom area, or “Get Alerts” to subscribe to notifications when there is fire activity in the selected watershed.</p>
+  <p><strong>13.</strong> You can now click on “Full Report” to get a more detailed watershed analysis for your custom area.</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/Image-L.jpg"/></p>
+  <p><strong>14.</strong> Click on “Get Alerts” to subscribe to notifications when there is new fire activity in the selected watershed.</p>
+  <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/Image-M.jpg"/></p>
 </div>
 
 
