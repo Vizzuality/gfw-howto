@@ -52,11 +52,22 @@ layout: default
         </div>
       </li>
     {% endfor %}
-    <li class="-active">
-      <header>
-        <h2><a href="{{site.baseurl}}/categories/faqs/">FAQ's</a></h2>
-      </header>
-      <div id="faqsView"></div>
-    </li>
+
+    {% assign faqs_count = 0 %}
+    {% for post in site.posts %}
+      {% if post.categories contains 'faqs' and post.tags contains tag.slug %}
+        {% assign faqs_count = faqs_count | plus: 1 %}
+      {% endif %}
+    {% endfor %}
+
+    {% if faqs_count > 0 %}
+      <li class="-active">
+        <header>
+          <h2><a href="{{site.baseurl}}/categories/faqs/">FAQ's</a></h2>
+        </header>
+        <div id="faqsView"></div>
+      </li>
+    {% endif %}
+
   </ul>
 </div>
