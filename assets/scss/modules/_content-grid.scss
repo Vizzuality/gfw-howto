@@ -1,4 +1,4 @@
-.m-content-grid { 
+.m-content-grid {
   > ul {
     margin: 0;
     display: flex;
@@ -14,7 +14,7 @@
         width: 48%;
         margin: 0 0 4%;
       }
-      
+
       &.-invisible {
         display: none;
       }
@@ -29,6 +29,18 @@
       position: relative;
       border: 1px solid $border1;
 
+      > .alert {
+        display: block;
+        height: 24px;
+        line-height: 24px;
+        color: $white;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        background: $primary-color;
+        border-bottom: 1px solid $border1;
+      }
+
       &:hover {
         // Video
         .img.-video {
@@ -39,7 +51,7 @@
           &:after {
             border-left-color: $white;
           }
-        } 
+        }
       }
     }
 
@@ -97,7 +109,7 @@
       text-transform: uppercase;
       font-size: 21px;
       position: relative;
-      margin: 0 0 20px;
+      margin: 0 0 15px;
       line-height: 1.25;
       a {
         color: $primary-color;
@@ -107,6 +119,10 @@
     p {
       color: $dark;
       font-size: 14px;
+
+      &.spaced {
+        margin: 15px 0 20px;
+      }
     }
   }
 

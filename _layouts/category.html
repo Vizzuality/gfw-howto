@@ -11,15 +11,18 @@ layout: default
   {% if category.title != 'Blogs' %}
     {% include filters.html %}
   {% endif %}
-  
+
 </header>
 
 
 {% if slug == 'faqs' %}
   <div id="faqsView" class="m-faqs"></div>
-{% elsif slug == 'blogs' %}  
+{% elsif slug == 'blogs' %}
   <div id="blogListView" class="m-section"></div>
-{% else %}  
+{% else %}
+  {% if slug == 'webinars' and site.categories.webinars_upcoming != null %}
+    {% include upcoming.html %}
+  {% endif %}
   <div class="m-section">
     <ul id="contentView" class="m-category-grid">
       <li class="-active">
@@ -27,14 +30,14 @@ layout: default
           <ul>
             {% for post in site.sorted_posts %}
               {% if post.categories contains page.title %}
-                <li class="m-content-item" data-tags="{{post.tags | join: ' ' | replace:'_','-'}}">  
-                  <div class="box">   
-                    <a href="{{site.baseurl}}{{ post.url }}" class="img {% if post.video %}-video{% endif %}" 
-                      {% if post.video %} 
-                        style="background-image: url(http://img.youtube.com/vi/{{post.video}}/0.jpg)" 
-                      {% else %} 
-                        style="background-image: url({{site.baseurl}}{{post.thumbnail}})" 
-                      {% endif %}>  
+                <li class="m-content-item" data-tags="{{post.tags | join: ' ' | replace:'_','-'}}">
+                  <div class="box">
+                    <a href="{{site.baseurl}}{{ post.url }}" class="img {% if post.video %}-video{% endif %}"
+                      {% if post.video %}
+                        style="background-image: url(http://img.youtube.com/vi/{{post.video}}/0.jpg)"
+                      {% else %}
+                        style="background-image: url({{site.baseurl}}{{post.thumbnail}})"
+                      {% endif %}>
                     </a>
                     <div class="content">
                       <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
@@ -43,15 +46,15 @@ layout: default
                           {% for tag in post.tags %}
                             {% assign tagCustom = site.tags_info[tag] %}
                             <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
-                          {% endfor %}                        
+                          {% endfor %}
                         </ul>
                       </div>
                       <p>{{ post.description }}</p>
-                    </div>              
-                  </div>              
+                    </div>
+                  </div>
                 </li>
               {% endif %}
-            {% endfor %}        
+            {% endfor %}
           </ul>
         </div>
       </li>

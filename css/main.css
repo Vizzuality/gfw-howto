@@ -184,6 +184,10 @@ button {
   .btn.disabled {
     opacity: 0.25;
     cursor: default; }
+  .btn.-large {
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 35px; }
 
 .m-breadcrumbs {
   position: relative;
@@ -268,6 +272,13 @@ button {
       .m-header h3 {
         font-size: 19px;
         margin: 0 0 40px; } }
+  .m-header.-sub {
+    padding-top: 0; }
+    .m-header.-sub h2 {
+      font-size: 30px; }
+      @media (min-width: 850px) {
+        .m-header.-sub h2 {
+          font-size: 37px; } }
   .m-header .m-faqs-select {
     width: 100%;
     position: relative;
@@ -503,6 +514,16 @@ button {
   width: 100%;
   position: relative;
   border: 1px solid #E5E5DF; }
+  .m-content-grid .m-content-item .box > .alert {
+    display: block;
+    height: 24px;
+    line-height: 24px;
+    color: #FFF;
+    font-size: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #97bd3d;
+    border-bottom: 1px solid #E5E5DF; }
   .m-content-grid .m-content-item .box:hover .img.-video:before {
     background: #97bd3d; }
   .m-content-grid .m-content-item .box:hover .img.-video:after {
@@ -552,7 +573,7 @@ button {
   text-transform: uppercase;
   font-size: 21px;
   position: relative;
-  margin: 0 0 20px;
+  margin: 0 0 15px;
   line-height: 1.25; }
   .m-content-grid .m-content-item h3 a {
     color: #97bd3d; }
@@ -560,6 +581,8 @@ button {
 .m-content-grid .m-content-item p {
   color: #555;
   font-size: 14px; }
+  .m-content-grid .m-content-item p.spaced {
+    margin: 15px 0 20px; }
 
 .m-content-grid .m-content-footer {
   padding: 30px 0 0; }

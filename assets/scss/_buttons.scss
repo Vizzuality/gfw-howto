@@ -42,5 +42,10 @@
     opacity: 0.25;
     cursor: default;
   }
-}
 
+  &.-large{
+    height: 40px;
+    line-height: 40px;
+    padding: 0px 35px;
+  }
+}
