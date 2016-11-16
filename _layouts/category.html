@@ -20,9 +20,12 @@ layout: default
 {% elsif slug == 'blogs' %}
   <div id="blogListView" class="m-section"></div>
 {% else %}
-  {% if slug == 'webinars' and site.categories.webinars_upcoming != null %}
+  {% if slug == 'webinars' %}
     {% include upcoming.html %}
   {% endif %}
+  <div class="m-header -sub">
+    <h2>Recorded Webinars</h2>
+  </div>
   <div class="m-section">
     <ul id="contentView" class="m-category-grid">
       <li class="-active">

@@ -188,6 +188,10 @@ button {
     height: 40px;
     line-height: 40px;
     padding: 0px 35px; }
+  .btn.-huge {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 70px; }
 
 .m-breadcrumbs {
   position: relative;
@@ -753,6 +757,30 @@ button {
       display: none; }
   .m-checkbox label:hover {
     color: #000; }
+
+.m-banner {
+  height: 100px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  background-color: #97bd3d; }
+  .m-banner > p {
+    color: #FFF;
+    font-size: 20px;
+    letter-spacing: 0.2px; }
+  .m-banner .btn {
+    position: relative; }
+    .m-banner .btn > svg {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      fill: #000;
+      position: absolute;
+      top: 15px;
+      left: 45px; }
 
 .m-faqs {
   padding: 0px 15px 40px; }
