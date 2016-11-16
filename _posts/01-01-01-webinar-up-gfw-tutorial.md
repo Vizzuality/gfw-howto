@@ -2,7 +2,7 @@
 layout: post
 title: Using GFW in the Classroom
 published: true
-description: "Use this video to learn how to use Global Forest Watch, an interactive online forest monitoring and alert system designed to empower people..."
+description: ""
 register_link: "https://attendee.gotowebinar.com/register/8128037832437556226"
 thumbnail: ""
 video: ""
