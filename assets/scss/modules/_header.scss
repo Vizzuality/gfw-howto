@@ -60,6 +60,17 @@
     }
   }
 
+  &.-sub {
+    padding-top: 0;
+
+    h2 {
+      font-size: 30px;
+      @media (min-width: $br-mobile){
+        font-size: 37px;
+      }
+    }
+  }
+
   .m-faqs-select {
     width: 100%;
     position: relative;
