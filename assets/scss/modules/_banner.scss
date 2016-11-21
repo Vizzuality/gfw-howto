@@ -1,28 +1,58 @@
 .m-banner {
-  height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-around;
+  flex-direction: column;
+  height: auto;
+  padding: 20px 15px;
 
   background-color: $primary-color;
 
+  @media (min-width: $br-mobile){
+    height: 100px;
+    padding: 20px 40px;
+    flex-direction: row;
+  }
+
   > p {
     color: $white;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 0.2px;
+    margin-bottom: 10px;
+
+    @media (min-width: $br-mobile){
+      font-size: 20px;
+      margin-bottom: 0;
+    }
   }
 
   .btn {
     position: relative;
+    padding: 0 40px;
+    height: 40px;
+    line-height: 40px;
+
+    @media (min-width: $br-mobile){
+      padding: 0 70px;
+      height: 50px;
+      line-height: 50px;
+    }
 
     > svg {
       display: inline-block;
-      width: 16px;
-      height: 16px;
+      width: 13px;
+      height: 13px;
       fill: #000;
       position: absolute;
-      top: 15px;
-      left: 45px;
+      top: 12px;
+      left: 24px;
+
+      @media (min-width: $br-mobile){
+        width: 16px;
+        height: 16px;
+        top: 15px;
+        left: 45px;
+      }
     }
   }
 }

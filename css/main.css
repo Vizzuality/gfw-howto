@@ -188,10 +188,6 @@ button {
     height: 40px;
     line-height: 40px;
     padding: 0px 35px; }
-  .btn.-huge {
-    height: 50px;
-    line-height: 50px;
-    padding: 0 70px; }
 
 .m-breadcrumbs {
   position: relative;
@@ -759,28 +755,56 @@ button {
     color: #000; }
 
 .m-banner {
-  height: 100px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
       align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  height: auto;
+  padding: 20px 15px;
   background-color: #97bd3d; }
+  @media (min-width: 850px) {
+    .m-banner {
+      height: 100px;
+      padding: 20px 40px;
+      -ms-flex-direction: row;
+          flex-direction: row; } }
   .m-banner > p {
     color: #FFF;
-    font-size: 20px;
-    letter-spacing: 0.2px; }
+    font-size: 16px;
+    letter-spacing: 0.2px;
+    margin-bottom: 10px; }
+    @media (min-width: 850px) {
+      .m-banner > p {
+        font-size: 20px;
+        margin-bottom: 0; } }
   .m-banner .btn {
-    position: relative; }
+    position: relative;
+    padding: 0 40px;
+    height: 40px;
+    line-height: 40px; }
+    @media (min-width: 850px) {
+      .m-banner .btn {
+        padding: 0 70px;
+        height: 50px;
+        line-height: 50px; } }
     .m-banner .btn > svg {
       display: inline-block;
-      width: 16px;
-      height: 16px;
+      width: 13px;
+      height: 13px;
       fill: #000;
       position: absolute;
-      top: 15px;
-      left: 45px; }
+      top: 12px;
+      left: 24px; }
+      @media (min-width: 850px) {
+        .m-banner .btn > svg {
+          width: 16px;
+          height: 16px;
+          top: 15px;
+          left: 45px; } }
 
 .m-faqs {
   padding: 0px 15px 40px; }
