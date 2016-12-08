@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Using GFW in the Classroom
-published: true
+published: False
 description: "How can we bridge the gap between technology and environmental education? This webinar will introduce Global Forest Watch as a teaching tool for middle and high school classrooms…"
 register_link: "https://attendee.gotowebinar.com/register/8128037832437556226"
 thumbnail: ""
