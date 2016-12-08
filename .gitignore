@@ -8,3 +8,4 @@ js/vendor.js
 .rbenv-gemsets
 .gems/
 .bundle/
+.DS_Store
