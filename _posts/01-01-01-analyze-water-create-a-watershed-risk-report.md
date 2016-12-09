@@ -13,7 +13,7 @@ mobile: false
 
 <div id="desktopContent" class="content">
   <p><strong>1.</strong> Navigate to the <a href="http://water.globalforestwatch.org/map/" target="_blank">Global Forest Watch Water map</a>.</p>
-  <p><strong>2.</strong> Use the panel on the right-hand side of the map to analyze a major watershed or a custom subwatershed (see Analyze Watershed Risk – link to Analyze Watershed Risk tutorial).</p>
+  <p><strong>2.</strong> Use the panel on the right-hand side of the map to analyze a major watershed or a custom subwatershed (to learn more, see the <a href='http://www.globalforestwatch.org/howto/analyze-data/analyze-water-watershed-risk.html' target=' blank'>Analyze Watershed Risk tutorial</a>).</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/Image-M.jpg"/></p>
   <p><strong>3.</strong> Once you see the analysis results, click on “Full Report” and the watershed report will open in a new browser tab.</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/Image-M-Report.jpg"/></p>
