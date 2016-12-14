@@ -16,7 +16,7 @@ order: 1
 
 <div id="desktopContent" class="content">
   <p><strong>1.</strong> Navigate to the <a href="http://water.globalforestwatch.org/map/" target="_blank">Global Forest Watch Water map</a>.</p>
-  <p><strong>2.</strong> Use the panel on the right-hand side of the map to analyze a major watershed or a custom subwatershed (see Analyze Watershed Risk – link to Analyze Watershed Risk tutorial).</p>
+  <p><strong>2.</strong> Use the panel on the right-hand side of the map to analyze a major watershed or a custom subwatershed (see <a href='http://www.globalforestwatch.org/howto/analyze-data/analyze-water-watershed-risk.html' target=' blank'>Analyze Watershed Risk tutorial</a>).</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/Image-A.jpg"/></p>
   <p><strong>3.</strong> Use the toggle buttons to select the data layers you want to display. Tree cover loss and tree cover gain data are displayed by default.</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/Image-A-Toggle.jpg"/></p>
