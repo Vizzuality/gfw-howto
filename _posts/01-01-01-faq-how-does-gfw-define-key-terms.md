@@ -9,8 +9,8 @@ order: 1
 ---
 
 <div class="content">
-	<p> For a quick graphic guide of how GFW defines key terms, read our blog <a href='http://blog.globalforestwatch.org/data/global-forest-watch-and-the-forest-resources-assessment-explained-in-5-graphics-2.html' target=' blank'>"Global Forest Watch and the Forest Resource Assessment, Explained in 5 Graphics."</a> See below for more detailed descriptions of individual terms.
-  
+	<p> For a quick graphic guide of how GFW defines key terms, read our blog <a href='http://blog.globalforestwatch.org/data/global-forest-watch-and-the-forest-resources-assessment-explained-in-5-graphics-2.html' target=' blank'>"Global Forest Watch and the Forest Resource Assessment, Explained in 5 Graphics."</a> See below for more detailed descriptions of individual terms.</p>
+
   <p><strong>Forest</strong></p>
 	<p>Various definitions exist for the term “forest,” and GFW does not aim to provide a consensus definition. Data sets hosted on GFW may define “forest” differently or pertain to different types of forest (primary, secondary, tree plantations, etc.). Through information found on the <a href='http://data.globalforestwatch.org/' target='blank'>Open Data Portal</a>, we aim to be transparent about the assumptions and definitions feeding into each data set.</p>
 	<p>In our general writing, including the GFW blog, “forest” refers to a landscape with a high density of trees and value for biodiversity, carbon storage, and human use.</p>
