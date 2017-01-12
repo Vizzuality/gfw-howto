@@ -667,6 +667,18 @@ button {
   @media (min-width: 850px) {
     .m-blog .img, .m-content-item .img {
       padding-bottom: 270px; } }
+  .m-blog .img.-data, .m-content-item .img.-data {
+    background: url("/assets/images/categories/data.jpg") center;
+    background-size: cover; }
+  .m-blog .img.-supply-chain, .m-content-item .img.-supply-chain {
+    background: url("/assets/images/categories/supply-chain.jpg") center;
+    background-size: cover; }
+  .m-blog .img.-new-features, .m-content-item .img.-new-features {
+    background: url("/assets/images/categories/new-features.jpg") center;
+    background-size: cover; }
+  .m-blog .img.-climate, .m-content-item .img.-climate {
+    background: url("/assets/images/categories/climate.jpg") center;
+    background-size: cover; }
   .m-blog .img.-feature-posts, .m-content-item .img.-feature-posts {
     background: url("/assets/images/categories/feature-posts.jpg") center;
     background-size: cover; }

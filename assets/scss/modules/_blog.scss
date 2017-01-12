@@ -93,6 +93,26 @@
       padding-bottom: 270px;
     }
 
+    &.-data {
+      background: url($baseurl + '/assets/images/categories/data.jpg') center;
+      background-size: cover;
+    }
+
+    &.-supply-chain {
+      background: url($baseurl + '/assets/images/categories/supply-chain.jpg') center;
+      background-size: cover;
+    }
+
+    &.-new-features {
+      background: url($baseurl + '/assets/images/categories/new-features.jpg') center;
+      background-size: cover;
+    }
+
+    &.-climate {
+      background: url($baseurl + '/assets/images/categories/climate.jpg') center;
+      background-size: cover;
+    }
+
     &.-feature-posts {
       background: url($baseurl + '/assets/images/categories/feature-posts.jpg') center;
       background-size: cover;
