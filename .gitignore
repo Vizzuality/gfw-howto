@@ -2,7 +2,6 @@ _site
 .idea
 .publish
 node_modules
-bower_components
 js/vendor.js
 .ruby-version
 .rbenv-gemsets
