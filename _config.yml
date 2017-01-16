@@ -141,7 +141,7 @@ categories_info:
     type: material
   faqs:
     order: 11
-    title: FAQ’s
+    title: FAQs
     description: "Description faqs"
     slug: faqs
     type: material

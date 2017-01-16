@@ -3,16 +3,16 @@
     <header>
       <h2 class="-bold">MOST POPULAR QUESTIONS</h2>
     </header>
-    <ul class="ranking-list">          
-      {% for post in site.faqs_sorted_posts_order %}        
+    <ul class="ranking-list">
+      {% for post in site.faqs_sorted_posts_order %}
         {% if post.star %}
           <li>
             <h3><a href="{{site.baseurl}}/categories/faqs/?slug={{ post.title | slugify }}">{{ post.title }}</a></h3>
           </li>
         {% endif %}
-      {% endfor %}        
+      {% endfor %}
     </ul>
-    <a class="link" href="{{site.baseurl}}/categories/faqs/">VIEW ALL FAQ’S ></a>
+    <a class="link" href="{{site.baseurl}}/categories/faqs/">VIEW ALL FAQs ></a>
   </div>
   <div class="col">
     <header>
