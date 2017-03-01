@@ -6,5 +6,8 @@ categories: [faqs]
 layout: post
 ---
 <div class="content">
-	<p>No. All applications will be reviewed against the same criteria. However, we encourage previous unsuccessful applicants to apply.</p>
+	<p>
+    No. All applications will be reviewed against the same criteria. However,
+    we encourage previous applicants to apply.
+  </p>
 </div>

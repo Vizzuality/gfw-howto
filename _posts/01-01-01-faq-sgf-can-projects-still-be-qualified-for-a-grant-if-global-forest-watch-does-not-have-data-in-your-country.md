@@ -1,6 +1,6 @@
 ---
 title: Can projects still be qualified for a grant if Global Forest Watch does not have data in your country?
-published: True
+published: False
 tags: [small_grants_fund]
 categories: [faqs]
 layout: post
