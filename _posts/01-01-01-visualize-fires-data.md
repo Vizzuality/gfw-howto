@@ -13,7 +13,7 @@ mobile: true
 
 <div id="desktopContent" class="content">
 <p><strong>1.</strong> Navigate to the <a href="http://fires.globalforestwatch.org/map" target="_blank">Global Forest Watch Fires Map</a>.</p>
-<p><strong>2.</strong> The panel on the left-hand side of the map shows avaialable data sets for monitoring fire activity and related impacts. Use the toggle buttons to turn data sets on and off on the map.</p>
+<p><strong>2.</strong> The panel on the left-hand side of the map shows available data sets for monitoring fire activity and related impacts. Use the toggle buttons to turn data sets on and off on the map.</p>
 <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/Image_A.jpg"/></p>
 <p><strong>3.</strong> VIIRS and MODIS active fires data are displayed by default. Change the dates of fire data displayed on the map using the time selection buttons.</p>
 <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/Image_K.jpg"/></p>
