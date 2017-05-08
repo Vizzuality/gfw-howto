@@ -3,7 +3,7 @@ layout: post
 title: Visualize Fire Data
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/visualize-fire-data/thumbnail.png"
+thumbnail: "/assets/images/fires/visualize-fire-data/thumbnail.png"
 imagepath: "/assets/images/fires/visualize-fire-data"
 categories: [visualize data]
 tags: [fires]
