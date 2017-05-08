@@ -13,7 +13,7 @@ mobile: true
 
 <div id="desktopContent" class="content">
 
-<p>Navigate to the Global Forest Watch Fires Map.</p>
+<p>Navigate to the <a href="http://fires.globalforestwatch.org/map/" target="_blank">Global Forest Watch Fires Map</a>.</p>
 <p>There are three ways to choose the area that you want to subscribe to: you can draw or upload a custom shape, select a shape from a data set on the map, or pick a subnational region.</p>
 
 <h3>Subscribe to fire alerts for a custom area</h3>
