@@ -32,7 +32,7 @@ order: 5
   <p><strong>7.</strong> Change the base map to view data with a different map background.</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/Image_E.png"/></p>
   <p><strong>8.</strong> Zoom in and out, share your map view, hide the windows, search the Google base map, and refresh the page using the buttons located on the bottom left-hand side of the map.</p>
-  <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/Image_F"/></p>
+  <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/Image_F.png"/></p>
 </div>
 
 
