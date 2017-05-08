@@ -3,8 +3,8 @@ layout: post
 title: Subscribe to Fire Alerts
 published: True
 description: ""
-thumbnail: "/assets/images/gfw/subscribe-to-fire-alerts/Thumbnail.jpg"
-imagepath: "/assets/images/gfw/subscribe-to-fire-alerts"
+thumbnail: "/assets/images/fires/subscribe-to-fire-alerts/Thumbnail.jpg"
+imagepath: "/assets/images/fires/subscribe-to-fire-alerts"
 categories: [subscribe to alerts]
 tags: [fires]
 mobile: true
