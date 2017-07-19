@@ -34,7 +34,7 @@ mobile: false
   <p><strong>3.</strong> Configure, or customize, your web application.</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/image3.png"/></p>
   <ul>
-    <li>Public ArcGIS account holders will copy a configuration code that you can edit in your application to customize it. You will also need to enter the ID of your web map.</li>
+    <li>Public ArcGIS account holders will copy a <a href="https://github.com/wri/gfw-mapbuilder/blob/master/config-panels/simplePanel.json" target="_blank">configuration code</a> that you can edit in your application to customize it. You will also need to enter the ID of your web map.</li>
     <li>For private ArcGIS account holders, you will open your web map and then share it as a web application using the Map Builder Template that you have added to your group.
     Then you can use the configuration panels in ArcGIS to customize your application.</li>
   </ul>
