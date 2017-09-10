@@ -48,8 +48,6 @@ mobile: false
       <li>From the list of your AOIs, click on the green download icon for the area that you would like to view offline. This will allow you to view the alerts you selected and a basemap (at zoom level 12) without internet connection.</li>
       <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/6z.png"/></p>
       <p>Once downloaded, the green icon will change to a check mark signaling data was successfully downloaded offline.</p>
-      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/6z.png"/></p>
-      <li>Click on the green gear icon in the bottom right side of the screen to open the settings.</li>
       <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/6y.png"/></p>
       <li>When new alerts are available for an area that you downloaded, the check mark icon will change to an update icon. Click this to load the new alerts.</li>
       <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/6x.png"/></p>
