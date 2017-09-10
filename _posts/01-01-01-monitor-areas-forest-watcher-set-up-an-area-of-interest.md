@@ -20,7 +20,9 @@ mobile: false
     <ul>
       <li>Tap on the map to begin drawing a shape. After your first tap you will see an undo button in the bottom left side of the screen. After your second tap, you will start to see the borders of the shape.</li>
       <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/1a.png"/></p>
-      <p><strong>Note</strong>: There is a limit on the size of areas of interest. If you are monitoring a large area, you may need to create two or more smaller areas: a warning will show on the app if your area is too large. You can also view contextual data like Protected Areas or annual tree cover loss if you want to draw an area of interest in a particular national park or forest reserve. To do this, click on the map layers icon in the top right corner of the map and select a data layer.</p>
+      <p><strong>Note</strong>: There is a limit on the size of areas of interest. If you are monitoring a large area, you may need to create two or more smaller areas: a warning will show on the app if your area is too large. 
+      <p>You can also view contextual data like Protected Areas or annual tree cover loss if you want to draw an area of interest in a particular national park or forest reserve. To do this, click on the map layers icon in the top right corner of the map and select a data layer.</p>
+      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/7a.png"/></p>
       <li>Click NEXT when you have drawn your area.</li>
       <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/1b.png"/></p>
       <li>Name your area.</li>
