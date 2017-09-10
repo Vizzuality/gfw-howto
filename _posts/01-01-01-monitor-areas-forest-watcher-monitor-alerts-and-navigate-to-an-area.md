@@ -24,3 +24,8 @@ mobile: false
   <p><strong>Note</strong>: You must allow Forest Watcher to access GPS/location data from your mobile device in order for this feature to work.</p>
   <p><strong>5.</strong> When you have selected an alert, you will see a “Report” button appear. <a href="http://globalforestwatch.org/howto/monitor-areas/submit-a-report.html" target="_blank">Learn how to submit a report</a>.</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/10d.png" /></p>
+  
+</div>
+
+<div id="mobileContent" class="content">
+</div>
