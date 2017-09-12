@@ -52,11 +52,11 @@ tags_info:
     description: "View critical watershed information, understand type and severity of threats such as forest changes to watershed health, and screen for cost-effective, sustainable solutions."
     slug: water
     type: app
-  forestwatcher:
+  forest-watcher:
     order: 6
     title: Forest Watcher
-    description: ""
-    slug: forestwatcher
+    description: "Forest Watcher is a mobile application that brings the forest monitoring and alert systems of Global Forest Watch offline and into the field."
+    slug: forest-watcher
     type: app
   odp:
     order: 7
@@ -106,26 +106,32 @@ categories_info:
     description: "Description subscribe_to_alerts"
     slug: subscribe to alerts
     type: subject
-  submit_a_story:
+  monitor_areas:
     order: 5
+    title: Monitor Areas
+    description: "Description monitor_areas"
+    slug: monitor areas
+    type: subject
+  submit_a_story:
+    order: 6
     title: Submit a story
     description: "Description submit_a_story"
     slug: submit a story
     type: subject
   download_data:
-    order: 6
+    order: 7
     title: Download data
     description: "Description download_data"
     slug: download data
     type: subject
   create_custom_maps:
-    order: 7
+    order: 8
     title: Create Custom Maps
     description: "Description create_custom_maps"
     slug: create custom maps
     type: subject
   gis:
-    order: 8
+    order: 9
     title: GIS
     description: "Description gis"
     slug: gis
@@ -134,31 +140,31 @@ categories_info:
 
 
   tutorial_videos:
-    order: 9
+    order: 10
     title: Tutorial videos
     description: "Description tutorial_videos"
     slug: tutorial videos
     type: material
   webinars:
-    order: 10
+    order: 11
     title: Webinars
     description: "Description webinars"
     slug: webinars
     type: material
   faqs:
-    order: 11
+    order: 12
     title: FAQs
     description: "Description faqs"
     slug: faqs
     type: material
   training_modules:
-    order: 12
+    order: 13
     title: Training modules
     description: "Description training_modules"
     slug: training modules
     type: material
   blogs:
-    order: 13
+    order: 14
     title: Blogs
     description: "Description blogs"
     slug: blogs
