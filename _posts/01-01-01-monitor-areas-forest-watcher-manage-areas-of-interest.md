@@ -3,7 +3,7 @@ layout: post
 title: Manage Areas of Interest
 published: True
 description: ""
-thumbnail: "/assets/images/forest-watcher/manage-areas-of-interest/thumbnail.png"
+thumbnail: "/assets/images/forest-watcher/manage-areas-of-interest/thumbnail.jpg"
 imagepath: "/assets/images/forest-watcher/manage-areas-of-interest"
 categories: [monitor areas]
 tags: [forest-watcher]
