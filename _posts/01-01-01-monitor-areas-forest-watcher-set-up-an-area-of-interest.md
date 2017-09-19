@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Forest Watcher Overview
+title: Set Up an Area of Interest
 published: True
 description: ""
 thumbnail: "/assets/images/forest-watcher/set-up-an-area-of-interest/thumbnail.png"
