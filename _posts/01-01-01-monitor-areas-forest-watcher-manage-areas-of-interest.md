@@ -13,13 +13,13 @@ mobile: false
   <p>On the Forest Watcher website, you can manage areas of interest that you already created and set up new ones. Any changes will be synced with the mobile app the next time you open it.</p>
   <p><strong>1.</strong> Go to the <a href="http://fw.globalforestwatch.org" target="_blank">Forest Watcher website</a> and click on “Access Desktop App” at the bottom of the page. Log in with the same Facebook, Google, or Twitter account that you used to log in to the mobile app.</p>
   <p><strong>2.</strong> The landing page will show any areas that you set up in the mobile app.</p>
-  <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/9.png" /></p>
+  <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/9.jpg" /></p>
   <p><strong>3.</strong> To manage an existing area:</p>
     <ul>
       <li>Click on the pencil button for any of your areas of interest.</li>
       <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/9a.png"/></p>
       <li>The “Manage Area” screen will show your area on a map. Click on the pencil tool on the right side of the map to edit the boundaries of your area. You can then drag the points of your area to change its shape. Click “Save” when you’re done.</li>
-      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/10.png"/></p>
+      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/10.jpg"/></p>
       <li>You can also rename your area of interest using the text box at the bottom of the map.</li>
       <li>Click the green “SAVE” button when you’re done editing your area of interest.</li>
     </ul>
@@ -28,7 +28,7 @@ mobile: false
       <li>Click on “ADD AREA”.</li>
       <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/9b.png"/></p>
       <li>Zoom in to a location on the map by using the "search country" box and then double clicking or using the zoom button in the top right corner of the map.</li>
-      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/6b.png"/></p>
+      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/6b.jpg"/></p>
       <li>Click on the Polygon button on the right side of the map to start drawing a shape.</li>
       <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/6x.png"/></p>
       <li>Click on the map to create a shape. After your second click, you will start to see the borders of the shape.</li>
