@@ -13,7 +13,7 @@ mobile: false
 
 <div id="desktopContent" class="content">
   <div class="video">
-    <iframe width="560" height="315" src="https://youtu.be/Xx-eaIktKjE" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Xx-eaIktKjE" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
 
