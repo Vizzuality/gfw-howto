@@ -1579,7 +1579,7 @@ button {
       background: #97bd3d; }
       @media (min-width: 850px) {
         .m-by-app ul li {
-          width: 22%;
+          width: 30%;
           margin: 4% 0 0; } }
       .m-by-app ul li > a {
         display: block;
