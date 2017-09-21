@@ -29,8 +29,8 @@ mobile: false
       <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/1d.png"/></p>
       <li>Click finish and the alert data will load for your area. This may take a few minutes.</li>
       <li>You will now see your area listed on the Forest Watcher home screen.</li>
+    </ul>  
       <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/6i.png"/></p>
-    </ul>
   <p><strong>6.</strong> Next you can select which alerts you want to see for your area:</p>
     <ul>
       <li>From the list of your AOIs, select an area to view it on the map.</li>
@@ -63,7 +63,4 @@ mobile: false
       <li>Delete areas of interest.</li>
       <li>Find out more about the app, our partners, and the terms and conditions.</li>
     </ul>
-</div>
-
-<div id="mobileContent" class="content">
 </div>
