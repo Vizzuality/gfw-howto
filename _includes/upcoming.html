@@ -13,7 +13,7 @@
                 <li class="m-content-item" data-tags="{{post.tags | join: ' ' | replace:'_','-'}}">
                   <div class="box">
                     <div class="alert">Upcoming</div>
-                    <div class="content">
+                    <div class="content m-webinar-content">
                       <h3>{{ post.title }}</h3>
                       <div class="m-apps-tag">
                         <ul>
@@ -23,8 +23,10 @@
                           {% endfor %}
                         </ul>
                       </div>
-                      <p class="spaced">{{ post.description }}</p>
-                      <a class="btn -large" href="{{ post.register_link }}" target="_blank">Register</a>
+                      <div class="m-content-text-button">
+                        <p class="spaced">{{ post.description }}</p>
+                        <a class="btn -large" href="{{ post.register_link }}" target="_blank">Register</a>
+                      </div>
                     </div>
                   </div>
                 </li>
