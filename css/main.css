@@ -134,7 +134,7 @@ button {
 .l-aside {
   display: none;
   width: 265px;
-  padding-top: 90px;
+  padding-top: 40px;
   background: #f7f8f8; }
   @media (min-width: 850px) {
     .l-aside {
@@ -220,11 +220,11 @@ button {
       text-decoration: underline; }
 
 .m-header {
-  padding: 70px 15px 40px;
+  padding: 20px 15px 40px;
   position: relative; }
   @media (min-width: 850px) {
     .m-header {
-      padding: 70px 40px 0; } }
+      padding: 20px 40px 0; } }
   .m-header h2 {
     font-size: 40px;
     font-weight: 300;
