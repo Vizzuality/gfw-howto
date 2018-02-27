@@ -322,7 +322,6 @@
         } else {
           // If a filter doesn't exist
           this.collection = this.toJSON();
-          console.log(this.collection);
           return params.pagination
             ? this.collection.slice(params.page*this.itemsOnPage, (params.page*this.itemsOnPage) + this.itemsOnPage)
             : this.collection;
