@@ -60,10 +60,10 @@
         this.itemsOnPage = params.itemsOnPage;
         if(!!this.filters && !!this.filters.length) {
           // If a filter exists
-          this.collection = _.filter(this.toJSON(), function(el){
+          this.collection = _.sortBy(_.filter(this.toJSON(), function(el){
             var is_selected = _.intersection(this.filters,el.tags_slugs);
             return !!is_selected.length;
-          }.bind(this));
+          }.bind(this)), 'order');
 
           return params.pagination
             ? this.collection.slice(params.page*this.itemsOnPage, (params.page*this.itemsOnPage) + this.itemsOnPage)
@@ -72,6 +72,7 @@
         } else {
           // If a filter doesn't exist
           this.collection = this.toJSON();
+          console.log(this.collection);
           return params.pagination
             ? this.collection.slice(params.page*this.itemsOnPage, (params.page*this.itemsOnPage) + this.itemsOnPage)
             : this.collection;

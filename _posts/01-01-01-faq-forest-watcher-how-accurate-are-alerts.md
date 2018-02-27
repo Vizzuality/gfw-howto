@@ -5,7 +5,7 @@ tags: [forest-watcher]
 categories: [faqs]
 layout: post
 star: True
-order: 4
+order: 5
 ---
 <div class="content">
 	<p>Each forest change data set has been through rigorous scientific testing and has a unique set of limitations. For example, the GLAD alerts were evaluated in Peru to have 13.5 percent false positives (an alert appeared in the data when it wasn’t there on the ground) and 33 percent false negatives (there was change observed on the ground that did not show up as an alert in the data). This means that around 87 percent of GLAD alerts represent forest change events. The higher rate of false negatives means the alerts are a conservative estimate of the tree cover loss. This helps minimize the likelihood that users spend resources investigating alerts that do not represent actual forest change.</p>

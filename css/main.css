@@ -888,6 +888,9 @@ button {
   .m-faqs-content h3 {
     font-size: 16px;
     font-weight: 500; }
+  .m-faqs-content h5 {
+    font-weight: 500;
+    font-size: 14px; }
   .m-faqs-content ul {
     list-style-type: disc;
     color: #555; }
