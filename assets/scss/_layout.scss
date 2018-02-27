@@ -48,7 +48,7 @@
       right: 0;
       line-height: 1;
       font-weight: 500;
-      font-size: 10px;      
+      font-size: 10px;
       text-transform: uppercase;
       transform: translate(5px,8px);
 
@@ -80,7 +80,7 @@
 .l-aside {
   display: none;
   width: $aside-width;
-  padding-top: 90px;
+  padding-top: 40px;
   background: #f7f8f8;
   @media (min-width: $br-mobile){
     display: block;

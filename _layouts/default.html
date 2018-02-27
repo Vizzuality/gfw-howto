@@ -18,10 +18,19 @@
         picker: '#transifexTranslateElement',
         api_key: "9eda410a7db74687ba40771c56abd357",
         detectlang: false,
-        site: 'gfw-global'
+        site: 'gfw-howto',
+        menuOptions:
+        {
+          options: [
+            {
+              title: 'logo',
+              url: '/'
+            }
+          ]
+        }
       };
     </script>
-    <script id="loader-gfw" data-current=".shape-howto" src="http://gfw-assets.s3.amazonaws.com/static/gfw-assets.latest.js"></script>
+    <script id="loader-gfw" data-current=".shape-howto" src="http://gfw-assets.s3.amazonaws.com/static/gfw-assets.nightly.js"></script>
     {% include favicon.html %}
     {% include config-js.html %}
   </head>
@@ -31,7 +40,6 @@
     <div id="headerGfw"></div>
 
     <div class="l-wrapper">
-      <h1 class="l-logo"><a href="{{site.baseurl}}/">GFW How to portal <span class="ribbon"><span>How to</span></span></a></h1>
       <aside id="asideView" class="l-aside">
         {% include aside.html %}
       </aside>
