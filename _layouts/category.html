@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<header class="m-header">
+<header class="m-title">
   {% include breadcrumbs.html %}
   {% assign slug = (page.title | downcase | replace:' ','_')%}
   {% assign category = site.categories_info[slug] %}
@@ -22,7 +22,7 @@ layout: default
 {% else %}
   {% if slug == 'webinars' %}
     {% include upcoming.html %}
-    <div class="m-header -sub">
+    <div class="m-title -sub">
       <h2>Recorded Webinars</h2>
     </div>
   {% endif %}

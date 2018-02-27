@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<header class="m-header">
+<header class="m-title">
   {% include breadcrumbs.html %}
   <h2>
     {{page.title}}
@@ -13,13 +13,13 @@ layout: default
       {% for tag in page.tags %}
         {% assign tagCustom = site.tags_info[tag] %}
         <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
-      {% endfor %}                        
-    </ul>    
+      {% endfor %}
+    </ul>
   </div>
 </header>
 
 <section class="m-post">
-  {{ content }}  
+  {{ content }}
 </section>
 
 <section class="m-section -padding -border">
@@ -32,13 +32,13 @@ layout: default
       {% if page.previous.url %}
         {% unless page.previous.categories contains 'blogs' %}
           <li class="m-content-item">
-            <div class="box">                
-              <a href="{{site.baseurl}}{{ page.previous.url }}" class="img {% if page.previous.video %}-video{% endif %}" 
-                {% if page.previous.video %} 
-                  style="background-image: url(http://img.youtube.com/vi/{{page.previous.video}}/0.jpg)" 
-                {% else %} 
-                  style="background-image: url({{site.baseurl}}{{page.previous.thumbnail}})" 
-                {% endif %}>  
+            <div class="box">
+              <a href="{{site.baseurl}}{{ page.previous.url }}" class="img {% if page.previous.video %}-video{% endif %}"
+                {% if page.previous.video %}
+                  style="background-image: url(http://img.youtube.com/vi/{{page.previous.video}}/0.jpg)"
+                {% else %}
+                  style="background-image: url({{site.baseurl}}{{page.previous.thumbnail}})"
+                {% endif %}>
               </a>
               <div class="content">
                 <h3><a href="{{site.baseurl}}{{ page.previous.url }}">{{ page.previous.title }}</a></h3>
@@ -47,25 +47,25 @@ layout: default
                     {% for tag in page.previous.tags %}
                       {% assign tagCustom = site.tags_info[tag] %}
                       <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
-                    {% endfor %}                        
+                    {% endfor %}
                   </ul>
                 </div>
                 <p>{{ page.previous.description }}</p>
-              </div>              
-            </div>              
+              </div>
+            </div>
           </li>
         {% endunless %}
       {% endif %}
       {% if page.next.url %}
         {% unless page.next.categories contains 'blogs' %}
           <li class="m-content-item">
-            <div class="box">                
-              <a href="{{site.baseurl}}{{ page.next.url }}" class="img {% if page.next.video %}-video{% endif %}" 
-                {% if page.next.video %} 
-                  style="background-image: url(http://img.youtube.com/vi/{{page.next.video}}/0.jpg)" 
-                {% else %} 
-                  style="background-image: url({{site.baseurl}}{{page.next.thumbnail}})" 
-                {% endif %}>  
+            <div class="box">
+              <a href="{{site.baseurl}}{{ page.next.url }}" class="img {% if page.next.video %}-video{% endif %}"
+                {% if page.next.video %}
+                  style="background-image: url(http://img.youtube.com/vi/{{page.next.video}}/0.jpg)"
+                {% else %}
+                  style="background-image: url({{site.baseurl}}{{page.next.thumbnail}})"
+                {% endif %}>
               </a>
               <div class="content">
                 <h3><a href="{{site.baseurl}}{{ page.next.url }}">{{ page.next.title }}</a></h3>
@@ -74,12 +74,12 @@ layout: default
                     {% for tag in page.next.tags %}
                       {% assign tagCustom = site.tags_info[tag] %}
                       <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
-                    {% endfor %}                        
+                    {% endfor %}
                   </ul>
                 </div>
                 <p>{{ page.next.description }}</p>
-              </div>              
-            </div>              
+              </div>
+            </div>
           </li>
         {% endunless %}
       {% endif %}

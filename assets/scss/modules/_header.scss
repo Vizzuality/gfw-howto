@@ -1,8 +1,9 @@
-.m-header {
-  padding: 20px 15px 40px;
+.m-title {
   position: relative;
+  padding: 40px 15px 20px 15px;
+
   @media (min-width: $br-mobile){
-    padding: 20px 40px 0;
+    padding: 40px 40px 20px 40px;
   }
 
   h2 {
@@ -10,7 +11,7 @@
     font-weight: 300;
     position: relative;
     display: inline-block;
-    padding: 15px 0;
+    padding-bottom: 15px;
     line-height: 1.125;
 
     @media (min-width: $br-mobile){

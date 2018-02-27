@@ -219,29 +219,29 @@ button {
     .m-breadcrumbs a:hover {
       text-decoration: underline; }
 
-.m-header {
-  padding: 20px 15px 40px;
-  position: relative; }
+.m-title {
+  position: relative;
+  padding: 40px 15px 20px 15px; }
   @media (min-width: 850px) {
-    .m-header {
-      padding: 20px 40px 0; } }
-  .m-header h2 {
+    .m-title {
+      padding: 40px 40px 20px 40px; } }
+  .m-title h2 {
     font-size: 40px;
     font-weight: 300;
     position: relative;
     display: inline-block;
-    padding: 15px 0;
+    padding-bottom: 15px;
     line-height: 1.125; }
     @media (min-width: 850px) {
-      .m-header h2 {
+      .m-title h2 {
         font-size: 47px;
         padding-right: 75px; } }
-    .m-header h2.-bold {
+    .m-title h2.-bold {
       font-weight: 400; }
-    .m-header h2.-toggle {
+    .m-title h2.-toggle {
       padding-right: 200px;
       display: block; }
-    .m-header h2 svg {
+    .m-title h2 svg {
       display: none;
       fill: #97bd3d;
       width: 40px;
@@ -253,38 +253,38 @@ button {
               transform: translate(0, -50%);
       margin: -5px 0 0; }
       @media (min-width: 850px) {
-        .m-header h2 svg {
+        .m-title h2 svg {
           display: block; } }
-      .m-header h2 svg.-gfw {
+      .m-title h2 svg.-gfw {
         fill: #97bd3d; }
-      .m-header h2 svg.-fires {
+      .m-title h2 svg.-fires {
         fill: #ed1846; }
-      .m-header h2 svg.-commodities {
+      .m-title h2 svg.-commodities {
         fill: #e98300; }
-      .m-header h2 svg.-climate {
+      .m-title h2 svg.-climate {
         fill: #5b80a0; }
-      .m-header h2 svg.-water {
+      .m-title h2 svg.-water {
         fill: #4099ce; }
-  .m-header h3 {
+  .m-title h3 {
     font-size: 15px;
     font-weight: 300; }
     @media (min-width: 850px) {
-      .m-header h3 {
+      .m-title h3 {
         font-size: 19px;
         margin: 0 0 40px; } }
-  .m-header.-sub {
+  .m-title.-sub {
     padding-top: 0; }
-    .m-header.-sub h2 {
+    .m-title.-sub h2 {
       font-size: 30px; }
       @media (min-width: 850px) {
-        .m-header.-sub h2 {
+        .m-title.-sub h2 {
           font-size: 37px; } }
-  .m-header .m-faqs-select {
+  .m-title .m-faqs-select {
     width: 100%;
     position: relative;
     z-index: 2; }
     @media (min-width: 850px) {
-      .m-header .m-faqs-select {
+      .m-title .m-faqs-select {
         position: absolute;
         top: 100px;
         right: 40px;
@@ -888,6 +888,9 @@ button {
   .m-faqs-content h3 {
     font-size: 16px;
     font-weight: 500; }
+  .m-faqs-content h5 {
+    font-weight: 500;
+    font-size: 14px; }
   .m-faqs-content ul {
     list-style-type: disc;
     color: #555; }
