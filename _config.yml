@@ -76,6 +76,11 @@ tags_info:
     description: "The Small Grants Fund seeks to promote uptake of Global Forest Watch by civil society organizations to use in their research, advocacy, and fieldwork."
     slug: small-grants-fund
     type: tool
+  tech_fellowship:
+    order: 9
+    title: Tech Fellowship
+    slug: tech-fellowship
+    type: tool
 
 
 
