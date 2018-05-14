@@ -1,5 +1,5 @@
 ---
-title: What is the Global Forest Watch (GFW) Tech Fellowship?
+title: What is expected of fellows?
 published: True
 tags: [tech_fellowship]
 categories: [faqs]
