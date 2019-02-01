@@ -8,6 +8,6 @@ layout: post
 <div class="content">
 	<p>
     Yes. Assuming they meet all other eligibility criteria, previous applicants
-    are eligible to reapply in 2017.
+    are eligible to reapply in 2019.
   </p>
 </div>
