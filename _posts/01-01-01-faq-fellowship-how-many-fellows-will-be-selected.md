@@ -6,5 +6,5 @@ categories: [faqs]
 layout: post
 ---
 <div class="content">
-	<p>Five Fellows will be selected in 2018.</p>
+	<p>Five Fellows will be selected in 2019.</p>
 </div>
