@@ -6,5 +6,5 @@ categories: [faqs]
 layout: post
 ---
 <div class="content">
-	<p>Yes, WRI will cover travel expenses for Fellows to attend the tech camp in D.C.</p>
+	<p>Yes, WRI will cover travel expenses for Fellows to attend the tech camp and GFW User Summit in D.C.</p>
 </div>
