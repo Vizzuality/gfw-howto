@@ -6,5 +6,5 @@ categories: [faqs]
 layout: post
 ---
 <div class="content">
-	<p>Applicants will be notified of their status by July 1st, 2018.</p>
+	<p>For the 2019-2020 cycle, applicants will be notified of their status on a rolling basis.</p>
 </div>
