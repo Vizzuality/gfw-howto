@@ -6,5 +6,5 @@ categories: [faqs]
 layout: post
 ---
 <div class="content">
-	<p>The GFW Tech Fellowship is a five-month long program that supports forest defenders to use technology to face the growing threats of deforestation.</p>
+	<p>The GFW Tech Fellowship is a year-long program that supports forest defenders to use technology to face the growing threats of deforestation.</p>
 </div>
