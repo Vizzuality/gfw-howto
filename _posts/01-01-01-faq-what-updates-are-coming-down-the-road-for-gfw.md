@@ -13,7 +13,7 @@ order: 5
 	  <li>Additional “Forest Use” and “People” data sets, including concession boundaries, community land claims, and tenure rights</li>
 	  <li>Additional local data, including projects, resources, and important places to watch</li>
 	  <li>A plantations map for tropical regions</li>
-	  <li>An expanded analysis and subscription tool that enables on-the-fly analysis of additional data layers and subscription to stories and other forest change data layers</li>
+	  <li>An expanded analysis and subscription tool that enables on-the-fly analysis of additional data layers</li>
 	  <li>Updated country profiles that include additional climate, carbon, and forest data</li>
 	  <li>Better language translation and low-bandwith capabilities</li>
 	  <li>Updated carbon density maps and estimates of emissions for forest loss and land-use change</li>

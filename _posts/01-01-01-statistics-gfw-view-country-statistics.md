@@ -22,7 +22,7 @@ mobile: true
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop3.png"/></p>
   <p><strong>5.</strong> Learn more about or share each statistic and graph by selecting the information or share icons, when available.</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop4.png"/></p>
-  <p><strong>6.</strong> Scroll down to the bottom of the page to subscribe to tree clearing alerts for the country (where applicable), read relevant stories, and join the discussion.</p>
+  <p><strong>6.</strong> Scroll down to the bottom of the page to subscribe to tree clearing alerts for the country (where applicable), and join the discussion.</p>
   <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop5.png"/></p>
   <p><a class='btn green medium' href='/countries' target='_blank'>Country Profiles</a></p>
 </div>

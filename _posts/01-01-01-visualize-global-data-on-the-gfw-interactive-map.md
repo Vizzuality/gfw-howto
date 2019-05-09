@@ -52,7 +52,7 @@ order: 1
   </p>
 
   <h3>Learn more about individual data points and polygons</h3>
-  <p>Some data layers allow you to click on individual data points and polygons (i.e., shapes) to view additional information. This feature applies to NASA active fires (within the Forest Change tab) and/or data within the Forest Use, Conservation, People, and Stories tabs.</p>
+  <p>Some data layers allow you to click on individual data points and polygons (i.e., shapes) to view additional information. This feature applies to NASA active fires (within the Forest Change tab) and/or data within the Forest Use, Conservation, and People tabs.</p>
   <p><strong>1.</strong>  Select a data layer, noting that this feature only applies to certain layers (see above).</p>
   <p><strong>2.</strong>  Click on the data point or polygon you want to learn more about and an information window will appear. <i>Note: You can analyze Forest Change data within individual land-use concessions and protected areas by selecting the analysis button in the information window. Click the <a href="http://www.globalforestwatch.org/howto/analyze-forest-change" target='_blank'>Analyze Forest Change</a> tab on this page for step-by-step guidance.</i></p>
 </div>

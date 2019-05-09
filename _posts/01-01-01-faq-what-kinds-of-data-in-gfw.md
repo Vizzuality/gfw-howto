@@ -16,7 +16,6 @@ order: 4
 		<li>Forest fire data, from NASA’s Modis satellite (see <a href='http://www.fires.globalforestwatch.org' target='_blank'>GFW Fires</a>)</li>
 		<li>Forest use data, which includes contextual information, such as concession areas for natural resource extraction or agricultural production</li>
 		<li>Conservation data, such as global boundaries for protected areas and biodiversity hotspots</li>
-		<li>Qualitative and anecdotal data, such as user-submitted (submit one <a href="/stories/new">here</a>)</li>
 		<li>People data, including community land boundaries and land tenure rights (coming soon)</li>
 	</ul>
 
