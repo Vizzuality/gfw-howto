@@ -41,11 +41,6 @@
           color: $blue; 
         }
 
-        &.water {
-          background: rgba($blue-water, 0.25);
-          color: $blue-water; 
-        }
-
         &:hover {
           text-decoration: underline;
         }

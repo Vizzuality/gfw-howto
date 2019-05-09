@@ -263,8 +263,6 @@ button {
         fill: #e98300; }
       .m-title h2 svg.-climate {
         fill: #5b80a0; }
-      .m-title h2 svg.-water {
-        fill: #4099ce; }
   .m-title h3 {
     font-size: 15px;
     font-weight: 300; }
@@ -367,9 +365,6 @@ button {
         .m-apps-tag ul > li a.climate {
           background: rgba(91, 128, 160, 0.25);
           color: #5b80a0; }
-        .m-apps-tag ul > li a.water {
-          background: rgba(64, 153, 206, 0.25);
-          color: #4099ce; }
         .m-apps-tag ul > li a:hover {
           text-decoration: underline; }
 
@@ -1598,8 +1593,6 @@ button {
         background: #e98300; }
       .m-by-app ul li.-climate {
         background: #5b80a0; }
-      .m-by-app ul li.-water {
-        background: #4099ce; }
       @media (min-width: 850px) {
         .m-by-app ul li:hover {
           background: #a2c64e; }
@@ -1610,9 +1603,7 @@ button {
         .m-by-app ul li.-commodities:hover {
           background: #ff9104; }
         .m-by-app ul li.-climate:hover {
-          background: #6a8daa; }
-        .m-by-app ul li.-water:hover {
-          background: #4099ce; } }
+          background: #6a8daa; } }
       .m-by-app ul li h2 {
         color: #FFF;
         text-transform: uppercase;
