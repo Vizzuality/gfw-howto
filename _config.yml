@@ -111,12 +111,6 @@ categories_info:
     description: "Description monitor_areas"
     slug: monitor areas
     type: subject
-  submit_a_story:
-    order: 6
-    title: Submit a story
-    description: "Description submit_a_story"
-    slug: submit a story
-    type: subject
   download_data:
     order: 7
     title: Download data
