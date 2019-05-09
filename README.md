@@ -10,12 +10,12 @@ To use this starter project, you'll need the following things installed on your 
 
 1. [Jekyll](http://jekyllrb.com/) - `$ gem install jekyll`
 2. [NodeJS](http://nodejs.org) - use the installer.
-3. [GulpJS](https://github.com/gulpjs/gulp) - `$ npm install -g gulp` (mac users may need sudo)
+3. [GulpJS](https://github.com/gulpjs/gulp) - `$ yarn add -g gulp` (mac users may need sudo)
 
 ## Local Installation
 
 1. Clone this repo, or download it into a directory of your choice.
-2. Inside the directory, run `npm install && bundle install && bower install`.
+2. Inside the directory, run `yarn && bundle install && bower install`.
 
 ## Usage
 
@@ -24,7 +24,7 @@ To use this starter project, you'll need the following things installed on your 
 This will give you file watching, browser synchronisation, auto-rebuild, CSS injecting etc etc.
 
 ```shell
-$ gulp
+$ yarn start
 ```
 
 **jekyll**
