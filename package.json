@@ -12,12 +12,11 @@
   "license": "MIT",
   "devDependencies": {
     "browser-sync": "^2.11.1",
-    "gift": "^0.10.2",
     "gulp": "^3.8.8",
     "gulp-autoprefixer": "1.0.0",
     "gulp-concat": "^2.6.0",
     "gulp-declare": "^0.3.0",
-    "gulp-gh-pages": "^0.5.4",
+    "gulp-gh-pages-will": "^0.5.4",
     "gulp-handlebars": "^4.0.0",
     "gulp-preprocess": "^2.0.0",
     "gulp-rename": "^1.2.2",

@@ -11,7 +11,7 @@ var concat      = require('gulp-concat');
 var rename      = require('gulp-rename');
 var uglify      = require('gulp-uglify');
 var cp          = require('child_process');
-var deploy      = require("gulp-gh-pages");
+var deploy      = require("gulp-gh-pages-will");
 var mainBowerFiles = require('main-bower-files');
 var paths = {
   asset   : './assets',
