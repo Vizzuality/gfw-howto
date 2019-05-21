@@ -14,7 +14,7 @@ order: 9
 
 
 <div id="desktopContent" class="content">
-  <p>This tutorial is for new or beginning GIS users who would like to use free, open source GIS software to make a custom display of Global Forest Watch (GFW) data. Also see our <a href="{{site.sub_url}}/gis/gis-spatial-analysis-in-qgis.html">tutorial</a> covering basic analyses with spatial data in QGIS.</p>
+  <p>This tutorial is for new or beginning GIS users who would like to use free, open source GIS software to make a custom display of Global Forest Watch (GFW) data. Also see our <a href="{{site.baseurl}}/gis/gis-spatial-analysis-in-qgis.html">tutorial</a> covering basic analyses with spatial data in QGIS.</p>
   <h3>Download QGIS and Global Forest Watch Data</h3>
   <ol>
     <li>Download and install QGIS from the QGIS project <a href="http://www.qgis.org/en/site/forusers/download.html" target="_blank">website</a>. QGIS is available for a variety of systems, including Windows, Mac OS X, and Linux.</li>
@@ -37,7 +37,7 @@ order: 9
             <li>If you have your own spatial data, you can also use that in place of GFW data for this tutorial.</li>
           </ul>
         </li>
-        <li>See <a href="{{site.sub_url}}/download-data/download-data-from-the-open-data-portal.html">data download tutorial</a> for further instructions, if needed.</li>
+        <li>See <a href="{{site.baseurl}}/download-data/download-data-from-the-open-data-portal.html">data download tutorial</a> for further instructions, if needed.</li>
       </ul>
     </li>
   </ol>
@@ -48,28 +48,28 @@ order: 9
     <li>Open QGIS from the start panel.</li>
     <li>
       Open the example data by navigating to the folder with the downloaded Forest Titles data in the Browser Panel on the left.
-      <p><img src="{{site.sub_url}}{{page.imagepath}}/desktop/panel.jpg"/></p>
+      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/panel.jpg"/></p>
     </li>
     <li>
       Display the Forest Titles data by dragging the file into the Layers Panel (below the Browser Panel) or display area (to the right).
       <ul class="-lower-alpha">
         <li>
           Polygons for forest titles and associated information are displayed.
-          <p><img src="{{site.sub_url}}{{page.imagepath}}/desktop/polygons.jpg"/></p>
+          <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/polygons.jpg"/></p>
         </li>
       </ul>
     </li>
     <li>
       Move the display by selecting the pan map tool in the toolbar at the top of the QGIS window. Click and drag the mouse in the display area to adjust the view of the polygons.
-      <p><img src="{{site.sub_url}}{{page.imagepath}}/desktop/icon_hand.jpg"/></p>
+      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/icon_hand.jpg"/></p>
     </li>
     <li>
       Zoom into a specific polygon by selecting the Zoom In tool in the toolbar at the top of the QGIS window. 
-      <p><img src="{{site.sub_url}}{{page.imagepath}}/desktop/icon_zoom.jpg"/></p>
+      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/icon_zoom.jpg"/></p>
       <ul class="-lower-alpha">
         <li>
           Revert back to previous zoom level by clicking the Zoom Last tool. 
-          <p><img src="{{site.sub_url}}{{page.imagepath}}/desktop/icon_last.jpg"/></p>
+          <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/icon_last.jpg"/></p>
         </li>
       </ul>
     </li>
@@ -84,24 +84,24 @@ order: 9
         </li>
         <li>
           To see information about a specific polygon, click a number on the far left of the attribute table to highlight the row. 
-          <p><img src="{{site.sub_url}}{{page.imagepath}}/desktop/attribute.jpg"/></p>
+          <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/attribute.jpg"/></p>
         </li>
         <li>
           Minimize the table to view a highlighted polygon in yellow. This polygon is associated with the information in the highlighted row. 
           <ul class="-lower-roman">
             <li>If the highlighted polygon is difficult to see, click the Zoom Map to Selected Rows button to adjust the view. Click the Zoom Last tool to return to the pervious zoom level.</li>
-            <p><img src="{{site.sub_url}}{{page.imagepath}}/desktop/icon_selected.jpg"/></p>
+            <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/icon_selected.jpg"/></p>
           </ul>
         </li>
         <li>
           To unselect the polygon, maximize the attribute table and click the Unselect All button at the top of the table. Close the attribute table.
-          <p><img src="{{site.sub_url}}{{page.imagepath}}/desktop/icon_unselected.jpg"/></p>
+          <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/icon_unselected.jpg"/></p>
         </li>
       </ul>
     </li>
     <li>
       Adjust the visual appearance of the data and other settings by right clicking on the layer in the Layers Panel and selecting Properties. Review each of the following tabs to see which properties can be adjusted. 
-      <p><img src="{{site.sub_url}}{{page.imagepath}}/desktop/properties.jpg"/></p>
+      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/properties.jpg"/></p>
       <ul class="-lower-alpha">
         <li>General: Change layer name (just for this QGIS session) and view where the data is saved.</li>
         <li>

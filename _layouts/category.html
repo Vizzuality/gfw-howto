@@ -35,20 +35,20 @@ layout: default
               {% if post.categories contains page.title %}
                 <li class="m-content-item" data-tags="{{post.tags | join: ' ' | replace:'_','-'}}">
                   <div class="box">
-                    <a href="{{site.sub_url}}{{ post.url }}" class="img {% if post.video %}-video{% endif %}"
+                    <a href="{{site.baseurl}}{{ post.url }}" class="img {% if post.video %}-video{% endif %}"
                       {% if post.video %}
                         style="background-image: url(https://img.youtube.com/vi/{{post.video}}/0.jpg)"
                       {% else %}
-                        style="background-image: url({{site.sub_url}}{{post.thumbnail}})"
+                        style="background-image: url({{site.baseurl }}{{post.thumbnail}})"
                       {% endif %}>
                     </a>
                     <div class="content">
-                      <h3><a href="{{site.sub_url}}{{ post.url }}">{{ post.title }}</a></h3>
+                      <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
                       <div class="m-apps-tag">
                         <ul>
                           {% for tag in post.tags %}
                             {% assign tagCustom = site.tags_info[tag] %}
-                            <li><a class="{{tagCustom.slug}}" href="{{site.sub_url}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
+                            <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
                           {% endfor %}
                         </ul>
                       </div>

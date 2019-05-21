@@ -7,7 +7,7 @@ layout: null
       "title"    : "{{ post.title | escape }}",
       "category" : "{{ post.categories | join: ', ' }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
-      "url"      : "{{ site.sub_url }}{{ post.url }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
       "date"     : "{{ post.date }}",
       "app"      : "{{ post.app }}",
       "order"    : "{{ post.order }}",

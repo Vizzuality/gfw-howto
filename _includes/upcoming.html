@@ -19,7 +19,7 @@
                         <ul>
                           {% for tag in post.tags %}
                             {% assign tagCustom = site.tags_info[tag] %}
-                            <li><a class="{{tagCustom.slug}}" href="{{site.sub_url}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
+                            <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
                           {% endfor %}
                         </ul>
                       </div>

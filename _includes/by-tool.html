@@ -4,7 +4,7 @@
     {% for tag in site.tags_info %}
       {% if tag[1].type == 'tool' %}
       <li class="-{{ tag[1].slug }}">
-        <a href="{{site.sub_url}}/tags/{{ tag[1].slug | slugify }}/">
+        <a href="{{site.baseurl}}/tags/{{ tag[1].slug | slugify }}/">
           <h2>{{ tag[1].title }}</h2>
         </a>
       </li>
