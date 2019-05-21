@@ -12,7 +12,7 @@ layout: default
     <ul>
       {% for tag in page.tags %}
         {% assign tagCustom = site.tags_info[tag] %}
-        <li><a class="{{tagCustom.slug}}" href="{{relative_url}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
+        <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
       {% endfor %}
     </ul>
   </div>
@@ -33,20 +33,20 @@ layout: default
         {% unless page.previous.categories contains 'blogs' %}
           <li class="m-content-item">
             <div class="box">
-              <a href="{{relative_url}}{{ page.previous.url }}" class="img {% if page.previous.video %}-video{% endif %}"
+              <a href="{{site.baseurl}}{{ page.previous.url }}" class="img {% if page.previous.video %}-video{% endif %}"
                 {% if page.previous.video %}
                   style="background-image: url(https://img.youtube.com/vi/{{page.previous.video}}/0.jpg)"
                 {% else %}
-                  style="background-image: url({{relative_url}}{{page.previous.thumbnail}})"
+                  style="background-image: url({{site.baseurl}}{{page.previous.thumbnail}})"
                 {% endif %}>
               </a>
               <div class="content">
-                <h3><a href="{{relative_url}}{{ page.previous.url }}">{{ page.previous.title }}</a></h3>
+                <h3><a href="{{site.baseurl}}{{ page.previous.url }}">{{ page.previous.title }}</a></h3>
                 <div class="m-apps-tag">
                   <ul>
                     {% for tag in page.previous.tags %}
                       {% assign tagCustom = site.tags_info[tag] %}
-                      <li><a class="{{tagCustom.slug}}" href="{{relative_url}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
+                      <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
                     {% endfor %}
                   </ul>
                 </div>
@@ -60,20 +60,20 @@ layout: default
         {% unless page.next.categories contains 'blogs' %}
           <li class="m-content-item">
             <div class="box">
-              <a href="{{relative_url}}{{ page.next.url }}" class="img {% if page.next.video %}-video{% endif %}"
+              <a href="{{site.baseurl}}{{ page.next.url }}" class="img {% if page.next.video %}-video{% endif %}"
                 {% if page.next.video %}
                   style="background-image: url(https://img.youtube.com/vi/{{page.next.video}}/0.jpg)"
                 {% else %}
-                  style="background-image: url({{relative_url}}{{page.next.thumbnail}})"
+                  style="background-image: url({{site.baseurl}}{{page.next.thumbnail}})"
                 {% endif %}>
               </a>
               <div class="content">
-                <h3><a href="{{relative_url}}{{ page.next.url }}">{{ page.next.title }}</a></h3>
+                <h3><a href="{{site.baseurl}}{{ page.next.url }}">{{ page.next.title }}</a></h3>
                 <div class="m-apps-tag">
                   <ul>
                     {% for tag in page.next.tags %}
                       {% assign tagCustom = site.tags_info[tag] %}
-                      <li><a class="{{tagCustom.slug}}" href="{{relative_url}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
+                      <li><a class="{{tagCustom.slug}}" href="{{site.baseurl}}/tags/{{tagCustom.slug}}/">{{tagCustom.title}}</a></li>
                     {% endfor %}
                   </ul>
                 </div>

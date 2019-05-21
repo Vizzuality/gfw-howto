@@ -7,7 +7,7 @@ layout: null
       "title"    : "{{ post.title | escape }}",
       "category" : "{{ post.categories | join: ', ' }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
-      "url"      : "{{ relative_url }}{{ post.url }}",
+      "url"      : "{{ site.baseurl }}{{ post.url }}",
       "date"     : "{{ post.date }}",
       "type"     : "post",
       "content"  : {{ page.content | jsonify }}
@@ -20,7 +20,7 @@ layout: null
         "title"    : "{{ page.title | escape }}",
         "category" : "{{ page.categories | join: ', ' }}",
         "tags"     : "{{ page.tags | join: ', ' }}",
-        "url"      : "{{ relative_url }}{{ page.url }}/",
+        "url"      : "{{ site.baseurl }}{{ page.url }}/",
         "date"     : "{{ page.date }}",
         "type"     : "page",
         "content"  : {{ page.content | jsonify }}
