@@ -7,12 +7,12 @@
       {% for post in site.faqs_sorted_posts_order %}
         {% if post.star %}
           <li>
-            <h3><a href="{{site.baseurl}}/categories/faqs/?slug={{ post.title | slugify }}">{{ post.title }}</a></h3>
+            <h3><a href="{{site.sub_url}}/categories/faqs/?slug={{ post.title | slugify }}">{{ post.title }}</a></h3>
           </li>
         {% endif %}
       {% endfor %}
     </ul>
-    <a class="link" href="{{site.baseurl}}/categories/faqs/">VIEW ALL FAQs ></a>
+    <a class="link" href="{{site.sub_url}}/categories/faqs/">VIEW ALL FAQs ></a>
   </div>
   <div class="col">
     <header>
@@ -22,7 +22,7 @@
       {% for post in site.sorted_posts_order %}
         {% if post.star %}
           <li>
-            <h3><a href="{{site.baseurl}}{{ post.url }}">{{ post.title }}</a></h3>
+            <h3><a href="{{site.sub_url}}{{ post.url }}">{{ post.title }}</a></h3>
           </li>
         {% endif %}
       {% endfor %}
