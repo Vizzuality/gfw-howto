@@ -28,7 +28,7 @@ order: 9
             <li>If you have your own spatial data, you can also use that in place of GFW data for this tutorial.</li>
           </ul>
         </li>
-        <li>See <a href="{{site.baseurl}}/download-data/download-data-from-the-open-data-portal.html">data download tutorial</a> for further instructions, if needed.</li>
+        <li>See <a href="{{relative_url}}/download-data/download-data-from-the-open-data-portal.html">data download tutorial</a> for further instructions, if needed.</li>
       </ul>
     </li>
   </ol>
@@ -46,14 +46,14 @@ order: 9
     </li>
     <li>
       Reproject the Forest Titles data by clicking the Vector dropdown menu at the top of the screen, Data Management Tools, and Define Current Projection.
-      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/define_coordinate.jpg"/></p>
+      <p><img src="{{relative_url}}{{page.imagepath}}/desktop/define_coordinate.jpg"/></p>
     </li>
     <li>Click Choose under Output Spatial Reference System to choose a new projection.</li>
     <li>
       In the filter bar, type “World Eckert.”
       <ul class="-lower-alpha">
         <li>This will help you find World Eckert IV, which is a common projection that our GIS team uses. If you have a preferred projection for your area, you can search for that here as well.</li>
-        <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/coordinate.jpg"/></p>
+        <p><img src="{{relative_url}}{{page.imagepath}}/desktop/coordinate.jpg"/></p>
       </ul>
     </li>
     <li>Scroll down and select “World_Eckert_IV” And click OK.</li>
@@ -64,7 +64,7 @@ order: 9
   <ol>
     <li>
       To run the buffer analysis, click on the Vector dropdown menu, then Geoprocessing Tools, then Buffers.
-      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/buffer.jpg"/></p>
+      <p><img src="{{relative_url}}{{page.imagepath}}/desktop/buffer.jpg"/></p>
     </li>
     <li>Select the forest titles layer from the drop down.</li>
     <li>The segments to approximate field increases the smoothness of the output polygons. Leave it at the default for now and increase it if the results are not smooth enough.</li>
@@ -73,7 +73,7 @@ order: 9
     <li>Select the output shapefile location.</li>
     <li>
       Your results will automatically display in the results window.
-      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/buffer_results.jpg"/></p>
+      <p><img src="{{relative_url}}{{page.imagepath}}/desktop/buffer_results.jpg"/></p>
     </li>
   </ol>
 

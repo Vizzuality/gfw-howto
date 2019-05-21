@@ -17,7 +17,7 @@ mobile: false
   <p><strong>3.</strong> Select the Analyze and Subscribe icon on the right-hand side of the map, and choose “Draw or Upload Shape.”</p>
     <ul>
       <li>To <strong>subscribe to a user-drawn shape</strong>, select “Start drawing” and click with your mouse to draw a shape in the map. <strong>Note</strong>: You can drag the points to edit your shape after you’re finished drawing.
-      <p><img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop4.gif"/></p>
+      <p><img src="{{relative_url}}{{page.imagepath}}/desktop/desktop4.gif"/></p>
 
         <ul>
           <li>The analysis results will appear in the window on the right side of the map. </li>
@@ -26,10 +26,10 @@ mobile: false
         </ul>
       </li>
       <div class="image-grid">
-        <img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop5.png"/>
-        <img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop6.png"/>
-        <img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop7.png"/>
-        <img src="{{site.baseurl}}{{page.imagepath}}/desktop/desktop8.png"/>
+        <img src="{{relative_url}}{{page.imagepath}}/desktop/desktop5.png"/>
+        <img src="{{relative_url}}{{page.imagepath}}/desktop/desktop6.png"/>
+        <img src="{{relative_url}}{{page.imagepath}}/desktop/desktop7.png"/>
+        <img src="{{relative_url}}{{page.imagepath}}/desktop/desktop8.png"/>
       </div>
 
       <li><strong>Note</strong>: You will only be subscribed to the activated forest change data set. You can create multiple subscriptions if you would like to subscribe to more than one Forest Change data set. Please be aware that not all alert systems may cover the area you selected, and not all forest change data sets are supported by the subscription feature. To learn more about each system, click on the information icons that appear in Forest Change drop-down menu on the GFW Interactive Map.</li>

@@ -1,4 +1,4 @@
-<div class="m-aside">  
+<div class="m-aside">
   <div id="searchAsideView" class="m-search -small">
     <div class="search-container">
       <svg class="-active -search"><use xlink:href="#icon-search"></use></svg>
@@ -6,7 +6,7 @@
       <input id="search-input" type="text" placeholder="How do I analyze data?">
     </div>
     <ul id="search-results" class="search-results"></ul>
-  </div>  
+  </div>
 </div>
 
 <div class="m-aside">
@@ -15,7 +15,7 @@
     {% for category in site.categories_info %}
       {% if category[1].type == "subject" %}
       <li>
-        <a class="-theme {% if category[1].disabled %}-disabled{% endif %}" id="aside-{{ category[0] | slugify }}" href="{{site.baseurl}}/categories/{{ category[0] | slugify }}/">
+        <a class="-theme {% if category[1].disabled %}-disabled{% endif %}" id="aside-{{ category[0] | slugify }}" href="{{relative_url}}/categories/{{ category[0] | slugify }}/">
           {{ category[1].title }}
         </a>
       </li>
@@ -30,7 +30,7 @@
     {% for category in site.categories_info %}
       {% if category[1].type == "material" %}
       <li>
-        <a class="-theme" id="aside-{{ category[0] | slugify }}" href="{{site.baseurl}}/categories/{{ category[0] | slugify }}/">
+        <a class="-theme" id="aside-{{ category[0] | slugify }}" href="{{relative_url}}/categories/{{ category[0] | slugify }}/">
           {{ category[1].title }}
         </a>
       </li>

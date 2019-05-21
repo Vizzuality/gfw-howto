@@ -16,19 +16,19 @@ mobile: true
   <h3>Visualize global data on the GFW Interactive Map</h3>
   <p><strong>1.</strong>  Navigate to the <a href="http://www.globalforestwatch.org/map" target="_blank">GFW Interactive Map</a>.</p>
   <p><strong>2.</strong>  Available global data layers are organized by category across the top of the map. Click through the tabs to select the data layer(s) you want to display. Tree cover loss and gain are displayed by default.</p>
-  <p><img src="{{site.baseurl}}/assets/images/gfw/visualize-global-data/desktop1.png"/></p>
+  <p><img src="{{relative_url}}/assets/images/gfw/visualize-global-data/desktop1.png"/></p>
   <p><strong>3.</strong>  Click the information icon in the drop down menu to learn more about each data layer. This includes information such as data resolution, frequency, cautions, and a link to learn more or download the data set on the <a class="mobile-friendly" href="http://data.globalforestwatch.org/" target="_blank">Open Data Portal</a>.</p>
-  <p><img src="{{site.baseurl}}/assets/images/gfw/visualize-global-data/desktop2.png"/></p>
+  <p><img src="{{relative_url}}/assets/images/gfw/visualize-global-data/desktop2.png"/></p>
   <p><strong>4.</strong>  View activated layers in the data legend on the left-hand side of the map.</p>
-  <p><img src="{{site.baseurl}}/assets/images/gfw/visualize-global-data/desktop3.png"/></p>
+  <p><img src="{{relative_url}}/assets/images/gfw/visualize-global-data/desktop3.png"/></p>
   <p>For data layers that cover a limited geographic region, you can turn on “Geographic coverage” in the data legend to see the geographic extent of the data layer on the map.</p>
-  <p><img src="{{site.baseurl}}/assets/images/gfw/visualize-global-data/desktop4.png"/></p>
+  <p><img src="{{relative_url}}/assets/images/gfw/visualize-global-data/desktop4.png"/></p>
   <p>For tree cover and tree cover loss data layers, you can adjust the tree canopy density of your data display and analysis by clicking on the highlighted percent canopy density within the legend.</p>
-  <p><img src="{{site.baseurl}}/assets/images/gfw/visualize-global-data/desktop5.png"/></p>
+  <p><img src="{{relative_url}}/assets/images/gfw/visualize-global-data/desktop5.png"/></p>
   <p><strong>5.</strong>  Zoom in and out, share your map view, hide the windows, search the Google base map, and refresh the page using the buttons located on the bottom left-hand side of the map.</p>
-  <p><img src="{{site.baseurl}}/assets/images/gfw/visualize-global-data/desktop6.png"/></p>
+  <p><img src="{{relative_url}}/assets/images/gfw/visualize-global-data/desktop6.png"/></p>
   <p><strong>6.</strong>  Change the base map to view data with a different map background.</p>
-  <p><img src="{{site.baseurl}}/assets/images/gfw/visualize-global-data/desktop7.png"/></p>
+  <p><img src="{{relative_url}}/assets/images/gfw/visualize-global-data/desktop7.png"/></p>
   <p>
     <a class="btn" href='http://www.globalforestwatch.org/map' target='_blank'>GFW Interactive Map</a>
   </p>
@@ -38,9 +38,9 @@ mobile: true
   <p><strong>1.</strong>  Select the Forest Change data layer you want to view as a time series.</p>
   <p><strong>2.</strong>  On the bottom of the map, locate the timeline.</p>
   <p><strong>3.</strong>  Some timelines allow you to animate the data over time or select a time interval. Press the play button on the left to view an animation of the entire time series or drag the ends of the timeline to select a specific period of time.</p>
-  <p><img src="{{site.baseurl}}/assets/images/gfw/visualize-global-data/desktop8.png"/></p>
+  <p><img src="{{relative_url}}/assets/images/gfw/visualize-global-data/desktop8.png"/></p>
   <p><strong>4.</strong>  For data layers with a simple timeline, select the period for which you would like to view data.</p>
-  <p><img src="{{site.baseurl}}/assets/images/gfw/visualize-global-data/desktop9.png"/></p>
+  <p><img src="{{relative_url}}/assets/images/gfw/visualize-global-data/desktop9.png"/></p>
   <p>
     <a class="btn" href='http://www.globalforestwatch.org/map/3/15.00/27.00/ALL/grayscale/loss' target='_blank'>View UMD/Google Data</a>
     <a class="btn" href='http://www.globalforestwatch.org/map/3/15.00/27.00/ALL/grayscale/forma' target='_blank'>View FORMA data</a>
