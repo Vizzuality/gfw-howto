@@ -25,20 +25,15 @@
         padding: 4px 10px 2px;
         display: block;
         margin: 0 0 5px;
-                
+
         &.fires {
           background: rgba($red, 0.25);
-          color: $red; 
+          color: $red;
         }
-        
-        &.commodities {
-          background: rgba($orange, 0.25);
-          color: $orange; 
-        }
-        
+
         &.climate {
           background: rgba($blue, 0.25);
-          color: $blue; 
+          color: $blue;
         }
 
         &:hover {
