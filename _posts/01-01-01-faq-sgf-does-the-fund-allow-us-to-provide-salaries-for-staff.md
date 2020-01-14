@@ -6,5 +6,5 @@ categories: [faqs]
 layout: post
 ---
 <div class="content">
-	<p>Salaries for staff may be included and there is no explicit ceiling, but all costs in the proposed budgets must be well-justified.</p>
+	<p>There is no explicit ceiling for specific budget line items, but all costs must be well-justified in the budget detail column of the provided budget template in the application. However, for general and administrative expenses, applicants should keep their budgets at or below 10% of total project costs.</p>
 </div>
