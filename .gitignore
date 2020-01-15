@@ -3,6 +3,7 @@ _site
 .publish
 node_modules
 js/vendor.js
+yarn-error.log
 .ruby-version
 .rbenv-gemsets
 .gems/
