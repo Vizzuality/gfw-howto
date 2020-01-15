@@ -1,8 +1,8 @@
 name: How to portal
 permalink: none
 
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:3000" # the base hostname & protocol for your site
+baseurl: "/howto" # the subpath of your site, e.g. /blog/
+url: "https://www.globalforestwatch.org" # the base hostname & protocol for your site
 
 gems:
   - jekyll-archives
