@@ -259,8 +259,6 @@ button {
         fill: #97bd3d; }
       .m-title h2 svg.-fires {
         fill: #ed1846; }
-      .m-title h2 svg.-climate {
-        fill: #5b80a0; }
   .m-title h3 {
     font-size: 15px;
     font-weight: 300; }
@@ -357,9 +355,6 @@ button {
         .m-apps-tag ul > li a.fires {
           background: rgba(237, 24, 70, 0.25);
           color: #ed1846; }
-        .m-apps-tag ul > li a.climate {
-          background: rgba(91, 128, 160, 0.25);
-          color: #5b80a0; }
         .m-apps-tag ul > li a:hover {
           text-decoration: underline; }
 
@@ -665,9 +660,6 @@ button {
     background-size: cover; }
   .m-blog .img.-new-features, .m-content-item .img.-new-features {
     background: url("/assets/images/categories/new-features.jpg") center;
-    background-size: cover; }
-  .m-blog .img.-climate, .m-content-item .img.-climate {
-    background: url("/assets/images/categories/climate.jpg") center;
     background-size: cover; }
   .m-blog .img.-feature-posts, .m-content-item .img.-feature-posts {
     background: url("/assets/images/categories/feature-posts.jpg") center;
@@ -1584,8 +1576,6 @@ button {
         background: #97bd3d; }
       .m-by-app ul li.-fires {
         background: #ed1846; }
-      .m-by-app ul li.-climate {
-        background: #5b80a0; }
       @media (min-width: 850px) {
         .m-by-app ul li:hover {
           background: #a2c64e; }
@@ -1593,8 +1583,7 @@ button {
           background: #a2c64e; }
         .m-by-app ul li.-fires:hover {
           background: #ef3059; }
-        .m-by-app ul li.-climate:hover {
-          background: #6a8daa; } }
+      }
       .m-by-app ul li h2 {
         color: #FFF;
         text-transform: uppercase;
