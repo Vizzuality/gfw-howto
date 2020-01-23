@@ -1,7 +1,7 @@
 ---
 title: Who is behind global forest watch?
 published: True
-tags: [gfw, climate]
+tags: [gfw]
 categories: [faqs]
 layout: post
 star: True
