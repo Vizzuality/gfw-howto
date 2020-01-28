@@ -33,12 +33,6 @@ tags_info:
     description: "Global Forest Watch Fires (GFW Fires) is an online platform for monitoring and responding to forest and land fires in the ASEAN region using near real-time information."
     slug: fires
     type: app
-  climate:
-    order: 3
-    title: Climate
-    description: "GFW Climate catalyzes action on climate change by providing timely, credible answers to questions about carbon emissions from tropical deforestation."
-    slug: climate
-    type: app
   forest-watcher:
     order: 4
     title: Forest Watcher
