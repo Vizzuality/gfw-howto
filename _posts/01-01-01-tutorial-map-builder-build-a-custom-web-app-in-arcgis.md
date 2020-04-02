@@ -3,16 +3,14 @@ layout: post
 title: Build a Custom Web App in ArcGIS (for public accounts)
 published: True
 description: ""
-thumbnail: "video"
-video: u2CIfBU6RCs
-categories: [tutorial videos]
+thumbnail: ""
+imagepath: ""
+categories: [create custom maps]
 tags: [map-builder]
 ---
 
 <div id="desktopContent" class="content">
-  <div class="video">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/u2CIfBU6RCs" frameborder="0" allowfullscreen></iframe>
-  </div>
+<p>Please see this <a href="http://s3.amazonaws.com/gfw.blog/Training%20Guides/GFW%20MapBuilder%20-%20Free%20Public%20Account%20Tutorial_FINAL.pdf" target="_blank">PDF tutorial</a> on how to build a custom web app in ArcGIS for a public account.</p>
 </div>
 
 <div id="mobileContent" class="content">
