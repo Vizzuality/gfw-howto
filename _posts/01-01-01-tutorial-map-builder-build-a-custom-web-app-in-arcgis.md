@@ -3,8 +3,8 @@ layout: post
 title: Build a Custom Web App in ArcGIS (for public accounts)
 published: True
 description: ""
-thumbnail: ""
-imagepath: ""
+thumbnail: "/assets/images/map-builder/build-a-custom-web-app-in-arcgis/thumbnail.png"
+imagepath: "/assets/images/map-builder/build-a-custom-web-app-in-arcgis"
 categories: [create custom maps]
 tags: [map-builder]
 ---
