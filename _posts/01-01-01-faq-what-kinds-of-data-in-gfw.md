@@ -13,7 +13,7 @@ order: 4
 	<ul>
 		<li>Forest change data, such as global tree cover loss and gain data from the University of Maryland/Google, near real-time FORMA alerts for the humid tropics, SAD alerts for the Brazilian Amazon from Imazon, quarterly vegetation change data from NASA, and others</li>
 		<li>Forest cover data, including global tree cover data, intact forest landscapes, and pantropical carbon density</li>
-		<li>Forest fire data, from NASA’s Modis satellite (see <a href='http://www.fires.globalforestwatch.org' target='_blank'>GFW Fires</a>)</li>
+		<li>Forest fire data, from NASA’s Modis satellite (see <a href='http://www.globalforestwatch.org' target='_blank'>GFW</a>)</li>
 		<li>Forest use data, which includes contextual information, such as concession areas for natural resource extraction or agricultural production</li>
 		<li>Conservation data, such as global boundaries for protected areas and biodiversity hotspots</li>
 		<li>People data, including community land boundaries and land tenure rights (coming soon)</li>
