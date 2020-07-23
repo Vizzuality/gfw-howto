@@ -1,7 +1,8 @@
 name: How to portal
 permalink: none
 
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/howto" # the subpath of your site, e.g. /blog/
+url: "https://www.globalforestwatch.org"
 
 gems:
   - jekyll-archives
