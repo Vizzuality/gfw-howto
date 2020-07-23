@@ -90,7 +90,7 @@ button {
   width: 60px;
   height: 60px;
   margin: 0 0 0 15px;
-  background-image: url("/assets/images/logo.png");
+  background-image: url("/howto/assets/images/logo.png");
   background-size: contain; }
   @media (min-width: 850px) {
     .l-logo {
@@ -516,7 +516,7 @@ button {
 
 .m-content-grid .m-content-item .img {
   display: block;
-  background-image: url("/assets/images/thumbnail-post.png");
+  background-image: url("/howto/assets/images/thumbnail-post.png");
   background-color: #555;
   background-size: cover;
   background-position: center;
@@ -653,37 +653,37 @@ button {
     .m-blog .img, .m-content-item .img {
       padding-bottom: 270px; } }
   .m-blog .img.-data, .m-content-item .img.-data {
-    background: url("/assets/images/categories/data.jpg") center;
+    background: url("/howto/assets/images/categories/data.jpg") center;
     background-size: cover; }
   .m-blog .img.-supply-chain, .m-content-item .img.-supply-chain {
-    background: url("/assets/images/categories/supply-chain.jpg") center;
+    background: url("/howto/assets/images/categories/supply-chain.jpg") center;
     background-size: cover; }
   .m-blog .img.-new-features, .m-content-item .img.-new-features {
-    background: url("/assets/images/categories/new-features.jpg") center;
+    background: url("/howto/assets/images/categories/new-features.jpg") center;
     background-size: cover; }
   .m-blog .img.-feature-posts, .m-content-item .img.-feature-posts {
-    background: url("/assets/images/categories/feature-posts.jpg") center;
+    background: url("/howto/assets/images/categories/feature-posts.jpg") center;
     background-size: cover; }
   .m-blog .img.-guest-post, .m-content-item .img.-guest-post {
-    background: url("/assets/images/categories/guest-post.jpg") center;
+    background: url("/howto/assets/images/categories/guest-post.jpg") center;
     background-size: cover; }
   .m-blog .img.-zooming-in, .m-content-item .img.-zooming-in {
-    background: url("/assets/images/categories/zooming-in.jpg") center;
+    background: url("/howto/assets/images/categories/zooming-in.jpg") center;
     background-size: cover; }
   .m-blog .img.-updates, .m-content-item .img.-updates {
-    background: url("/assets/images/categories/updates.jpg") center;
+    background: url("/howto/assets/images/categories/updates.jpg") center;
     background-size: cover; }
   .m-blog .img.-map-of-the-week, .m-content-item .img.-map-of-the-week {
-    background: url("/assets/images/categories/map-of-the-week.jpg") center;
+    background: url("/howto/assets/images/categories/map-of-the-week.jpg") center;
     background-size: cover; }
   .m-blog .img.-news-roundups, .m-content-item .img.-news-roundups {
-    background: url("/assets/images/categories/news-roundups.jpg") center;
+    background: url("/howto/assets/images/categories/news-roundups.jpg") center;
     background-size: cover; }
   .m-blog .img.-gfw-user-profile, .m-content-item .img.-gfw-user-profile {
-    background: url("/assets/images/categories/gfw-user-profile.jpg") center;
+    background: url("/howto/assets/images/categories/gfw-user-profile.jpg") center;
     background-size: cover; }
   .m-blog .img.-uncategorized, .m-content-item .img.-uncategorized {
-    background: url("/assets/images/categories/guest-post.jpg") center;
+    background: url("/howto/assets/images/categories/guest-post.jpg") center;
     background-size: cover; }
 
 .m-filters {
@@ -1034,7 +1034,7 @@ button {
       .m-select .chosen-container.with-selection .chosen-single abbr {
         display: block; }
       .m-select .chosen-container.with-selection .chosen-single div b {
-        background: url("/assets/images/arrow-down.svg") center no-repeat;
+        background: url("/howto/assets/images/arrow-down.svg") center no-repeat;
         background-size: contain; }
   .m-select .chosen-container-single {
     outline: none; }
@@ -1075,7 +1075,7 @@ button {
         width: 14px;
         margin: 0 auto;
         height: 100%;
-        background: url("/assets/images/arrow-down.svg") center no-repeat;
+        background: url("/howto/assets/images/arrow-down.svg") center no-repeat;
         background-size: contain; }
     .m-select .chosen-container-single .chosen-search {
       position: relative;
@@ -1358,13 +1358,13 @@ button {
     left: 50%; }
 
 .simple-pagination.light-theme .prev:before {
-  background: url("/assets/images/arrow-left.svg") center no-repeat;
+  background: url("/howto/assets/images/arrow-left.svg") center no-repeat;
   -webkit-transform: translate(-55%, -50%);
           transform: translate(-55%, -50%);
   background-size: contain; }
 
 .simple-pagination.light-theme .next:before {
-  background: url("/assets/images/arrow-right.svg") center no-repeat;
+  background: url("/howto/assets/images/arrow-right.svg") center no-repeat;
   -webkit-transform: translate(-45%, -50%);
           transform: translate(-45%, -50%);
   background-size: contain; }
