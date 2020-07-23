@@ -1,7 +1,7 @@
 name: How to portal
 permalink: none
 
-baseurl: "/howto" # the subpath of your site, e.g. /blog/
+baseurl: "/gfw-howto" # the subpath of your site, e.g. /blog/
 url: "https://www.globalforestwatch.org"
 
 gems:
